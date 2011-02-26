@@ -17,7 +17,7 @@
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to text.code, text %></td>
 		<td><%= text.title %></td>
-		<td><%= text.topics_to_str %></td>
+		<td><%= text.topics_to_str.html_safe %></td>
   </tr>
 <% end %>
 </table>
