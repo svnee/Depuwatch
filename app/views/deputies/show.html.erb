@@ -9,7 +9,7 @@
 
 <div class="wrapper_text"> 
 <div class="projet">
-<img src="/images/deputies/<%= @deputy.name %>.jpg">
+<img src="<%= @deputy.pc_img == "" ? "/images/empty_abg_med.gif" : @deputy.pc_img %>.jpg">
 </div>
 
 <div class="result">
