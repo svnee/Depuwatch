@@ -17,6 +17,6 @@ test:
 
 production:
   adapter: sqlite3
-  database: db/chd.sqlite3
+  database: /home/chd/shared/databases/chd.sqlite3
   pool: 5
   timeout: 5000
