@@ -1,4 +1,16 @@
 ChdTransparent::Application.routes.draw do
+  match 'info' => 'static#info'
+  match 'faq' => 'static#faq'
+  match 'contact' => 'static#contact'
+  match 'license' => 'static#license'
+  match 'disclaimer' => 'static#disclaimer'
+  
+  get "static/info"
+  get "static/faq"
+  get "static/contact"
+  get "static/license"
+  get "static/disclaimer"
+
   get "user_session/new"
 
   get "user_session/create"
