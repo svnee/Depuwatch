@@ -13,12 +13,9 @@
 <div class="wrapper_text">
 <div class="projet1">
 <div class="h2"><span class="h2">Dossier</span>: <%= @text.code %></div>
-<div class="h2"><span class="h2">Mémorial</span>: ?</div>
+<div class="h2"><span class="h2">Mémorial</span>: <%= @text.link_memorial.nil? ? "?" : link_to("PDF-Versioun", @text.link_memorial)%></div>
 <h2>Titel</h2><%= @text.title %><br>
 
-<% if !@text.link_memorial.nil? then -%>
-
-<% end -%>
 </div>
 <div class="result">
 <table>
