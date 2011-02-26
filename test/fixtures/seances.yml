@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  session_id: 1
+  nr: 1
+  start: 2010-09-06
+  end: 2010-09-06
+
+two:
+  session_id: 1
+  nr: 1
+  start: 2010-09-06
+  end: 2010-09-06

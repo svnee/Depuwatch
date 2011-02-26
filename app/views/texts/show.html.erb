@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<div class="title">
+<a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
+|
+<a href="<%= url_for @text.seance %>">S&eacute;ance</a>: <span class="bold"><%= @text.seance.start.strftime("%d/%m/%Y") %></span> de <%= @text.seance.start.strftime("%H:%M") %> jusqu'&agrave;
+<%= @text.seance.end.strftime("%H:%M") %>
+|
+<a href="<%= url_for @text %>">Dossier</a>: <span class="bold"><%= @text.code %></span>
+</div>
+
+
+<div class="wrapper">
+<div class="projet">
+<p><%= @text.title %></p>
+<% if !@text.link_memorial.nil? then -%>
+<span class="bold">Mémorial</span>: <%= link_to "[LINK]", @text.link_memorial %>
+<% end -%>
+</div>
+<div class="result">
+<table>
+	<tr>
+		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
+        <td style="width: 50px; text-align:left; font-weight:bold;">Pour:</td>
+		<td style="width: 50px; text-align:left;"><%= @text.votes_pour.count %></td>
+	</tr>
+    <tr>
+		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
+        <td style="width: 50px; text-align:left; font-weight:bold;">Contre:</td>
+		<td style="width: 50px; text-align:left;"><%= @text.votes_contre.count %></td>
+	</tr>
+	 <tr>
+		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
+        <td style="width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
+		<td style="width: 50px; text-align:left;"><%= @text.abstentions.count %></td>
+	</tr>
+</table>
+<p>
+<img src="http://chart.apis.google.com/chart?cht=bhs&chs=240x30&chd=t:<%= "#{@text.votes_pour.count}|#{@text.votes_contre.count}|#{@text.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
+</div>
+</div>
+<table class="content">
+	<tr>
+		<th style="width: 150px;">Pour</th>
+		<th style="width: 150px;">Contre</th>
+		<th style="width: 150px;">Abstention</th>
+	</tr>
+	<tr>
+		<td>
+			<ul id="votes">
+				<% @text.votes_pour.each do |v| -%>
+					<li><%= link_to v.deputy.name, v.deputy %> <%="(#{v.deputy.party.name})" %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+				<% end -%>
+			</ul>
+		</td>
+		<td>
+			<ul id="votes">
+				<% @text.votes_contre.each do |v| -%>
+					<li><%= link_to v.deputy.name, v.deputy %> <%="(#{v.deputy.party.name})" %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+				<% end -%>
+			</ul>
+		</td>
+		<td>
+			<ul id="votes">
+				<% @text.abstentions.each do |v| -%>
+					<li><%= link_to v.deputy.name, v.deputy %> <%="(#{v.deputy.party.name})" %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+				<% end -%>
+			</ul>
+		</td>
+	</tr>
+</table>

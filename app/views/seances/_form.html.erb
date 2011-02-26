@@ -1,0 +1,33 @@
+<%= form_for(@seance) do |f| %>
+  <% if @seance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seance.errors.count, "error") %> prohibited this seance from being saved:</h2>
+
+      <ul>
+      <% @seance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :session_id %><br />
+    <%= f.text_field :session_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nr %><br />
+    <%= f.text_field :nr %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br />
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

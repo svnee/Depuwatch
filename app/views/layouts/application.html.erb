@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dépuwatch - kuck dengen Députéiert of d'Fanger!</title>
+  <%= stylesheet_link_tag "style.css" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<!-- START HEADER -->
+	<img src="/images/logo.jpg" width="350" height="75" alt="header"><p>
+	<div class="navi">
+	<ul id="navi">
+		<li><a href="<%= url_for :controller => :sessions %>"><img src="/images/sessions.png" width="17" alt="sessions"> Sessiounen</a></li>
+	    <li> | </li>
+	    <li><a href="<%= url_for :controller => :seances %>"> <img src="/images/seances.png" width="17" alt="séances"> S&eacute;ancen</a></li>
+	    <li> | </li>
+	    <li><a href="<%= url_for :controller => :texts %>"><img src="/images/dossiers.png" width="17" alt="dossiers"> Dossie&eacute;en</a></li>
+	    <li> | </li>
+	    <li><a href="<%= url_for :controller => :deputies %>"><img src="/images/deputes.png" width="17" alt="députés">  D&eacute;put&eacute;iert</a></li>
+	</ul>
+	</div>
+	
+<%= yield %>
+
+<div class="footer">
+<a href="#">Contact</a> | All Data provided <a href="http://chd.lu/wps/portal/public">by chd.lu</a> | <a href="#">Impressum</a>
+</div>
+<p><a href="http://piratepartei.lu/"><img src="http://wiki.piratepartei.lu/images/7/72/PpLogo-ww-lb-web.png" height="10%"></a></p>
+
+</body>
+</html>

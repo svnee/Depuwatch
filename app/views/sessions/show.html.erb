@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="title">
+<a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@session.start.strftime("%Y")}/#{@session.end.strftime("%Y")}"%></span> 
+</div>
+
+<table class="content">
+	<tr>
+		<th style="width: 45px; text-align: left;">Séance Nr.</th>
+		<th style="width: 150px; text-align: left;"><img src="/images/seances.png" width="25" alt="logo"></th>
+		<th style="width: 100px; text-align: left;">Start</th>
+		<th style="width: 100px; text-align: left;">End</th>
+		<th style="width: 35px; text-align: left;">Dauer</th>
+		<th style="text-align: left;"><img src="/images/dossiers.png" width="25" alt="logo"></th>
+	</tr>
+	<% @session.seances.each do |s| -%>
+	<tr onmouseover="style.backgroundColor='#eee';"
+onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to "[#{s.nr}]", s %></td>
+		<td><%= link_to s.start.strftime("%d/%m/%Y"), s %></td>
+		<td><%= s.start.strftime("%H:%M") %></td>
+		<td><%= s.end.strftime("%H:%M") %></td>
+		<td><%= duration(s.start, s.end) %></td>
+		<td>
+			<% s.texts.each do |t| -%>
+				<%= link_to "[#{t.code}] ", t %>
+			<% end -%>
+		</td>
+	</tr>
+	<% end -%>
+</table>
