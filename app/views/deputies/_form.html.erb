@@ -16,8 +16,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :party_id %><br />
-    <%= f.text_field :party_id %>
+    <%= f.label :party_id, "Party" %><br />
+    <%= f.select :party_id, Party.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
+  </div>
+	<div class="field">
+    <%= f.label :pc_img, "Link to Politikercheck.lu Image" %><br />
+    <%= f.text_field :pc_img %>
+  </div>
+	<div class="field">
+    <%= f.label :pc_profile, "Link to Politikercheck.lu Profile" %><br />
+    <%= f.text_field :pc_profile %>
   </div>
   <div class="actions">
     <%= f.submit %>

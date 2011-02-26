@@ -1,6 +1,8 @@
 class Text < ActiveRecord::Base
   has_many :votes
   belongs_to :seance
+  has_many :text_topics
+  has_many :topics, :through => :text_topics
   
   def votes_pour
     res = []

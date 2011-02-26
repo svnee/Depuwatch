@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @text_topic.text_id %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @text_topic.topic_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_topic_path(@text_topic) %> |
+<%= link_to 'Back', text_topics_path %>

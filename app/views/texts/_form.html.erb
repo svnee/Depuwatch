@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :seance_id %><br />
-    <%= f.text_field :seance_id %>
+    <%= f.select :seance_id, Seance.all.collect {|s| [ s.start.strftime("%d/%m/%Y")+" de "+s.start.strftime("%H:%M"), s.id ] } %>
+  </div>
+	<div class="field">
+    <%= f.label :topic_ids, "Themen" %><br />
+    <%= f.select :topic_ids, Topic.all.collect {|t| [ t.name, t.id ] }, {}, {:size => 5, :multiple => true} %>
   </div>
   <div class="actions">
     <%= f.submit %>

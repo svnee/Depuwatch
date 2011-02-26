@@ -9,7 +9,7 @@
 
 <div class="wrapper_text"> 
 <div class="projet">
-<img src="<%= @deputy.pc_img == "" ? "/images/empty_abg_med.gif" : @deputy.pc_img %>.jpg">
+<img src="<%= @deputy.pc_img.nil? ? "/images/empty_abg_med.gif" : @deputy.pc_img %>">
 </div>
 
 <div class="result">
@@ -17,7 +17,7 @@
 	<div class="h2"><span class="h2">Numm: </span> <%= @deputy.name %></div>
 	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
 
-	<div class="h2"><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="http://www.politikercheck.lu/">Politikercheck.lu</a></div>
+	<div class="h2"><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></div>
 
 </div>
 <div class="dossiers2"><div class="result2">

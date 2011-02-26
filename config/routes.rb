@@ -1,4 +1,8 @@
 ChdTransparent::Application.routes.draw do
+  resources :text_topics
+
+  resources :topics
+
   match 'info' => 'static#info'
   match 'index' => 'static#index'
   match 'faq' => 'static#faq'
