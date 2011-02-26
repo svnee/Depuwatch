@@ -31,6 +31,15 @@ class Text < ActiveRecord::Base
     res
   end
   
+  def topics_to_str
+    str = ""
+    topics.each do |t| 
+      str += "[" + t.name + "] "
+    end
+    
+    str
+  end
+  
   def party_opinion(pid)
     c, p, a = 0,0,0
     votes.each do |v|

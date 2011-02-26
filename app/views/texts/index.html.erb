@@ -8,14 +8,16 @@
 <div class="content">
 <table class="content">
   <tr>
-    <th></th>
-		<th></th>
+    <th>Dossier</th>
+		<th>Titel</th>
+		<th>Themen</th>
   </tr>
 
 <% @texts.each do |text| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to text.code, text %></td>
 		<td><%= text.title %></td>
+		<td><%= text.topics_to_str %></td>
   </tr>
 <% end %>
 </table>
