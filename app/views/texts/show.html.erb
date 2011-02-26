@@ -1,37 +1,40 @@
-<p id="notice"><%= notice %></p>
-
-<div class="title">
+<div class="pointer_dossiers"></div>
+<div class="content_wrapper">
+<div class="info">
 <a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
 |
 <a href="<%= url_for @text.seance %>">S&eacute;ance</a>: <span class="bold"><%= @text.seance.start.strftime("%d/%m/%Y") %></span> de <%= @text.seance.start.strftime("%H:%M") %> jusqu'&agrave;
 <%= @text.seance.end.strftime("%H:%M") %>
-|
-<a href="<%= url_for @text %>">Dossier</a>: <span class="bold"><%= @text.code %></span>
+
 </div>
 
 
-<div class="wrapper">
-<div class="projet">
-<p><%= @text.title %></p>
+<div class="content">
+<div class="wrapper_text">
+<div class="projet1">
+<div class="h2"><span class="h2">Dossier</span>: <%= @text.code %></div>
+<div class="h2"><span class="h2">Mémorial</span>: ?</div>
+<h2>Titel</h2><%= @text.title %><br>
+
 <% if !@text.link_memorial.nil? then -%>
-<span class="bold">Mémorial</span>: <%= link_to "[LINK]", @text.link_memorial %>
+
 <% end -%>
 </div>
 <div class="result">
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Pour:</td>
+        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Pour:</td>
 		<td style="width: 50px; text-align:left;"><%= @text.votes_pour.count %></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Contre:</td>
+        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Contre:</td>
 		<td style="width: 50px; text-align:left;"><%= @text.votes_contre.count %></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
+        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
 		<td style="width: 50px; text-align:left;"><%= @text.abstentions.count %></td>
 	</tr>
 </table>
@@ -69,3 +72,4 @@
 		</td>
 	</tr>
 </table>
+</div>

@@ -1,0 +1,340 @@
+body{	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	margin: 0px;
+	}
+body a{
+	 color: #003399;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+body a:hover{
+	text-decoration:underline;
+}
+
+
+h1{
+	font-size:18px;
+	font-weight:bold;
+	}
+th{
+	font-size:12px;
+	font-weight:bold;
+	}
+td{
+	font-size:12px;
+	font-weight:normal;
+	
+	}
+h2 {
+	font-size:18px;
+	font-weight:normal;
+	text-align:left;
+	padding-left:15px;
+}
+
+h3 {
+	font-size:12px;
+	font-weight:bold;
+}
+
+table.content {
+   border-spacing: 0px 0px;
+	width:100%;
+}
+
+table.content th{
+	border-bottom: 1px solid #eee;
+	padding-bottom:5px;
+	padding-left:20px;
+	text-align:left;
+}
+
+
+table.content td{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+	padding-top:8px;
+	padding-left:20px;
+	text-align:left;
+	vertical-align:top;
+}
+
+div.footer {
+	background-color:#f8f8f8;
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 0px;
+	font-size:12px;
+	text-align: center;
+	border-radius: 15px;
+	clear:both;
+	border-top: 1px solid #EEEEEE;
+	height: 50px;
+	background: -moz-linear-gradient(center top , #f8f8f8, #fff) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#fff'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#fff)); /* for webkit browsers */
+}
+
+div.header_top {
+	 background: -moz-linear-gradient(center top , #FFFFFF, #F8F8F8) repeat scroll 0 0 transparent;
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8)); /* for webkit browsers */
+    border-bottom: 1px solid #EEEEEE;
+    clear: both;
+   font-size: 12px;
+   height: 22px;
+   text-align: right;
+   padding-top: 8px;
+   padding-right: 15px;
+	
+}
+
+
+div.title {
+	background-color: #eee;
+	padding: 8px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	font-size:12px;
+	text-align: center;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+div.navi {
+	display: block;
+   float: left;
+   font-size: 12px;
+   font-weight: normal;
+   text-align: left;
+   clear: both;
+}
+div.navi2 {
+	display: block;
+   float: left;
+   font-size: 12px;
+   font-weight: normal;
+   text-align: left;
+clear: both;
+}
+
+a img {
+text-decoration: none;
+	border: 0 none;
+
+	}
+
+span.bold {
+	font-size:14px;
+	font-weight:bold; }
+
+#navi ul {
+        list-style-type: none;
+} 
+
+#navi li {
+		display:inline-block;
+}
+
+#navi li a { 
+        color: #FFF;
+        display: block;
+		font-size:14px;
+        padding: 6px;
+        text-decoration: none;
+}
+
+#navi li a:hover
+{
+	background-color:#FFF;
+	text-decoration:none;
+	color:#333;
+	}
+	
+
+#votes {
+  padding:0;
+  margin:0;
+  }
+#votes li {
+  list-style-type: none;
+  padding-bottom:5px;
+  }
+  
+div.wrapper {
+	clear: both;
+    display: block;
+    float: left;
+    padding: 10px;
+}
+
+div.header {
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+div.content {
+    background-color: white;
+    display: block;
+    float: left;
+    padding: 10px;
+    width: 780px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.navi_item {
+	border: 1px solid #EDEDED;
+   height: 30px;
+   margin-bottom: 10px;
+   padding-left: 15px;
+   padding-top: 4px;
+   width: 135px;
+	background: -moz-linear-gradient(center top , #FFFFFF, #ededed) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ededed)); /* for webkit browsers */
+ 
+	}
+
+div.navi_img {
+	 border-right: 1px solid #EDEDED;
+    float: left;
+    height: 27px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 4px;
+    width: 30px;
+	}
+	
+div.navi2_link {
+	float: left;
+   margin-bottom: 0;
+   padding-left: 15px;
+   padding-top: 6px;
+	}
+	
+	div.navi2_link a {
+color: white;
+	}
+	
+	div.navi2_item {
+	border: 1px solid #0C4EA3;
+   height: 30px;
+   margin-bottom: 10px;
+   padding-left: 15px;
+   padding-top: 4px;
+   width: 135px;
+	background: -moz-linear-gradient(center top , #1270BA, #0C4EA3) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1270BA', endColorstr='#0C4EA3'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#1270BA), to(#0C4EA3)); /* for webkit browsers */
+	}
+
+div.content_wrapper {
+	background: -moz-linear-gradient(center top , #1270BA, #0C4EA3) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1270BA', endColorstr='#0C4EA3'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#1270BA), to(#0C4EA3)); /* for webkit browsers */
+	display: block;
+   float: left;
+   width: 800px;
+   margin-left: 10px;
+   padding: 10px 5px 5px;
+    }
+
+div.info {
+	color: white;
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+	}
+
+div.navi_wrapper {
+	display: block;
+	float: left;
+	}
+
+div.navi2_img {
+	 border-right: 1px solid #0C4EA3;
+    float: left;
+    height: 27px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 4px;
+    width: 30px;
+	}
+	
+div.navi_link {
+	float: left;
+   margin-bottom: 0;
+   padding-left: 15px;
+   padding-top: 6px;
+	}
+	
+div.projet {
+	display:block;
+	float:left;
+	width:55%;
+}
+div.result {
+	display:block;
+	float:right;
+	width:40%;
+	padding-left:35px;
+	padding-top:10px;
+}
+
+div.result2 {
+	padding-bottom:35px;
+}
+
+div.wrapperDEP {
+	width:100%;
+	display:block;
+	float:left;
+	clear:both;
+	border: 0px black solid;
+	padding-left:15px;
+	padding-right:15px;
+	margin-right:15px;
+	padding-bottom:30px;
+}
+div.profil {
+	display:block;
+	float:left;
+	width:65%;
+	border: 0px red solid;
+	padding-top:0px;
+}
+div.dossiers {
+	display:block;
+	float:left;
+	width:20%;
+	border: 0px yellow solid;
+	padding-top:35px;
+}
+
+table.content2 {
+    border-spacing: 0px 0px;
+}
+
+table.content2 th{
+	border-bottom: 1px solid #eee;
+	padding-bottom:5px;
+	text-align:left;
+}
+
+table.content2 td{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+	padding-top:8px;
+	text-align:left;
+	vertical-align:top;
+	padding-left:10px;
+	padding-right:10px;
+
+}

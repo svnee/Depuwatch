@@ -1,12 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<div class="title">
+<div class="pointer_seancen"></div>
+<div class="content_wrapper">
+<div class="info">
 <a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@seance.session.start.strftime("%Y")}/#{@seance.session.end.strftime("%Y")}"%></span> 
 |
 <a href="<%= url_for @seance %>">S&eacute;ance</a>: <span class="bold"><%= @seance.start.strftime("%d/%m/%Y") %></span> de <%= @seance.start.strftime("%H:%M") %> jusqu'&agrave;
 <%= @seance.end.strftime("%H:%M") %>
 </div>
 
+<div class="content">
 <table class="content">
 	<tr>
 		<th style="width: 60px;"><img src="/images/dossiers.png" width="25" alt="dossiers"></th>
@@ -23,3 +24,4 @@
 	</tr>
 	<% end -%>
 </table>
+</div>

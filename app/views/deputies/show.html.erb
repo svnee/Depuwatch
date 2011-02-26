@@ -1,71 +1,74 @@
-<p id="notice"><%= notice %></p>
+<div class="pointer_deputeiert"></div>
+<div class="content_wrapper">
+<div class="info">
 
-<div class="title">
-<a href="/deputies">D&eacute;put&eacute;</a>: <span class="bold"><%= @deputy.name %></span> | Partei: <span class="bold"><%= @deputy.party.name %></span>
+<a href="/deputies">D&eacute;put&eacute;</a>: <%= @deputy.name %> | Partei: <%= @deputy.party.name %>
 </div>
 
-<div class="wrapperDEP">
+<div class="content">
 
-<div class="dossiers">
-<table class="content2">
-	<tr>
-		<th style="padding-right:15px; margin-left:10px; padding-left:10px;"
-><img src="/images/dossiers.png" width="25" alt="logo"></th>
-		<th>Vote</th>
-	</tr>
-	<% @deputy.votes.each do |v| -%>
-	<tr>
-		<td><%= link_to v.text.code, v.text %></td>
-		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-	</tr>
-	<% end -%>
-</table>
+<div class="wrapper_text"> 
+<div class="projet">
+<img src="/images/deputies/<%= @deputy.name %>.jpg">
 </div>
-<div class="profil">
-<span class="bold">Pr&eacute;sence lors des votes</span>: <%= number_to_percentage(@deputy.presence,:precision => 2) %><p>
-<div class="result2">
+
+<div class="result">
+
+	<div class="h2"><span class="h2">Numm: </span> <%= @deputy.name %></div>
+	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
+
+	<div class="h2"><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="http://www.politikercheck.lu/">Politikercheck.lu</a></div>
+
+</div>
+<div class="dossiers2"><div class="result2">
+<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %></div>
 	<% p, c, a = @deputy.split_votes -%>
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Pour:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Pour:</td>
 		<td style="width: 50px; text-align:left;"><%= p.count %></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Contre:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Contre:</td>
 		<td style="width: 50px; text-align:left;"><%= c.count %></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Abstentions:</td>
 		<td style="width: 50px; text-align:left;"><%= a.count %></td>
 	</tr>
 </table>
 <p>
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=240x30&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
+</div></div>
+
 </div>
 
-Ce d&eacute;put&eacute; a d&eacute;l&eacute;gu&eacute; sa voix lors des dossiers suivants:<p>
-<table class="content2" style="width:40%;">
+<div class="dossiers">
+<table class="content2">
 	<tr>
-		<th	style="padding-left:10px;"
-><img src="/images/dossiers.png" width="25" alt="logo"></th>
-		<th width="10px">Vote</th>
-		<th	style="padding-left:10px;">D&eacute;l&eacute;gu&eacute;</th>
-		<th width="10px">Vote</th>
+		<th><img width="25" alt="logo" src="/images/sessions.png"></th>
+		<th><img width="25" alt="logo" src="/images/seances_small.png"></th>
+		<th style="padding-right:15px; margin-left:10px; padding-left:10px;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
+		<th>Vote</th>
+		<th>Thema</th>
+		<th>Délégéierten</th>
 	</tr>
-	<% @deputy.delegations.each do |v| -%>
+	<% @deputy.votes.each do |v| -%>
 	<tr>
+	<th></th>
+		<th></th>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-		<td><%= v.delegate.name %></td>
-		<% z = Vote.find_by_text_id_and_deputy_id(v.text_id, v.delegate_id) -%>
-		<td style="background-color:<%= vote_to_color(z.vote) %>"></td>
+		<th></th>
+		<th></th>
 	</tr>
 	<% end -%>
 </table>
+</div>
+
 
 </div>
 
-</div>

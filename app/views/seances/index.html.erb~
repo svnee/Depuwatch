@@ -1,19 +1,13 @@
-<div class="pointer_seancen"></div>
-<div class="content_wrapper">
-<div class="info">
-	Seancen: Informatiounen zu den Seancen, waat en hei fënnt etc.
-</div>
-
-
+<div class="info">Sessiounen: Informatiounen zu den Sessiounen, waat en hei fënnt etc.</div>
 <div class="content">
 <table class="content">
   <tr>
     <th style="width: 110px;"><img src="/images/sessions.png" width="25" alt="logo"></th>
     <th style="width: 40px;">nr.</th>
-	<th style="width: 120px;"><img src="/images/seances_small.png" width="25" alt="logo"></th>
+	<th style="width: 120px;"><img src="/images/seances.png" width="25" alt="logo"></th>
 	<th style="width: 65px;">Ufank</th>
 	<th style="width: 85px;">Schluss</th>
-	<th style="text-align: left;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
+	<th style="text-align: left;"><img src="/images/dossiers.png" width="25" alt="logo"></th>
   </tr>
 
 <% @seances.each do |seance| %>
