@@ -13,5 +13,8 @@ class StaticController < ApplicationController
 
   def disclaimer
   end
+  
+  def index
+  end
 
 end

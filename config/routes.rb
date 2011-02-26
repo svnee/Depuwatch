@@ -1,15 +1,10 @@
 ChdTransparent::Application.routes.draw do
   match 'info' => 'static#info'
+  match 'index' => 'static#index'
   match 'faq' => 'static#faq'
   match 'contact' => 'static#contact'
   match 'license' => 'static#license'
   match 'disclaimer' => 'static#disclaimer'
-  
-  get "static/info"
-  get "static/faq"
-  get "static/contact"
-  get "static/license"
-  get "static/disclaimer"
 
   get "user_session/new"
 
@@ -80,7 +75,7 @@ ChdTransparent::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "static#index"
 
   # See how all your routes lay out with "rake routes"
 
