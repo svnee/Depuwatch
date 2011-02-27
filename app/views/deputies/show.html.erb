@@ -62,7 +62,7 @@
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
 		<th><%= v.text.topics_to_str.html_safe %></th>
-		<th><%= v.delegate.nil? ? "selwer ofgestëmmt" : link_to(v.delegate.name, v.delegate) %></th>
+		<th><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>
 </table>
