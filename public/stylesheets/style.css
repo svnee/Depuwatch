@@ -161,6 +161,18 @@ div.title1 {
     width: 530px;
 }
 
+div.title1 a {
+ color: #444444;
+    font-family: 'Crimson Text';
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #CDCDCD;
+}
+
+div.title1 a:hover {
+text-decoration: none;
+}
+
 div.title1_sub {
 display: block;
     float: left;
