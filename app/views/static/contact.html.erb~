@@ -1,4 +1,3 @@
-
 <div class="content_wrapper">
 <div class="info">Kontakt</div>
 
@@ -8,8 +7,10 @@
 
 <p><span class="h2">Politikercheck</span></p>
 
+<img align="right" width="220px" style="padding-right: 275px;" src="/images/logo politikercheck.jpg">
+
 <p><a href="http://www.politikercheck.lu">www.politikercheck.lu</a><br>
-<a href="mailto:info@politikercheck.lu">info@politikercheck.lu</a></p>
+<img align="absmiddle" height="14" src="/images/mail.gif"> <a href="mailto:info@politikercheck.lu">info@politikercheck.lu</a></p>
 
 Politikercheck Asbl<br>
 127 rue de hollerich<br>
@@ -23,10 +24,10 @@ Fax:(+352) 47 14 16<br>
 
 <p><span class="h2">Piratepartei Lëtzebuerg</span></p>
 
-<img align="right" width="250px" src="http://wiki.piratepartei.lu/images/7/72/PpLogo-ww-lb-web.png">
+<img align="right" width="250px" src="/images/PpLogo-ww-lb-web.png" style="padding-right: 275px;">
 
 <p><a href="http://www.piratepartei.lu">www.piratepartei.lu</a><br>
-<a href="mailto:ahoi@piratepartei.lu">ahoi@piratepartei.lu</a></p>
+<img align="absmiddle" height="14" src="/images/mail.gif"> <a href="mailto:ahoi@piratepartei.lu">ahoi@piratepartei.lu</a></p>
 
 c/o Sven Clement<br>
 1, Sonnestrooss<br>

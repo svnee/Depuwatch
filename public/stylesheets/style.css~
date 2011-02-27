@@ -352,14 +352,13 @@ min-height: 455px;
 }
 
 div.content_static {
-    background-color: white;
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
     display: block;
     float: left;
-    padding: 0 10px;
+    min-height: 200px;
+    padding-left: 10px;
     width: 765px;
-min-height: 200px;
-padding-left: 10px;
-border-bottom: 1px solid #EEEEEE;
 
 }
 
