@@ -48,20 +48,20 @@
 
 <table class="content">
 	<tr>
-		<th><img width="25" alt="logo" src="/images/sessions.png"></th>
-		<th><img width="25" alt="logo" src="/images/seances_small.png"></th>
-		<th style="margin-left:10px; padding-left:10px;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
+		<th width="130px"><img width="25" src="/images/sessions.png" alt="logo"></th>
+		<th width="130px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+		<th width="95px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
-		<th>Thema</th>
-		<th>Délégéierten</th>
+		<th class="vote_next">Thema</th>
+		<th width="130px">Délégéierten</th>
 	</tr>
 	<% @deputy.votes.each do |v| -%>
-	<tr>
+	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></th>
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-		<td><%= v.text.topics_to_str.html_safe %></th>
+		<td class="vote_next"><%= v.text.topics_to_str.html_safe %></th>
 		<td><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>

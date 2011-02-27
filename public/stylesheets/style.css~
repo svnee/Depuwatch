@@ -71,20 +71,23 @@ h3 {
 }
 
 table.content {
-   border-spacing: 0px 0px;
-	width:100%;
-	margin-top: 20px;
-	margin-bottom: 20px;
+border-spacing: 0;
+    margin: 15px;
+    width: 745px;
 }
 
 th.vote {
-	width: 26px;
+	width: 30px;
 	}
+	
+	th.vote_next {
+	padding-left: 75px
+	}
+
 
 table.content th{
 	border-bottom: 1px solid #eee;
-	padding-bottom:5px;
-	padding-left:10px;
+	padding-bottom:10px;
 	text-align:left;
 }
 
@@ -93,7 +96,6 @@ table.content td{
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 	padding-top:8px;
-	padding-left:20px;
 	text-align:left;
 	vertical-align:top;
 }
@@ -631,7 +633,6 @@ margin-left: 3px;
 th {
 	font-size: 12px;
     font-weight: bold;
-    padding-left: 10px;
     text-align: left;
     text-shadow: 2px 2px 3px #CDCDCD;
 	}
