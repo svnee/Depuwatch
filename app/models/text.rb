@@ -34,7 +34,7 @@ class Text < ActiveRecord::Base
   def topics_to_str
     str = ""
     topics.each do |t| 
-      str += "[<a href='/topics/#{t.id}'>#{t.name}</a>]"
+      str += "<a href='/topics/#{t.id}'>#{t.name}</a>"
     end
     
     str
