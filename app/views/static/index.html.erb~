@@ -2,9 +2,39 @@
 <div class="content_wrapper">
 <div class="info">Homepage</div>
 
-<div class="content">
+<div class="content_static">
+<p>Häerzlech wëllkomm op Depuwatch.lu, dem Internetportal dat dem interesséierte Bierger d'Ofstëmmungsverhaalen vun onsen Députéiert an der Chamber transparent an iwwersiichtlech duerstellt.</p></div>
 
-	<h1>Static#index</h1>
-	<p>Find me in app/views/static/index.html.erb</p>
+<div class="content_static">
+<table style="border: 0px solid red; width: 755px;">
+<tr>
+<td><img width="25" alt="sessions" src="/images/sessions.png" align="absmiddle"></td>
+<td><span class="h2"><a href="/sessions">Sessiounen</a></span></td>
+<td>Iwwerbléck vun de Sessiounen vun der Chamber ab 2009-2010.</td>
+</tr>
+<td><img width="25" alt="sessions" src="/images/seances_small.png" align="absmiddle"></td>
+<td><span class="h2"><a href="/seances">Séancen</a></span></td>
+<td> Séancen vun der Chamber, sortéiert no Datum an Auerzäit.</td>
+<tr>
+<td><img width="25" alt="sessions" src="/images/dossiers_small.png" align="absmiddle"></td>
+<td> <span class="h2"><a href="/texts">Dossieéen</a></span></td>
+<td>Iwwerbléck iwwer Dossiéeën, sortéiert no Nummer oder Thema.</td>
+</tr>
+<tr>
+<td><img width="25" alt="sessions" src="/images/deputes_small.png" align="absmiddle"></td>
+<td> <span class="h2"><a href="/deputies">Députéiert</a></span></td> 
+<td>Députéiert an der Chamber an hier Partei.</td>
+</tr>
+<tr>
+<td><img width="25" alt="sessions" src="/images/themen_small.png" align="absmiddle"></td>
+<td><span class="h2"><a href="/topics">Themen</a></span></td> 
+<td>Dossieéën, sortéiert no Thema.</td>
+</tr>
+</table>
+</div>
+
+<div class="content_static">
+<p>Eng Fro, e Kommentaire oder Kritik? <a href=/contact>Kontaktéiert ons!</a>.</p>
+</div>
 
 </div>
