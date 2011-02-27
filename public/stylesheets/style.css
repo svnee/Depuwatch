@@ -73,7 +73,13 @@ h3 {
 table.content {
    border-spacing: 0px 0px;
 	width:100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
+
+th.vote {
+	width: 26px;
+	}
 
 table.content th{
 	border-bottom: 1px solid #eee;
@@ -640,25 +646,4 @@ div.dossiers {
 div.dossiers2 {
     display: block;
     float: left;
-}
-
-table.content2 {
-    border-spacing: 0px 0px;
-}
-
-table.content2 th{
-	border-bottom: 1px solid #eee;
-	padding-bottom:5px;
-	text-align:left;
-}
-
-table.content2 td{
-	border-bottom: 1px solid #eee;
-	padding-bottom: 8px;
-	padding-top:8px;
-	text-align:left;
-	vertical-align:top;
-	padding-left:10px;
-	padding-right:10px;
-
 }
