@@ -351,6 +351,17 @@ div.content {
 min-height: 455px;
 }
 
+div.content_static {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    min-height: 200px;
+    padding-left: 10px;
+    width: 765px;
+
+}
+
 div.navi_item {
 	border-bottom: 2px solid #333;
    height: 31px;

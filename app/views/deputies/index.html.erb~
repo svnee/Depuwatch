@@ -1,0 +1,21 @@
+<div class="pointer_deputeiert"></div>
+<div class="content_wrapper">
+<div class="info">Deputéiert</div>
+
+<div class="content">
+
+<table class="content">
+	<tr>
+		<th style="width:225px;"><img src="/images/deputes.png" width="25" alt="députés"></th>
+		<th>Partei</th>
+	</tr>
+
+<% @deputies.each do |deputy| %>
+  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+    <td><%= link_to deputy.name, deputy %></td>
+    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>

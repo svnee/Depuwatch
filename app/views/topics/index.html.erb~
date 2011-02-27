@@ -1,12 +1,8 @@
-<div class="pointer_deputeiert"></div>
-<div class="content_wrapper">
-<div class="info">Themen</div>
+<h1>Listing topics</h1>
 
-<div class="content">
-
-<table class="content">
+<table>
   <tr>
-    <th>Numm</th>
+    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,4 +21,3 @@
 <br />
 
 <%= link_to 'New Topic', new_topic_path %>
-</div>
