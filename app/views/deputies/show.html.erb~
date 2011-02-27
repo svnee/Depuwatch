@@ -51,7 +51,7 @@
 		<th><img width="25" alt="logo" src="/images/sessions.png"></th>
 		<th><img width="25" alt="logo" src="/images/seances_small.png"></th>
 		<th style="padding-right:15px; margin-left:10px; padding-left:10px;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
-		<th>Vote</th>
+		<th class="vote">Vote</th>
 		<th>Thema</th>
 		<th>Délégéierten</th>
 	</tr>
