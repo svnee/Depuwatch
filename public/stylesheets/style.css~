@@ -80,8 +80,8 @@ th.vote {
 	width: 30px;
 	}
 	
-	th.vote_next {
-	padding-left: 75px
+	.vote_next {
+	padding-left: 55px
 	}
 
 
