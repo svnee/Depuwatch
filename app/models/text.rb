@@ -33,8 +33,11 @@ class Text < ActiveRecord::Base
   
   def topics_to_str
     str = ""
+    i = 1
     topics.each do |t| 
       str += "<a href='/topics/#{t.id}'>#{t.name}</a>"
+      str += ", " unless i >= topics.size
+      i += 1
     end
     
     str
