@@ -13,14 +13,16 @@
 		<th style="width: 50px;"><img width="25" src="/images/dossiers_small.png" alt="dossiers"></th>
 		<th style="width: 340px;">Titel</th>
 		<th style="width: 250px; padding-left: 30px;">Votes</th>
+		<th>Thema</th>
 	</tr>
 	<% @seance.texts.each do |t| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to t.code, t %></td>
 		<td><%= t.title %></td>
-		<td><img src="http://chart.apis.google.com/chart?cht=bhs&chs=240x30&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+		<td style=" padding-left: 30px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x20&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
 		<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %>
 		</td>
+		<td> </td>
 	</tr>
 	<% end -%>
 </table>

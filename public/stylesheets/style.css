@@ -535,15 +535,24 @@ width: 140px;
 div.projet1 {
 	display:block;
 	float:left;
-width: 434px;
+width: 510px;
+text-align: justify;
+padding-right: 55px;
+}
+
+div.result3 {
+	display: block;
+    float: left;
+    width: 22%;
+    padding-right: 0px;
 }
 
 div.result {
 	display: block;
     float: left;
-    padding-left: 15px;
-    width: 40%;
-    padding-right: 10px;
+    width: 43%;
+    padding-right: 35px;
+        padding-left: 15px;
 }
 
 div.LSAP {

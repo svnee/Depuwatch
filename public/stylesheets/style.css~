@@ -92,7 +92,7 @@ table.content td{
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 	padding-top:8px;
-	text-align:left;
+	text-align:justify;
 	vertical-align:top;
 }
 
@@ -535,15 +535,16 @@ width: 140px;
 div.projet1 {
 	display:block;
 	float:left;
-width: 434px;
+width: 510px;
+text-align: justify;
+padding-right: 55px;
 }
 
 div.result {
 	display: block;
     float: left;
-    padding-left: 15px;
-    width: 40%;
-    padding-right: 10px;
+    width: 22%;
+    padding-right: 0px;
 }
 
 div.LSAP {
