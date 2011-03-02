@@ -172,8 +172,7 @@ text-decoration: none;
 }
 
 div.title1_sub {
-display: block;
-    float: left;
+
     font-family: 'Crimson Text';
     font-size: 17px;
     margin-left: 103px;
@@ -181,6 +180,7 @@ display: block;
     text-shadow: 2px 2px 3px #CDCDCD;
     top: -17px;
     width: 476px;
+    left:50px;
 }
 
 div.navi {

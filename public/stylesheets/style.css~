@@ -540,11 +540,19 @@ text-align: justify;
 padding-right: 55px;
 }
 
-div.result {
+div.result3 {
 	display: block;
     float: left;
     width: 22%;
     padding-right: 0px;
+}
+
+div.result {
+	display: block;
+    float: left;
+    width: 43%;
+    padding-right: 35px;
+        padding-left: 15px;
 }
 
 div.LSAP {
