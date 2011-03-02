@@ -41,7 +41,7 @@
 	</tr>
 </table>
 <p>
-<img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=240x30&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
+<img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div></div>
 
 </div>
@@ -61,7 +61,7 @@
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-		<td style="padding-left: 50px"><%= v.text.topics_to_str.html_safe %></th>
+		<td style="padding-left: 50px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
 		<td><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>

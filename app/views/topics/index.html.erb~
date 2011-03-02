@@ -1,15 +1,19 @@
-<h1>Listing topics</h1>
+<div class="pointer_deputeiert"></div>
+<div class="content_wrapper">
+<div class="info">Themen</div>
 
-<table>
+<div class="content">
+
+<table class="content">
   <tr>
-    <th>Name</th>
+    <th>Numm</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @topics.each do |topic| %>
-  <tr>
+  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= topic.name %></td>
     <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
@@ -21,3 +25,4 @@
 <br />
 
 <%= link_to 'New Topic', new_topic_path %>
+</div>

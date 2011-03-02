@@ -8,16 +8,18 @@
 <div class="content">
 <table class="content">
 <tr>
-	<th width="80px">Dossier</th>
-	<th>Titel</th>
-	<th width="220px" style="padding-left: 25px;">Themen</th>
+	<th width="60px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
+		<th>Titel</th>
+	<th width="75px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+	<th width="185px" style="padding-left: 25px;">Themen</th>
 </tr>
 
 <% @texts.each do |text| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to text.code, text %></td>
+		<td>datum</td>
 		<td><%= text.title %></td>
-		<td style="padding-left: 25px;"><%= text.topics_to_str.html_safe %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= text.topics_to_str.html_safe %></td>
   </tr>
 <% end %>
 </table>
