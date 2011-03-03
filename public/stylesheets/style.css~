@@ -233,18 +233,18 @@ div.pointer_themen {
 border-color: transparent transparent #333;
     border-style: solid;
     border-width: 16px;
-    left: 612px;
+    left: 895px;
     position: relative;
-    top: 136px;
+    top: 33px;
     width: 0;
 	}
 div.pointer_seancen {
 border-color: transparent transparent #333;
     border-style: solid;
     border-width: 13px;
-    left: 418px;
+    left: 413px;
     position: relative;
-    top: 136px;
+    top: 33px;
     width: 0;
 	}
 	
@@ -254,7 +254,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 575px;
     position: relative;
-    top: 136px;
+    top: 33px;
     width: 0;
 	}
 	
@@ -262,9 +262,9 @@ border-color: transparent transparent #333;
 border-color: transparent transparent #333;
     border-style: solid;
     border-width: 13px;
-    left: 733px;
+    left: 734px;
     position: relative;
-    top: 136px;
+    top: 33px;
     width: 0;
 
 	}
@@ -273,9 +273,9 @@ border-color: transparent transparent #333;
 border-color: transparent transparent #333;
     border-style: solid;
     border-width: 13px;
-    left: 256px;
+    left: 255px;
     position: relative;
-    top: 136px;
+    top: 33px;
     width: 0;
 	}
 
