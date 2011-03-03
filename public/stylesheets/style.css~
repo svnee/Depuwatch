@@ -175,7 +175,7 @@ div.title1_sub {
 
     font-family: 'Crimson Text';
     font-size: 17px;
-    margin-left: 103px;
+    margin-left: 185px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
     top: -17px;

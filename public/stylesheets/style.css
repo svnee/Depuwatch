@@ -371,6 +371,17 @@ div.content_static {
 
 }
 
+div.content_static2 {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    width: 765px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
 div.navi_item {
 	border-bottom: 2px solid #333;
    height: 31px;
