@@ -55,7 +55,9 @@
 			<ul id="votes">
 				<% @text.votes_pour.each do |v| -%>
 
-					<li><%= link_to v.deputy.name, v.deputy %> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div> </li>
+					<li><table>
+<tbody><tr><td width="165px"><%= link_to v.deputy.name, v.deputy %></td><td> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+</tbody></table> </li>
 
 				<% end -%>
 			</ul>
@@ -64,7 +66,9 @@
 			<ul id="votes">
 				<% @text.votes_contre.each do |v| -%>
 
-					<li> <%= link_to v.deputy.name, v.deputy %> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></li>
+					<li> <table>
+<tbody><tr><td width="165px"><%= link_to v.deputy.name, v.deputy %> </td><td><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+</tbody></table></li>
 
 				<% end -%>
 			</ul>
@@ -73,7 +77,9 @@
 			<ul id="votes">
 				<% @text.abstentions.each do |v| -%>
 
-					<li> <%= link_to v.deputy.name, v.deputy %> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></li>
+					<li> <table>
+<tbody><tr><td width="165px"><%= link_to v.deputy.name, v.deputy %> </td><td><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+</tbody></table></li>
 
 				<% end -%>
 			</ul>
