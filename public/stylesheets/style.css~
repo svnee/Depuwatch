@@ -368,7 +368,6 @@ div.content_static {
     float: left;
     padding-left: 10px;
     width: 765px;
-padding-bottom: 10px;
 }
 
 div.content_static2 {
