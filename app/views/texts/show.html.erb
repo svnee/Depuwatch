@@ -55,7 +55,7 @@
 			<ul id="votes">
 				<% @text.votes_pour.each do |v| -%>
 
-					<li><div class="<%= v.deputy.party.name %>"> </div><%= link_to v.deputy.name, v.deputy %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+					<li><div class="<%= v.deputy.party.name %>"> </div><%= link_to v.deputy.name, v.deputy %> (<%= v.deputy.party.name %>) <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
 
 				<% end -%>
 			</ul>
@@ -64,7 +64,7 @@
 			<ul id="votes">
 				<% @text.votes_contre.each do |v| -%>
 
-					<li><div class="<%= v.deputy.party.name %>"></div> <%= link_to v.deputy.name, v.deputy %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+					<li><div class="<%= v.deputy.party.name %>"></div> <%= link_to v.deputy.name, v.deputy %> (<%= v.deputy.party.name %>) <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
 
 				<% end -%>
 			</ul>
@@ -73,7 +73,7 @@
 			<ul id="votes">
 				<% @text.abstentions.each do |v| -%>
 
-					<li><div class="<%= v.deputy.party.name %>"></div> <%= link_to v.deputy.name, v.deputy %> <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
+					<li><div class="<%= v.deputy.party.name %>"></div> <%= link_to v.deputy.name, v.deputy %> (<%= v.deputy.party.name %>) <%= "[Par: #{v.delegate.name}]" if !v.delegate.nil? %></li>
 
 				<% end -%>
 			</ul>
