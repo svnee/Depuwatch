@@ -1,8 +1,8 @@
 
 <div class="content_wrapper">
-<div class="info">Disclaimer</div>
+<div class="info"><a href="/disclaimer">Disclaimer</a></div>
 
-<div class="content">
+<div class="content_static">
 
 	<h1>Static#disclaimer</h1>
 	<p>Find me in app/views/static/disclaimer.html.erb</p>
