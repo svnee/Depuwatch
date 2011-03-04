@@ -61,8 +61,8 @@
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-		<td style="padding-left: 45px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
-		<td><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
+		<td style="padding-left: 35px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
+		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>
 </table>
