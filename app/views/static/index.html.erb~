@@ -7,8 +7,8 @@
 
 <!-- RECENT VOTES <div class="recent"> INSERT HERE </div> RECENT VOTES -->
 
-<div class="content_static">
-<table style="border: 0px solid red; width: 755px;">
+<div class="content_static2">
+<table style="border: 0px solid red; width: 755px; border-spacing: 5px;">
 <tr>
 <td><img width="25" alt="sessions" src="/images/sessions.png" align="absmiddle"></td>
 <td><span class="h2"><a href="/sessions">Sessiounen</a></span></td>
@@ -36,5 +36,25 @@
 </div>
 
 <div class="content_static">
-<p>Eng Fro, e Kommentaire oder Kritik? <a href=/contact>Kontaktéiert ons!</a>.</p>
+<p>Dei aktuellsten Dossiéeën:</p>
+<table class="content">
+<tr>
+	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
+	<th width="80px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+	<th>Titel</th>
+	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
+</tr>
+
+<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		<td style="padding-left: 25px; text-align: left;"> </td>
+</tr>
+
+</table>
+</div>
+
+<div class="content_static">
+<p>Eng Fro, e Kommentaire oder Kritik? <a href=/contact>Kontaktéiert ons</a>!</p>
 </div>

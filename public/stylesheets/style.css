@@ -172,7 +172,7 @@ text-decoration: none;
 }
 
 div.title1_sub {
-
+	color: #734347;
     font-family: 'Crimson Text';
     font-size: 17px;
     margin-left: 185px;
@@ -368,7 +368,6 @@ div.content_static {
     float: left;
     padding-left: 10px;
     width: 765px;
-
 }
 
 div.content_static2 {
