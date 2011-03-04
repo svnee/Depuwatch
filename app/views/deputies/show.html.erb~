@@ -52,7 +52,7 @@
 		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
 		<th width="70px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
-		<th style="padding-left: 35px">Thema</th>
+		<th style="padding-left: 35px"><img width="25" alt="logo" src="/images/topics.png"></th>
 		<th style="padding-left: 10px" width="105px">Délégéierten</th>
 	</tr>
 	<% @deputy.votes.each do |v| -%>
@@ -61,8 +61,8 @@
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
-		<td style="padding-left: 45px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
-		<td><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
+		<td style="padding-left: 35px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
+		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>
 </table>
