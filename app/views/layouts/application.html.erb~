@@ -19,7 +19,7 @@
 		<div class="navi_item"><div class="navi_img"><img src="/images/seances_small.png" width="25" alt="séances"></div><div class="navi_link"><a href="<%= url_for :controller => :seances %>">  S&eacute;ancen</a></div></div>
 		<div class="navi_item"><div class="navi_img"><img src="/images/dossiers_small.png" width="25" alt="dossiers"></div><div class="navi_link"><a href="<%= url_for :controller => :texts %>"> Dossie&eacute;en</a></div></div>
 		<div class="navi_item"><div class="navi_img"><img src="/images/deputes_small.png" width="25" alt="députés"></div><div class="navi_link"><a href="<%= url_for :controller => :deputies %>">  D&eacute;put&eacute;iert</a></div></div>
-		<div class="navi_item"><div class="navi_img"><img src="/images/themen_small.png" width="25" alt="themen"></div><div class="navi_link"><a href="<%= url_for :controller => :topics %>">  Themen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><img src="/images/topics.png" width="25" alt="themen"></div><div class="navi_link"><a href="<%= url_for :controller => :topics %>">  Themen</a></div></div>
 </div>
 
 <div class="navi2">
