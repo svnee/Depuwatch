@@ -56,7 +56,7 @@
 				<% @text.votes_pour.each do |v| -%>
 
 					<li><table>
-<tbody><tr><td width="160px" style="border-bottom:00px solid red"><%= link_to v.deputy.name, v.deputy %></td><td> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+<tbody><tr><td width="150px" style="border-bottom:0px solid red; padding: 0px;"><%= link_to v.deputy.name, v.deputy %></td><td style="border-bottom:0px solid red; padding: 0px;"> <div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
 </tbody></table> </li>
 
 				<% end -%>
@@ -67,7 +67,7 @@
 				<% @text.votes_contre.each do |v| -%>
 
 					<li> <table>
-<tbody><tr><td width="160px" style="border-bottom:00px solid red"><%= link_to v.deputy.name, v.deputy %> </td><td><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+<tbody><tr><td width="150px" style="border-bottom:0px solid red; padding: 0px;"><%= link_to v.deputy.name, v.deputy %> </td><td style="border-bottom:0px solid red; padding: 0px;"><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
 </tbody></table></li>
 
 				<% end -%>
@@ -78,7 +78,7 @@
 				<% @text.abstentions.each do |v| -%>
 
 					<li> <table>
-<tbody><tr><td width="160px" style="border-bottom:00px solid red"><%= link_to v.deputy.name, v.deputy %> </td><td><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+<tbody><tr><td width="150px" style="border-bottom:0px solid red; padding: 0px;"><%= link_to v.deputy.name, v.deputy %> </td><td style="border-bottom:0px solid red; padding-: 0px;"><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
 </tbody></table></li>
 
 				<% end -%>
