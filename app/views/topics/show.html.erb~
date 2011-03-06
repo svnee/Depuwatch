@@ -6,10 +6,10 @@
 <div class="content">
 	<table class="content">
 	  <tr>
-	    <th>Séance</th>
-	    <th>Dossier</th>
-			<th>Titel</th>
-			<th>Vote</th>
+	    <th style="width: 80px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
+	    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
+		 <th style="width: 350px;"> </th>
+		 <th style="width: 250px; padding-left: 30px;">Vote</th>
 	  </tr>
 		
 		<% @topic.texts.each do |t| -%>
@@ -17,7 +17,7 @@
 			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
 			<td><%= link_to t.code, t %></td>
 			<td><%= t.title %></td>
-			<td>
+			<td style="padding-left: 30px;">
 				<table>
 				<tr>
 					<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
