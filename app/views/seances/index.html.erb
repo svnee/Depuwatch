@@ -20,9 +20,9 @@
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= link_to "#{seance.session.start.strftime("%Y")}/#{seance.session.end.strftime("%Y")}", seance.session %></td>
     <td><%= link_to seance.nr, seance %></td>
-	<td><%= seance.start.strftime("%d/%m/%Y") %></td>
-    <td><%= seance.start.strftime("%H:%M") %></td>
-    <td><%= seance.end.strftime("%H:%M") %></td>
+	<td><%= link_to seance.start.strftime("%d/%m/%Y"), seance %></td>
+    <td><%= link_to seance.start.strftime("%H:%M"), seance %></td>
+    <td><%= link_to seance.end.strftime("%H:%M"), seance %></td>
 	<td>
 		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
