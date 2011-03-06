@@ -27,7 +27,7 @@
 		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
 			<%= link_to t.code, t %>
-			<%= ", " unless i >= seances.texts.size %>
+			<%= ", " unless i >= seance.texts.size %>
 			<% i += 1 %>
 		<% end -%>
 	</td>
