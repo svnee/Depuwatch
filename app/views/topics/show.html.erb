@@ -4,16 +4,39 @@
 
 
 <div class="content">
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @topic.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
-
+	<table class="content">
+	  <tr>
+	    <th>Séance</th>
+	    <th>Dossier</th>
+			<th>Titel</th>
+			<th>Vote</th>
+	  </tr>
+		
+		<% @topic.texts.each do |t| -%>
+		<tr>
+			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+			<td><%= link_to t.code, t %></td>
+			<td><%= t.title %></td>
+			<td>
+				<table>
+				<tr>
+					<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
+			        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Pour:</td>
+					<td style="width: 50px; text-align:left;"><%= t.votes_pour.count %></td>
+				</tr>
+			    <tr>
+					<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
+			        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Contre:</td>
+					<td style="width: 50px; text-align:left;"><%= t.votes_contre.count %></td>
+				</tr>
+				 <tr>
+					<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
+			        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
+					<td style="width: 50px; text-align:left;"><%= t.abstentions.count %></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<% end -%>
+	</table>
 </div>
