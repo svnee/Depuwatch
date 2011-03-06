@@ -15,6 +15,7 @@ class StaticController < ApplicationController
   end
   
   def index
+    @dossiers = Text.limit(5).order("updated_at")
   end
 
 end

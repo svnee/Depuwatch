@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110226150756) do
+ActiveRecord::Schema.define(:version => 20110306113621) do
 
   create_table "deputies", :force => true do |t|
     t.string  "name"
@@ -44,10 +44,11 @@ ActiveRecord::Schema.define(:version => 20110226150756) do
   end
 
   create_table "texts", :force => true do |t|
-    t.string  "code"
-    t.string  "title"
-    t.string  "link_memorial"
-    t.integer "seance_id"
+    t.string   "code"
+    t.string   "title"
+    t.string   "link_memorial"
+    t.integer  "seance_id"
+    t.datetime "updated_at"
   end
 
   create_table "topics", :force => true do |t|

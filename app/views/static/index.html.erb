@@ -42,13 +42,14 @@
 	<th>Titel</th>
 	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
 </tr>
-
+<% @dossiers.each do |t| -%>
 <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td> </td>
-		<td> </td>
-		<td> </td>
-		<td style="padding-left: 25px; text-align: left;"> </td>
+		<td><%= link_to t.code, t%></td>
+		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
 </tr>
+<% end -%>
 
 </table>
 </div>
