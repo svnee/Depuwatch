@@ -24,8 +24,11 @@
     <td><%= seance.start.strftime("%H:%M") %></td>
     <td><%= seance.end.strftime("%H:%M") %></td>
 	<td>
+		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
-			<%= link_to "[#{t.code}] ", t %>
+			<%= link_to t.code, t %>
+			<%= ", " unless i >= seances.texts.size %>
+			<% i += 1 %>
 		<% end -%>
 	</td>
   </tr>

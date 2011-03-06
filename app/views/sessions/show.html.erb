@@ -17,14 +17,17 @@
 	<% @session.seances.each do |s| -%>
 	<tr onmouseover="style.backgroundColor='#eee';"
 onmouseout="style.backgroundColor='#fff'">
-		<td><%= link_to "[#{s.nr}]", s %></td>
+		<td><%= link_to s.nr, s %></td>
 		<td><%= link_to s.start.strftime("%d/%m/%Y"), s %></td>
 		<td><%= s.start.strftime("%H:%M") %></td>
 		<td><%= s.end.strftime("%H:%M") %></td>
 		<td><%= duration(s.start, s.end) %></td>
 		<td>
+			<% i = 1 %>
 			<% s.texts.each do |t| -%>
-				<%= link_to "[#{t.code}] ", t %>
+				<%= link_to t.code, t %>
+				<%= ", " unless i >= s.texts.size %>
+				<% i += 1 %>
 			<% end -%>
 		</td>
 	</tr>
