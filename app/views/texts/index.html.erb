@@ -17,7 +17,7 @@
 <% @texts.each do |text| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to text.code, text %></td>
-		<td>datum</td>
+		<td><%= link_to "#{text.seance.start.strftime("%d/%m/%Y")}", text %></td>
 		<td><%= text.title %></td>
 		<td style="padding-left: 25px; text-align: left;"><%= text.topics_to_str.html_safe %></td>
   </tr>
