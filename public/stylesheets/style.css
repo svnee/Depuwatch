@@ -385,7 +385,9 @@ div.content_static {
     display: block;
     float: left;
     padding-left: 10px;
-    width: 765px;
+    padding-left: 10px;
+    width: 755px;
+    text-align: justify;
 }
 
 div.content_static2 {
