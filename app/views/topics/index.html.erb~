@@ -6,25 +6,26 @@
 
 <table class="content">
   <tr>
-    <th>Thema</th>
+    <th><img width="25" alt="logo" src="/images/topics.png"></th>
     <th><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @topics.each do |topic| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-    <td><%= topic.name %></td>
-     <td> </td>
-    <td><%= link_to 'Show', topic %></td>
-    <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to topic.name, topic %></td>
+    <td>
+    	<% 	
+					i = 1
+					topic.texts.each do |t| 
+			-%>
+				<%= link_to t.code, t %>
+				<%= ", " unless i >= topic.texts.size %>
+			<%
+					i += 1
+					end
+			%>
+    </td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Topic', new_topic_path %>
 </div>

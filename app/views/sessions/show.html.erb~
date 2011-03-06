@@ -7,11 +7,11 @@
 <div class="content">
 <table class="content">
 	<tr>
-		<th style="width: 60px; text-align: left;">nr.</th>
-		<th style="width: 125px; text-align: left;"><img src="/images/seances_small.png" width="25" alt="logo"></th>
-		<th style="width: 50px; text-align: left;">Start</th>
-		<th style="width: 90px; text-align: left;">End</th>
-		<th style="width: 100px; text-align: left;">Dauer</th>
+		<th style="width: 45px; text-align: left;">Séance Nr.</th>
+		<th style="width: 150px; text-align: left;"><img src="/images/seances_small.png" width="25" alt="logo"></th>
+		<th style="width: 100px; text-align: left;">Start</th>
+		<th style="width: 100px; text-align: left;">End</th>
+		<th style="width: 35px; text-align: left;">Dauer</th>
 		<th style="text-align: left;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
 	</tr>
 	<% @session.seances.each do |s| -%>

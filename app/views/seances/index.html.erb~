@@ -1,7 +1,7 @@
 <div class="pointer_seancen"></div>
 <div class="content_wrapper">
 <div class="info">
-	Seancen: Informatiounen zu den Seancen, waat en hei fënnt etc.
+	<a href="/seances">Séancen</a>: Séancen vun der Chamber, sortéiert no Datum an Auerzäit.
 </div>
 
 
@@ -20,12 +20,15 @@
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= link_to "#{seance.session.start.strftime("%Y")}/#{seance.session.end.strftime("%Y")}", seance.session %></td>
     <td><%= link_to seance.nr, seance %></td>
-	<td><%= seance.start.strftime("%d/%m/%Y") %></td>
-    <td><%= seance.start.strftime("%H:%M") %></td>
-    <td><%= seance.end.strftime("%H:%M") %></td>
+	<td><%= link_to seance.start.strftime("%d/%m/%Y"), seance %></td>
+    <td><%= link_to seance.start.strftime("%H:%M"), seance %></td>
+    <td><%= link_to seance.end.strftime("%H:%M"), seance %></td>
 	<td>
+		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
-			<%= link_to "[#{t.code}] ", t %>
+			<%= link_to t.code, t %>
+			<%= ", " unless i >= seance.texts.size %>
+			<% i += 1 %>
 		<% end -%>
 	</td>
   </tr>

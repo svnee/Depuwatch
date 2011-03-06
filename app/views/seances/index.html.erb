@@ -11,7 +11,7 @@
    <th width="110px"><img width="25" alt="logo" src="/images/sessions.png"></th>
     <th width="65p;">nr.</th>
 	<th width="110px"><img width="25" alt="logo" src="/images/seances_small.png"></th>
-	<th width="66px">Ufank</th>
+	<th width="60px">Ufank</th>
 	<th width="85px" >Schluss</th>
 	<th<img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 </tr>
@@ -21,8 +21,8 @@
     <td><%= link_to "#{seance.session.start.strftime("%Y")}/#{seance.session.end.strftime("%Y")}", seance.session %></td>
     <td><%= link_to seance.nr, seance %></td>
 	<td><%= link_to seance.start.strftime("%d/%m/%Y"), seance %></td>
-    <td><%= link_to seance.start.strftime("%H:%M"), seance %></td>
-    <td><%= link_to seance.end.strftime("%H:%M"), seance %></td>
+    <td><%= s.start.strftime("%H:%M") %></td>
+    <td><%= s.end.strftime("%H:%M") %></td>
 	<td>
 		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
