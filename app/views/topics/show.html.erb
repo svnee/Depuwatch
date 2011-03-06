@@ -1,6 +1,6 @@
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
-<div class="info"><%= @topic.name %></div>
+<div class="info"><a href="/topics">Thema</a>: <span class="bold"><%= @topic.name %></div></span> 
 
 
 <div class="content">
@@ -9,12 +9,12 @@
 	    <th style="width: 80px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
 	    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
 		 <th style="width: 350px;"> </th>
-		 <th style="width: 250px; padding-left: 30px;">Vote</th>
+		 <th style="width: 150px; padding-left: 30px;">Vote</th>
 	  </tr>
 		
 		<% @topic.texts.each do |t| -%>
-		<tr>
-			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+		<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
+			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
 			<td><%= link_to t.code, t %></td>
 			<td><%= t.title %></td>
 			<td style="padding-left: 30px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
