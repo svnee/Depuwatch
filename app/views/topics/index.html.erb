@@ -12,7 +12,7 @@
 
 <% @topics.each do |topic| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-    <td><%= link_to topic.name, t %></td>
+    <td><%= link_to topic.name, topic %></td>
     <td>
     	<% 	
 					i = 1
