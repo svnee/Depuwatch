@@ -42,13 +42,14 @@
 	<th>Titel</th>
 	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
 </tr>
-
+<% @dossiers.each do |t| -%>
 <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td> </td>
-		<td> </td>
-		<td> </td>
-		<td style="padding-left: 25px; text-align: left;"> </td>
+		<td><%= link_to t.code, t%></td>
+		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
 </tr>
+<% end -%>
 
 </table>
 </div>
@@ -56,15 +57,15 @@
 <div class="content_static">
 <table style="padding: 15px 0px" cellspacing="5px">
 <tr>
-<td  style="text-align:right;"><a href="/info"><span class="h2">Iwwer de Projet</span></a> </td>
-<td  style="padding-left: 15px">Waat ass Dépuwatch, wou kommen d'Donnéeën hier, wien ass den Entwéckler? Wéider Informatiounen zum Projet.</td>
+<td valign="top"  style="text-align:right;"><a href="/info"><span class="h2">Iwwer de Projet</span></a> </td>
+<td  style="padding-left: 15px">Waat ass Dépuwatch, wou kommen d'Donnéeën hier, wien sinn d'Entwéckler? Wéider Informatiounen zum Projet.</td>
 </tr>
 <tr>
-<td  style="text-align:right;"><a href="faq"><span class="h2">F.A.Q.</span></a> </td>
+<td valign="top"  style="text-align:right;"><a href="faq"><span class="h2">F.A.Q.</span></a> </td>
 <td style="padding-left: 15px">Äntwerten op déi heefegst gestallte Froen zu Dépuwatch.</td>
 </tr>
 <tr>
-<td style="text-align:right;"><a href="/contact"><span class="h2">Kontaktéiert ons!</span></a></td>
+<td valign="top"  style="text-align:right;"><a href="/contact"><span class="h2">Kontakt</span></a></td>
 <td style="padding-left: 15px">Eng Fro, e Kommentaire oder Kritik?</td>
 </tr>
 </table>

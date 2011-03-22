@@ -82,6 +82,13 @@ border-spacing: 0;
     width: 745px;
 }
 
+
+table.content_index {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 755px;
+}
+
 th.vote {
 	width: 30px;
 	}
@@ -385,7 +392,9 @@ div.content_static {
     display: block;
     float: left;
     padding-left: 10px;
-    width: 765px;
+    padding-left: 10px;
+    width: 755px;
+    text-align: justify;
 }
 
 div.content_static2 {

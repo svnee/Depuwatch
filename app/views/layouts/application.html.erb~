@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dépuwatch - kuck dengen Députéiert of d'Fanger!</title>
+  <title>Depuwatch - Ofstëmmungen aus der Chambre des Députés</title>
   <%= stylesheet_link_tag "style.css" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -11,7 +11,7 @@
 <div class="wrapper">
 <div class="header"></div>
 <div class="logo"> <a style="display: block; height: 103px; width: 127;" href="/"> </a></div>
-<div class="title1"><a href="/">Dépuwatch</a></div>
+<div class="title1"><a href="/">Depuwatch</a></div>
 <div class="title1_sub">Ofstëmmungen aus der Chambre des Députés</div>
 <div class="header_top"><!--<a href="/lu"><img src="http://piratepartei.lu/misc/images/LU-flag.png" alt="LU" width="16"></a> <a href="/fr"><img src="http://piratepartei.lu/misc/images/FR-flag.png" alt="FR" width="16"></a> <a href="/de"><img src="http://piratepartei.lu/misc/images/DE-flag.png" alt="DE" width="16"></a>--></div>
 <div class="navi">
@@ -23,7 +23,7 @@
 </div>
 
 <div class="navi2">
-<div class="intro">Wéi stëmmen Députéiert of? Fann et raus!</div>
+<div class="intro">Wéi stëmmen Deputéiert of? Fannt et raus!</div>
 		<div class="navi2_item"><div class="navi2_img">!</div><div class="navi2_link"><a href="/info">Iwwer de Projet</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">?</div><div class="navi2_link"><a href="/faq">F.A.Q.</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">@</div><div class="navi2_link"><a href="/contact">Kontakt</a></div></div>
@@ -35,7 +35,7 @@
 			<li><a href="http://chd.lu/">Chamber.lu</a></li>
 		</ul>
 		<hr>
-		<h2>Dépuwatch Partner</h2>
+		<h2>Depuwatch Partner</h2>
 		<ul>
 			<li><a href="http://www.politikercheck.lu">Politikercheck.lu</a></li>
 			<li><a href="http://www.piratepartei.lu">Piratepartei Lëtzebuerg</a></li>

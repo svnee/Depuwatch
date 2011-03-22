@@ -23,7 +23,26 @@
 </div>
 
 <div class="navi2">
-<div class="intro">Wéi stëmmen Deputéiert of? Fannt et raus!</div>
+<div class="intro">
+<table class="content_index">
+<tr>
+	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
+	<th width="80px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+	<th>Titel</th>
+	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
+</tr>
+<% @dossiers.each do |t| -%>
+<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to t.code, t%></td>
+		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
+</tr>
+<% end -%>
+
+</table>
+
+</div></div>
 		<div class="navi2_item"><div class="navi2_img">!</div><div class="navi2_link"><a href="/info">Iwwer de Projet</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">?</div><div class="navi2_link"><a href="/faq">F.A.Q.</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">@</div><div class="navi2_link"><a href="/contact">Kontakt</a></div></div>
