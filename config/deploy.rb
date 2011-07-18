@@ -8,6 +8,8 @@ role :web, "depuwatch.sven.lu"                          # Your HTTP server, Apac
 role :app, "depuwatch.sven.lu"                          # This may be the same as your `Web` server
 role :db,  "depuwatch.sven.lu", :primary => true # This is where Rails migrations will run
 
+set :port, 5643
+
 set :user, "chd"
 set :deploy_to, "/home/chd"
 set :use_sudo, false
