@@ -94,7 +94,7 @@ th.vote {
 	}
 	
 
-table.content th{
+table.content th, table.content_index th {
 	border-bottom: 1px solid #eee;
 	padding-bottom:10px;
 	text-align:left;
