@@ -101,7 +101,7 @@ table.content th, table.content_index th {
 }
 
 
-table.content td{
+table.content td, table.content_index td {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 	padding-top:8px;
