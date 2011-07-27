@@ -514,7 +514,8 @@ div.info {
 background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 0 transparent;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e1e1e1'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#e1e1e1)); /* for webkit browsers */
-
+width: 763px;
+float: left;
 	}
 div.info a {
 	color: #555;

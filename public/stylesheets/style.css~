@@ -87,6 +87,7 @@ table.content_index {
     margin-bottom: 15px;
     margin-top: 15px;
     width: 755px;
+    border-spacing: 0px;
 }
 
 th.vote {
