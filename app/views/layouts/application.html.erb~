@@ -9,12 +9,12 @@
 </head>
 <body>
 <div class="wrapper">
-<div class="header"></div>
-<div class="logo"> <a style="display: block; height: 103px; width: 127;" href="/"> </a></div>
-<div class="title1"><a href="/">Depuwatch</a></div>
-<div class="title1_sub">Ofstëmmungen aus der Chambre des Députés</div>
-<div class="header_top"><!--<a href="/lu"><img src="http://piratepartei.lu/misc/images/LU-flag.png" alt="LU" width="16"></a> <a href="/fr"><img src="http://piratepartei.lu/misc/images/FR-flag.png" alt="FR" width="16"></a> <a href="/de"><img src="http://piratepartei.lu/misc/images/DE-flag.png" alt="DE" width="16"></a>--></div>
-<div class="navi">
+	<div class="header"></div>
+	<div class="logo"> <a style="display: block; height: 103px; width: 127;" href="/"> </a></div>
+	<div class="title1"><a href="/">Depuwatch</a></div>
+	<div class="title1_sub">Ofstëmmungen aus der Chambre des Députés</div>
+	<div class="header_top"><!--<a href="/lu"><img src="http://piratepartei.lu/misc/images/LU-flag.png" alt="LU" width="16"></a> <a href="/fr"><img src="http://piratepartei.lu/misc/images/FR-flag.png" alt="FR" width="16"></a> <a href="/de"><img src="http://piratepartei.lu/misc/images/DE-flag.png" alt="DE" width="16"></a>--></div>
+	<div class="navi">
 		<div class="navi_item"><div class="navi_img"><img src="/images/sessions.png" width="25" alt="sessions"></div><div class="navi_link"><a href="<%= url_for :controller => :sessions %>">Sessiounen</a></div></div>
 		<div class="navi_item"><div class="navi_img"><img src="/images/seances_small.png" width="25" alt="séances"></div><div class="navi_link"><a href="<%= url_for :controller => :seances %>">  S&eacute;ancen</a></div></div>
 		<div class="navi_item"><div class="navi_img"><img src="/images/dossiers_small.png" width="25" alt="dossiers"></div><div class="navi_link"><a href="<%= url_for :controller => :texts %>"> Dossie&eacute;en</a></div></div>
@@ -22,36 +22,17 @@
 		<div class="navi_item"><div class="navi_img"><img src="/images/topics.png" width="25" alt="themen"></div><div class="navi_link"><a href="<%= url_for :controller => :topics %>">  Themen</a></div></div>
 </div>
 
-<div class="navi2">
-<div class="intro">
-<table class="content_index">
-<tr>
-	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
-	<th width="80px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
-	<th>Titel</th>
-	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
-</tr>
-<% @dossiers.each do |t| -%>
-<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td><%= link_to t.code, t%></td>
-		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
-		<td><%= t.title %></td>
-		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
-</tr>
-<% end -%>
-
-</table>
-
-</div></div>
+	<div class="navi2">
 		<div class="navi2_item"><div class="navi2_img">!</div><div class="navi2_link"><a href="/info">Iwwer de Projet</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">?</div><div class="navi2_link"><a href="/faq">F.A.Q.</a></div></div>
 		<div class="navi2_item"><div class="navi2_img">@</div><div class="navi2_link"><a href="/contact">Kontakt</a></div></div>
 
 <!-- LINKS -->
 	<div class="links">
-		<h2>Chambre des Députés</h2>
+		<h2>Depuwatch Sourcen</h2>
 		<ul>
 			<li><a href="http://chd.lu/">Chamber.lu</a></li>
+			<li><a href="http://www.legilux.public.lu/">Legilux</a></li>
 		</ul>
 		<hr>
 		<h2>Depuwatch Partner</h2>
@@ -73,13 +54,12 @@
 </div>
 
 
-<%= yield %>
-<div class="footer">
-<a href="/license">Lizenz</a> | All Data provided <a href="http://chd.lu/wps/portal/public">by chd.lu</a> | <a href="/disclaimer">Disclaimer</a>
-</div>
-</div>
+	<%= yield %>
 
 
+	<div class="footer">
+<a href="/license">Lizenz</a> | <a href="/contact">Kontakt</a> | <a href="/disclaimer">Disclaimer</a>
+</div>
 <!-- wrapper --></div>
 </body>
 </html>
