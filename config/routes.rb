@@ -1,4 +1,6 @@
 ChdTransparent::Application.routes.draw do
+  resources :memberships
+
   resources :text_topics
 
   resources :topics

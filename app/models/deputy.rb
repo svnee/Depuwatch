@@ -1,5 +1,6 @@
 class Deputy < ActiveRecord::Base
   belongs_to :party
+  has_many :memberships
   has_many :votes
   
   def split_votes
@@ -37,11 +38,21 @@ class Deputy < ActiveRecord::Base
     d.uniq!
   end
   
+  def texts_count
+    texts = 0
+    Text.all.each { |t| if (memberships.any? { |m| m.start < t.seance.start.to_date && (m.end.nil? || m.end > t.seance.end.to_date) }) then texts = texts + 1 end }
+    texts
+  end
+  
   def presence
-    t = Text.all.count
+    texts = texts_count
     p = 0
     votes.each { |v| p += v.delegate.nil? ? 1 : 0 }
     
-    "%f" % ((p / t.to_f) * 100)
+    "%f" % ((p / texts.to_f) * 100)
+  end
+  
+  def delegations_rate
+    "%f" % (delegations.count / votes.count.to_f)
   end
 end
