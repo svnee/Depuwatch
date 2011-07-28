@@ -10,13 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110306113621) do
+ActiveRecord::Schema.define(:version => 20110728160253) do
 
   create_table "deputies", :force => true do |t|
     t.string  "name"
     t.integer "party_id"
     t.string  "pc_img"
     t.string  "pc_profile"
+    t.string  "lastname"
+    t.string  "firstname"
   end
 
   create_table "parties", :force => true do |t|
