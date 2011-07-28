@@ -1,9 +1,9 @@
 body{	
-	font-family:"Trebuchet MS",Arial;
+	font-family: Helvetica,"Trebuchet MS",Arial;
 	font-size:12px;
 	font-weight:normal;
 	margin: 0px;
-
+	color: #222222;
 	}
 body a {
 	 color: #A4253D;
