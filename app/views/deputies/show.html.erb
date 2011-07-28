@@ -18,8 +18,8 @@
 	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
 
 	<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
-		<p><%= facebook_button(@deputy.facebook).html_safe %></p>
-		<p><%= twitter_button(@deputy.twitter).html_safe %></p>
+		<p><%= facebook_button(@deputy.facebook).html_safe %>
+		<%= twitter_button(@deputy.twitter).html_safe %></p>
 	</div>
 
 </div>
@@ -59,8 +59,8 @@
 		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
 		<th width="70px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
-		<th style="padding-left: 35px"><img width="25" alt="logo" src="/images/topics.png"></th>
-		<th style="padding-left: 10px" width="105px">Délégéierten</th>
+		<th><img width="25" alt="logo" src="/images/topics.png"></th>
+		<th width="105px">Délégéierten</th>
 	</tr>
 	</thead>
 	<tbody>
