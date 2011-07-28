@@ -10,6 +10,7 @@
 			<th style="width:112px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
 			<th style="width:112px;">&nbsp;</th>
 			<th>Partei</th>
+			<th>Amtszäit</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -18,6 +19,16 @@
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%str = ""
+				deputy.memberships.each do |m|
+					if m.end.nil? then 
+			      str = str + "#{m.start.year} - ..."
+			    else
+			      str = str + "#{m.start.year} - #{m.end.year}"
+			    end
+					if deputy.memberships.size > 1 && !str.empty? then str = str + ", " end
+				end
+			%> <%= str %></td>
 	  </tr>
 	<% end %>
 	</tbody>
