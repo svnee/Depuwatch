@@ -1,9 +1,9 @@
 body{	
-	font-family:"Trebuchet MS",Arial;
+	font-family: Helvetica,"Trebuchet MS",Arial;
 	font-size:12px;
 	font-weight:normal;
 	margin: 0px;
-
+	color: #222222;
 	}
 body a {
 	 color: #A4253D;
@@ -713,4 +713,31 @@ div.dossiers {
 div.dossiers2 {
     display: block;
     float: left;
+}
+
+/* Code for sorting */
+.sorting_asc {
+	background: url('../images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../images/sort_desc.png') no-repeat center right;
+}
+
+.sorting {
+	background: url('../images/sort_both.png') no-repeat center right;
+}
+
+.sorting_asc_disabled {
+	background: url('../images/sort_asc_disabled.png') no-repeat center right;
+}
+
+.sorting_desc_disabled {
+	background: url('../images/sort_desc_disabled.png') no-repeat center right;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
 }
