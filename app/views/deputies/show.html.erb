@@ -46,7 +46,8 @@
 
 </div>
 
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th width="90px"><img width="25" src="/images/sessions.png" alt="logo"></th>
 		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
@@ -55,6 +56,8 @@
 		<th style="padding-left: 35px"><img width="25" alt="logo" src="/images/topics.png"></th>
 		<th style="padding-left: 10px" width="105px">Délégéierten</th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @deputy.votes.each do |v| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></th>
@@ -65,6 +68,7 @@
 		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 
 

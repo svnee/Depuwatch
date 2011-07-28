@@ -4,12 +4,14 @@
 
 <div class="content">
 
-<table class="content">
-  <tr>
+<table class="content" id="ordered_table">
+  <thead>
+	<tr>
     <th><img width="25" alt="logo" src="/images/topics.png"></th>
     <th><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
   </tr>
-
+	</thead>
+	<tbody>
 <% @topics.each do |topic| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= link_to topic.name, topic %></td>
@@ -27,5 +29,6 @@
     </td>
   </tr>
 <% end %>
+	</tbody>
 </table>
 </div>

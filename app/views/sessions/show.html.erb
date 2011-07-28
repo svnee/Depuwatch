@@ -5,7 +5,8 @@
 </div>
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th style="width: 60px; text-align: left;">nr.</th>
 		<th style="width: 125px; text-align: left;"><img src="/images/seances_small.png" width="25" alt="logo"></th>
@@ -14,6 +15,8 @@
 		<th style="width: 100px; text-align: left;">Dauer</th>
 		<th style="text-align: left;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @session.seances.each do |s| -%>
 	<tr onmouseover="style.backgroundColor='#eee';"
 onmouseout="style.backgroundColor='#fff'">
@@ -32,5 +35,6 @@ onmouseout="style.backgroundColor='#fff'">
 		</td>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 </div>

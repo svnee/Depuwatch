@@ -8,13 +8,16 @@
 </div>
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th style="width: 50px;"><img width="25" src="/images/dossiers_small.png" alt="dossiers"></th>
 		<th style="width: 340px;"> </th>
 		<th style="width: 250px; padding-left: 30px;">Vote</th>
 		<th><img width="25" alt="logo" src="/images/topics.png"></th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @seance.texts.each do |t| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to t.code, t %></td>
@@ -25,5 +28,6 @@
 		<td> </td>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 </div>

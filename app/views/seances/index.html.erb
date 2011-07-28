@@ -6,7 +6,8 @@
 
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+<thead>
 <tr>
    <th width="110px"><img width="25" alt="logo" src="/images/sessions.png"></th>
     <th width="65p;">nr.</th>
@@ -15,7 +16,8 @@
 	<th width="85px" >Schluss</th>
 	<th<img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 </tr>
-
+</thead>
+<tbody>
 <% @seances.each do |seance| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= link_to "#{seance.session.start.strftime("%Y")}/#{seance.session.end.strftime("%Y")}", seance.session %></td>
@@ -33,5 +35,6 @@
 	</td>
   </tr>
 <% end %>
+</tbody>
 </table>
 </div>

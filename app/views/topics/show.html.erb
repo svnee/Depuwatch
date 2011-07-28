@@ -4,14 +4,16 @@
 
 
 <div class="content">
-	<table class="content">
-	  <tr>
+	<table class="content" id="ordered_table">
+	  <thead>
+		<tr>
 	    <th style="width: 80px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
 	    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
 		 <th style="width: 350px;"> </th>
 		 <th style="width: 150px; padding-left: 30px;">Vote</th>
 	  </tr>
-		
+		</thead>
+		<tbody>
 		<% @topic.texts.each do |t| -%>
 		<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
 			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
@@ -21,5 +23,6 @@
 		<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
 		</tr>
 		<% end -%>
+		</tbody>
 	</table>
 </div>
