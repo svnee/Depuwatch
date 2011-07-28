@@ -2,7 +2,7 @@ class DeputiesController < ApplicationController
   # GET /deputies
   # GET /deputies.xml
   def index
-    @deputies = Deputy.all(:order => "name ASC")
+    @deputies = Deputy.all(:order => "lastname ASC")
 
     respond_to do |format|
       format.html # index.html.erb
