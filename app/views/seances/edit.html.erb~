@@ -1,0 +1,6 @@
+<h1>Editing seance</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @seance %> |
+<%= link_to 'Back', seances_path %>

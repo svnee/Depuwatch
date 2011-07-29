@@ -17,11 +17,17 @@
 	<div class="h2"><span class="h2">Numm: </span> <%= @deputy.name %></div>
 	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
 
-	<div class="h2"><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></div>
+	<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
+		<p><%= facebook_button(@deputy.facebook).html_safe %>
+		<%= twitter_button(@deputy.twitter).html_safe %></p>
+	</div>
 
 </div>
 <div class="dossiers2"><div class="result2">
-<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %></div>
+<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
+	<br />
+	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
+</div>
 	<% p, c, a = @deputy.split_votes -%>
 <table>
 	<tr>
@@ -46,7 +52,8 @@
 
 </div>
 
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th width="90px"><img width="25" src="/images/sessions.png" alt="logo"></th>
 		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
@@ -55,6 +62,8 @@
 		<th style="padding-left: 35px"><img width="25" alt="logo" src="/images/topics.png"></th>
 		<th style="padding-left: 10px" width="105px">Délégéierten</th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @deputy.votes.each do |v| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></th>
@@ -65,6 +74,7 @@
 		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 
 

@@ -99,6 +99,7 @@ table.content th, table.content_index th {
 	border-bottom: 1px solid #eee;
 	padding-bottom:10px;
 	text-align:left;
+   padding-left: 20px;
 }
 
 
@@ -106,7 +107,6 @@ table.content td, table.content_index td {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 	padding-top:8px;
-	text-align:justify;
 	vertical-align:top;
 }
 
@@ -395,7 +395,7 @@ div.content_static {
     padding-left: 10px;
     padding-right: 10px;
     width: 755px;
-    text-align: justify;
+
 }
 
 div.content_static2 {
@@ -575,7 +575,7 @@ div.projet1 {
 	display:block;
 	float:left;
 width: 510px;
-text-align: justify;
+
 padding-right: 55px;
 }
 
@@ -715,25 +715,29 @@ div.dossiers2 {
     float: left;
 }
 
+div.dataTables_wrapper {
+	float: left;
+	}
+
 /* Code for sorting */
 .sorting_asc {
-	background: url('../images/sort_asc.png') no-repeat center right;
+	background: url('../images/sort_asc.png') no-repeat center left;
 }
 
 .sorting_desc {
-	background: url('../images/sort_desc.png') no-repeat center right;
+	background: url('../images/sort_desc.png') no-repeat center left;
 }
 
 .sorting {
-	background: url('../images/sort_both.png') no-repeat center right;
+	background: url('../images/sort_both.png') no-repeat center left;
 }
 
 .sorting_asc_disabled {
-	background: url('../images/sort_asc_disabled.png') no-repeat center right;
+	background: url('../images/sort_asc_disabled.png') no-repeat center left;
 }
 
 .sorting_desc_disabled {
-	background: url('../images/sort_desc_disabled.png') no-repeat center right;
+	background: url('../images/sort_desc_disabled.png') no-repeat center left;
 }
 
 .dataTables_filter {
@@ -741,3 +745,5 @@ div.dossiers2 {
 	float: right;
 	text-align: right;
 }
+
+
