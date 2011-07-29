@@ -107,7 +107,6 @@ table.content td, table.content_index td {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 	padding-top:8px;
-	text-align:justify;
 	vertical-align:top;
 }
 
@@ -396,7 +395,7 @@ div.content_static {
     padding-left: 10px;
     padding-right: 10px;
     width: 755px;
-    text-align: justify;
+
 }
 
 div.content_static2 {
@@ -576,7 +575,7 @@ div.projet1 {
 	display:block;
 	float:left;
 width: 510px;
-text-align: justify;
+
 padding-right: 55px;
 }
 
