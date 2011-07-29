@@ -1,3 +1,23 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"aoColumns": [ 
+						null,
+						{ "sType": "numeric" },
+						{ "sType": "date" },
+						null,
+						null,
+						null
+					] 
+			} );
+	} );
+</script>
 <div class="pointer_seancen"></div>
 <div class="content_wrapper">
 <div class="info">

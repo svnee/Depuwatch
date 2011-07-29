@@ -6,17 +6,6 @@
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" %>
 	<%= javascript_include_tag "jquery.dataTables" %>
 	<%= javascript_include_tag "rails" %>
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function() {
-			$('#ordered_table').dataTable( {
-				"bPaginate": false,
-				"bLengthChange": false,
-				"bFilter": false,
-				"bSort": true,
-				"bInfo": false,
-				"bAutoWidth": false } );
-		} );
-	</script>
   <%= csrf_meta_tag %>
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 </head>
