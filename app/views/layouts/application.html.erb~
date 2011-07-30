@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Depuwatch - Ofstëmmungen aus der Chambre des Députés</title>
+  <link href="/images/favicon.ico" rel="SHORTCUT ICON">
   <%= stylesheet_link_tag "style.css" %>
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" %>
 	<%= javascript_include_tag "jquery.dataTables" %>
