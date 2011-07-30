@@ -26,8 +26,8 @@
 	<thead>
 	<tr>
 		<th style="width: 50px;"><img width="25" src="/images/dossiers_small.png" alt="dossiers"></th>
-		<th style="width: 340px;"> </th>
-		<th style="width: 250px; padding-left: 30px;">Vote</th>
+		<th style="width: 290px;"> </th>
+		<th style="width: 190px; padding-left: 20px;">Vote</th>
 		<th><img width="25" alt="logo" src="/images/topics.png"></th>
 	</tr>
 	</thead>
@@ -36,7 +36,7 @@
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to t.code, t %></td>
 		<td><%= t.title %></td>
-		<td style=" padding-left: 30px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+		<td style=" padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
 		<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %>
 		</td>
 		<td><% i = 1 %>
