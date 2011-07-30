@@ -18,7 +18,7 @@
 <a href="<%= url_for @seance %>">S&eacute;ance</a>: <span class="bold"><%= @seance.start.strftime("%d/%m/%Y") %></span> de <%= @seance.start.strftime("%H:%M") %> jusqu'&agrave;
 <%= @seance.end.strftime("%H:%M") %>
 |
-<a href="">Compte rendu</a>
+<%= @seance.compte_rendu.nil? ? "" : link_to("Compte rendu", @seance.compte_rendu) %>
 </div>
 
 <div class="content">
