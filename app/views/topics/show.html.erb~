@@ -27,8 +27,8 @@
 		<tr>
 	    <th style="width: 80px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
 	    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
-		 <th style="width: 350px;"> </th>
-		 <th style="width: 150px; padding-left: 30px;">Vote</th>
+		 <th style="width: 375px; padding-right: 10px;"> </th>
+		 <th style="width: 150px; padding-left: 20px;">Vote</th>
 	  </tr>
 		</thead>
 		<tbody>
@@ -37,7 +37,7 @@
 			<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
 			<td><%= link_to t.code, t %></td>
 			<td><%= t.title %></td>
-			<td style="padding-left: 30px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+			<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
 		<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
 		</tr>
 		<% end -%>
