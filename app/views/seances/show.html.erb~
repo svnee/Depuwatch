@@ -1,3 +1,15 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false
+			} );
+	} );
+</script>
 <div class="pointer_seancen"></div>
 <div class="content_wrapper">
 <div class="info">
@@ -8,13 +20,16 @@
 </div>
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th style="width: 50px;"><img width="25" src="/images/dossiers_small.png" alt="dossiers"></th>
 		<th style="width: 340px;"> </th>
-		<th style="width: 250px; padding-left: 30px;"><img width="25" alt="logo" src="/images/vote.png"></th>
+		<th style="width: 250px; padding-left: 30px;">Vote</th>
 		<th><img width="25" alt="logo" src="/images/topics.png"></th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @seance.texts.each do |t| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to t.code, t %></td>
@@ -22,8 +37,14 @@
 		<td style=" padding-left: 30px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
 		<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %>
 		</td>
-		<td> </td>
+		<td><% i = 1 %>
+		<% t.topics.each do |to| -%>
+			<%= link_to to.name, to %>
+			<%= ", " unless i >= t.topics.size %>
+			<% i += 1 %>
+		<% end -%></td>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 </div>
