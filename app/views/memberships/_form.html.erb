@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :start %><br />
-    <%= f.date_select :start %>
+    <%= f.date_select :start, {:start_year => 2004} %>
   </div>
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.date_select :end %>
+    <%= f.date_select :end, {:start_year => 2004} %>
   </div>
   <div class="actions">
     <%= f.submit %>
