@@ -1,7 +1,9 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		$('#ordered_table').dataTable( {
-			"bPaginate": false,
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
 			"bLengthChange": false,
 			"bFilter": false,
 			"bSort": true,
@@ -11,14 +13,6 @@
                           { "bSortable": false, "aTargets": [ 2, 3, -1 ] },
                           { "sType": "num-html", "aTargets": [ 0 ] }
                         ]
-			/*"aoColumns": [ 
-						{ "sType": "numeric" },
-						{ "sType": "date" },
-						null,
-						null,
-						null,
-						null
-					]*/
 			} );
 	} );
 </script>

@@ -3,6 +3,7 @@
 		$('#ordered_table').dataTable( {
 			"bPaginate": true,
                         "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
 			"bLengthChange": false,
 			"bFilter": false,
 			"bSort": true,
@@ -12,8 +13,7 @@
                           { "bSortable": false, "aTargets": [ 3, 4 ] },
                           { "sType": "num-html", "aTargets": [ 1 ] },
                           { "sType": "eu_date", "aTargets": [ 2 ] }
-                        ], 
-                        "sPaginationType": "full_numbers"
+                        ]
 			} );
 	} );
 </script>

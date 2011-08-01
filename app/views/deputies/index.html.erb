@@ -1,18 +1,14 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		$('#ordered_table').dataTable( {
-			"bPaginate": false,
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
 			"bLengthChange": false,
-			"bFilter": false,
+			"bFilter": true,
 			"bSort": true,
 			"bInfo": false,
 			"bAutoWidth": false
-			/*"aoColumns": [ 
-						null,
-						{ "sType": "date" },
-						null,
-						null
-					] */
 			} );
 	} );
 </script>
