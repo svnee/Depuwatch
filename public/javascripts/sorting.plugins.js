@@ -33,7 +33,6 @@ function calculate_date(date) {
 }
 
 jQuery.fn.dataTableExt.oSort['eu_date-asc'] = function(a, b) {
-        alert(a)
 	x = calculate_date(a.replace( /<.*?>/g, "" ));
 	y = calculate_date(b.replace( /<.*?>/g, "" ));
 	
