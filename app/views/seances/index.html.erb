@@ -1,7 +1,8 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		$('#ordered_table').dataTable( {
-			"bPaginate": false,
+			"bPaginate": true,
+                        "iDisplayLength": 25,
 			"bLengthChange": false,
 			"bFilter": false,
 			"bSort": true,
@@ -11,15 +12,8 @@
                           { "bSortable": false, "aTargets": [ 3, 4 ] },
                           { "sType": "num-html", "aTargets": [ 1 ] },
                           { "sType": "eu_date", "aTargets": [ 2 ] }
-                        ]
-			/*"aoColumns": [ 
-						null,
-						{ "sType": "numeric" },
-						{ "sType": "date" },
-						null,
-						null,
-						null
-					]*/ 
+                        ], 
+                        "sPaginationType": "full_numbers"
 			} );
 	} );
 </script>
