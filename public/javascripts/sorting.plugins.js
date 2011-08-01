@@ -33,15 +33,15 @@ function calculate_date(date) {
 }
 
 jQuery.fn.dataTableExt.oSort['eu_date-asc'] = function(a, b) {
-	x = calculate_date(a);
-	y = calculate_date(b);
+	x = calculate_date(a.replace( /<.*?>/g, "" ));
+	y = calculate_date(b.replace( /<.*?>/g, "" ));
 	
 	return ((x < y) ? -1 : ((x > y) ?  1 : 0));
 };
 
 jQuery.fn.dataTableExt.oSort['eu_date-desc'] = function(a, b) {
-	x = calculate_date(a);
-	y = calculate_date(b);
+	x = calculate_date(a.replace( /<.*?>/g, "" ));
+	y = calculate_date(b.replace( /<.*?>/g, "" ));
 	
 	return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
 };
