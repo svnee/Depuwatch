@@ -748,26 +748,26 @@ div.dataTables_wrapper {
 	width: 400px;
 	height: 22px;
 	line-height: 22px;
+	padding-left: 210px;
+	margin-bottom: 15px;
 }
  
 .paging_full_numbers span.paginate_button,
  	.paging_full_numbers span.paginate_active {
-	border: 1px solid #aaa;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	padding: 2px 5px;
 	margin: 0 3px;
 	cursor: pointer;
 }
  
 .paging_full_numbers span.paginate_button {
-	background-color: #ddd;
+	background-color: #f3f3f3;
 }
  
 .paging_full_numbers span.paginate_button:hover {
-	background-color: #ccc;
+	background-color: #eee;
 }
  
 .paging_full_numbers span.paginate_active {
-	background-color: #99B3FF;
+	background-color: #8c93fe;
+	color: white;
 }
