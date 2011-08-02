@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate
+
   protect_from_forgery
   helper_method :current_user_session, :current_user
 
@@ -27,5 +29,12 @@ class ApplicationController < ActionController::Base
     def current_user
       return @current_user if defined?(@current_user)
       @current_user = current_user_session && current_user_session.user
+    end
+    
+  protected
+    def authenticate
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "developer" && password == "depuwatch"
+      end
     end
 end
