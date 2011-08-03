@@ -1,4 +1,6 @@
 ChdTransparent::Application.routes.draw do
+  namespace :api do resources :politicians end
+
   resources :legislations
 
   get "admin/vote"
