@@ -1,4 +1,6 @@
 ChdTransparent::Application.routes.draw do
+  resources :legislations
+
   get "admin/vote"
   match "admin/save_votes" => 'admin#save_votes'
 
