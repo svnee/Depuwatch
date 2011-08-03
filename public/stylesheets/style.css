@@ -773,3 +773,18 @@ div.dataTables_wrapper {
 	color: white;
 	font-weight: bold;
 }
+
+/* Session buttons */
+span.session_btn {
+	border: 1px solid #EEEEEE;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	background-color: #8c93fe;
+	color: white;
+	font-weight: bold;
+}
+
+span.session_btn:hover {
+	background-color: #eee;
+}
