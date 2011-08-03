@@ -20,9 +20,9 @@ Entrée vu Voten
 					<td>Abstention</td>
 				</tr>
 				<tr>
-					<td><%= select("vote", "pour", @deputies.all.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
-					<td><%= select("vote", "contre", @deputies.all.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
-					<td><%= select("vote", "abstention", @deputies.all.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
+					<td><%= select("vote", "pour", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
+					<td><%= select("vote", "contre", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
+					<td><%= select("vote", "abstention", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
 				</tr>
 			</table>
 			<%= submit_tag("Search") %>
