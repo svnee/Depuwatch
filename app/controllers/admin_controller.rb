@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   def vote
   	@deputies = Deputy.all
-  	@texts = Text.all.order(:code)
+  	@texts = Text.order(:code).all
   end
   
   def save_votes
