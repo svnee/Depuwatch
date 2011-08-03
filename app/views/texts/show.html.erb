@@ -16,14 +16,13 @@
 <p><img src="/images/file.gif"> <span class="h2"><%= @text.code %></span> </p>
 
 <p><%= @text.title %></p>
-
-<p><img src="/images/resume.gif"> <span class="h2"> <%= @text.link_memorial.nil? ? "?" : link_to("Resumé", @text.link_memorial)%> </span> 
-|
-<p><img src="/images/memorial.gif"> <span class="h2"> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%> </span> 
-|
-<img src="/images/compte.gif"> <span class="h2"> <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> </span> </p>
-
 <p><img src="/images/topics.gif"> <%= @text.topics_to_str.html_safe %></p>
+
+<p><img src="/images/resume.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Resumé", @text.link_memorial)%>
+|
+<img src="/images/memorial.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
+|
+<img src="/images/compte.gif">  <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> </p>
 
 </div>
 <div class="result3">
