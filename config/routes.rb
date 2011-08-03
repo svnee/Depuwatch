@@ -1,10 +1,16 @@
 ChdTransparent::Application.routes.draw do
+  match 'report_sent' => 'static#report_sent'
+  match 'report' => 'static#report'
+  
+  resources :reports
+
   resources :memberships
 
   resources :text_topics
 
   resources :topics
-
+  
+  
   match 'info' => 'static#info'
   match 'index' => 'static#index'
   match 'faq' => 'static#faq'

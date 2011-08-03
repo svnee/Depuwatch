@@ -1,0 +1,38 @@
+<div class="content_wrapper">
+<div class="info">Mell ee Feeler</div>
+
+<div class="content">
+
+	<h1>Feelermeldung</h1>
+	<p>Matt folgendem Formulaire kanns de ganz einfach ee Feeler mellen. Mir këmmeren eis dann drëm.</p>
+	<%= form_for(@report, :url => url_for(:action => 'report_sent', :controller => 'static')) do |f| %>
+	  <% if @report.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this text from being saved:</h2>
+
+	      <ul>
+	      <% @report.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :page %><br />
+	    <%= f.text_field :page, {:value => @page} %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :description %><br />
+	    <%= f.text_area :description %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+
+</div>
