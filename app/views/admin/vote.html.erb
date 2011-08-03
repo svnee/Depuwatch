@@ -11,7 +11,7 @@ Entrée vu Voten
 			<table>
 				<tr>
 					<td>Text:</td>
-					<td><%= select("vote", "text_id", @texts.collect {|t| [ t.code, t.id ] }) %></td>
+					<td><%= select("vote", "text_id", @texts.collect {|t| [ t.code, t.id ] }, {}, {:class => "chzn-select"}) %></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
