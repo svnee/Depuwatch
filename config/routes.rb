@@ -1,5 +1,5 @@
 ChdTransparent::Application.routes.draw do
-  constraints(Subdomain) do
+  constraints :subdomain => "api" do
     resources :politicians
   end
   
