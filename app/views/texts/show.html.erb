@@ -16,10 +16,10 @@
 
 <p><img src="/images/file.gif"><span class="h2">Dossier</span>: <%= @text.code %></p>
 
-<p><span class="h2">Mémorial</span>: <%= @text.link_memorial.nil? ? "?" : link_to("PDF-Versioun", @text.link_memorial)%></p>
-<p><span class="h2">Compte rendu</span>: <%= @text.seance.compte_rendu.nil? ? "?" : link_to("PDF-Versioun", @text.seance.compte_rendu)%></p>
+<p><img src="/images/memorial.gif"><span class="h2">Mémorial</span>: <%= @text.link_memorial.nil? ? "?" : link_to("PDF-Versioun", @text.link_memorial)%></p>
+<p><img src="/images/compte.gif"><span class="h2">Compte rendu</span>: <%= @text.seance.compte_rendu.nil? ? "?" : link_to("PDF-Versioun", @text.seance.compte_rendu)%></p>
 
-<p><span class="h2">Themen</span>: <%= @text.topics_to_str.html_safe %></p>
+<p><img src="/images/themen.gif"><span class="h2">Themen</span>: <%= @text.topics_to_str.html_safe %></p>
 
 </div>
 <div class="result3">
