@@ -2,6 +2,8 @@ class Deputy < ActiveRecord::Base
   belongs_to :party
   has_many :memberships
   has_many :votes
+  belongs_to :predecessor, :class_name => "Deputy", :foreign_key => "predecessor_id"
+  belongs_to :successor, :class_name => "Deputy", :foreign_key => "successor_id"
   
   def split_votes
     a, p, c = [], [], []

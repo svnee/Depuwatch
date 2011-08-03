@@ -28,6 +28,14 @@
     <%= f.select :party_id, Party.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
   </div>
 	<div class="field">
+    <%= f.label :predecessor_id, "Predecessor" %><br />
+    <%= f.select :predecessor_id, Deputy.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
+  </div>
+	<div class="field">
+    <%= f.label :successor_id, "Successor" %><br />
+    <%= f.select :successor_id, Deputy.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
+  </div>
+	<div class="field">
     <%= f.label :pc_img, "Link to Politikercheck.lu Image" %><br />
     <%= f.text_field :pc_img %>
   </div>
