@@ -1,0 +1,25 @@
+<h1>Listing legislations</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @legislations.each do |legislation| %>
+  <tr>
+    <td><%= legislation.start %></td>
+    <td><%= legislation.end %></td>
+    <td><%= link_to 'Show', legislation %></td>
+    <td><%= link_to 'Edit', edit_legislation_path(legislation) %></td>
+    <td><%= link_to 'Destroy', legislation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Legislation', new_legislation_path %>

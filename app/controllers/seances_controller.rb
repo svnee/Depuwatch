@@ -2,7 +2,8 @@ class SeancesController < ApplicationController
   # GET /seances
   # GET /seances.xml
   def index
-    @seances = Seance.all
+    @seances = Seance.find(:all, :include => :session, :order => 
+    'sessions.start, seances.nr')
 
     respond_to do |format|
       format.html # index.html.erb

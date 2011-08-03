@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start:</b>
+  <%= @legislation.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @legislation.end %>
+</p>
+
+<p>
+	<ul>
+	<% @legislation.deputies.each do |d| %>
+		<li><%= link_to "#{d.name}", d %></li>
+	<% end %>
+	</ul>
+</p>
+
+
+<%= link_to 'Edit', edit_legislation_path(@legislation) %> |
+<%= link_to 'Back', legislations_path %>

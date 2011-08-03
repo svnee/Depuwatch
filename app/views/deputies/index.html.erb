@@ -8,7 +8,10 @@
 			"bFilter": true,
 			"bSort": true,
 			"bInfo": false,
-			"bAutoWidth": false
+			"bAutoWidth": false,
+			"aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 0 ] }
+      ]
 			} );
 	} );
 </script>
@@ -21,18 +24,22 @@
 <table class="content" id="ordered_table">
 	<thead>
 		<tr>
+			<th>&nbsp;</th>
 			<th style="width:112px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
 			<th style="width:112px;">&nbsp;</th>
 			<th>Partei</th>
+			<th>Bezierk</th>
 			<th>Amtszäit</th>
 		</tr>
 	</thead>
 	<tbody>
 	<% @deputies.each do |deputy| %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+			<td><%= image_tag 'active.gif' if deputy.active? %></td>
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%= deputy.bezierk %></td>
 			<td><%str = ""
 				i = 1
 				deputy.memberships.each do |m|

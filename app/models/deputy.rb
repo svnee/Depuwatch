@@ -2,6 +2,25 @@ class Deputy < ActiveRecord::Base
   belongs_to :party
   has_many :memberships
   has_many :votes
+  belongs_to :predecessor, :class_name => "Deputy", :foreign_key => "predecessor_id"
+  belongs_to :successor, :class_name => "Deputy", :foreign_key => "successor_id"
+  
+  def bezierk
+    case circonscription 
+      when 'N'
+        return 'Norden'
+      when 'Z'
+        return 'Zentrum'
+      when 'S'
+        return 'Süden'
+      when 'O' 
+        return "Osten"
+    end
+  end
+  
+  def active?
+    return memberships.any? {|m| m.end.nil?}
+  end
   
   def split_votes
     a, p, c = [], [], []

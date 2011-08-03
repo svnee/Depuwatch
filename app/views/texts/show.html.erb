@@ -18,7 +18,7 @@
 <p><%= @text.title %></p>
 <p><img src="/images/topics.gif" style="margin-left:2px"> <%= @text.topics_to_str.html_safe %></p>
 
-<p><img src="/images/resume.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Resumé", @text.link_memorial)%>
+<p><img src="/images/resume.gif"> <%= link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code}")%>
 |
 <img src="/images/memorial.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
 |
