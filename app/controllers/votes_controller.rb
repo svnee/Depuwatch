@@ -25,7 +25,7 @@ class VotesController < ApplicationController
   # GET /votes/new.xml
   def new
     @vote = Vote.new
-
+    @texts = Text.all
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @vote }

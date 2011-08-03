@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :deputy_id %><br />
-    <%= f.text_field :deputy_id %>
+    <%= f.select :deputy_id, Deputy.all.collect {|d| [d.name, d.id]} %>
   </div>
   <div class="field">
     <%= f.label :delegate_id %><br />
-    <%= f.text_field :delegate_id %>
+    <%= f.select :delegate_id, Deputy.all.collect {|d| [d.name, d.id]} %>
   </div>
   <div class="field">
     <%= f.label :text_id %><br />
-    <%= f.text_field :text_id %>
+    <%= f.select :text_id, @texts.collect {|d| [d.code, d.id]} %>
   </div>
   <div class="field">
     <%= f.label :vote %><br />
-    <%= f.text_field :vote %>
+    <%= f.select :vote, %w[-1 0 1] %>
   </div>
   <div class="actions">
     <%= f.submit %>

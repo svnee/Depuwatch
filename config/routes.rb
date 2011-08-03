@@ -1,6 +1,6 @@
 ChdTransparent::Application.routes.draw do
   get "admin/vote"
-  get "admin/save_votes"
+  match "admin/save_votes" => 'admin#save_votes'
 
   match 'report_sent' => 'static#report_sent'
   match 'report' => 'static#report'
