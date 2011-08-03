@@ -36,5 +36,12 @@ class StaticController < ApplicationController
       end
     end
   end
+  
+  def missing
+  	@texts = Array.new
+  	Text.all.each do |t|
+  		@texts << t if t.votes.size < 1
+  	end
+  end
 
 end
