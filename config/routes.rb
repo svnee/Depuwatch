@@ -1,4 +1,8 @@
 ChdTransparent::Application.routes.draw do
+  constraints(Subdomain) do
+    resources :politicians
+  end
+  
   namespace :api do resources :politicians end
 
   resources :legislations
