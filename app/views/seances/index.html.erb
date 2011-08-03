@@ -26,6 +26,11 @@
 
 
 <div class="content">
+	
+	<% Session.all.each do |s| %>
+	<span class="paginate_button"><%= link_to "#{s.start.strftime("%Y")}/#{s.end.strftime("%Y")}", s %></span>
+	<% end %>
+	
 <table class="content" id="ordered_table">
 <thead>
 <tr>
