@@ -14,7 +14,7 @@
 <div class="projet1">
 <h2>Titel</h2><p><%= @text.title %></p>
 
-<p><span class="h2">Dossier</span>: <%= @text.code %></p>
+<p><img src="/images/file.gif"><span class="h2">Dossier</span>: <%= @text.code %></p>
 
 <p><span class="h2">Mémorial</span>: <%= @text.link_memorial.nil? ? "?" : link_to("PDF-Versioun", @text.link_memorial)%></p>
 <p><span class="h2">Compte rendu</span>: <%= @text.seance.compte_rendu.nil? ? "?" : link_to("PDF-Versioun", @text.seance.compte_rendu)%></p>
