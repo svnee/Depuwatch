@@ -24,6 +24,7 @@
 			<th style="width:112px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
 			<th style="width:112px;">&nbsp;</th>
 			<th>Partei</th>
+			<th>Bezierk</th>
 			<th>Amtszäit</th>
 		</tr>
 	</thead>
@@ -33,6 +34,7 @@
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%= deputy.bezierk %></td>
 			<td><%str = ""
 				i = 1
 				deputy.memberships.each do |m|
