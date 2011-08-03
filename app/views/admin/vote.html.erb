@@ -1,0 +1,24 @@
+<div class="pointer_deputeiert"></div>
+<div class="content_wrapper">
+<div class="info">
+Entrée vu Voten
+</div>
+
+<div class="content">
+	<div> 
+              <em>Multiple Select with Groups</em> 
+              <select title="Your Favorite Types of Bear" style="width:350px;" multiple class="chzn-select" tabindex="8"> 
+                <option value=""></option> 
+                <option>American Black Bear</option> 
+                <option>Asiatic Black Bear</option> 
+                <option>Brown Bear</option> 
+                <option>Giant Panda</option> 
+                <option selected>Sloth Bear</option> 
+                <option disabled>Sun Bear</option> 
+                <option selected>Polar Bear</option> 
+                <option disabled>Spectacled Bear</option> 
+              </select> 
+            </div> 
+</div>
+<%= javascript_include_tag "chosen" %>
+<script type="text/javascript"> $(".chzn-select").chosen(); </script>

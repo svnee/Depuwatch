@@ -1,4 +1,6 @@
 ChdTransparent::Application.routes.draw do
+  get "admin/vote"
+
   match 'report_sent' => 'static#report_sent'
   match 'report' => 'static#report'
   match 'missing' => 'static#missing'
