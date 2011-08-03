@@ -43,5 +43,8 @@ class StaticController < ApplicationController
   		@texts << t if t.votes.size < 1 || t.votes.size > 60
   	end
   end
+  
+  def search
+  end
 
 end
