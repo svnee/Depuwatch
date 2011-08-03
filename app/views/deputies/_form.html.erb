@@ -28,6 +28,10 @@
     <%= f.select :party_id, Party.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
   </div>
 	<div class="field">
+    <%= f.label :circonscription %><br />
+    <%= f.select :circonscription, %w[Z S O N] %>
+  </div>
+	<div class="field">
     <%= f.label :predecessor_id, "Predecessor" %><br />
     <%= f.select :predecessor_id, Deputy.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
   </div>

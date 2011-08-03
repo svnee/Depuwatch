@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803162150) do
+ActiveRecord::Schema.define(:version => 20110803163417) do
 
   create_table "deputies", :force => true do |t|
     t.string  "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110803162150) do
     t.string  "twitter"
     t.integer "predecessor_id"
     t.integer "successor_id"
+    t.string  "circonscription"
   end
 
   create_table "legislations", :force => true do |t|
