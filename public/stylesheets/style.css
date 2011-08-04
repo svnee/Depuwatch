@@ -216,6 +216,14 @@ div.logo {
     width: 127px;
 }
 
+div.blog {
+background-image: url("/images/blog.png");
+    display: block;
+    float: left;
+    height: 103px;
+    width: 127px;
+}
+
 div.title {
 	display: block;
 	float: left;
