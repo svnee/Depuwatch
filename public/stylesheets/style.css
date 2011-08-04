@@ -186,15 +186,15 @@ text-decoration: none;
 }
 
 div.title1_sub {
-	color: #734347;
+color: #734347;
     font-family: 'Crimson Text';
     font-size: 17px;
-    margin-left: 185px;
+    left: -222px;
+    margin-left: 155px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: -17px;
-    width: 476px;
-    left:50px;
+    top: 65px;
+    width: 637px;
 }
 
 div.navi {
@@ -217,11 +217,13 @@ div.logo {
 }
 
 div.blog {
-background-image: url("/images/blog.png");
-    display: block;
-    float: left;
-    height: 103px;
-    width: 127px;
+    background-image: url("/images/blog.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 109px;
+    left: 870px;
+    position: absolute;
+    width: 110px;
 }
 
 div.title {
