@@ -1,9 +1,9 @@
 <div class="content_wrapper">
-<div class="info">Mell ee Feeler</div>
+<div class="info"><a href="/contact">Feelermeldung</a>Mell ee Feeler</div>
 
 <div class="content_static">
 
-	<h1>Feelermeldung</h1>
+	<img src="/images/flag.gif"> <h1>Feelermeldung</h1>
 	<p>Matt folgendem Formulaire kanns de ganz einfach ee Feeler mellen. Mir këmmeren eis dann drëm.</p>
 	<%= form_for(@report, :url => url_for(:action => 'report_sent', :controller => 'static')) do |f| %>
 	  <% if @report.errors.any? %>
@@ -19,7 +19,7 @@
 	  <% end %>
 
 	  <div class="field">
-	    <%= f.label :email %><br />
+	    <%= f.label :email %> (nëmme falls Réckmeldung erwënscht)<br />
 	    <%= f.text_field :email %>
 	  </div>
 	  <div class="field">
