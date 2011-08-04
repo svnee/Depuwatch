@@ -18,8 +18,16 @@ class Deputy < ActiveRecord::Base
     end
   end
   
+  def partei
+    party.name
+  end
+  
   def active?
     return memberships.any? {|m| m.end.nil?}
+  end
+  
+  def active
+    active?
   end
   
   def split_votes

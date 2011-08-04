@@ -1,4 +1,10 @@
 ChdTransparent::Application.routes.draw do
+  constraints :subdomain => "api" do
+    resources :politicians
+  end
+  
+  namespace :api do resources :politicians end
+
   resources :legislations
 
   get "admin/vote"
