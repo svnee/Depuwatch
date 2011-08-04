@@ -10,7 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803163417) do
+ActiveRecord::Schema.define(:version => 20110804160256) do
+
+  create_table "api_politicians", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "deputies", :force => true do |t|
     t.string  "name"
@@ -43,6 +48,12 @@ ActiveRecord::Schema.define(:version => 20110803163417) do
 
   create_table "parties", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "text_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reports", :force => true do |t|

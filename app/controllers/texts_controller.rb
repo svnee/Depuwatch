@@ -14,7 +14,8 @@ class TextsController < ApplicationController
   # GET /texts/1.xml
   def show
     @text = Text.find(params[:id])
-
+    @rating = Rating.new
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @text }

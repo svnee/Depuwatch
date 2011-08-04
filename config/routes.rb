@@ -1,4 +1,6 @@
 ChdTransparent::Application.routes.draw do
+  resources :ratings
+
   constraints :subdomain => "api" do
     resources :politicians
   end
