@@ -3,6 +3,11 @@ class Text < ActiveRecord::Base
   belongs_to :seance
   has_many :text_topics
   has_many :topics, :through => :text_topics
+  has_many :ratings
+  
+  def fav_count
+    ratings.favs.count
+  end
   
   def votes_pour
     res = []
