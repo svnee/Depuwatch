@@ -186,12 +186,12 @@ text-decoration: none;
 }
 
 div.title1_sub {
- color: #734347;
+color: #734347;
     font-family: 'Crimson Text';
     font-size: 17px;
-    left: -222px;
+    left: 295px;
     margin-left: -46px;
-    position: relative;
+    position: absolute;
     text-shadow: 2px 2px 3px #CDCDCD;
     top: 68px;
     width: 827px;
