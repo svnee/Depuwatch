@@ -186,15 +186,15 @@ text-decoration: none;
 }
 
 div.title1_sub {
-color: #734347;
+ color: #734347;
     font-family: 'Crimson Text';
     font-size: 17px;
     left: -222px;
-    margin-left: 155px;
+    margin-left: -46px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: 65px;
-    width: 637px;
+    top: 68px;
+    width: 827px;
 }
 
 div.navi {
