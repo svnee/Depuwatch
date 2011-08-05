@@ -797,3 +797,8 @@ span.session_btn {
 span.session_btn:hover {
 	background-color: #eee;
 }
+
+div.up {
+	float: right;
+	width: 20px;
+}
