@@ -24,7 +24,7 @@
 |
 <img src="/images/compte.gif">  <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> </p>
 
-<p><span id="favorite"><%= link_to(image_tag("fav.gif"), {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST) %> Top Dossier</span></p>
+<p><span id="favorite"><%= link_to(image_tag("fav.gif"), {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST) %> Top Dossier?</span></p>
 
 </div>
 <div class="result3">
