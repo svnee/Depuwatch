@@ -850,7 +850,7 @@ background-color: #8C93FE;
     color: white;
     float: left;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
 }
 
@@ -858,7 +858,7 @@ div.contact_btm{
 border: 1px solid #EEEEEE;
     border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
-    padding: 9px;
+    padding: 4px;
     width: 100%;
 float: left;
 }

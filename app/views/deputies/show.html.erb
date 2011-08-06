@@ -27,14 +27,17 @@
 
 <div class="wrapper_text"> 
 <div class="projet">
-<div class="h2"><img src="/images/136.gif"> <span class="h2"><%= @deputy.name %> </span> </div>
-	<div class="h2_partei_wrapper"> <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div>
-
 <img width="137" src="<%= @deputy.pc_img.nil? ? "/images/empty_abg_med.gif" : @deputy.pc_img %>">
 </div>
 
 <div class="result">
+
 <div class="dossiers2"><div class="result2">
+
+<div class="h2"><img src="/images/136.gif"> <span class="h2"><%= @deputy.name %> </span> </div>
+	<div class="h2_partei_wrapper"> <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div>
+
+
 <div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 	<br />
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
@@ -67,8 +70,10 @@ Kontaktéier d(e) <%= @deputy.name %>
 	</div>
 	
 	<div class="contact_btm">
-<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
-<p><%= facebook_button(@deputy.facebook).html_safe %>
+<p>
+<img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
+
+<%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
 	</div>
 	</div>
