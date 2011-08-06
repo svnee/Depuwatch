@@ -42,27 +42,10 @@
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
 
-<div class="dep_contact">
-	<div class="contact_top">
-Kontaktéier d(e) <%= @deputy.name %>
-	</div>
-	
-	<div class="contact_btm">
-<p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
-
-<%= facebook_button(@deputy.facebook).html_safe %>
-<%= twitter_button(@deputy.twitter).html_safe %></p>
-
-	</div>
-</div>
-	
-
-</div>
-
 <div class="h2">
 
 <p>
-
+<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 </div> <% p, c, a = @deputy.split_votes -%>
 </p>
 </div>
@@ -99,7 +82,22 @@ Kontaktéier d(e) <%= @deputy.name %>
 </div>
 
 
+<div class="dep_contact">
+	<div class="contact_top">
+Kontaktéier d(e) <%= @deputy.name %>
+	</div>
+	
+	<div class="contact_btm">
+<p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
 
+<%= facebook_button(@deputy.facebook).html_safe %>
+<%= twitter_button(@deputy.twitter).html_safe %></p>
+
+	</div>
+</div>
+	
+
+</div>
 
 
 	<div class="dep_details">
