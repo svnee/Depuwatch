@@ -43,11 +43,12 @@
 </div>
 
 <div class="h2">
-<span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
-	<br />
+<p><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
+	</p>
+<p>
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 </div>
-	<% p, c, a = @deputy.split_votes -%>
+	<% p, c, a = @deputy.split_votes -%></p>
 
 
 </div>
@@ -81,11 +82,11 @@ Kontaktéier d(e) <%= @deputy.name %>
 	</div>
 	
 	<div class="contact_btm">
-<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
+<p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
 
 <%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
-	</div>
+
 	</div>
 </div>
 	
