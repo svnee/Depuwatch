@@ -42,15 +42,18 @@
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
 
-<BR>
-</div>
-<div class="dossiers2">
-	<div class="result2">
-	<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
+<div class="h2">
+<span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 	<br />
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 </div>
 	<% p, c, a = @deputy.split_votes -%>
+
+
+</div>
+<div class="dossiers2">
+	<div class="result2">
+	
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>

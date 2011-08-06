@@ -592,7 +592,7 @@ div.result3 {
     float: left;
     width: 22%;
     padding-right: 0px;
-	margin-top: 20px;
+margin-top: 0px;
 }
 
 div.result {
@@ -721,7 +721,7 @@ div.dossiers {
 
 div.dossiers2 {
     display: block;
-    float: left;
+    float: right;
 }
 
 div.dataTables_wrapper {
