@@ -597,10 +597,10 @@ margin-top: 0px;
 
 div.result {
 	display: block;
-    float: left;
-    width: 300px;
-    padding-right: 35px;
-        padding-left: 15px;
+    	float: left;
+    	width: 300px;
+    	padding-right: 5px;
+    	padding-left: 15px;
 }
 
 div.LSAP {
@@ -863,5 +863,5 @@ border: 1px solid #EEEEEE;
     -moz-border-radius: 0 0 4px 0px;
     padding: 4px;
     width: 230px;
-float: right;
+float: left;
 }
