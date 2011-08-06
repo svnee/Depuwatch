@@ -812,6 +812,16 @@ background-color: #EEEEEE;
     width: 554px;
 }
 
+div.dep_details {
+background-color: #EEEEEE;
+    border-radius: 4px 0 0 4px;
+    float: left;
+    -moz-border-radius: 4px 0 0 4px;
+    padding: 3px;
+    width: 554px;
+margin-right:10px;
+}
+
 div.d_wrapper {
 float:left;
 width: 100%;
@@ -825,4 +835,16 @@ border: 1px solid #EEEEEE;
     margin-right: 10px;
     padding: 2px 2px 2px 50px;
     width: 136px;
+}
+
+div.dep_contact {
+float:left;
+}
+
+div.contact_top {
+float:left;
+}
+
+div.contact_btm{
+float:left;
 }
