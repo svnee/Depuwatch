@@ -42,8 +42,11 @@
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
 
-<div class="dossiers2"><div class="result2">
-<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
+<BR>
+</div>
+<div class="dossiers2">
+	<div class="result2">
+	<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 	<br />
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 </div>
@@ -67,7 +70,7 @@
 </table>
 <p>
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
-</div></div>
+</div>
 
 <div class="dep_contact">
 	<div class="contact_top">
