@@ -34,22 +34,6 @@
 </div>
 
 <div class="result">
-
-<div class="dep_contact">
-	<div class="contact_top">
-Kontaktéier d(e) <%= @deputy.name %>
-	</div>
-	
-	<div class="contact_btm">
-<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
-<p><%= facebook_button(@deputy.facebook).html_safe %>
-<%= twitter_button(@deputy.twitter).html_safe %></p>
-	</div>
-	</div>
-</div>
-	
-
-</div>
 <div class="dossiers2"><div class="result2">
 <div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 	<br />
@@ -76,6 +60,23 @@ Kontaktéier d(e) <%= @deputy.name %>
 <p>
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div></div>
+
+<div class="dep_contact">
+	<div class="contact_top">
+Kontaktéier d(e) <%= @deputy.name %>
+	</div>
+	
+	<div class="contact_btm">
+<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
+<p><%= facebook_button(@deputy.facebook).html_safe %>
+<%= twitter_button(@deputy.twitter).html_safe %></p>
+	</div>
+	</div>
+</div>
+	
+
+</div>
+
 
 	<div class="dep_details">
 <img src="/images/active.gif"> 	2004 - 2009; 2009 - 2011; (Successor: Josée Lorsché)
