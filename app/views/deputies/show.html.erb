@@ -38,12 +38,13 @@
 	<br />
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 
-	<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
-		<p><%= facebook_button(@deputy.facebook).html_safe %>
-		<%= twitter_button(@deputy.twitter).html_safe %></p>
-	</div>
+<img src="/images/politikercheck_logo.jpg"> <%= @deputy.name %> op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
 
-</div>
+<%= facebook_button(@deputy.facebook).html_safe %> FB
+
+<%= twitter_button(@deputy.twitter).html_safe %> Twitter
+
+</div></div>
 <div class="dossiers2"><div class="result2">
 </div>
 	<% p, c, a = @deputy.split_votes -%>
@@ -74,15 +75,11 @@
 <img src="/images/memorial.gif"> active + période (successor)
 |
 <img src="/images/compte.gif">  Bezierk
-|
-<img src="/images/compte.gif">FB
-|
-<img src="/images/memorial.gif"> Twitter
 
 
 	</div>
 	<div class="d_fav">
-politikercheck	</div>
+	</div>
 </div>
 
 
