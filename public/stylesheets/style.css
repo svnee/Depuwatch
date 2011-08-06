@@ -598,7 +598,7 @@ margin-top: 0px;
 div.result {
 	display: block;
     float: left;
-    width: 43%;
+    width: 300px;
     padding-right: 35px;
         padding-left: 15px;
 }
@@ -691,7 +691,8 @@ th {
 	}
 
 div.result2 {
-	padding-bottom:35px;
+	padding-bottom:0px;
+margin-right: 100px;
 }
 
 div.wrapperDEP {
@@ -819,7 +820,6 @@ background-color: #EEEEEE;
     -moz-border-radius: 4px 4px 4px 4px;
     padding: 3px;
     width: 749px;
-margin-right:10px;
 }
 
 div.d_wrapper {
@@ -838,9 +838,12 @@ border: 1px solid #EEEEEE;
 }
 
 div.dep_contact {
-float:left;
-width: 300px;
-margin-bottom: 20px;
+clear: both;
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 240px;
 }
 
 div.contact_top {
@@ -856,9 +859,9 @@ background-color: #8C93FE;
 
 div.contact_btm{
 border: 1px solid #EEEEEE;
-    border-radius: 0 0 4px 4px;
-    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 0px;
+    -moz-border-radius: 0 0 4px 0px;
     padding: 4px;
-    width: 100%;
-float: left;
+    width: 230px;
+float: right;
 }
