@@ -20,25 +20,24 @@
 <div class="content_wrapper">
 <div class="info">
 
-<a href="/deputies">D&eacute;put&eacute;</a>: <%= @deputy.name %> | Partei: <%= @deputy.party.name %>
+<a href="/deputies">Deput&eacute;</a>: <%= @deputy.name %> | Partei: <%= @deputy.party.name %>
 </div>
 
 <div class="content">
 
 <div class="wrapper_text"> 
 <div class="projet">
+<div class="h2"><img src="/images/136.gif"> <span class="h2"><%= @deputy.name %> </span> </div>
+	<div class="h2_partei_wrapper"> <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div>
+
 <img width="137" src="<%= @deputy.pc_img.nil? ? "/images/empty_abg_med.gif" : @deputy.pc_img %>">
 </div>
 
 <div class="result">
 
-	<div class="h2"><span class="h2"><%= @deputy.name %> </span> </div>
-	<div class="h2_partei_wrapper"> <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
-
-
 <div class="dep_contact">
 	<div class="contact_top">
-Kontaktéier den <%= @deputy.name %>
+Kontaktéier d(e) <%= @deputy.name %>
 	</div>
 	
 	<div class="contact_btm">
@@ -78,13 +77,10 @@ Kontaktéier den <%= @deputy.name %>
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div></div>
 
-
-<div class="d_wrapper">
 	<div class="dep_details">
-<img src="/images/memorial.gif"> Active + Periodes (Successor)
-<img src="/images/compte.gif">  Bezierk
+<img src="/images/active.gif"> 	2004 - 2009; 2009 - 2011; (Successor: Josée Lorsché)
+<img src="/images/061.gif">  Bezierk Zentrum
 
-	</div>
 	
 </div>
 
