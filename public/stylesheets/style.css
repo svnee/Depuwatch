@@ -804,5 +804,21 @@ div.up {
 }
 
 div.details {
-	float:left;
+	background-color: #EEEEEE;
+    	border: 1px solid #EEEEEE;
+    	border-radius: 4px 0px 0px 4px;
+	-moz-border-radius: 4px 0px 0px 4px;
+    	float: left;
+    	padding: 3px;
+    	width: 70%;
+}
+
+div.d_wrapper {
+float:left;
+width: 100%;
+}
+
+div.d_fav {
+float:right;
+width: 30%;
 }
