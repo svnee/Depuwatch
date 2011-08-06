@@ -48,7 +48,7 @@ Kontaktéier d(e) <%= @deputy.name %>
 	</div>
 	
 	<div class="contact_btm">
-<p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
+<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><img src="/images/politikercheck_small.jpg"> </a>
 
 <%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
