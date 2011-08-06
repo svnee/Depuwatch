@@ -34,18 +34,17 @@
 
 	<div class="h2"><span class="h2">Numm: </span> <%= @deputy.name %></div>
 	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
+
+	<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
+		<p><%= facebook_button(@deputy.facebook).html_safe %>
+		<%= twitter_button(@deputy.twitter).html_safe %></p>
+	</div>
+
+</div>
+<div class="dossiers2"><div class="result2">
 <div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 	<br />
 	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
-
-<img src="/images/politikercheck_logo.jpg"> <%= @deputy.name %> op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a>
-
-<%= facebook_button(@deputy.facebook).html_safe %> FB
-
-<%= twitter_button(@deputy.twitter).html_safe %> Twitter
-
-</div></div>
-<div class="dossiers2"><div class="result2">
 </div>
 	<% p, c, a = @deputy.split_votes -%>
 <table>
@@ -72,13 +71,17 @@
 
 <div class="d_wrapper">
 	<div class="details">
-<img src="/images/memorial.gif"> active + période (successor)
-|
+<img src="/images/memorial.gif"> Twitter
 <img src="/images/compte.gif">  Bezierk
+|
+<img src="/images/compte.gif">FB
+|
+<img src="/images/memorial.gif"> Twitter
 
 
 	</div>
 	<div class="d_fav">
+<span id="favorite"><%= link_to(image_tag("fav.gif"), {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST) %> Top Dossier?</span>
 	</div>
 </div>
 
