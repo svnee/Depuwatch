@@ -78,8 +78,7 @@ h3 {
 
 table.content {
 border-spacing: 0;
-    margin: 15px;
-    width: 745px;
+    width: 775px;
 }
 
 
@@ -836,6 +835,8 @@ border: 1px solid #EEEEEE;
     padding: 2px 2px 2px 50px;
     width: 136px;
 background-color: #8C93FE;
+color: white;
+font-weight: bold;
 }
 
 div.dep_contact {
