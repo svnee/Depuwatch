@@ -802,3 +802,7 @@ div.up {
 	float: right;
 	width: 20px;
 }
+
+div.details {
+	float:left;
+}
