@@ -44,7 +44,10 @@
 
 <div class="h2">
 
-
+<p>
+<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
+</div> <% p, c, a = @deputy.split_votes -%>
+</p>
 </div>
 
 <div class="dossiers2">
@@ -54,9 +57,7 @@
 </p>
 <p>
 <span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
- <% p, c, a = @deputy.split_votes -%>
 </p>
-
 	<div class="result2">
 	
 <table>
