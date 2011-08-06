@@ -42,19 +42,25 @@
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
 
+
+
+</div>
+
+<div class="dossiers2">
+	<div class="result2">
+	
+
+<!-- Présence start -->
 <div class="h2">
 <p>
 <span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
 </p>
 <p>
 <span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
-</div> <% p, c, a = @deputy.split_votes -%>
 </p>
-</div>
+</div> 
+<!-- Présence end -->
 
-<div class="dossiers2">
-	<div class="result2">
-	
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
@@ -76,6 +82,7 @@
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div>
 
+<!-- Contact Start -->
 <div class="dep_contact">
 	<div class="contact_top">
 Kontaktéier d(e) <%= @deputy.name %>
@@ -89,6 +96,7 @@ Kontaktéier d(e) <%= @deputy.name %>
 
 	</div>
 </div>
+<!-- Contact end -->
 	
 
 </div>
