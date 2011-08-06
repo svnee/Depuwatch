@@ -48,9 +48,8 @@
 </p>
 <p>
 <span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
+</div> <% p, c, a = @deputy.split_votes -%>
 </p>
-</div> 
-
 </div>
 
 <div class="dossiers2">
@@ -77,7 +76,7 @@
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div>
 
-<!-- Contact Start -->
+
 <div class="dep_contact">
 	<div class="contact_top">
 Kontaktéier d(e) <%= @deputy.name %>
@@ -91,7 +90,6 @@ Kontaktéier d(e) <%= @deputy.name %>
 
 	</div>
 </div>
-<!-- Contact end -->
 	
 
 </div>
