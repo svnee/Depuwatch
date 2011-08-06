@@ -42,15 +42,6 @@
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
 
-
-
-</div>
-
-<div class="dossiers2">
-	<div class="result2">
-	
-
-<!-- Présence start -->
 <div class="h2">
 <p>
 <span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
@@ -59,8 +50,12 @@
 <span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
 </p>
 </div> 
-<!-- Présence end -->
 
+</div>
+
+<div class="dossiers2">
+	<div class="result2">
+	
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
