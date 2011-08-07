@@ -45,7 +45,7 @@ clear: both;
 
 div.h2_partei_wrapper {
     text-align: left;
-margin-bottom: 20px;
+margin-bottom: 18px;
 float: left;
 }
 
@@ -78,7 +78,7 @@ h3 {
 
 table.content {
 border-spacing: 0;
-    margin: 15px;
+margin: 5px 15px 0;
     width: 745px;
 }
 
@@ -97,7 +97,7 @@ th.vote {
 
 table.content th, table.content_index th {
 	border-bottom: 1px solid #eee;
-	padding-bottom:10px;
+	padding-bottom:0px;
 	text-align:left;
    padding-left: 20px;
 }
@@ -815,7 +815,7 @@ background-color: #EEEEEE;
 
 div.dep_details {
 background-color: #EEEEEE;
-    border-radius: 4px 0px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
     float: left;
     -moz-border-radius: 4px 0px 4px 4px;
     padding: 3px;
@@ -843,7 +843,7 @@ font-weight: bold;
 div.dep_contact {
 clear: both;
     display: block;
-    float: right;
+    float: left;
     margin-bottom: 5px;
     margin-right: 10px;
     width: 240px;
