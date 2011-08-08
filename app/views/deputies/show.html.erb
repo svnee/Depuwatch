@@ -99,9 +99,23 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 
 	<div class="dep_details">
-<img src="/images/active.gif"> 	2004 - 2009; 2009 - 2011; (Successor: Josée Lorsché)
+<% if @deputy.active? then %><img src="/images/active.gif"> <% end %>			<%str = ""
+			i = 1
+			@deputy.memberships.each do |m|
+				if m.end.nil? then 
+		      str = str + "#{m.start.year} - ..."
+		    else
+					if @deputy.memberships.size > 1 && i <= @deputy.memberships.size then
+		      	str = "#{m.start.year} - #{m.end.year}; " + str
+					else
+						str = "#{m.start.year} - #{m.end.year}" + str
+					end
+		    end
+				i = i + 1
+			end
+		%> <%= str %> <% if !@deputy.predecessor.nil? %>(Prédécesseur: <%= link_to @deputy.predecessor.name, @deputy.predecessor %>) <% end %><% if !@deputy.successor.nil? %> (Successeur: <%= link_to @deputy.successor.name, @deputy.successor %>)<% end %>
 |
-<img src="/images/061.gif">  Bezierk Zentrum
+<img src="/images/061.gif">  Bezierk <%= @deputy.bezierk %>
 
 	
 </div>
