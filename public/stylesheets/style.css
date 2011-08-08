@@ -6,7 +6,7 @@ body{
 	color: #222222;
 	}
 body a {
-	 color: #A4253D;
+	color: #A4253D;
     font-size: 12px;
     text-decoration: none;
 }
@@ -865,4 +865,8 @@ border: 1px solid #EEEEEE;
     padding: 4px;
     width: 230px;
 float: left;
+}
+
+div d_fav a {
+color: white;
 }
