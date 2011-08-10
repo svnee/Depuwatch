@@ -823,8 +823,14 @@ background-color: #EEEEEE;
     width: 749px;
 }
 
-div.dep_details info {
+div.dep_details2 {
 border-bottom: 10px;
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+    width: 749px;
 }
 
 div.d_wrapper {
