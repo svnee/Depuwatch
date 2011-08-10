@@ -437,6 +437,7 @@ div.navi_item {
    -webkit-box-shadow: 3px 5px 3px #e1e1e1;
    box-shadow: 3px 5px 3px #e1e1e1;
 	}
+img { align: absmiddle;}
 
 div.navi_img {
 	 border-right: 1px solid #e3e3e3;
@@ -867,6 +868,6 @@ border: 1px solid #EEEEEE;
 float: left;
 }
 
-div.d_fav a {
+div.id_fav a {
 color: white;
 }
