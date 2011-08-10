@@ -818,7 +818,7 @@ div.dep_details {
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
     float: left;
-    -moz-border-radius: 4px 0px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
     padding: 3px;
     width: 749px;
 }
