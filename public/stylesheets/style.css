@@ -823,6 +823,10 @@ background-color: #EEEEEE;
     width: 749px;
 }
 
+div.dep_details info {
+border-bottom: 10px;
+}
+
 div.d_wrapper {
 float:left;
 width: 100%;
