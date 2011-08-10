@@ -824,7 +824,7 @@ background-color: #EEEEEE;
 }
 
 div.dep_details2 {
-border-bottom: 10px;
+margin-bottom: 10px;
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
     float: left;
