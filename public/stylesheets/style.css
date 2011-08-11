@@ -764,6 +764,7 @@ div.dataTables_wrapper {
 	text-align: center;
     	width: 100%;
 	margin-bottom: 15px;
+margin-top: 10px;
 }
  
 .paging_full_numbers span.paginate_button,
