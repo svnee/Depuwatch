@@ -67,11 +67,18 @@ Stell dem <%= @deputy.name %> eng Fro!
 <div class="dossiers2">
 
 <p>
-<img src="/images/123.gif"> Pr&eacute;sence lors des votes: <%= number_to_percentage(@deputy.presence,:precision => 2) %>
-</p>
-<p>
-<img src="/images/124.gif"> Délégations / Vote: <%= @deputy.delegations_rate %>
-</p>
+<table>
+<tr>
+<td><img src="/images/123.gif"></td>
+<td> Pr&eacute;sence lors des votes:</td>
+<td> <%= number_to_percentage(@deputy.presence,:precision => 2) %></td>
+</tr>
+<tr>
+<td><img src="/images/124.gif"></td>
+<td>Délégations / Vote:<td>
+<td> <%= @deputy.delegations_rate %></td>
+</tr>
+</table>
 	<div class="result2">
 	
 <table>
