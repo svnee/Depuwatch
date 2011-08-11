@@ -773,9 +773,9 @@ background-color: #EEEEEE;
  
 .paging_full_numbers span.paginate_button,
  	.paging_full_numbers span.paginate_active {
-	padding: 2px 5px;
-	margin: 0 3px;
-	cursor: pointer;
+cursor: pointer;
+    margin: 0 2px;
+    padding: 2px 30px;
 }
  
 .paging_full_numbers span.paginate_button {
