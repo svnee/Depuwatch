@@ -758,13 +758,17 @@ div.dataTables_wrapper {
 }
 
 .paging_full_numbers {
-	width: 400px;
-	height: 22px;
-	line-height: 22px;
-	text-align: center;
-    	width: 100%;
-	margin-bottom: 15px;
-margin-top: 10px;
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 3px;
+    text-align: center;
+    width: 755px;
 }
  
 .paging_full_numbers span.paginate_button,
@@ -775,11 +779,12 @@ margin-top: 10px;
 }
  
 .paging_full_numbers span.paginate_button {
-	border: 1px solid #EEEEEE;
+	background-color: white;
 }
  
 .paging_full_numbers span.paginate_button:hover {
-	background-color: #eee;
+	background-color: white;
+	border: 1px solid white;
 }
  
 .paging_full_numbers span.paginate_active {
