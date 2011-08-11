@@ -784,6 +784,7 @@ background-color: #EEEEEE;
  
 .paging_full_numbers span.paginate_button:hover {
 	background-color: #8c93fe;
+	color: white;
 }
  
 .paging_full_numbers span.paginate_active {
