@@ -768,7 +768,7 @@ background-color: #EEEEEE;
     margin-top: 10px;
     padding: 3px;
     text-align: center;
-    width: 755px;
+    width: 749px;
 }
  
 .paging_full_numbers span.paginate_button,
@@ -783,8 +783,7 @@ background-color: #EEEEEE;
 }
  
 .paging_full_numbers span.paginate_button:hover {
-	background-color: white;
-	border: 1px solid white;
+	background-color: #8c93fe;
 }
  
 .paging_full_numbers span.paginate_active {
