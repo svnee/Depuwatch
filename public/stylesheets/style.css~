@@ -187,14 +187,14 @@ text-decoration: none;
 
 div.title1_sub {
 color: #734347;
+    float: left;
     font-family: 'Crimson Text';
     font-size: 17px;
-    left: 295px;
-    margin-left: -46px;
-    position: absolute;
+    margin-left: 107px;
+    position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: 68px;
-    width: 827px;
+    top: -16px;
+    width: 434px;
 }
 
 div.navi {
@@ -222,8 +222,8 @@ div.blog {
     background-repeat: no-repeat;
     height: 109px;
     left: 890px;
-    position: absolute;
     width: 110px;
+    float: right;
 }
 
 div.title {
