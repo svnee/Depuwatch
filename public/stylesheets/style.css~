@@ -6,7 +6,7 @@ body{
 	color: #222222;
 	}
 body a {
-	 color: #A4253D;
+	color: #A4253D;
     font-size: 12px;
     text-decoration: none;
 }
@@ -45,7 +45,7 @@ clear: both;
 
 div.h2_partei_wrapper {
     text-align: left;
-margin-bottom: 30px;
+margin-bottom: 18px;
 float: left;
 }
 
@@ -78,7 +78,7 @@ h3 {
 
 table.content {
 border-spacing: 0;
-    margin: 15px;
+margin: 5px 15px 0;
     width: 745px;
 }
 
@@ -97,7 +97,7 @@ th.vote {
 
 table.content th, table.content_index th {
 	border-bottom: 1px solid #eee;
-	padding-bottom:10px;
+	padding-bottom:0px;
 	text-align:left;
    padding-left: 20px;
 }
@@ -186,15 +186,15 @@ text-decoration: none;
 }
 
 div.title1_sub {
-	color: #734347;
+color: #734347;
     font-family: 'Crimson Text';
     font-size: 17px;
-    margin-left: 185px;
-    position: relative;
+    left: 295px;
+    margin-left: -46px;
+    position: absolute;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: -17px;
-    width: 476px;
-    left:50px;
+    top: 68px;
+    width: 827px;
 }
 
 div.navi {
@@ -214,6 +214,16 @@ div.logo {
     float: left;
     height: 103px;
     width: 127px;
+}
+
+div.blog {
+    background-image: url("/images/blog.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 109px;
+    left: 890px;
+    position: absolute;
+    width: 110px;
 }
 
 div.title {
@@ -249,7 +259,7 @@ border-color: transparent transparent #333;
     border-width: 16px;
     left: 895px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 	}
 div.pointer_seancen {
@@ -258,7 +268,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 413px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 	}
 	
@@ -268,7 +278,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 575px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 	}
 	
@@ -278,7 +288,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 734px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 
 	}
@@ -290,7 +300,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 896px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 
 	}
@@ -301,7 +311,7 @@ border-color: transparent transparent #333;
     border-width: 13px;
     left: 255px;
     position: relative;
-    top: 33px;
+    top: 137px;
     width: 0;
 	}
 
@@ -395,7 +405,6 @@ div.content_static {
     padding-left: 10px;
     padding-right: 10px;
     width: 755px;
-
 }
 
 div.content_static2 {
@@ -412,10 +421,10 @@ padding-bottom: 10px;
 div.navi_item {
 	border-bottom: 2px solid #333;
    height: 31px;
-   margin-bottom: 25px;
+   margin-bottom: 15px;
    padding-left: 7px;
    margin-right: 0px;
-   margin-left: 14px;
+   margin-left: 16px;
    padding-top: 3px;
    width: 140px;
    float: left;
@@ -428,6 +437,7 @@ div.navi_item {
    -webkit-box-shadow: 3px 5px 3px #e1e1e1;
    box-shadow: 3px 5px 3px #e1e1e1;
 	}
+img { align: absmiddle; }
 
 div.navi_img {
 	 border-right: 1px solid #e3e3e3;
@@ -575,7 +585,6 @@ div.projet1 {
 	display:block;
 	float:left;
 width: 510px;
-
 padding-right: 55px;
 }
 
@@ -584,14 +593,15 @@ div.result3 {
     float: left;
     width: 22%;
     padding-right: 0px;
+margin-top: 0px;
 }
 
 div.result {
 	display: block;
-    float: left;
-    width: 43%;
-    padding-right: 35px;
-        padding-left: 15px;
+    	float: left;
+    	width: 300px;
+    	padding-right: 5px;
+    	padding-left: 15px;
 }
 
 div.LSAP {
@@ -682,7 +692,8 @@ th {
 	}
 
 div.result2 {
-	padding-bottom:35px;
+	padding-bottom:0px;
+margin-right: 100px;
 }
 
 div.wrapperDEP {
@@ -712,7 +723,7 @@ div.dossiers {
 
 div.dossiers2 {
     display: block;
-    float: left;
+    float: right;
 }
 
 div.dataTables_wrapper {
@@ -746,4 +757,133 @@ div.dataTables_wrapper {
 	text-align: right;
 }
 
+.paging_full_numbers {
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 3px;
+    text-align: center;
+    width: 749px;
+}
+ 
+.paging_full_numbers span.paginate_button,
+ 	.paging_full_numbers span.paginate_active {
+cursor: pointer;
+    margin: 0 2px;
+    padding: 2px 29px;
+}
+ 
+.paging_full_numbers span.paginate_button {
+	background-color: white;
+}
+ 
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #8c93fe;
+	color: white;
+}
+ 
+.paging_full_numbers span.paginate_active {
+	background-color: #8c93fe;
+	color: white;
+	font-weight: bold;
+}
 
+/* Session buttons */
+span.session_btn {
+	border: 1px solid #EEEEEE;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	font-weight: bold;p
+}
+
+span.session_btn:hover {
+	background-color: #eee;
+}
+
+div.up {
+	float: right;
+	width: 20px;
+}
+
+div.details {
+background-color: #EEEEEE;
+    border-radius: 4px 0 0 4px;
+    float: left;
+    -moz-border-radius: 4px 0 0 4px;
+    padding: 3px;
+    width: 554px;
+}
+
+div.dep_details {
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+    width: 749px;
+}
+
+div.dep_details2 {
+margin-bottom: 10px;
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+    width: 749px;
+}
+
+div.d_wrapper {
+float:left;
+width: 100%;
+}
+
+div.d_fav {
+border: 1px solid #EEEEEE;
+    border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    float: right;
+    margin-right: 10px;
+    padding: 2px 2px 2px 50px;
+    width: 136px;
+background-color: #8C93FE;
+color: white;
+font-weight: bold;
+}
+
+div.dep_contact {
+clear: both;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 240px;
+}
+
+div.contact_top {
+background-color: #8C93FE;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    color: white;
+    float: left;
+    font-weight: bold;
+    padding: 5px;
+    width: 230px;
+}
+
+div.contact_btm{
+border: 1px solid #EEEEEE;
+    padding: 4px;
+    width: 230px;
+float: left;
+}
+
+div.d_fav a {
+color: white;
+}
