@@ -253,67 +253,6 @@ div.intro {
     width: 163px;
 }
 
-div.pointer_themen {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 16px;
-    left: 895px;
-    position: relative;
-    top: 133px;
-    width: 0;
-	}
-div.pointer_seancen {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 13px;
-    left: 413px;
-    position: relative;
-    top: 133px;
-    width: 0;
-	}
-	
-	div.pointer_dossiers {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 13px;
-    left: 575px;
-    position: relative;
-    top: 133px;
-    width: 0;
-	}
-	
-		div.pointer_deputeiert {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 13px;
-    left: 734px;
-    position: relative;
-    top: 133px;
-    width: 0;
-
-	}
-	
-
-		div.pointer_topics {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 13px;
-    left: 896px;
-    position: relative;
-    top: 133px;
-    width: 0;
-
-	}
-	
-	div.pointer_sessiounen {
-border-color: transparent transparent #333;
-    border-style: solid;
-    border-width: 13px;
-    left: 255px;
-    position: relative;
-    top: 133px;
-    width: 0;
-	}
 
 a img {
 text-decoration: none;
