@@ -9,10 +9,6 @@
       <option>All</option>
       <option>Dep 1</option>
       <option>Dep 2</option>
-    </select> vun der Partei <select name="leg" size="2" multiple="multiple">
-      <option>All</option>
-      <option>CSV</option>
-      <option>LSAP</option>
     </select> mat <input type="checkbox" name="vote" value="Jo"> Jo <input type="checkbox" name="vote" value="Nee"> Nee <input type="checkbox" name="vote" value="Abstentioun"> Abstentioun gestëmmt huet fir Sessioun <select name="leg" size="2" multiple="multiple">
       <option>All</option>
       <option>2010/2011</option>
