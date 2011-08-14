@@ -29,7 +29,7 @@
   </div>
 	<div class="field">
     <%= f.label :topic_ids, "Themen" %><br />
-    <%= f.select :topic_ids, Topic.all.collect {|t| [ t.name, t.id ] }, {}, {:size => 15, :multiple => true} %>
+    <%= f.select :topic_ids, Topic.all.collect {|t| [ t.name, t.id ] }, {}, {:size => 5, :multiple => true} %>
   </div>
   <div class="actions">
     <%= f.submit %>
