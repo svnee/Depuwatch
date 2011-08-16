@@ -826,3 +826,10 @@ float: left;
 div.d_fav a {
 color: white;
 }
+
+span.beta {
+	font-size: 18px; 
+	font-family: Helvetica,"Trebuchet MS",Arial; 
+	color: #00bb00;
+	text-shadow: 1px 1px 8px #57cb57";
+	}
