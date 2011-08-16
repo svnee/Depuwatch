@@ -6,10 +6,11 @@ class AdminController < ApplicationController
   
   def save_votes
     @text = Text.find(params[:vote][:text_id])
-    @text.votes.each { |v| v.destroy }
-    params[:vote][:pour].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 1}).save! }
-    params[:vote][:contre].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => -1}).save! }
-    params[:vote][:abstention].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 0}).save! }
+    
+    #@text.votes.each { |v| v.destroy }
+    #params[:vote][:pour].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 1}).save! }
+    #params[:vote][:contre].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => -1}).save! }
+    #params[:vote][:abstention].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 0}).save! }
   	redirect_to @text
   end
 
