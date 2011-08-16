@@ -5,8 +5,11 @@ class AdminController < ApplicationController
   end
   
   def save_votes
-    @text = Text.find(params[:vote][:text_id])
+    @text = Text.find(params[:text][:id])
     
+    params[:vote].each do |k,v|
+    	logger.info "#{k} -> #{v}"
+    end
     #@text.votes.each { |v| v.destroy }
     #params[:vote][:pour].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 1}).save! }
     #params[:vote][:contre].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => -1}).save! }
