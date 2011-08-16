@@ -7,24 +7,37 @@ Entrée vu Voten
 <div class="content">
 	
 	<div style="padding: 10px;">
-		<em>Attention, this form does not allow to encode proxies! Those have to be encoded separately at <%= link_to "New Vote", {:action => :new, :controller => 'votes'} %></em>
 		
 		<%= form_tag({:action => "save_votes", :controller => "admin"}, :method => "post") do  %>
 			<table>
 				<tr>
 					<td>Text:</td>
-					<td><%= select("vote", "text_id", @texts.collect {|t| [ t.code, t.id ] }, {}, {:class => "chzn-select"}) %></td>
+					<td><%= select("text", "id", @texts.collect {|t| [ t.code, t.id ] }, {}, {:class => "chzn-select"}) %></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<td>Pour</td>
-					<td>Contre</td>
-					<td>Abstention</td>
-				</tr>
-				<tr>
-					<td><%= select("vote", "pour", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
-					<td><%= select("vote", "contre", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
-					<td><%= select("vote", "abstention", @deputies.collect {|d| [ d.name, d.id ] }, {}, {:multiple => true, :class => "chzn-select"}) %></td>
+					<td colspan="3">
+						<table>
+							<tr>
+								<th>Deputy</th>
+								<th>Pas voté</th>
+								<th>OUI</th>
+								<th>NON</th>
+								<th>ABSTENTION</th>
+								<th>Proxy</th>
+							</tr>
+							<% @deputies.each do |d| %>
+							<tr>
+								<td><%= d.name %></td>
+								<td><%= radio_button("vote", d.id, "noshow", {:checked => true}) %></td>
+								<td><%= radio_button("vote", d.id, "yes") %></td>
+								<td><%= radio_button("vote", d.id, "no") %></td>
+								<td><%= radio_button("vote", d.id, "abs") %></td>
+								<td><%= select("proxy", d.id, @deputies.collect {|de| [de.name, de.id]}, { :include_blank => true }, {:class => "chzn-select"}) %></td>
+							</tr>
+							<% end %>
+						</table>
+					</td>
 				</tr>
 			</table>
 			<%= submit_tag("Save") %>

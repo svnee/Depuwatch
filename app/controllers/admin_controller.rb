@@ -1,15 +1,26 @@
 class AdminController < ApplicationController
   def vote
-  	@deputies = Deputy.all
+  	@deputies = Deputy.order(:lastname).all
   	@texts = Text.order(:code).all
   end
   
   def save_votes
-    @text = Text.find(params[:vote][:text_id])
+    @text = Text.find(params[:text][:id])
     @text.votes.each { |v| v.destroy }
-    params[:vote][:pour].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 1}).save! }
-    params[:vote][:contre].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => -1}).save! }
-    params[:vote][:abstention].each { |i| Vote.create({:text_id => @text.id, :deputy_id => i, :vote => 0}).save! }
+    params[:vote].each do |k,v|
+    	if (v != "noshow") then
+    		vote = 0
+    		case v
+    			when "no"
+    				vote = -1
+    			when "yes"
+    				vote = 1
+    			else
+    				vote = 0
+	    	end
+  			Vote.create({:text_id => @text.id, :deputy_id => k, :vote => vote, :delegate_id => params[:proxy][k]}).save!
+    	end
+    end
   	redirect_to @text
   end
 
