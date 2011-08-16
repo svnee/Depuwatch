@@ -827,7 +827,7 @@ div.d_fav a {
 color: white;
 }
 
-.button{
+#button{
 width:100px; 
 height:100px; 
 border-radius:50px; 
@@ -837,10 +837,9 @@ border:0px;
 padding:39px 27px 39px 28px;
 background:#000; 
 text-align:center; 
-}
-
-.button a { font-size:18px; 
+font-size:18px; 
 	font-family: Helvetica,"Trebuchet MS",Arial;
-color:#fff}
+color:#fff
+}
 
 .nav{padding-top:37px}
