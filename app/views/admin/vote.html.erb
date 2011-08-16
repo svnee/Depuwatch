@@ -29,11 +29,11 @@ Entrée vu Voten
 							<% @deputies.each do |d| %>
 							<tr>
 								<td><%= d.name %></td>
-								<td><%= radio_button("vote", d.id, "noshow") %></td>
+								<td><%= radio_button("vote", d.id, "noshow", {:checked => true}) %></td>
 								<td><%= radio_button("vote", d.id, "yes") %></td>
 								<td><%= radio_button("vote", d.id, "no") %></td>
 								<td><%= radio_button("vote", d.id, "abs") %></td>
-								<td><%= select("proxy", d.id, @deputies.collect {|de| [de.name, de.id]}, { :include_blank => true }) %></td>
+								<td><%= select("proxy", d.id, @deputies.collect {|de| [de.name, de.id]}, { :include_blank => true, :class => "chzn-select" }) %></td>
 							</tr>
 							<% end %>
 						</table>
