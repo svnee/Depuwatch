@@ -33,7 +33,7 @@ Entrée vu Voten
 								<td><%= radio_button("vote", d.id, "yes") %></td>
 								<td><%= radio_button("vote", d.id, "no") %></td>
 								<td><%= radio_button("vote", d.id, "abs") %></td>
-								<td><%= select("proxy", d.id, @deputies.all.collect {|de| [de.name, de.id]}, { :include_blank => true }) %></td>
+								<td><%= select("proxy", d.id, @deputies.collect {|de| [de.name, de.id]}, { :include_blank => true }) %></td>
 							</tr>
 							<% end %>
 						</table>
