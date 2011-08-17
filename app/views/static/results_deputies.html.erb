@@ -1,0 +1,32 @@
+<div class="pointer_deputeiert"></div>
+<div class="content_wrapper">
+<div class="info"><a href="/deputies">Deputéiert</a>: Deputéiert an der Chamber an hier Partei.</div>
+
+<div class="content">
+
+<table class="content" id="ordered_table">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th style="width:100px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
+			<th style="width:100px;">&nbsp;</th>
+			<th>Partei</th>
+			<th>Präsenz/Votes</th>
+			<th>Délégatiounen/Vote</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @deputies.each do |deputy| %>
+	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+	    <td><%= link_to deputy.lastname, deputy %></td>
+			<td><%= link_to deputy.firstname, deputy %></td>
+	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%= number_to_percentage(deputy.presence,:precision => 2) %></td>
+			<td><%= number_to_percentage(deputy.delegations_rate,:precision => 2) %></td>
+	  </tr>
+	<% end %>
+	</tbody>
+</table>
+
+</div>
