@@ -96,23 +96,7 @@
     <!-- TAB 2 -->
     <div id="idTab2">More content in tab 2.
   
-  
-  </div> 
-      <!-- TAB 2 -->
-  
-    <!-- TAB 3 -->
-  <div id="idTab3">Tab 3 is always last!
-  
-  
-  </div> 
-      <!-- TAB 3 -->
-    
-  
-</div>
-
-<div style="display:block; float:left; clear:both;">
-
-<div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table2">
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table2">
 <tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 	<th>Titel</th>
@@ -127,7 +111,14 @@
 <% end -%>
 
 </table></p> </div>
-<div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table3">
+  
+  </div> 
+      <!-- TAB 2 -->
+  
+    <!-- TAB 3 -->
+  <div id="idTab3">Tab 3 is always last!
+  
+  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table3">
 <tr>
 <th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 <th>Titel</th>
@@ -142,4 +133,9 @@
 <% end -%>
 
 </table></p> </div>
+  
+  </div> 
+      <!-- TAB 3 -->
+    
+  
 </div>

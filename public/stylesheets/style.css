@@ -898,34 +898,37 @@ top:-18px;
 .usual {
     background: none repeat scroll 0 0 #181818;
     color: #111111;
-    margin: 8px auto;
-    width: 773px;
+
+    width: 775px;
 }
 
 .usual li {
     float: left;
     list-style: none outside none;
+    margin-left: -40px;
 }
 
 .usual ul a.selected {
-    background: -moz-linear-gradient(center top , #ffffff, #E1e1e1) repeat scroll 0 0 transparent; 
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E1e1e1'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E1e1e1)); /* for webkit browsers */
+background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
 width: 246px;
     border-bottom: 1px solid snow;
-    color: #000000;
+    color: #fff;
     cursor: default;
     margin-bottom: 0;
 }
 
 .usual ul a {
-    background: none repeat scroll 0 0 #444444;
-    color: #FFFFFF;
+   background: -moz-linear-gradient(center top , #ffffff, #E1e1e1) repeat scroll 0 0 transparent; 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E1e1e1'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E1e1e1)); /* for webkit browsers */
+
+    border-left: 2px solid #333333;
     display: block;
-    font: 10px Verdana;
-    margin: 1px 1px 1px 0;
-    padding: 6px 10px;
-    text-decoration: none !important;
+    height: 25px;
+    padding: 5px 5px 7px;
+    width: 225px;
 }
 
 .usual div {
