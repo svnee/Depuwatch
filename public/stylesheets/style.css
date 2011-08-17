@@ -892,9 +892,19 @@ top:-18px;
 -webkit-transform: rotate(12deg);
 }
 
-.slider_active{
+.slider_active {
 background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
  
+}
+
+div.slider_static {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 755px;
 }
