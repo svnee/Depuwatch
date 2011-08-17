@@ -80,6 +80,6 @@ class Deputy < ActiveRecord::Base
   end
   
   def delegations_rate
-    "%f" % (delegations.count / votes.count.to_f)
+    "%f" % ((delegations.count / votes.count.to_f) * 100)
   end
 end
