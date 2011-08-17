@@ -122,7 +122,7 @@ table.content td, table.content_index td {
 div.footer {
 border-top: 2px solid #333333;
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-right: 0px;
 	font-size:12px;
 	text-align: center;
@@ -937,7 +937,6 @@ color: #555555;
 	}
 
 .usual div {
-    background: none repeat scroll 0 0 snow;
     clear: left;
-    padding: 10px 10px 8px;
+    padding: 0 10px 1px;
 }

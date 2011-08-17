@@ -122,7 +122,7 @@ table.content td, table.content_index td {
 div.footer {
 border-top: 2px solid #333333;
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-right: 0px;
 	font-size:12px;
 	text-align: center;
@@ -909,7 +909,7 @@ top:-18px;
 background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
-width: 246px;
+width: 251px;
     border-bottom: 1px solid snow;
     color: #fff;
     cursor: default;
@@ -929,7 +929,7 @@ color: #555555;
     padding-bottom: 3px;
     padding-top: 9px;
     padding-left: 5px;
-    width: 225px;
+    width: 251px;
 }
 
 .usual ul a:hover {
@@ -937,7 +937,6 @@ color: #555555;
 	}
 
 .usual div {
-    background: none repeat scroll 0 0 snow;
     clear: left;
     padding: 10px 10px 8px;
 }
