@@ -1,21 +1,63 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 0 ] }
+      ]
+			} );
+	} );
+</script>
 <div class="pointer_deputeiert"></div>
 <div class="content_wrapper">
-<div class="info">Deputéiert</div>
+<div class="info"><a href="/deputies">Deputéiert</a>: Deputéiert an der Chamber an hier Partei.</div>
 
 <div class="content">
 
-<table class="content">
-	<tr>
-		<th style="width:225px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
-		<th>Partei</th>
-	</tr>
-
-<% @deputies.each do |deputy| %>
-  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-    <td><%= link_to deputy.name, deputy %></td>
-    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
-  </tr>
-<% end %>
+<table class="content" id="ordered_table">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th style="width:100px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
+			<th style="width:100px;">&nbsp;</th>
+			<th>Partei</th>
+			<th>Bezierk</th>
+			<th>Amtszäit</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @deputies.each do |deputy| %>
+	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+	    <td><%= link_to deputy.lastname, deputy %></td>
+			<td><%= link_to deputy.firstname, deputy %></td>
+	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%= deputy.bezierk %></td>
+			<td><%str = ""
+				i = 1
+				deputy.memberships.each do |m|
+					if m.end.nil? then 
+			      str = str + "#{m.start.year} - ..."
+			    else
+						if deputy.memberships.size > 1 && i <= deputy.memberships.size then
+			      	str = "#{m.start.year} - #{m.end.year}; " + str
+						else
+							str = "#{m.start.year} - #{m.end.year}" + str
+						end
+			    end
+					i = i + 1
+				end
+			%> <%= str %></td>
+	  </tr>
+	<% end %>
+	</tbody>
 </table>
 
 </div>
