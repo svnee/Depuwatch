@@ -61,6 +61,15 @@ var z = 10;
 
 <div style="display:block; float:left; clear:both;">
 <div id="mydiv" style="display:block; z-index:1;" class="slider_static">
+	<p>Neisten Dossieren</p> 
+	<p>Neisten Dossieren</p>
+	<p>Neisten Dossieren</p>
+</div>
+<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
+<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
+</div>
+
+<div class="content_static">
 
 <table class="content_index" id="ordered_table">
 <tr>
@@ -79,13 +88,4 @@ var z = 10;
 <% end -%>
 
 </table>
-
 </div>
-<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
-<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
-</div>
-
-
-
-
-
