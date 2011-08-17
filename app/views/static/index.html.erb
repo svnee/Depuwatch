@@ -68,7 +68,27 @@
   <!-- TAB 1 -->
     <div id="idTab1">This is tab 1.
   
-  
+  <div class="slider_static">
+	<p><table class="content_index" id="ordered_table">
+<tr>
+	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
+	<th>Titel</th>
+	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
+</tr>
+<% @dossiers.each do |t| -%>
+<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to t.code, t%></td>
+		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
+</tr>
+<% end -%>
+
+</table></p>
+</div>
+
+
   </div> 
     <!-- TAB 1 -->
   
@@ -91,25 +111,7 @@
 </div>
 
 <div style="display:block; float:left; clear:both;">
-<div id="mydiv" style="display:block; z-index:1;" class="slider_static">
-	<p><table class="content_index" id="ordered_table">
-<tr>
-	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
-	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
-	<th>Titel</th>
-	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
-</tr>
-<% @dossiers.each do |t| -%>
-<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td><%= link_to t.code, t%></td>
-		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
-		<td><%= t.title %></td>
-		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
-</tr>
-<% end -%>
 
-</table></p>
-</div>
 <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table2">
 <tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
