@@ -1,3 +1,12 @@
+@media screen {
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Crimson Text'), local('CrimsonText-Roman'), url('http://themes.googleusercontent.com/static/fonts/crimsontext/v1/3IFMwfRa07i-auYR-B-zNXhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+}
+
 body{	
 	font-family: Helvetica,"Trebuchet MS",Arial;
 	font-size:12px;
