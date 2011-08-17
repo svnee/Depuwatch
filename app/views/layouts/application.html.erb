@@ -5,20 +5,8 @@
   <link href="/images/favicon.ico" rel="SHORTCUT ICON">
   <%= stylesheet_link_tag "style.css" %>
   <%= stylesheet_link_tag "chosen.css" %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
-  <%= javascript_include_tag "jquery.dataTables" %>
-  <%= javascript_include_tag "rails" %>
-  <%= javascript_include_tag "sorting.plugins" %>
   <%= csrf_meta_tag %>
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-  <%= javascript_include_tag "ga" %>
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-23853402-3']);
-	  _gaq.push(['_setDomainName', document.domain]);
-	  _gaq.push(['_setAllowHash', 'false']);
-	  _gaq.push(['_trackPageview']);
-	</script>
 </head>
 <body>
 <div class="wrapper">
@@ -75,5 +63,19 @@
 <a href="/license">Lizenz</a> | <a href="/contact">Kontakt</a> | <a href="/disclaimer">Disclaimer</a> | <a href="/report">Mell ee Feeler</a>
 </div>
 <!-- wrapper --></div>
+
+<!-- Javascript -->
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
+<%= javascript_include_tag "jquery.dataTables" %>
+<%= javascript_include_tag "rails" %>
+<%= javascript_include_tag "sorting.plugins" %>
+<%= javascript_include_tag "ga" %>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23853402-3']);
+  _gaq.push(['_setDomainName', document.domain]);
+  _gaq.push(['_setAllowHash', 'false']);
+  _gaq.push(['_trackPageview']);
+</script>
 </body>
 </html>
