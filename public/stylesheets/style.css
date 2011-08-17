@@ -865,8 +865,7 @@ color: white;}
 div.slider {
     display: block;
     float: left;
-
-    width: 30%;
+    width: 246px;
 border-left: 2px solid #333333;
 	color: #555;
     height: 25px;
@@ -876,6 +875,9 @@ border-left: 2px solid #333333;
 background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 0 transparent;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e1e1e1'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#e1e1e1)); /* for webkit browsers */
+}
+
+div.slider_active { 
 
 }
 
