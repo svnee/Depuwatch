@@ -826,3 +826,23 @@ float: left;
 div.d_fav a {
 color: white;
 }
+
+#button{
+width:100px; 
+height:100px; 
+border-radius:190px; 
+-moz-border-radius:190px; 
+-webkit-border-radius:190px; 
+border:0px;
+padding:13px 5px;
+background: -moz-linear-gradient(center top , #E8E8E8, #E2E2E2) repeat scroll 0 0 transparent; 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8E8E8', endColorstr='#E2E2E2'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E8E8E8), to(#E2E2E2)); /* for webkit browsers */
+
+text-align:center; 
+font-size:16px; 
+	font-family: Helvetica,"Trebuchet MS",Arial;
+color:#fff
+}
+
+.nav{padding-top:37px}
