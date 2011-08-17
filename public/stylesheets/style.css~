@@ -898,7 +898,6 @@ top:-18px;
 .usual {
     background: none repeat scroll 0 0 #fff;
     width: 775px;
-    display: inline;
 }
 
 .usual li {
