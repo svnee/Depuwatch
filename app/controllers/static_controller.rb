@@ -46,5 +46,11 @@ class StaticController < ApplicationController
   
   def search
   end
+  
+  def results_texts
+  end
+  
+  def results_deputies
+  end
 
 end

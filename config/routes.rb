@@ -16,6 +16,8 @@ ChdTransparent::Application.routes.draw do
   match 'report' => 'static#report'
   match 'missing' => 'static#missing'
   match 'search' => 'static#search'
+  match 'results/deputies' => 'static#results_deputies'
+  match 'results/texts' => 'static#results_texts'
   
   resources :reports
 
