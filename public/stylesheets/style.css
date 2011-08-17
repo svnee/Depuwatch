@@ -815,7 +815,9 @@ clear: both;
 }
 
 div.contact_top {
-background: -moz-linear-gradient(center top , #8C93FE, #4956FF) repeat scroll 0 0 transparent
+background: -moz-linear-gradient(center top, #8C93FE, #4956FF) repeat scroll 0 0 transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#4956FF'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#4956FF)); /* for webkit browsers */
     border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     color: white;
@@ -826,7 +828,7 @@ background: -moz-linear-gradient(center top , #8C93FE, #4956FF) repeat scroll 0 
 }
 
 div.contact_btm{
-border-color: #EEEEEE #EEEEEE #333333;
+border-color: 1px solid #EEEEEE #EEEEEE;
     padding: 4px;
     width: 230px;
 float: left;
