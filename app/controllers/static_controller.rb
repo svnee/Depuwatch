@@ -15,7 +15,8 @@ class StaticController < ApplicationController
   end
   
   def index
-    @dossiers = Text.limit(5).order("updated_at")
+    @dossiers = Text.order("updated_at DESC").limit(5)
+    @top = Text.select('texts.*, count(*) as favs_count').joins(:ratings).group('texts.id').limit(5).order('favs_count desc').where("created_at > ?", DateTime.now - 7.days)
   end
   
   def report
