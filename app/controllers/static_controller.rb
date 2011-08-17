@@ -48,6 +48,15 @@ class StaticController < ApplicationController
   end
   
   def results_texts
+  	qry = Array.new
+  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].nil?)
+  	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].nil?)
+  	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].nil?)
+  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].nil?)
+  	qry << "votes.vote = 1" if (params[:vote] == "Jo")
+  	qry << "votes.vote = -1" if (params[:vote] == "Nee")
+  	qry << "votes.vote = 0" if (params[:vote] == "Abstentioun")
+  	@texts = Text.joins(:votes => [:deputy]).joins(:seance => :session).joins(:topics).where(qry.join(" AND "))
   end
   
   def results_deputies
