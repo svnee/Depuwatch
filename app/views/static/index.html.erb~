@@ -69,12 +69,22 @@ var z = 10;
 <div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv2', 'mydiv', 'mydiv3');">Top Dossieren</a></div>
 <div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3', 'mydiv2', 'mydiv');">Featured Dossieren</a></div>
 
-<ul class="idTabs"> 
-  <li><a href="#jquery">jQuery</a></li> 
-  <li><a href="#official">Tabs 3</a></li> 
-</ul> 
-<div id="jquery">If you haven't checked out ...</div> 
-<div id="official">idTabs is only a simple ...</div>
+<div class="imagebox idTabs"> 
+  <a class="selected" href="#img1">1</a> 
+  <a href="#img2">2</a> 
+  <a href="#img3">3</a> 
+  <a href="#img4">4</a> 
+  <img id="img1" src="http://www.sunsean.com/images/symbol/_brace.png"> 
+  <img id="img2" src="http://www.sunsean.com/images/symbol/_lambda.png"> 
+  <img id="img3" src="http://www.sunsean.com/images/symbol/_beta.png"> 
+  <img id="img4" src="http://www.sunsean.com/images/symbol/_paren.png"> 
+</div> 
+ 
+<script type="text/javascript"> 
+  $(".imagebox").idTabs("!mouseover"); 
+</script>
+
+
 
 <div style="display:block; float:left; clear:both;">
 <div id="mydiv" style="display:block; z-index:1;" class="slider_static">
