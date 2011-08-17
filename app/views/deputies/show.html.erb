@@ -41,7 +41,7 @@
 	<div class="<%= @deputy.party.name %>"> </div>
 	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
 </div>
-
+<% if deputy.active? then %>
 <div class="dep_contact">
 	<div class="contact_top">
 Stell dem <%= @deputy.name %> eng Fro!
@@ -55,6 +55,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 	</div>
 </div>
+<% end %>
 
 <div class="h2">
 
