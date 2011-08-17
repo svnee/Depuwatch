@@ -21,13 +21,14 @@
 </script>
 
 <script language="javascript">
-  function toggleDiv(divid){
-    if(document.getElementById(divid).style.display == 'none'){
-      document.getElementById(divid).style.display = 'block';
-    }else{
-      document.getElementById(divid).style.display = 'none';
-    }
-  }
+var z = 10;
+
+  function changeZIndex(i,id, id2, id3) {
+	document.getElementById(id).style.zIndex=i;
+	document.getElementById(id2).style.zIndex=0;
+	document.getElementById(id3).style.zIndex=0;
+}
+
 </script>
 
 <div class="content_wrapper">
@@ -54,14 +55,14 @@
 </div>
 
 
-<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv');">Neisten Dossieren</a> </div>
-<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv2');">Top Dossieren</a></div>
-<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv3');">Featured Dossieren</a></div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv', 'mydiv2', 'mydiv3');">Neisten Dossieren</a> </div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv2', 'mydiv1', 'mydiv3');">Top Dossieren</a></div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3', 'mydiv2', 'mydiv1');">Featured Dossieren</a></div>
 
-<div>
-<div id="mydiv" style="display:none" class="slider_static">Neisten Dossieren </div>
-<div id="mydiv2" style="display:none" class="slider_static">Top Dossieren </div>
-<div id="mydiv3" style="display:none" class="slider_static">Featured Dossieren </div>
+<div style="display:block; float:left; clear:both;">
+<div id="mydiv" style="display:block; z-index:1;" class="slider_static">Neisten Dossieren </div>
+<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
+<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
 </div>
 
 <div class="content_static">
