@@ -1,5 +1,4 @@
 class DeputiesController < ApplicationController
-  caches_page :index, :show
   
   # GET /deputies
   # GET /deputies.xml
@@ -44,7 +43,6 @@ class DeputiesController < ApplicationController
   def create
     @deputy = Deputy.new(params[:deputy])
 
-    expire_page :action => :index
     respond_to do |format|
       if @deputy.save
         format.html { redirect_to(@deputy, :notice => 'Deputy was successfully created.') }
@@ -61,7 +59,6 @@ class DeputiesController < ApplicationController
   def update
     @deputy = Deputy.find(params[:id])
 
-    expire_page :action => :show
     respond_to do |format|
       if @deputy.update_attributes(params[:deputy])
         format.html { redirect_to(@deputy, :notice => 'Deputy was successfully updated.') }
