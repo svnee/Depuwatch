@@ -4,7 +4,7 @@
 <div class="content_static">
 
 	 <h1><img src="/images/113.gif"> Search</h1>
-	<p> 
+<%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
 <img src="/images/file.gif"> Sich <strong>Dossier</strong> wou Deputéiert 
 <%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
  vun der Partei 
@@ -14,10 +14,10 @@ Abstentioun gestëmmt huet fir Sessioun
 <%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%>
 an Thema 
 <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
-. <input type="button" name="Search_text" value="Search Dossier">
-</p>
+. <%= submit_tag("Search Dossier")%>
+<% end %>
 
-<p> 
+<%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
 <img src="/images/136.gif"> Sich <input type="checkbox" name="vote" value="Jo"> aktuellen <input type="checkbox" name="vote" value="Nee"> freiren <strong>Deputéiert</strong> aus Bezierk 
 <select name="bezierk">
       <option value="all">All</option>
@@ -37,7 +37,7 @@ mat Präsenz bei Voten iwwer <select name="presence">
       <% (0..10).each do |i| %>
       <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
       <% end %>
-    </select>. <input type="button" name="Search_text" value="Search Deputy">
-</p>
+    </select>. <%= submit_tag("Search Deputy")%>
+<% end %>
 
 </div>
