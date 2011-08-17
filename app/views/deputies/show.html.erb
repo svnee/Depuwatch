@@ -27,7 +27,6 @@
 
 <div class="wrapper_text"> 
 <div class="projet">
-
 <img width="137" src="<%= @deputy.pc_img.nil? ? "/images/empty_abg_med.gif" : @deputy.pc_img %>">
 </div>
 
@@ -48,7 +47,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 	</div>
 	
 	<div class="contact_btm">
-<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><img src="/images/politikercheck_small.jpg"> </a>
+<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><%= image_tag "politikercheck_small.jpg" %> </a>
 
 <%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
