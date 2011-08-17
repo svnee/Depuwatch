@@ -885,9 +885,6 @@ background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#e1e1e1)); /* for webkit browsers */
 }
 
-div.slider_active { 
-
-}
 
 div.beta_div {
 	float:right; 
@@ -898,20 +895,34 @@ top:-18px;
 -webkit-transform: rotate(12deg);
 }
 
-.slider_active {
-background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
- 
+.usual {
+    background: none repeat scroll 0 0 #181818;
+    border: 1px solid #222222;
+    color: #111111;
+    margin: 8px auto;
+    padding: 15px 20px;
+    width: 500px;
 }
 
-div.slider_static {
-  background-color: white;
-    border-bottom: 1px solid #EEEEEE;
-    display: block;
+.usual li {
     float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 755px;
-    position: absolute;
+    list-style: none outside none;
+}
+
+.usual ul a.selected {
+    background: none repeat scroll 0 0 snow;
+    border-bottom: 1px solid snow;
+    color: #000000;
+    cursor: default;
+    margin-bottom: 0;
+}
+
+.usual ul a {
+    background: none repeat scroll 0 0 #444444;
+    color: #FFFFFF;
+    display: block;
+    font: 10px Verdana;
+    margin: 1px 1px 1px 0;
+    padding: 6px 10px;
+    text-decoration: none !important;
 }

@@ -926,3 +926,10 @@ top:-18px;
     padding: 6px 10px;
     text-decoration: none !important;
 }
+
+.usual div {
+    background: none repeat scroll 0 0 snow;
+    clear: left;
+    font: 10pt Georgia;
+    padding: 10px 10px 8px;
+}
