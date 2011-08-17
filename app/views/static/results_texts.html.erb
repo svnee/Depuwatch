@@ -1,0 +1,48 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+      "aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 2 ] },
+        { "sType": "eu_date", "aTargets": [ 1 ] },
+				{ "bSearchable": false, "aTargets": [ 1, 2, 3 ] }
+      ]
+			} );
+	} );
+</script>
+<div class="pointer_dossiers"></div>
+<div class="content_wrapper">
+<div class="info">
+<a href="/texts">Dossiéeën</a>: Iwwerbléck iwwer Dossiéeën, sortéiert no Nummer oder Thema.
+</div>
+
+
+<div class="content">
+<table class="content" id="ordered_table">
+<thead>
+<tr>
+	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
+	<th width="80px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+	<th></th>
+	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
+</tr>
+</thead>
+<tbody>
+<% @texts.each do |text| %>
+  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to text.code, text %></td>
+		<td><%= link_to "#{text.seance.start.strftime("%d/%m/%Y")}", text %></td>
+		<td><%= text.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= text.topics_to_str.html_safe %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>
