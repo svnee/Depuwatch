@@ -174,9 +174,6 @@ div.title {
 div.title1 {
  color: #444444;
     float: left;
-    font-family: 'Crimson Text';
-    font-size: 60px;
-    font-weight: bold;
     text-shadow: 2px 2px 3px #CDCDCD;
     width: 530px;
 }
@@ -886,10 +883,10 @@ background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 
 
 
 div.beta_div {
-	float:right; 
-left: -616px;
+float: right;
+    left: -616px;
     position: relative;
-    top: -15px;
+    top: 12px;
 -moz-transform: rotate(12deg);
 -webkit-transform: rotate(12deg);
 }
