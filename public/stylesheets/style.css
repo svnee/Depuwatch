@@ -185,7 +185,7 @@ div.title1 {
 div.title1 a {
  color: #444444;
     font-family: Helvetica,"Trebuchet MS",Arial;
-    font-size: 57px;
+    font-size: 50px;
     font-weight: bold;
     text-shadow: 2px 2px 3px #CDCDCD;
 }
@@ -852,7 +852,10 @@ text-align:center;
 font-size:16px; 
 	font-family: Helvetica,"Trebuchet MS",Arial;
 color:#fff
-box-shadow: 2px 2px 3px #666666;
+-moz-box-shadow: 2px 2px 3px #666666;
+-webkit-box-shadow: 2px 2px 3px #666666;
+  box-shadow: 2px 2px 3px #666666;
+
 }
 
 .nav{padding-top:37px}
