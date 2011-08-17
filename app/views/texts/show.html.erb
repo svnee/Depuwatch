@@ -1,7 +1,7 @@
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
 <div class="info">
-<a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
+<a href="<%= url_for @text.seance.session %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
 |
 <a href="<%= url_for @text.seance %>">S&eacute;ance</a>: <span class="bold"><%= @text.seance.start.strftime("%d/%m/%Y") %></span> de <%= @text.seance.start.strftime("%H:%M") %> jusqu'&agrave;
 <%= @text.seance.end.strftime("%H:%M") %>
