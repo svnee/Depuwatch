@@ -56,7 +56,7 @@ class StaticController < ApplicationController
   	qry << "votes.vote = 1" if (params[:vote] == "Jo")
   	qry << "votes.vote = -1" if (params[:vote] == "Nee")
   	qry << "votes.vote = 0" if (params[:vote] == "Abstentioun")
-  	@texts = Text.joins(:votes => [:deputy]).joins(:seance => :session).joins(:topics).where(qry.join(" AND "))
+  	@texts = Text.joins(:votes => [:deputy]).joins(:seance => :session).joins(:topics).where(qry.join(" AND ")).uniq!
   end
   
   def results_deputies
