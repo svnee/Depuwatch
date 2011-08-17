@@ -6,36 +6,38 @@
 	 <h1><img src="/images/113.gif"> Search</h1>
 	<p> 
 <img src="/images/file.gif"> Sich <strong>Dossier</strong> wou Deputéiert 
-<%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => true })%>
+<%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
  vun der Partei 
-<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => true })%> 
+<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> 
 mat <input type="checkbox" name="vote" value="Jo"> Jo <input type="checkbox" name="vote" value="Nee"> Nee <input type="checkbox" name="vote" value="Abstentioun">
 Abstentioun gestëmmt huet fir Sessioun
-<%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => true })%>
+<%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%>
 an Thema 
-<%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => true })%>
+<%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
 . <input type="button" name="Search_text" value="Search Dossier">
 </p>
 
 <p> 
 <img src="/images/136.gif"> Sich <input type="checkbox" name="vote" value="Jo"> aktuellen <input type="checkbox" name="vote" value="Nee"> freiren <strong>Deputéiert</strong> aus Bezierk 
-<select name="bezierk" size="1" multiple="multiple">
-      <option>All</option>
-      <option>Norden</option>
-      <option>Osten</option>
+<select name="bezierk">
+      <option value="all">All</option>
+      <option value="N">Norden</option>
+      <option value="O">Osten</option>$
+      <option value="Z">Zentrum</option>
+      <option value="S">Süden</option>
 </select> vun der Partei 
-<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => true })%> 
+<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> 
 an Thema 
- <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => true })%>
-mat Präsenz bei Voten iwwer <select name="bezierk" size="1">
-      <option>0%</option>
-      <option>10%</option>
-      <option>20%</option>
-    </select> an Vote/Delegatioun iwwer <select name="bezierk" size="1">
-      <option>0%</option>
-      <option>10%</option>
-      <option>20%</option>
-    </select>. <input type="button" name="Search_text" value="Search Deputy"">
+ <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
+mat Präsenz bei Voten iwwer <select name="presence">
+      <% (0..10).each do |i| %>
+      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
+      <% end %>
+    </select> an Vote/Delegatioun iwwer <select name="delegations">
+      <% (0..10).each do |i| %>
+      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
+      <% end %>
+    </select>. <input type="button" name="Search_text" value="Search Deputy">
 </p>
 
 </div>
