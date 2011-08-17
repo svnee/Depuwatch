@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110804160256) do
+ActiveRecord::Schema.define(:version => 20110817182101) do
 
   create_table "api_politicians", :force => true do |t|
     t.datetime "created_at"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20110804160256) do
     t.string   "link_memorial"
     t.integer  "seance_id"
     t.datetime "updated_at"
+    t.string   "featured"
   end
 
   create_table "topics", :force => true do |t|
