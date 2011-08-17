@@ -58,7 +58,7 @@
 <div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv2');">Top Dossieren</a></div>
 <div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv3');">Featured Dossieren</a></div>
 
-<div>
+<div style="display:block; float:left; clear:both;">
 <div id="mydiv" style="display:none" class="slider_static">Neisten Dossieren </div>
 <div id="mydiv2" style="display:none" class="slider_static">Top Dossieren </div>
 <div id="mydiv3" style="display:none" class="slider_static">Featured Dossieren </div>

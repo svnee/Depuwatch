@@ -24,6 +24,7 @@
   function toggleDiv(divid){
     if(document.getElementById(divid).style.display == 'none'){
       document.getElementById(divid).style.display = 'block';
+      document.getElementById(divid).style.z-index = '3';
     }else{
       document.getElementById(divid).style.display = 'none';
     }
@@ -59,9 +60,9 @@
 <div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv3');">Featured Dossieren</a></div>
 
 <div style="display:block; float:left; clear:both;">
-<div id="mydiv" style="display:none" class="slider_static">Neisten Dossieren </div>
-<div id="mydiv2" style="display:none" class="slider_static">Top Dossieren </div>
-<div id="mydiv3" style="display:none" class="slider_static">Featured Dossieren </div>
+<div id="mydiv" style="display:block; z-index:3;" class="slider_static">Neisten Dossieren </div>
+<div id="mydiv2" style="display:none; z-index:2;" class="slider_static">Top Dossieren </div>
+<div id="mydiv3" style="display:none; z-index:1;" class="slider_static">Featured Dossieren </div>
 </div>
 
 <div class="content_static">
