@@ -23,8 +23,10 @@
 <script language="javascript">
 var z = 10;
 
-  function changeZIndex(i,id) {
+  function changeZIndex(i,id, id2, id3) {
 	document.getElementById(id).style.zIndex=i;
+	document.getElementById(id2).style.zIndex=i-1;
+	document.getElementById(id3).style.zIndex=i-1;
 }
 
 </script>
@@ -53,9 +55,9 @@ var z = 10;
 </div>
 
 
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv'); changeZIndex(0, 'mydiv2'); changeZIndex(0, 'mydiv3');">Neisten Dossieren</a> </div>
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv2'); changeZIndex(0, 'mydiv1'); changeZIndex(0, 'mydiv3');;">Top Dossieren</a></div>
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3); changeZIndex(0, 'mydiv2'); changeZIndex(0, 'mydiv1');;">Featured Dossieren</a></div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv', 'mydiv2', 'mydiv3');">Neisten Dossieren</a> </div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv2', 'mydiv1', 'mydiv3');">Top Dossieren</a></div>
+<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3', 'mydiv2', 'mydiv1');">Featured Dossieren</a></div>
 
 <div style="display:block; float:left; clear:both;">
 <div id="mydiv" style="display:block; z-index:1;" class="slider_static">Neisten Dossieren </div>
