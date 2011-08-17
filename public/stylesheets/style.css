@@ -184,8 +184,8 @@ div.title1 {
 
 div.title1 a {
  color: #444444;
-    font-family: 'Crimson Text';
-    font-size: 60px;
+    font-family: Helvetica,"Trebuchet MS",Arial;
+    font-size: 57px;
     font-weight: bold;
     text-shadow: 2px 2px 3px #CDCDCD;
 }
@@ -197,12 +197,12 @@ text-decoration: none;
 div.title1_sub {
 color: #734347;
     float: left;
-    font-family: 'Crimson Text';
-    font-size: 17px;
-    margin-left: 107px;
+    font-family: Helvetica,"Trebuchet MS",Arial;
+    font-size: 14px;
+    margin-left: 95px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: -16px;
+    top: -10px;
     width: 434px;
 }
 
@@ -852,6 +852,7 @@ text-align:center;
 font-size:16px; 
 	font-family: Helvetica,"Trebuchet MS",Arial;
 color:#fff
+box-shadow: 2px 2px 3px #666666;
 }
 
 .nav{padding-top:37px}
@@ -872,4 +873,5 @@ position:relative;
 left:-170px; 
 top:-15px; 
 -moz-transform: rotate(12deg);
+-webkit-transform: rotate(12deg);
 }
