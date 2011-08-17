@@ -10,7 +10,7 @@
 	<%= javascript_include_tag "jquery.dataTables" %>
 	<%= javascript_include_tag "rails" %>
 	<%= javascript_include_tag "sorting.plugins" %>
-	<script type="text/javascript" src="jquery.idTabs.min.js"></script>
+	<%= javascript_include_tag "jquery.idTabs.min.js" %>
 </head>
 <body>
 <div class="wrapper">
