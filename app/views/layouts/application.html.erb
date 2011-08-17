@@ -6,6 +6,10 @@
   <%= stylesheet_link_tag "style.css" %>
   <%= stylesheet_link_tag "chosen.css" %>
   <%= csrf_meta_tag %>
+	<%= javascript_include_tag "jquery" %>
+	<%= javascript_include_tag "jquery.dataTables" %>
+	<%= javascript_include_tag "rails" %>
+	<%= javascript_include_tag "sorting.plugins" %>
 </head>
 <body>
 <div class="wrapper">
@@ -64,10 +68,6 @@
 <!-- wrapper --></div>
 
 <!-- Javascript -->
-<%= javascript_include_tag "jquery" %>
-<%= javascript_include_tag "jquery.dataTables" %>
-<%= javascript_include_tag "rails" %>
-<%= javascript_include_tag "sorting.plugins" %>
 <%= javascript_include_tag "ga" %>
 <script type="text/javascript">
   var _gaq = _gaq || [];
