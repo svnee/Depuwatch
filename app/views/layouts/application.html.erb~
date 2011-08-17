@@ -5,42 +5,22 @@
   <link href="/images/favicon.ico" rel="SHORTCUT ICON">
   <%= stylesheet_link_tag "style.css" %>
   <%= stylesheet_link_tag "chosen.css" %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
-  <%= javascript_include_tag "jquery.dataTables" %>
-  <%= javascript_include_tag "rails" %>
-  <%= javascript_include_tag "sorting.plugins" %>
   <%= csrf_meta_tag %>
-  <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-23853402-3']);
-	  _gaq.push(['_setDomainName', 'depuwatch.lu']);
-	  _gaq.push(['_setAllowHash', 'false']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="header"></div>
 	<div class="logo"> <a style="display: block; height: 103px; width: 127;" href="/"> </a></div>
 	<div class="blog"> <a style="display: block; height: 103px; width: 127;" href="http://www.blog.depuwatch.lu"> </a></div>
-	<div class="title1"><a href="/">Depuwatch</a> <div style="float:right; position:relative; left:-160px; top:-15px"> <a href="/faq#beta" id="button"><span class="nav">Beta</span></a></div></div>
+	<div class="title1"><a href="/">Depuwatch</a> <div style="float:right; position:relative; left:-170px; top:-15px"> <a href="/faq#beta" id="button"><span class="nav">Beta</span></a></div></div>
 	<div class="title1_sub">Ofstëmmungen aus der Chambre des Députés</div>
 	<div class="header_top"><!--<a href="/lu"><img src="http://piratepartei.lu/misc/images/LU-flag.png" alt="LU" width="16"></a> <a href="/fr"><img src="http://piratepartei.lu/misc/images/FR-flag.png" alt="FR" width="16"></a> <a href="/de"><img src="http://piratepartei.lu/misc/images/DE-flag.png" alt="DE" width="16"></a>--></div>
 	<div class="navi">
-		<div class="navi_item"><div class="navi_img"><img src="/images/sessions_white.png" alt="sessions"></div><div class="navi_link"><a href="<%= url_for :controller => :sessions %>">Sessiounen</a></div></div>
-		<div class="navi_item"><div class="navi_img"><img src="/images/seances_white.png" alt="séances"></div><div class="navi_link"><a href="<%= url_for :controller => :seances %>">  S&eacute;ancen</a></div></div>
-		<div class="navi_item"><div class="navi_img"><img src="/images/dossiers_white.png" alt="dossiers"></div><div class="navi_link"><a href="<%= url_for :controller => :texts %>"> Dossie&eacute;en</a></div></div>
-		<div class="navi_item"><div class="navi_img"><img src="/images/deputes_white.png" alt="députés"></div><div class="navi_link"><a href="<%= url_for :controller => :deputies %>">  Deput&eacute;iert</a></div></div>
-		<div class="navi_item"><div class="navi_img"><img src="/images/topics_white.png" alt="themen"></div><div class="navi_link"><a href="<%= url_for :controller => :topics %>">  Themen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><%= image_tag "sessions_white.png", :alt => "Sessions" %></div><div class="navi_link"><a href="<%= url_for :controller => :sessions %>">Sessiounen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><%= image_tag "seances_white.png", :alt => "Séances" %></div><div class="navi_link"><a href="<%= url_for :controller => :seances %>">  S&eacute;ancen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><%= image_tag "dossiers_white.png", :alt => "Dossiers" %></div><div class="navi_link"><a href="<%= url_for :controller => :texts %>"> Dossie&eacute;en</a></div></div>
+		<div class="navi_item"><div class="navi_img"><%= image_tag "deputes_white.png", :alt => "Députés" %>></div><div class="navi_link"><a href="<%= url_for :controller => :deputies %>">  Deput&eacute;iert</a></div></div>
+		<div class="navi_item"><div class="navi_img"><%= image_tag "topics_white.png", :alt => "Themen" %></div><div class="navi_link"><a href="<%= url_for :controller => :topics %>">  Themen</a></div></div>
 </div>
 
 	<div class="navi2">
@@ -82,5 +62,19 @@
 <a href="/license">Lizenz</a> | <a href="/contact">Kontakt</a> | <a href="/disclaimer">Disclaimer</a> | <a href="/report">Mell ee Feeler</a>
 </div>
 <!-- wrapper --></div>
+
+<!-- Javascript -->
+<%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "jquery.dataTables" %>
+<%= javascript_include_tag "rails" %>
+<%= javascript_include_tag "sorting.plugins" %>
+<%= javascript_include_tag "ga" %>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23853402-3']);
+  _gaq.push(['_setDomainName', document.domain]);
+  _gaq.push(['_setAllowHash', 'false']);
+  _gaq.push(['_trackPageview']);
+</script>
 </body>
 </html>

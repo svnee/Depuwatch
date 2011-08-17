@@ -865,3 +865,11 @@ div.slider {
     padding-right: 10px;
     width: 30%;
 }
+
+div.beta_div {
+	float:right; 
+position:relative; 
+left:-170px; 
+top:-15px; 
+-moz-transform: rotate(12deg);
+}
