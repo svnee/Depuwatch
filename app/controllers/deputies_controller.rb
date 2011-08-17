@@ -13,7 +13,7 @@ class DeputiesController < ApplicationController
   # GET /deputies/1
   # GET /deputies/1.xml
   def show
-    @deputy = Deputy.find(params[:id])
+    @deputy = Deputy.find(params[:id], :include => :votes)
 
     respond_to do |format|
       format.html # show.html.erb
