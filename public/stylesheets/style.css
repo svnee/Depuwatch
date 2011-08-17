@@ -897,11 +897,9 @@ top:-18px;
 
 .usual {
     background: none repeat scroll 0 0 #181818;
-    border: 1px solid #222222;
     color: #111111;
     margin: 8px auto;
-    padding: 15px 20px;
-    width: 500px;
+    width: 773px;
 }
 
 .usual li {
@@ -910,7 +908,10 @@ top:-18px;
 }
 
 .usual ul a.selected {
-    background: none repeat scroll 0 0 snow;
+    background: -moz-linear-gradient(center top , #ffffff, #E1e1e1) repeat scroll 0 0 transparent; 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E1e1e1'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E1e1e1)); /* for webkit browsers */
+width: 246px;
     border-bottom: 1px solid snow;
     color: #000000;
     cursor: default;
