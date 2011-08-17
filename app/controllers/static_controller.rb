@@ -20,7 +20,7 @@ class StaticController < ApplicationController
   end
   
   def featured
-    @dossiers = Text.all.where('featured <> ""').order(:updated_at)
+    @dossiers = Text.where('featured <> ""').order(:updated_at)
   end
   
   def report
