@@ -42,9 +42,16 @@
 </table>
 </div>
 
+
 <div class="slider">Neisten Dossieren</div>
 <div class="slider">Top Dossieren</div>
 <div class="slider">Featured Dossieren</div>
+
+<div>
+<div class="slider_static">Neisten Dossieren </div>
+<div class="slider_static">Top Dossieren </div>
+<div class="slider_static">Featured Dossieren </div>
+</div>
 
 <div class="content_static">
 
