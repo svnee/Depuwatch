@@ -16,7 +16,15 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: /home/chd/shared/databases/chd.sqlite3
+#  adapter: sqlite3
+#  database: /home/chd/shared/databases/chd.sqlite3
+#  pool: 5
+#  timeout: 5000
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: depuwatch
   pool: 5
-  timeout: 5000
+  username: depuwatch
+  password: yE3vRBpf3MNarfmb
+
