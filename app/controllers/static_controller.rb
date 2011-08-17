@@ -49,10 +49,10 @@ class StaticController < ApplicationController
   
   def results_texts
   	qry = Array.new
-  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty?)
-  	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty?)
-  	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].empty?)
-  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty?)
+  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty? && params[:all][:id] != "all")
+  	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
+  	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].empty? && params[:session][:id] != "all")
+  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
   	qry << "votes.vote = 1" if (params[:vote] == "Jo")
   	qry << "votes.vote = -1" if (params[:vote] == "Nee")
   	qry << "votes.vote = 0" if (params[:vote] == "Abstentioun")
@@ -61,12 +61,12 @@ class StaticController < ApplicationController
   
   def results_deputies
     qry = Array.new
-    qry << "memberships.end < #{Date.today}" if params[:active] == "Nee"
-    qry << "memberships.start < #{Date.today} AND (memberships.end IS NULL OR memberships.end > #{Date.today})" if params[:active] == "Jo"
-    qry << "deputies.circonscription = #{params[:bezierk]}" if (!params[:bezierk].empty?)
-    qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty?)
-  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty?)
-  	@deputies = Deputy.joins(:memberships).joins(:votes => [:texts => :topics]).where(qry.join(" AND ")).uniq!
+    qry << "memberships.end < '#{Date.today}'" if params[:active] == "Nee"
+    qry << "memberships.start < '#{Date.today}' AND (memberships.end IS NULL OR memberships.end > '#{Date.today}')" if params[:active] == "Jo"
+    qry << "deputies.circonscription = '#{params[:bezierk]}'" if (!params[:bezierk].empty? && params[:bezierk] != "all")
+    qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
+  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
+  	@deputies = Deputy.joins(:memberships).joins(:votes => {:text => :topics}).where(qry.join(" AND ")).uniq!
   end
 
 end
