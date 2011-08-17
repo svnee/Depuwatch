@@ -846,3 +846,13 @@ color:#fff
 }
 
 .nav{padding-top:37px}
+
+div.slider {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 30%;
+}
