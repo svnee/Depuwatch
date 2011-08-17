@@ -21,14 +21,16 @@
 <div class="content_wrapper">
 <div class="usual"> 
  <ul class="idTabs" style="display:inline;"> 
-    <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> Neisten Dossieren</a></li> 
+    <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> All Dossieren</a></li> 
     <li><a href="#idTab2"> <%= image_tag "fav.gif", :alt => "fav" %> Top Dossieren</a></li> 
     <li><a href="#idTab3"><%= image_tag "109.gif", :alt => "featured" %> Featured Dossieren</a></li> 
   </ul> 
-
-
 <div class="content">
-<table class="content" id="ordered_table">
+<!-- TAB 1 -->
+    <div id="idTab1">
+  
+  <div class="slider_static">
+	<p><table class="content" id="ordered_table">
 <thead>
 <tr>
 	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
@@ -47,6 +49,13 @@
   </tr>
 <% end %>
 </tbody>
-</table>
+</table></p>
 </div>
+
+
+  </div> 
+    <!-- TAB 1 -->
+    
+</div>
+
 </div>
