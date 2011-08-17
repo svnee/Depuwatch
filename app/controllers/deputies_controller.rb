@@ -1,4 +1,5 @@
 class DeputiesController < ApplicationController
+  
   # GET /deputies
   # GET /deputies.xml
   def index
@@ -25,7 +26,7 @@ class DeputiesController < ApplicationController
   # GET /deputies/new.xml
   def new
     @deputy = Deputy.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @deputy }
