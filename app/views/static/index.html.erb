@@ -60,14 +60,8 @@ var z = 10;
 <div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3', 'mydiv2', 'mydiv');">Featured Dossieren</a></div>
 
 <div style="display:block; float:left; clear:both;">
-<div id="mydiv" style="display:block; z-index:1;" class="slider_static">Neisten Dossieren </div>
-<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
-<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
-</div>
-
-<div class="content_static">
-
-<table class="content_index" id="ordered_table">
+<div id="mydiv" style="display:block; z-index:1;" class="slider_static">
+	<p><table class="content_index" id="ordered_table">
 <tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
@@ -83,5 +77,13 @@ var z = 10;
 </tr>
 <% end -%>
 
-</table>
+</table></p>
+</div>
+<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
+<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
+</div>
+
+<div class="content_static">
+
+
 </div>
