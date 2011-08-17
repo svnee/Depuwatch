@@ -907,4 +907,5 @@ div.slider_static {
     padding-left: 10px;
     padding-right: 10px;
     width: 755px;
+    position: absolute;
 }
