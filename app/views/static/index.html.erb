@@ -48,10 +48,10 @@
 
 <table class="content_index" id="ordered_table">
 <tr>
-	<th width="50px"><img src="/images/dossiers_small.png" alt="logo"></th>
-	<th width="80px"><img src="/images/seances_small.png" alt="logo"></th>
+	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
 	<th>Titel</th>
-	<th width="185px" style="padding-left: 25px;"><img alt="logo" src="/images/topics.png"></th>
+	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics_small.png", :alt => "Topics" %></th>
 </tr>
 <% @dossiers.each do |t| -%>
 <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
