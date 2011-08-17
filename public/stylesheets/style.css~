@@ -939,5 +939,5 @@ color: #555555;
 
 .usual div {
     clear: left;
-    padding: 1px 5px 1px;
+    padding: 1px 0px 0px;
 }
