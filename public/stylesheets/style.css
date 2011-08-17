@@ -199,10 +199,10 @@ color: #734347;
     float: left;
     font-family: Helvetica,"Trebuchet MS",Arial;
     font-size: 14px;
-    margin-left: 95px;
+    margin-left: 85px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: -10px;
+    top: -11px;
     width: 434px;
 }
 
@@ -858,7 +858,9 @@ color:#fff
 
 }
 
-.nav{padding-top:37px}
+.nav{
+	padding-top:37px;
+color: white;}
 
 div.slider {
   background-color: white;
@@ -873,8 +875,8 @@ div.slider {
 div.beta_div {
 	float:right; 
 position:relative; 
-left:-170px; 
-top:-15px; 
+left:-195px; 
+top:-18px; 
 -moz-transform: rotate(12deg);
 -webkit-transform: rotate(12deg);
 }
