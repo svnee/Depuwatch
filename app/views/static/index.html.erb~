@@ -19,6 +19,17 @@
 			} );
 	} );
 </script>
+
+<script language="javascript">
+  function toggleDiv(divid){
+    if(document.getElementById(divid).style.display == 'none'){
+      document.getElementById(divid).style.display = 'block';
+    }else{
+      document.getElementById(divid).style.display = 'none';
+    }
+  }
+</script>
+
 <div class="content_wrapper">
 <div class="info">Depuwatch</div>
 
@@ -43,14 +54,14 @@
 </div>
 
 
-<div class="slider">Neisten Dossieren</div>
-<div class="slider">Top Dossieren</div>
-<div class="slider">Featured Dossieren</div>
+<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv');">Neisten Dossieren</a> </div>
+<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv2');">Top Dossieren</a></div>
+<div class="slider"><a href="javascript:;" onmousedown="toggleDiv('mydiv3');">Featured Dossieren</a></div>
 
 <div>
-<div class="slider_static">Neisten Dossieren </div>
-<div class="slider_static">Top Dossieren </div>
-<div class="slider_static">Featured Dossieren </div>
+<div id="mydiv" style="display:none" class="slider_static">Neisten Dossieren </div>
+<div id="mydiv2" style="display:none" class="slider_static">Top Dossieren </div>
+<div id="mydiv3" style="display:none" class="slider_static">Featured Dossieren </div>
 </div>
 
 <div class="content_static">
