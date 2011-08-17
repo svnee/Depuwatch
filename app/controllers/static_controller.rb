@@ -66,7 +66,7 @@ class StaticController < ApplicationController
     qry << "deputies.circonscription = #{params[:bezierk]}" if (!params[:bezierk].empty?)
     qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty?)
   	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty?)
-  	@texts = Deputy.joins(:memberships).joins(:votes => [:texts => :topics]).where(qry.join(" AND ")).uniq!
+  	@deputies = Deputy.joins(:memberships).joins(:votes => [:texts => :topics]).where(qry.join(" AND ")).uniq!
   end
 
 end
