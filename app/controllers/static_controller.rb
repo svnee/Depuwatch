@@ -19,6 +19,10 @@ class StaticController < ApplicationController
     @top = Text.select('texts.*, count(*) as favs_count').joins(:ratings).group('texts.id').limit(5).order('favs_count desc').where("created_at > ?", DateTime.now - 7.days)
   end
   
+  def featured
+    @dossiers = Text.find(:conditions => 'featured <> ""').order(:updated_at)
+  end
+  
   def report
     @report = Report.new
     @page = request.referer
