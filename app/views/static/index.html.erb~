@@ -1,4 +1,24 @@
-
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+                        "aoColumnDefs": [
+                          { "bSortable": false, "aTargets": [ -1, -2 ] }
+                        ]
+			/*"aoColumns": [
+						{ "sType": "date" },
+						null,
+						null,
+						null
+					] */
+			} );
+	} );
+</script>
 <div class="content_wrapper">
 <div class="info">Dépuwatch</div>
 
@@ -26,12 +46,12 @@
 
 <div class="content_static">
 
-<table class="content_index">
+<table class="content_index" id="ordered_table">
 <tr>
 	<th width="50px"><img src="/images/dossiers_small.png" alt="logo"></th>
 	<th width="80px"><img src="/images/seances_small.png" alt="logo"></th>
 	<th>Titel</th>
-	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
+	<th width="185px" style="padding-left: 25px;"><img alt="logo" src="/images/topics.png"></th>
 </tr>
 <% @dossiers.each do |t| -%>
 <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
