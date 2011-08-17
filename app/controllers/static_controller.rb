@@ -49,14 +49,14 @@ class StaticController < ApplicationController
   
   def results_texts
   	qry = Array.new
-  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].nil?)
-  	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].nil?)
-  	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].nil?)
-  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].nil?)
+  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty?)
+  	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty?)
+  	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].empty?)
+  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty?)
   	qry << "votes.vote = 1" if (params[:vote] == "Jo")
   	qry << "votes.vote = -1" if (params[:vote] == "Nee")
   	qry << "votes.vote = 0" if (params[:vote] == "Abstentioun")
-  	@texts = Text.joins(:votes => [:deputy]).joins(:seance => :session).joins(:topics).where(qry.join(" AND "))
+  	@texts = Text.joins(:votes => [:deputy]).joins(:seance => :session).joins(:topics).where(qry.join(" AND ")).uniq!
   end
   
   def results_deputies
