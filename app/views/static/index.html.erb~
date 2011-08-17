@@ -10,25 +10,24 @@
                         "aoColumnDefs": [
                           { "bSortable": false, "aTargets": [ -1, -2 ] }
                         ]
-			/*"aoColumns": [
-						{ "sType": "date" },
-						null,
-						null,
-						null
-					] */
-			} );
+		} );
+		$('#ordered_table2').dataTable( {
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false
+		} );
+		$('#ordered_table3').dataTable( {
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false
+		} );
 	} );
-</script>
-
-<script language="javascript">
-var z = 10;
-
-  function changeZIndex(i,id, id2, id3) {
-	document.getElementById(id).style.zIndex=i;
-	document.getElementById(id2).style.zIndex=0;
-	document.getElementById(id3).style.zIndex=0;
-}
-
 </script>
 
 <div class="content_wrapper">
@@ -55,23 +54,22 @@ var z = 10;
 </div>
 
 
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv', 'mydiv2', 'mydiv3');">Neisten Dossieren</a> </div>
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv2', 'mydiv', 'mydiv3');">Top Dossieren</a></div>
-<div class="slider"><a href="javascript:;" onmousedown="changeZIndex(1, 'mydiv3', 'mydiv2', 'mydiv');">Featured Dossieren</a></div>
+<div class="slider"><a>Neisten Dossieren</a> </div>
+<div class="slider"><a>Top Dossieren</a></div>
+<div class="slider"><a>Featured Dossieren</a></div>
 
-<div style="display:block; float:left; clear:both;">
-<div id="mydiv" style="display:block; z-index:1;" class="slider_static">
-	<p>Neisten Dossieren</p> 
-	<p>Neisten Dossieren</p>
-	<p>Neisten Dossieren</p>
-</div>
-<div id="mydiv2" style="display:block; z-index:0;" class="slider_static">Top Dossieren </div>
-<div id="mydiv3" style="display:block; z-index:0;" class="slider_static">Featured Dossieren </div>
-</div>
+<div class="usual"> 
+  <ul class="idTabs"> 
+    <li><a href="#idTab1" class="selected">Neisten Dossieren</a></li> 
+    <li><a href="#idTab2">Top Dossieren</a></li> 
+    <li><a href="#idTab3">Featured Dossieren</a></li> 
+  </ul> 
 
-<div class="content_static">
-
-<table class="content_index" id="ordered_table">
+  <!-- TAB 1 -->
+    <div id="idTab1">This is tab 1.
+  
+  <div class="slider_static">
+	<p><table class="content_index" id="ordered_table">
 <tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
@@ -87,5 +85,57 @@ var z = 10;
 </tr>
 <% end -%>
 
-</table>
+</table></p>
+</div>
+
+
+  </div> 
+    <!-- TAB 1 -->
+  
+  
+    <!-- TAB 2 -->
+    <div id="idTab2">More content in tab 2.
+  
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table2">
+<tr>
+	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th>Titel</th>
+	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
+</tr>
+<% @top.each do |t| -%>
+<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to t.code, t%></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
+</tr>
+<% end -%>
+
+</table></p> </div>
+  
+  </div> 
+      <!-- TAB 2 -->
+  
+    <!-- TAB 3 -->
+  <div id="idTab3">Tab 3 is always last!
+  
+  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table3">
+<tr>
+<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+<th>Titel</th>
+<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
+</tr>
+<% @featured.each do |t| -%>
+<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+	<td><%= link_to t.code, t%></td>
+	<td><%= t.title %></td>
+	<td style="padding-left: 25px; text-align: left;"><%= t.featured %></td>
+</tr>
+<% end -%>
+
+</table></p> </div>
+  
+  </div> 
+      <!-- TAB 3 -->
+    
+  
 </div>
