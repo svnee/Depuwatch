@@ -60,6 +60,13 @@ class StaticController < ApplicationController
   end
   
   def results_deputies
+    qry = Array.new
+    qry << "memberships.end < #{Date.today}" if params[:active] == "Nee"
+    qry << "memberships.start < #{Date.today} AND (memberships.end IS NULL OR memberships.end > #{Date.today})" if params[:active] == "Jo"
+    qry << "deputies.circonscription = #{params[:bezierk]}" if (!params[:bezierk].empty?)
+    qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty?)
+  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty?)
+  	@texts = Deputy.joins(:memberships).joins(:votes => [:texts => :topics]).where(qry.join(" AND ")).uniq!
   end
 
 end
