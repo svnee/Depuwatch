@@ -21,13 +21,14 @@
  
 <ul class="idTabs" style="display:inline;"> 
     <li><a href="#idTab1" class="selected"><%= image_tag "active.gif", :alt => "new" %> Aktuell Deputéiert</a></li> 
-    <li><a href="#idTab2"> <%= image_tag "passive.gif", :alt => "fav" %> Fréier Deputéiert</a></li> 
+    <li><a href="#idTab2"> <%= image_tag "passive.gif", :alt => "freier" %> Fréier Deputéiert</a></li> 
   </ul> 
+  
 <!-- TAB 1 -->
 <div id="idTab1">
   
   <div class="slider_static">
-  <table class="content" id="ordered_table">
+  <table class="content" id="ordered_table2">
 	<thead>
 		<tr>
 			<th>&nbsp;</th>
