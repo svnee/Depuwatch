@@ -24,7 +24,7 @@
 var z = 10;
 
   function toggleDiv(divid) {
-	document.getElementById(id).style.zIndex = z++;
+	document.getElementById(id).style.zIndex = 10;
 }
 
 </script>
