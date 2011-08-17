@@ -87,14 +87,13 @@ h3 {
 
 table.content {
 border-spacing: 0;
-margin: 5px 15px 0;
-    width: 745px;
+margin: 5px 10px 0;
+    width: 755px;
 }
 
 
 table.content_index {
-    margin-bottom: 15px;
-    margin-top: 15px;
+margin: 5px 10px 0;
     width: 755px;
     border-spacing: 0px;
 }
@@ -888,9 +887,9 @@ background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 
 
 div.beta_div {
 	float:right; 
-position:relative; 
-left:-195px; 
-top:-18px; 
+left: -616px;
+    position: relative;
+    top: -15px;
 -moz-transform: rotate(12deg);
 -webkit-transform: rotate(12deg);
 }
@@ -909,12 +908,13 @@ top:-18px;
 background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
-width: 251px;
-    border-bottom: 1px solid snow;
+width: 252px;
+
     color: #fff;
     cursor: default;
     margin-bottom: 0;
     text-decoration: none;
+    text-align: center;
 }
 
 .usual ul a {
@@ -926,10 +926,11 @@ color: #555555;
     border-left: 2px solid #333333;
     display: block;
     height: 22px;
-    padding-bottom: 3px;
-    padding-top: 9px;
+    padding-bottom: 6px;
     padding-left: 5px;
+    padding-top: 6px;
     width: 251px;
+    text-align: center;
 }
 
 .usual ul a:hover {
@@ -938,5 +939,5 @@ color: #555555;
 
 .usual div {
     clear: left;
-    padding: 0 10px 1px;
+    padding: 1px 5px 1px;
 }
