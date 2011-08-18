@@ -73,8 +73,7 @@ class StaticController < ApplicationController
     qry << "deputies.delegations_rate_cache >= #{params[:delegations]}" if !params[:delegations].empty?
     qry << "deputies.circonscription = '#{params[:bezierk]}'" if (!params[:bezierk].empty? && params[:bezierk] != "all")
     qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
-  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
-  	@deputies = Deputy.joins(:votes => {:text => :topics}).where(qry.join(" AND ")).uniq!
+  	@deputies = Deputy.where(qry.join(" AND ")).uniq!
   end
 
 end
