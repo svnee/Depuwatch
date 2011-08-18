@@ -24,6 +24,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
+    run "ln -nsf /home/chd/shared/cache/ #{File.join(current_path,'tmp','cache')}"
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
