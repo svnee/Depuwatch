@@ -8,7 +8,7 @@
 
 </div>
 
-
+<% cache("texts_show_#{@text.id}") do %>
 <div class="content">
 <div class="wrapper_text">
 <div class="projet1">
@@ -100,3 +100,4 @@
 	</tr>
 </table>
 </div>
+<% end %>
