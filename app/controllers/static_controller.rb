@@ -55,7 +55,7 @@ class StaticController < ApplicationController
   
   def results_texts
   	qry = Array.new
-  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty? && params[:all][:id] != "all")
+  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty? && params[:deputy][:id] != "all")
   	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
   	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].empty? && params[:session][:id] != "all")
   	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
@@ -67,12 +67,14 @@ class StaticController < ApplicationController
   
   def results_deputies
     qry = Array.new
-    qry << "memberships.end < '#{Date.today}'" if params[:active] == "Nee"
-    qry << "memberships.start < '#{Date.today}' AND (memberships.end IS NULL OR memberships.end > '#{Date.today}')" if params[:active] == "Jo"
+    qry << "deputies.active_cache <> 0" if params[:active] == "Jo"
+    qry << "deputies.active_cache = 0" if params[:active] == "Nee"
+    qry << "deputies.presence_cache >= #{params[:presence]}" if !params[:presence].empty?
+    qry << "deputies.delegations_rate_cache >= #{params[:delegations]}" if !params[:delegations].empty?
     qry << "deputies.circonscription = '#{params[:bezierk]}'" if (!params[:bezierk].empty? && params[:bezierk] != "all")
     qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
-  	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
-  	@deputies = Deputy.joins(:memberships).joins(:votes => {:text => :topics}).where(qry.join(" AND ")).uniq!
+  	@query = qry.join(" AND ")
+  	@deputies = Deputy.where(@query)
   end
 
 end
