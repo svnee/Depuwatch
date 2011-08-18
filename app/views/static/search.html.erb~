@@ -4,7 +4,7 @@
 <div class="content_static">
 
 <%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
-<img src="/images/file.gif"> <strong>Dossier</strong> 
+<p><img src="/images/file.gif"> <strong>Dossier</strong> </p>
 
 <table>
 <tr><td> Deputéiert:</td> 	<td><%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>

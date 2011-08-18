@@ -14,30 +14,21 @@ Abstentioun </td></tr>
 <tr><td> Sessioun: </td>	<td><%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%></td></tr>
 <tr><td> Thema: </td>		<td><%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%></td></tr>
 </table>
-<%= submit_tag("Search Dossier")%>
+<p><%= submit_tag("Sich Dossier")%></p>
 <% end %>
 
 <%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
-<img src="/images/136.gif"> Sich <input type="checkbox" name="active" value="Jo"> aktuellen <input type="checkbox" name="active" value="Nee"> freiren <strong>Deputéiert</strong> aus Bezierk 
-<select name="bezierk">
-      <option value="all">All</option>
-      <option value="N">Norden</option>
-      <option value="O">Osten</option>$
-      <option value="Z">Zentrum</option>
-      <option value="S">Süden</option>
-</select> vun der Partei 
-<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> 
-an Thema 
- <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
-mat Präsenz bei Voten iwwer <select name="presence">
-      <% (0..10).each do |i| %>
-      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
-      <% end %>
-    </select> an Vote/Delegatioun iwwer <select name="delegations">
-      <% (0..10).each do |i| %>
-      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
-      <% end %>
-    </select>. <%= submit_tag("Search Deputy")%>
+<p><img src="/images/136.gif"> <strong>Deputéiert</strong> </p>
+
+<table>
+<tr><td> Activ:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
+<tr><td> Bezierk: </td>		<td> <select name="bezierk"> <option value="all">All</option> <option value="N">Norden</option> <option value="O">Osten</option> <option value="Z">Zentrum</option> <option value="S">Süden</option> </select> </td></tr>
+<tr><td> Partei: </td>		<td><%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Thema: </td>		<td> <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Präsenz bei Voten <td> <select name="presence"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
+<tr><td> Vote/Delegatioun: <td> <select name="delegations"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select>. </td></tr>
+    
+<p><%= submit_tag("Search Deputy")%></p>
 <% end %>
 
 </div>
