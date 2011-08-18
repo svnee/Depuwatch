@@ -59,5 +59,9 @@ class AdminController < ApplicationController
   	
   	render :text => "OK!"
   end
+  
+  def purge_cache
+    
+  end
 
 end
