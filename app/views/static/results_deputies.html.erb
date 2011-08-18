@@ -3,7 +3,9 @@
 <div class="info"><a href="/deputies">Deputéiert</a>: Deputéiert an der Chamber an hier Partei.</div>
 
 <div class="content">
-
+<% if @deputies.nil? then %>
+	<%= @query %>
+<% else %>
 <table class="content" id="ordered_table">
 	<thead>
 		<tr>
@@ -28,5 +30,5 @@
 	<% end %>
 	</tbody>
 </table>
-
+<% end %>
 </div>
