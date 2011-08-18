@@ -55,7 +55,7 @@ class StaticController < ApplicationController
   
   def results_texts
   	qry = Array.new
-  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty? && params[:all][:id] != "all")
+  	qry << "deputies.id = #{params[:deputy][:id]}" if (!params[:deputy][:id].empty? && params[:deputy][:id] != "all")
   	qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
   	qry << "sessions.id = #{params[:session][:id]}" if (!params[:session][:id].empty? && params[:session][:id] != "all")
   	qry << "topics.id = #{params[:topic][:id]}" if (!params[:topic][:id].empty? && params[:topic][:id] != "all")
@@ -73,7 +73,8 @@ class StaticController < ApplicationController
     qry << "deputies.delegations_rate_cache >= #{params[:delegations]}" if !params[:delegations].empty?
     qry << "deputies.circonscription = '#{params[:bezierk]}'" if (!params[:bezierk].empty? && params[:bezierk] != "all")
     qry << "deputies.party_id = #{params[:party][:id]}" if (!params[:party][:id].empty? && params[:party][:id] != "all")
-  	@deputies = Deputy.where(qry.join(" AND ")).uniq!
+  	@query = qry.join(" AND ")
+  	@deputies = Deputy.all.where(@query)
   end
 
 end
