@@ -9,6 +9,8 @@ ChdTransparent::Application.routes.draw do
 
   resources :legislations
 
+	get "admin/cache_percentages"
+	get "admin/cache_active"
   get "admin/vote"
   get "admin/calculate_favs"
   match "admin/save_votes" => 'admin#save_votes'

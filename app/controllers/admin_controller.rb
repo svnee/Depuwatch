@@ -40,5 +40,24 @@ class AdminController < ApplicationController
   	
   	render :text => "OK!"
   end
+  
+  def cache_percentages
+  	Deputy.all.each do |d|
+  		d.presence_cache = d.presence
+  		d.delegations_rate_cache = d.delegations_rate
+  		d.save!
+  	end
+  	
+  	render :text => "OK!"
+  end
+  
+  def cache_active
+  	Deputy.all.each do |d|
+  		d.active_cache = d.active?
+  		d.save!
+  	end
+  	
+  	render :text => "OK!"
+  end
 
 end
