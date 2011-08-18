@@ -1,8 +1,26 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"aaSorting": [[ 1, "desc" ]],
+			"aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 0, 2, 4 ] },
+        { "sType": "eu_date", "aTargets": [ 1 ] }
+      ]
+			} );
+	} );
+</script>
+
 <div class="pointer_deputeiert"></div>
 <div class="content_wrapper">
 <div class="info">
 
-<a href="/deputies">D&eacute;put&eacute;</a>: <%= @deputy.name %> | Partei: <%= @deputy.party.name %>
+<a href="/deputies">Deput&eacute;</a>: <strong><%= @deputy.name %></strong> | Partei: <strong><%= @deputy.party.name %></strong>
 </div>
 
 <div class="content">
@@ -14,21 +32,55 @@
 
 <div class="result">
 
-	<div class="h2"><span class="h2">Numm: </span> <%= @deputy.name %></div>
-	<div class="h2_partei_wrapper"> <div class="h2_partei">Partei:</div>  <div class="<%= @deputy.party.name %>"></div> <div class="h2_partei_name"><%= @deputy.party.name %></div>   </div> 
-
-	<div class="h2"><p><img src="/images/politikercheck_logo.jpg"> Stell dem <%= @deputy.name %> eng Fro op <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>">Politikercheck.lu</a></p>
-		<p><%= facebook_button(@deputy.facebook).html_safe %>
-		<%= twitter_button(@deputy.twitter).html_safe %></p>
+<div class="h2">
+	<img src="/images/136.gif"> 
+		<span class="h2"><%= @deputy.name %> </span> 
+</div>
+<div class="h2_partei_wrapper"> 
+	<div class="<%= @deputy.party.name %>"> </div>
+	<div class="h2_partei_name"><%= @deputy.party.name %></div>   
+</div>
+<% if @deputy.active? then %>
+<div class="dep_contact">
+	<div class="contact_top">
+Stell dem <%= @deputy.name %> eng Fro!
 	</div>
+	
+	<div class="contact_btm">
+<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><%= image_tag "politikercheck_small.jpg" %> </a>
 
+<%= facebook_button(@deputy.facebook).html_safe %>
+<%= twitter_button(@deputy.twitter).html_safe %></p>
+
+	</div>
 </div>
-<div class="dossiers2"><div class="result2">
-<div class="h2"><span class="h2">Pr&eacute;sence lors des votes: </span> <%= number_to_percentage(@deputy.presence,:precision => 2) %>
-	<br />
-	<span class="h2">Délégations / Vote: </span> <%= @deputy.delegations_rate %>
+<% end %>
+
+<div class="h2">
+
+<p>
+
+</div> <% p, c, a = @deputy.split_votes -%>
+</p>
 </div>
-	<% p, c, a = @deputy.split_votes -%>
+
+<div class="dossiers2">
+
+<p>
+<table style="margin-bottom:20px">
+<tr>
+<td><img src="/images/123.gif"></td>
+<td> Pr&eacute;sence lors des votes:</td>
+<td> <%= number_to_percentage(@deputy.presence,:precision => 2) %></td>
+</tr>
+<tr>
+<td><img src="/images/124.gif"></td>
+<td>Délégations / Vote:</td>
+<td> <%= number_to_percentage(@deputy.delegations_rate,:precision => 2) %></td>
+</tr>
+</table>
+	<div class="result2">
+	
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
@@ -48,7 +100,33 @@
 </table>
 <p>
 <img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
-</div></div>
+</div>	
+
+</div>
+
+
+	<div class="dep_details">
+<% if @deputy.active? then %><img src="/images/active.gif"> <% end %>			<%str = ""
+			i = 1
+			@deputy.memberships.each do |m|
+				if m.end.nil? then 
+		      str = str + "#{m.start.year} - ..."
+		    else
+					if @deputy.memberships.size > 1 && i <= @deputy.memberships.size then
+		      	str = "#{m.start.year} - #{m.end.year}; " + str
+					else
+						str = "#{m.start.year} - #{m.end.year}" + str
+					end
+		    end
+				i = i + 1
+			end
+		%> <%= str %> <% if !@deputy.predecessor.nil? %>(Prédécesseur: <%= link_to @deputy.predecessor.name, @deputy.predecessor %>) <% end %><% if !@deputy.successor.nil? %> (Successeur: <%= link_to @deputy.successor.name, @deputy.successor %>)<% end %>
+|
+<img src="/images/061.gif">  Bezierk <%= @deputy.bezierk %>
+
+	
+</div>
+
 
 </div>
 
@@ -59,8 +137,8 @@
 		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
 		<th width="70px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
-		<th style="padding-left: 35px"><img width="25" alt="logo" src="/images/topics.png"></th>
-		<th style="padding-left: 10px" width="105px">Délégéierten</th>
+		<th><img width="25" alt="logo" src="/images/topics.png"></th>
+		<th width="105px">Délégéierten</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -69,7 +147,7 @@
 		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></th>
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
 		<td><%= link_to v.text.code, v.text %></td>
-		<td style="background-color:<%= vote_to_color(v.vote) %>"></td>
+		<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
 		<td style="padding-left: 35px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
 		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
 	</tr>
