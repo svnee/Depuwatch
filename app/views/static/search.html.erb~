@@ -21,13 +21,13 @@ Abstentioun </td></tr>
 <p><img src="/images/136.gif"> <strong>Deputéiert</strong> </p>
 
 <table>
-<tr><td> Activ:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
+<tr><td> Actif:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
 <tr><td> Bezierk: </td>		<td> <select name="bezierk"> <option value="all">All</option> <option value="N">Norden</option> <option value="O">Osten</option> <option value="Z">Zentrum</option> <option value="S">Süden</option> </select> </td></tr>
 <tr><td> Partei: </td>		<td><%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Thema: </td>		<td> <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Präsenz bei Voten <td> <select name="presence"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
 <tr><td> Vote/Delegatioun: <td> <select name="delegations"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select>. </td></tr>
-    
+</table>
 <p><%= submit_tag("Search Deputy")%></p>
 <% end %>
 

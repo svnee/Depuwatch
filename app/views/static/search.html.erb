@@ -13,8 +13,8 @@
 Abstentioun </td></tr>
 <tr><td> Sessioun: </td>	<td><%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%></td></tr>
 <tr><td> Thema: </td>		<td><%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%></td></tr>
+<tr><td> </td>					<td><%= submit_tag("Sich Dossier")%></td></tr>
 </table>
-<p><%= submit_tag("Sich Dossier")%></p>
 <% end %>
 
 <%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
@@ -27,8 +27,8 @@ Abstentioun </td></tr>
 <tr><td> Thema: </td>		<td> <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Präsenz bei Voten <td> <select name="presence"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
 <tr><td> Vote/Delegatioun: <td> <select name="delegations"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select>. </td></tr>
+<tr><td> </td>					<td><%= submit_tag("Search Deputy")%></td></tr>
 </table>
-<p><%= submit_tag("Search Deputy")%></p>
 <% end %>
 
 </div>
