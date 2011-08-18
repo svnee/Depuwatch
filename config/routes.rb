@@ -10,6 +10,7 @@ ChdTransparent::Application.routes.draw do
   resources :legislations
 
   get "admin/vote"
+  get "admin/calculate_favs"
   match "admin/save_votes" => 'admin#save_votes'
 
   match 'report_sent' => 'static#report_sent'
