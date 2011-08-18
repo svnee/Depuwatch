@@ -51,11 +51,11 @@ class Text < ActiveRecord::Base
   def code
   	if favorite < 99 then
   	  str = "#{self[:code]} <img src='/images/fav.gif' alt='Favorite'>"
-  		str += "<img src='/images/109.gif' alt='Featured'>" if (!str.featured.empty? && !str.featured.nil?)
+  		str += "<img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
   		str.html_safe
   	else
   		str = self[:code]
-  		str += " <img src='/images/109.gif' alt='Featured'>" if (!str.featured.empty? && !str.featured.nil?)
+  		str += " <img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
   		str.html_safe
   	end
   end
