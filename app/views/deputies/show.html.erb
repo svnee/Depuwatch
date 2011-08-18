@@ -23,7 +23,7 @@
 
 <a href="/deputies">Deput&eacute;</a>: <strong><%= @deputy.name %></strong> | Partei: <strong><%= @deputy.party.name %></strong>
 </div>
-
+<% cache("deputies_show_#{@deputy.id}") do %>
 <div class="content">
 
 <div class="wrapper_text"> 
@@ -158,4 +158,5 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 
 </div>
+<% end %>
 

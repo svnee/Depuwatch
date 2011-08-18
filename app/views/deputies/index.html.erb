@@ -41,7 +41,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<% cache do %>
+	<% cache('deputies_index_tab1') do %>
 	<% @deputies.each do |deputy| %>
 	<% if (deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
@@ -92,6 +92,7 @@
 		</tr>
 	</thead>
 	<tbody>
+	<% cache('deputies_index_tab2') do %>
 	<% @deputies.each do |deputy| %>
 	<% if (!deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
@@ -116,6 +117,7 @@
 				end
 			%> <%= str %></td>
 	  </tr>
+	<% end %>
 	<% end %>
 	<% end %>
 	</tbody>
