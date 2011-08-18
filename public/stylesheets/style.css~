@@ -703,6 +703,7 @@ div.dataTables_wrapper {
 	 border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .paging_full_numbers {
@@ -746,11 +747,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endC
 
 /* Session buttons */
 span.session_btn {
-	border: 1px solid #EEEEEE;
-	padding: 2px 5px;
-	margin: 0 3px;
-	cursor: pointer;
-	font-weight: bold;p
+	color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 4px 17px;
+    padding: 4px 7px;
+    background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
+ 
+}
+
+span.session_btn a {
+	color: white;
 }
 
 span.session_btn:hover {
@@ -788,6 +797,8 @@ background-color: #EEEEEE;
     padding: 3px;
     width: 749px;
     text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 div.dep_details2 {
