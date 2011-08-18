@@ -1,28 +1,58 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"aaSorting": [ [0,'asc'], [1,'desc'] ],
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+                        "aoColumnDefs": [
+                          { "bSortable": false, "aTargets": [ 3, 4 ] },
+                          { "sType": "num-html", "aTargets": [ 1 ] },
+                          { "sType": "eu_date", "aTargets": [ 2 ] }
+                        ]
+			} );
+	} );
+</script>
 <div class="pointer_seancen"></div>
 <div class="content_wrapper">
 <div class="info">
-	<a href="/seances">Séancen</a>: Séancen vun der Chamber, sortéiert no Datum an Auerzäit.
+	<a href="/seances">Séancen</a>: Séance vun der Chamber, sortéiert no Datum an Auerzäit.
 </div>
 
 
 <div class="content">
-<table class="content">
+	<div style="text-align: center">
+	<% Session.all.each do |s| %>
+	<span class="session_btn"><%= link_to "#{s.start.strftime("%Y")}/#{s.end.strftime("%Y")}", s %></span>
+	<% end %>
+	</div>
+<table class="content" id="ordered_table">
+<thead>
 <tr>
-   <th width="110px"><img width="25" alt="logo" src="/images/sessions.png"></th>
-    <th width="65p;">nr.</th>
+  <th width="110px"><img width="25" alt="logo" src="/images/sessions.png"></th>
+  <th width="65p;">nr.</th>
 	<th width="110px"><img width="25" alt="logo" src="/images/seances_small.png"></th>
 	<th width="60px">Ufank</th>
 	<th width="85px" >Schluss</th>
-	<th<img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+	<th><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+        <% if params[:admin] == "123" then %>
+        <th>Admin</th>
+        <% end %>
 </tr>
-
+</thead>
+<tbody>
 <% @seances.each do |seance| %>
   <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
     <td><%= link_to "#{seance.session.start.strftime("%Y")}/#{seance.session.end.strftime("%Y")}", seance.session %></td>
     <td><%= link_to seance.nr, seance %></td>
 	<td><%= link_to seance.start.strftime("%d/%m/%Y"), seance %></td>
-    <td><%= s.start.strftime("%H:%M") %></td>
-    <td><%= s.end.strftime("%H:%M") %></td>
+    <td><%= seance.start.strftime("%H:%M") %></td>
+    <td><%= seance.end.strftime("%H:%M") %></td>
 	<td>
 		<% i = 1 %>
 		<% seance.texts.each do |t| -%>
@@ -31,7 +61,11 @@
 			<% i += 1 %>
 		<% end -%>
 	</td>
+        <% if params[:admin] == "123" then %>
+        <td><%= link_to 'Edit', edit_seance_path(seance) %> | <%= link_to 'Destroy', seance, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
   </tr>
 <% end %>
+</tbody>
 </table>
 </div>

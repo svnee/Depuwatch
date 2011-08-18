@@ -746,7 +746,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endC
 }
 
 /* Session buttons */
-span.session_btn {
+div.session_btn {
 	color: white;
     cursor: pointer;
     font-weight: bold;
