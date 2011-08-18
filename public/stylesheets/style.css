@@ -755,16 +755,24 @@ div.session_btn {
     background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
- 
+ float: left;
+ width: 75px;
 }
 
-span.session_btn a {
+div.session_btn a {
 	color: white;
 }
 
 span.session_btn:hover {
 	background-color: #eee;
 }
+
+.session_wrapper {
+	   background: -moz-linear-gradient(center top , #ffffff, #E1e1e1) repeat scroll 0 0 transparent; 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E1e1e1'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E1e1e1)); /* for webkit browsers */
+
+	}
 
 div.up {
 	float: right;

@@ -28,7 +28,7 @@
 <div class="content">
 	<div style="text-align: center">
 	<% Session.all.each do |s| %>
-	<span class="session_btn"><%= link_to "#{s.start.strftime("%Y")}/#{s.end.strftime("%Y")}", s %></span>
+	<div class="session_btn"><%= link_to "#{s.start.strftime("%Y")}/#{s.end.strftime("%Y")}", s %></div>
 	<% end %>
 	</div>
 <table class="content" id="ordered_table">
