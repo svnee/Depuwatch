@@ -3,6 +3,8 @@ class TextsController < ApplicationController
   # GET /texts.xml
   def index
     @texts = Text.all
+    @top = Text.where('favorite < 99').order(:favorite)
+    @featured = Text.where('featured <> ""').order(:updated_at).limit(15)
 
     respond_to do |format|
       format.html # index.html.erb
