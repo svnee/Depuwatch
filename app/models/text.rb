@@ -48,6 +48,14 @@ class Text < ActiveRecord::Base
     str
   end
   
+  def code
+  	if favorite < 99 then
+  		read_attribute(:code, "#{code} #{image_tag '109.gif'}".html_safe)
+  	else
+  		read_attribute(:code, code)
+  	end
+  end
+  
   def party_opinion(pid)
     c, p, a = 0,0,0
     votes.each do |v|
