@@ -23,5 +23,19 @@ class AdminController < ApplicationController
     end
   	redirect_to @text
   end
+  
+  def calculate_favs
+  	i = 0
+  	texts = Text.all
+  	texts.sort!(|a,b| a.fav_count <=> b.fav_count).each do |t|
+  		if i < 15 then
+  			t.favorite = i + 1
+  		else
+  			t.favorite = 99
+  		end
+  		t.save!
+  		i += 1
+  	end
+  end
 
 end
