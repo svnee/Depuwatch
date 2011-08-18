@@ -36,6 +36,8 @@ class AdminController < ApplicationController
   		t.save!
   		i += 1
   	end
+  	
+  	render :text => "OK!"
   end
 
 end
