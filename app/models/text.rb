@@ -50,9 +50,9 @@ class Text < ActiveRecord::Base
   
   def code
   	if favorite < 99 then
-  		read_attribute(:code, "#{code} #{image_tag '109.gif'}".html_safe)
+  		"#{self[:code]} #{image_tag '109.gif'}".html_safe
   	else
-  		read_attribute(:code, code)
+  		self[:code]
   	end
   end
   
