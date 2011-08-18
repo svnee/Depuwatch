@@ -50,7 +50,7 @@ class Text < ActiveRecord::Base
   
   def code
   	if favorite < 99 then
-  		"#{self[:code]} <img src='109.gif' alt='Favorite'>".html_safe
+  		"#{self[:code]} <img src='/images/109.gif' alt='Favorite'>".html_safe
   	else
   		self[:code]
   	end
