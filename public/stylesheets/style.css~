@@ -784,8 +784,9 @@ div.more {
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
     float: left;
-    -moz-border-radius: 4px 4px 4px 4px;
-    padding: 3px;
+    margin-bottom: 5px;
+    margin-left: 13px;
+    margin-top: 8px;
     width: 749px;
 }
 
