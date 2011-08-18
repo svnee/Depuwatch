@@ -747,16 +747,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endC
 
 /* Session buttons */
 div.session_btn {
-	color: white;
+  color: white;
     cursor: pointer;
+    float: left;
     font-weight: bold;
-    margin: 0 4px 17px;
-    padding: 4px 7px;
+    line-height: 23px;
+    margin: 1px 2px 0;
+    padding: 0 7px;
+    width: 74px;
     background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
- float: left;
- width: 75px;
 }
 
 div.session_btn a {
@@ -770,14 +771,14 @@ span.session_btn:hover {
 .session_wrapper {
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
-    height: 22px;
+    height: 26px;
     line-height: 22px;
     margin-bottom: 10px;
     margin-left: 10px;
-    margin-top: 10px;
-    padding: 3px;
+    margin-top: 0;
+    padding: 4px 3px 3px 10px;
     text-align: center;
-    width: 749px;
+    width: 742px;
 	}
 
 div.up {
