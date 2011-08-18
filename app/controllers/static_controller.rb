@@ -15,9 +15,9 @@ class StaticController < ApplicationController
   end
   
   def index
-    @dossiers = Text.order("updated_at DESC").limit(5)
-    @top = Text.select('texts.*, count(*) as favs_count').joins(:ratings).group('texts.id').limit(5).order('favs_count desc').where("created_at > ?", DateTime.now - 7.days)
-    @featured = Text.where('featured <> ""').order(:updated_at).limit(5)
+    @dossiers = Text.order("updated_at DESC").limit(15)
+    @top = Text.where('favorite < 99').order(:favorite)
+    @featured = Text.where('featured <> ""').order(:updated_at).limit(15)
   end
   
   def featured

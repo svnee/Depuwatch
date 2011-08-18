@@ -48,6 +48,14 @@ class Text < ActiveRecord::Base
     str
   end
   
+  def code
+  	if favorite < 99 then
+  		"#{self[:code]} <img src='/images/fav.gif' alt='Favorite'>".html_safe
+  	else
+  		self[:code]
+  	end
+  end
+  
   def party_opinion(pid)
     c, p, a = 0,0,0
     votes.each do |v|

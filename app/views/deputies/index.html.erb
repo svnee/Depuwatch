@@ -42,8 +42,9 @@
 	</thead>
 	<tbody>
 	<% @deputies.each do |deputy| %>
+	<% if (deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+			<td><%= image_tag 'active.gif' %></td>
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
@@ -64,6 +65,7 @@
 				end
 			%> <%= str %></td>
 	  </tr>
+	<% end %>
 	<% end %>
 	</tbody>
 </table>
@@ -89,8 +91,9 @@
 	</thead>
 	<tbody>
 	<% @deputies.each do |deputy| %>
+	<% if (!deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+			<td>&nbsp;</td>
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
@@ -111,6 +114,7 @@
 				end
 			%> <%= str %></td>
 	  </tr>
+	<% end %>
 	<% end %>
 	</tbody>
 </table>

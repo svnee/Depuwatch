@@ -23,5 +23,41 @@ class AdminController < ApplicationController
     end
   	redirect_to @text
   end
+  
+  def calculate_favs
+  	i = 0
+  	texts = Text.all
+  	texts.sort! { |a,b| b.fav_count <=> a.fav_count }
+  	texts.each do |t|
+  		if i < 15 then
+  			t.favorite = i + 1
+  		else
+  			t.favorite = 99
+  		end
+  		t.save!
+  		i += 1
+  	end
+  	
+  	render :text => "OK!"
+  end
+  
+  def cache_percentages
+  	Deputy.all.each do |d|
+  		d.presence_cache = d.presence
+  		d.delegations_rate_cache = d.delegations_rate
+  		d.save!
+  	end
+  	
+  	render :text => "OK!"
+  end
+  
+  def cache_active
+  	Deputy.all.each do |d|
+  		d.active_cache = d.active?
+  		d.save!
+  	end
+  	
+  	render :text => "OK!"
+  end
 
 end
