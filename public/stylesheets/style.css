@@ -698,6 +698,12 @@ div.dataTables_wrapper {
 	width: 50%;
 	float: right;
 	text-align: right;
+	background-color: #EEEEEE;
+	width: 749px;
+	padding: 3px;
+	 border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    margin-right: 10px;
 }
 
 .paging_full_numbers {
