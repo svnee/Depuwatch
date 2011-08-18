@@ -120,15 +120,14 @@ table.content td, table.content_index td {
 
 div.footer {
 border-top: 2px solid #333333;
-	padding: 10px;
+padding-bottom: 25px;
 	margin-top: 0px;
 	margin-right: 0px;
 	font-size:12px;
 	text-align: center;
 	clear:both;
 	color: white;
-
-	height: 50px;
+	height: 55px;
 	background: -moz-linear-gradient(center top , #8D7D78, #734347) repeat scroll 0 0 transparent;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8D7D78', endColorstr='#734347'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8D7D78), to(#734347)); /* for webkit browsers */
@@ -699,6 +698,12 @@ div.dataTables_wrapper {
 	width: 50%;
 	float: right;
 	text-align: right;
+	background-color: #EEEEEE;
+	width: 749px;
+	padding: 3px;
+	 border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    margin-right: 10px;
 }
 
 .paging_full_numbers {

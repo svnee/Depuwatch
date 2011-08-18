@@ -1,43 +1,34 @@
 <div class="content_wrapper">
-<div class="info"><a href="/search">Search</a>: weider Sichfunktiounen</div>
+<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a> </div>
 
 <div class="content_static">
 
-	 <h1><img src="/images/113.gif"> Search</h1>
 <%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
-<img src="/images/file.gif"> Sich <strong>Dossier</strong> wou Deputéiert 
-<%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
- vun der Partei 
-<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> 
-mat <input type="checkbox" name="vote" value="Jo"> Jo <input type="checkbox" name="vote" value="Nee"> Nee <input type="checkbox" name="vote" value="Abstentioun">
-Abstentioun gestëmmt huet fir Sessioun
-<%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%>
-an Thema 
-<%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
-. <%= submit_tag("Search Dossier")%>
+<p><img src="/images/file.gif"> <strong>Dossier</strong> </p>
+
+<table>
+<tr><td width="115px"> Deputéiert:</td> 	<td><%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Partei: </td> 		<td> <%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Vote: </td> 		<td><input type="checkbox" name="vote" value="Jo"> Jo <input type="checkbox" name="vote" value="Nee"> Nee <input type="checkbox" name="vote" value="Abstentioun">
+Abstentioun </td></tr>
+<tr><td> Sessioun: </td>	<td><%= select (:session, :id, Session.all.collect {|d| ["#{d.start.strftime("%Y")}/#{d.end.strftime("%Y")}", d.id]}, { :include_blank => "All" })%></td></tr>
+<tr><td> Thema: </td>		<td><%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%></td></tr>
+<tr><td> </td>					<td><%= submit_tag("Sich Dossier")%></td></tr>
+</table>
 <% end %>
 
 <%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
-<img src="/images/136.gif"> Sich <input type="checkbox" name="active" value="Jo"> aktuellen <input type="checkbox" name="active" value="Nee"> freiren <strong>Deputéiert</strong> aus Bezierk 
-<select name="bezierk">
-      <option value="all">All</option>
-      <option value="N">Norden</option>
-      <option value="O">Osten</option>$
-      <option value="Z">Zentrum</option>
-      <option value="S">Süden</option>
-</select> vun der Partei 
-<%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> 
-an Thema 
- <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%>
-mat Präsenz bei Voten iwwer <select name="presence">
-      <% (0..10).each do |i| %>
-      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
-      <% end %>
-    </select> an Vote/Delegatioun iwwer <select name="delegations">
-      <% (0..10).each do |i| %>
-      <option value="<%=i*10%>"><%= "#{i*10} %" %></option>
-      <% end %>
-    </select>. <%= submit_tag("Search Deputy")%>
+<p><img src="/images/136.gif"> <strong>Deputéiert</strong> </p>
+
+<table>
+<tr><td width="115px"> Actif:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
+<tr><td> Bezierk: </td>		<td> <select name="bezierk"> <option value="all">All</option> <option value="N">Norden</option> <option value="O">Osten</option> <option value="Z">Zentrum</option> <option value="S">Süden</option> </select> </td></tr>
+<tr><td> Partei: </td>		<td><%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Thema: </td>		<td> <%= select (:topic, :id, Topic.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
+<tr><td> Präsenz bei Vote:n <td> <select name="presence"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
+<tr><td> Vote/Delegatioun: <td> <select name="delegations"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
+<tr><td> </td>					<td><%= submit_tag("Search Deputy")%></td></tr>
+</table>
 <% end %>
 
 </div>
