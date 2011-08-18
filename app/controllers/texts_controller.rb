@@ -14,6 +14,7 @@ class TextsController < ApplicationController
   # GET /texts/1.xml
   def show
     @text = Text.find(params[:id])
+    @text.votes.sort!{|a,b| a.deputy.party_id <=> b.deputy.party_id}
     @rating = Rating.new
     
     respond_to do |format|
