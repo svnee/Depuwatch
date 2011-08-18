@@ -780,6 +780,15 @@ background-color: #EEEEEE;
     width: 749px;
 }
 
+div.more {
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+    width: 749px;
+}
+
 div.dep_details2 {
 margin-bottom: 10px;
 background-color: #EEEEEE;
