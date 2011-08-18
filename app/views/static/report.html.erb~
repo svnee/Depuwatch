@@ -4,7 +4,9 @@
 <div class="content_static">
 
 	 <h1></h1>
-	<p> Mat folgendem Formulaire kanns de ganz einfach ee Feeler mellen. Mir këmmeren eis dann drëm.</p>
+	<p> E Feeler fonnt? Ob technesche Feeler, falsch Donnéeën oder Problemer mam Design, mat dësem Formulaire kanns De ons de Feeler mellen.</p>
+
+<p>Am schnellste kënne Feeler behuewe ginn, wann se op Github agestallt ginn. Mir bieden och drëms d'aktuell "To-Do"-Lëscht ze kucken an ze iwwerpréiwen op de Feeler net schon gemellt gouf.</p>
 	<%= form_for(@report, :url => url_for(:action => 'report_sent', :controller => 'static')) do |f| %>
 	  <% if @report.errors.any? %>
 	    <div id="error_explanation">
