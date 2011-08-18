@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817182101) do
+ActiveRecord::Schema.define(:version => 20110818134705) do
 
   create_table "api_politicians", :force => true do |t|
     t.datetime "created_at"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(:version => 20110817182101) do
     t.integer "predecessor_id"
     t.integer "successor_id"
     t.string  "circonscription"
+    t.decimal "presence_cache"
+    t.decimal "delegations_rate_cache"
+    t.boolean "active_cache"
   end
 
   create_table "legislations", :force => true do |t|
@@ -92,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20110817182101) do
     t.integer  "seance_id"
     t.datetime "updated_at"
     t.string   "featured"
+    t.integer  "favorite"
   end
 
   create_table "topics", :force => true do |t|
