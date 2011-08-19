@@ -23,6 +23,7 @@ body a:hover{
 	text-decoration:underline;
 }
 
+body a:hover img{vertical-align:bottom;}
 
 h1{
 	font-size:18px;
@@ -261,7 +262,7 @@ div.intro {
 a img {
 text-decoration: none;
 	border: 0 none;
-
+vertical-align: bottom;
 	}
 
 span.bold {
@@ -379,7 +380,7 @@ div.navi_item {
    -webkit-box-shadow: 3px 5px 3px #e1e1e1;
    box-shadow: 3px 5px 3px #e1e1e1;
 	}
-img { align: absmiddle; }
+img { vertical-align: bottom;}
 
 div.navi_img {
 	 border-right: 1px solid #e3e3e3;

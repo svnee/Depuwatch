@@ -261,7 +261,7 @@ div.intro {
 a img {
 text-decoration: none;
 	border: 0 none;
-
+vertical-align: bottom;
 	}
 
 span.bold {
@@ -379,7 +379,7 @@ div.navi_item {
    -webkit-box-shadow: 3px 5px 3px #e1e1e1;
    box-shadow: 3px 5px 3px #e1e1e1;
 	}
-img { align: absmiddle; }
+img { vertical-align: bottom;}
 
 div.navi_img {
 	 border-right: 1px solid #e3e3e3;
@@ -1039,7 +1039,7 @@ color: #555555;
 background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
-width: 252px;
+width: 189px;
     color: #fff;
     cursor: default;
     margin-bottom: 0;
@@ -1059,7 +1059,7 @@ color: #555555;
     padding-bottom: 6px;
     padding-left: 5px;
     padding-top: 6px;
-    width: 251px;
+    width: 186px;
     text-align: center;
 }
 
