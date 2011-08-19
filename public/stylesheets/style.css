@@ -23,6 +23,7 @@ body a:hover{
 	text-decoration:underline;
 }
 
+body a:hover img{vertical-align:bottom;}
 
 h1{
 	font-size:18px;
@@ -261,7 +262,7 @@ div.intro {
 a img {
 text-decoration: none;
 	border: 0 none;
-
+vertical-align: bottom;
 	}
 
 span.bold {
@@ -379,7 +380,7 @@ div.navi_item {
    -webkit-box-shadow: 3px 5px 3px #e1e1e1;
    box-shadow: 3px 5px 3px #e1e1e1;
 	}
-img { align: absmiddle; }
+img { vertical-align: bottom;}
 
 div.navi_img {
 	 border-right: 1px solid #e3e3e3;
@@ -670,6 +671,7 @@ div.dossiers2 {
 
 div.dataTables_wrapper {
 	float: left;
+	margin-top: 5px;
 	}
 
 /* Code for sorting */
@@ -962,9 +964,9 @@ color: #555555;
     border-left: 2px solid #333333;
     display: block;
     height: 22px;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
     padding-left: 5px;
-    padding-top: 6px;
+    padding-top: 8px;
     width: 251px;
     text-align: center;
 }
@@ -1009,9 +1011,9 @@ color: #555555;
     border-left: 2px solid #333333;
     display: block;
     height: 22px;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
     padding-left: 5px;
-    padding-top: 6px;
+    padding-top: 8px;
     width: 380px;
     text-align: center;
 }
@@ -1056,9 +1058,9 @@ color: #555555;
     border-left: 2px solid #333333;
     display: block;
     height: 22px;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
     padding-left: 5px;
-    padding-top: 6px;
+    padding-top: 8px;
     width: 186px;
     text-align: center;
 }
