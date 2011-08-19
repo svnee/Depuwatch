@@ -18,6 +18,8 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'sitemap_generator'
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
