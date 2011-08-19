@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+	
   def vote
   	@deputies = Deputy.order(:lastname).all
   	@texts = Text.order(:code).all
