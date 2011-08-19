@@ -1024,3 +1024,50 @@ color: #555555;
     clear: left;
     padding: 1px 0px 0px;
 }
+
+.usual3 {
+    background: none repeat scroll 0 0 #fff;
+    width: 775px;
+}
+
+.usual3 li {
+    float: left;
+    list-style: none outside none;
+}
+
+.usual3 ul a.selected {
+background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
+width: 252px;
+    color: #fff;
+    cursor: default;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.usual3 ul a {
+   background: -moz-linear-gradient(center top , #ffffff, #E1e1e1) repeat scroll 0 0 transparent; 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E1e1e1'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E1e1e1)); /* for webkit browsers */
+color: #555555;
+    text-decoration: underline;
+    border-left: 2px solid #333333;
+    display: block;
+    height: 22px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+    padding-top: 6px;
+    width: 251px;
+    text-align: center;
+}
+
+.usual3 ul a:hover {
+	    text-decoration: none;
+	}
+
+.usual3 div {
+    clear: left;
+    padding: 1px 0px;
+}

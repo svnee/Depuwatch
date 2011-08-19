@@ -1039,7 +1039,7 @@ color: #555555;
 background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
-width: 252px;
+width: 189px;
     color: #fff;
     cursor: default;
     margin-bottom: 0;
@@ -1059,7 +1059,7 @@ color: #555555;
     padding-bottom: 6px;
     padding-left: 5px;
     padding-top: 6px;
-    width: 251px;
+    width: 186px;
     text-align: center;
 }
 
