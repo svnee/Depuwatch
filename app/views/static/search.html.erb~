@@ -1,10 +1,19 @@
 <div class="content_wrapper">
-<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a> </div>
+<div class="usual2">
 
-<div class="content_static">
+<ul class="idTabs" style="display:inline;"> 
+    <li><a href="#idTab1" class="selected"><%= image_tag "file.gif", :alt => "new" %> Dossier</a></li> 
+    <li><a href="#idTab2"> <%= image_tag "136.gif", :alt => "freier" %> Deputéiert</a></li> 
+  </ul> 
 
-<%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
-<p><img src="/images/file.gif"> <strong>Dossier</strong> </p>
+<div class="content">
+
+<!-- TAB 1 -->
+<div id="idTab1">
+  
+  <div class="slider_static">
+  
+  <%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
 
 <table>
 <tr><td width="115px"> Deputéiert:</td> 	<td><%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
@@ -16,9 +25,17 @@ Abstentioun </td></tr>
 <tr><td> </td>					<td><%= submit_tag("Sich Dossier")%></td></tr>
 </table>
 <% end %>
+  
+  </div>
 
-<%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
-<p><img src="/images/136.gif"> <strong>Deputéiert</strong> </p>
+</div> 
+<!-- TAB 1 -->
+
+<!-- TAB 2 -->
+<div id="idTab2">
+  
+  <div class="slider_static">
+  <%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
 
 <table>
 <tr><td width="115px"> Actif:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
@@ -29,5 +46,12 @@ Abstentioun </td></tr>
 <tr><td> </td>					<td><%= submit_tag("Search Deputy")%></td></tr>
 </table>
 <% end %>
+  </div>
 
+</div> 
+<!-- TAB 2 -->
+
+
+
+</div>
 </div>
