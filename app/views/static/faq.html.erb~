@@ -1,4 +1,3 @@
-
 <div class="content_wrapper">
 <a name="up"> </a>
 <div class="info"><a href="/faq">F.A.Q</a>: Heefeg gestallte Froen</div>
@@ -8,8 +7,9 @@
 <p><strong>Fonctionnement</strong></p>
 <p>
 <img src="/images/013.gif"> <a href="#wei">Wéi fannen ech e bestëmmten Dossier?</a><br>
-<img src="/images/013.gif"> <a href="#fav">Wat bedeit de giele Stär virun den Dossier Nummeren, bzw. "Top Dossier"?</a><br>
-<img src="/images/013.gif"> <a href="#dot">Wat bedeit de gringe Punk virun den Deputéiert?</a><br>
+<img src="/images/013.gif"> <a href="#fav">Wat bedeit de giele Stär (<img src="/images/fav.gif">) hannert den Dossier Nummeren, bzw. "Top Dossier"?</a><br>
+<img src="/images/013.gif"> <a href="#feature">Wat bedeit d'Medaille (<img src="/images/109.gif">) hannert den Dossier Nummeren, bzw. "Feature Dossier"?</a><br>
+<img src="/images/013.gif"> <a href="#dot">Wat bedeit de grénge Punk (<img src="/images/active.gif">) virun den Deputéiert?</a><br>
 <img src="/images/013.gif"> <a href="#functioun">Ech wéilt gäre Funktioun A oder Statistik B! </a> <br>
 </p>
 <p><strong>Iwwer de Projet</strong></p>
@@ -18,7 +18,7 @@
 <img src="/images/013.gif"> <a href="#wien">Wien sidd dir?</a> <br>
 <img src="/images/013.gif"> <a href="#beta">Wat bedeit "Beta"?</a> <br>
 <img src="/images/013.gif"> <a href="#chamber">Wier et net besser d'Chamber géif dës Donnéeën ubidde wéi eng politesch Partei? </a><br>
-<img src="/images/013.gif"> <a href="#delete">Ech sinn Deputéiert; kann ech meng Donnéeë läschte loossen?</a><br>
+<img src="/images/013.gif"> <a href="#delete">Ech sinn Deputéiert; kann ech meng Donnéeë läsche loossen?</a><br>
 <img src="/images/013.gif"> <a href="#updates">Wéi bleiwen ech um Lafenden wat d'Entwécklung vun Depuwatch ugeet?</a><br>
 </p>
 <p><strong>Technesch Infrastruktur</strong></p>
@@ -39,21 +39,27 @@
 <div class="content_static">
 <p> <img src="/images/013.gif">  <a name="wei"> </a> <strong> Wéi fannen ech e bestëmmten Dossier?</strong></p>
 <p> <strong>Mat der Dossier-Nummer</strong></p>
-<p>Ass d'Nummer vum Dossier bekannt, geet et duer op der <a href="/texts">Dossier-Säit</a> an der "Search" dësen Nummer unzeginn. D'Dossieren loossen sech op dëser Säit och no der Nummer sortéieren, falls nëmmen en Deel vun den Zuelen bekannt ass.</p>
+<p>Ass d'Nummer vum Dossier bekannt, geet et duer op der <a href="/texts">Dossier-Säit</a> an der "Search" dësen Nummer unzeginn. D'Dossiere loossen sech op dëser Säit och no der Nummer sortéieren, falls nëmmen en Deel vun den Zuele bekannt ass.</p>
 <p><strong>Mam Thema</strong></p>
-<p><a href="/topics">Theme-Säit</a> lescht Dossieren no Thema op. Mat engem Klick op e bestëmmten Thema ginn et weider Detaile zu den Dossieren aus deem Themeberäich. D'Thema vun engem Dossieren ass duerch den Ministère deen den Dossier ënnerschriwwen huet determinéiert (z.B. Dossieren déi vum „Ministère des Finances“ ënnerschriwwen sinn fannen sech beim Thema "Finanzen"). <a href="#up"><img src="/images/012.gif"></a> </p>
+<p><a href="/topics">Theme-Säit</a> lescht Dossieren no Thema op. Mat engem Klick op e bestëmmten Thema ginn et weider Detailer zu den Dossieren aus deem Themeberäich. D'Thema vun engem Dossieren ass duerch de Ministère deen den Dossier ënnerschriwwen huet determinéiert (z.B. Dossieren déi vum „Ministère des Finances“ ënnerschriwwe sinn fannen sech beim Thema "Finanzen"). <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 
 <div class="content_static">
-<p> <img src="/images/013.gif">  <a name="fav"> </a> <strong> Wat bedeit de giele Stär (<img src="/images/fav.gif">) virun den Dossier Nummeren, bzw. "Top Dossier"?</strong></p>
-<p> Dossieren mat engem Stär virdrun sinn "Top Dossieren". Dës Dossieren goufen vun de Visiteuren vun Depuwatch als interessant Dossieren ausgewisen. Op der jeeweileger Detailsäit vun all Dossier kann dësen als "Top Dossier" markéiert ginn.
+<p> <img src="/images/013.gif">  <a name="fav"> </a> <strong> Wat bedeit de giele Stär (<img src="/images/fav.gif">) hannert den Dossier Nummeren, bzw. "Top Dossier"?</strong></p>
+<p>Dossiere mat engem Stär virdru sinn "Top Dossieren". Dës Dossiere goufe vun de Visiteure vun Depuwatch als interessant Dossieren ausgewisen. Op der jeeweileger Detailsäit vun all Dossier kann dësen als "Top Dossier" markéiert ginn.
 <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
+<div class="content_static">
+<p> <img src="/images/013.gif">  <a name="feature"> </a> <strong> Wat bedeit d'Medaille (<img src="/images/109.gif">) hannert den Dossier Nummeren, bzw. "Feature Dossier"?</strong></p>
+<p> Dossieren déi mat enger Medaille markéiert sinn sinn "Feature" Dossieren. Dës Dossieren si besonnesch interessant a goufen zu Lëtzebuerg vill diskutéiert oder hunn wichteg Verännerunge mat sech bruecht. Den Titel gëtt e kuerzen Hiwäis vu wat de jeeweilegen Dossier handelt.</p>
+<p>"Feature" Dossiere gi vu Politikercheck no den uewe genannte Kriterien ausgesicht.</p>
+<a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
 
 <div class="content_static">
-<p> <img src="/images/013.gif">  <a name="dot"> </a> <strong> Wat bedeit de gringe Punk (<img src="/images/active.gif">) virun den Deputé</strong></p>
+<p> <img src="/images/013.gif">  <a name="dot"> </a> <strong> Wat bedeit de grénge Punkt (<img src="/images/active.gif">) virun den Deputéierten?</strong></p>
 <p> Aktuell Deputéiert sinn mat dësem Icon markéiert. Deputéiert ouni Icon sinn net méi aktiv.
 <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
@@ -71,15 +77,15 @@ Doriwwer raus ass Depuwatch "open source". De Quellcode ass op <a href="https://
 <div class="content_static">
 <p> <a name="wisou"> </a> <img src="/images/013.gif"> <strong> Wisou gëtt et Depuwatch.lu?</strong></p>
 <p> D'Ziel vun Depuwatch ass et d'Politik fir d'Bierger méi transparent ze gestalten.
-D'Ofstëmmungen an der Chamber sinn zwar ëffentlech, et ass trotzdem net einfach déi eenzel Voten ze verfollegen. Sou sinn d'Stëmme vun den Deputéiert um Site vun der Chamber (an engem PDF- Dokument) ze fannen, ma net an enger iwwersiichtlecher graphescher Duerstellung. Et ass och méiglech Ofstëmmungen op Chamber TV ze verfollegen, ma bei dëser Méiglechkeet ass een un d'Sendezäite vum Kanal gebonnen.</p>
+D'Ofstëmmungen an der Chamber sinn zwar ëffentlech, et ass trotzdem net einfach déi eenzel Voten ze verfollegen. Sou sinn d'Stëmme vun den Deputéiert um Site vun der Chamber (an engem PDF-Dokument) ze fannen, ma net an enger iwwersiichtlecher graphescher Duerstellung. Et ass och méiglech d'Ofstëmmungen op Chamber TV ze verfollegen, mä hei kritt een nëmmen d'Resultat vum Vote gesot an net d'Votë vun den eenzelnen Deputéierten.</p>
 
-<p>Depuwatch soll dës Lücke schléissen an ëffentlech Donnéeën iwwersiichtlech duerstelle fir d'Bierger méino un d'Politik an d'Deputéiert erun ze bréngen. Dëse Site soll souwuel d'Transparenz vun der politescher Arabescht an der Chamber erhéijen, wéi och d'Bierger zu engem méi direkten Dialog mat den Deputéiert ureegen. <a href="#up"><img src="/images/012.gif"></a> </p>
+<p>Depuwatch soll dës Lücke schléissen an ëffentlech Donnéeën iwwersiichtlech duerstelle fir d'Bierger méi no un d'Politik an d'Deputéiert erun ze bréngen. Dëse Site soll souwuel d'Transparenz vun  der politescher Arabescht an der Chamber erhéijen, wéi och d'Bierger zu engem méi direkten Dialog mat den Deputéiert ureegen.<a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
 <p> <a name="wien"> </a> <img src="/images/013.gif"> <strong> Wien sidd dir?</strong></p>
-<p> Depuwatch ass aus der Zesummenaarbecht vun Politikercheck.lu an der Piratepartei Lëtzebuerg entstanen. D'Zesummenaarbecht vun Politikercheck.lu an Depuwatch erlaabt et all Bierger den Deputéierte konkret Froen zu bestëmmten Ofstëmmungen ze stellen. 
-Politikercheck.lu iwwerhëlt am Projet Depuwatch d'Rolle vum onofhängegen Beobachter während déi technesch Infrastruktur vun der Piratepartei Lëtzebuerg offréiert gëtt.</p><p>
+<p> Depuwatch ass aus der Zesummenaarbecht vu Politikercheck.lu an der Piratepartei Lëtzebuerg entstanen. D'Zesummenaarbecht vu Politikercheck.lu an Depuwatch erlaabt et all Bierger den Deputéierte konkret Froen zu bestëmmten Ofstëmmungen ze stellen. 
+Politikercheck.lu iwwerhëlt am Projet Depuwatch d'Rolle vum onofhängege Beobachter während déi technesch Infrastruktur vun der Piratepartei Lëtzebuerg offréiert gëtt.</p><p>
 Bei Froen, Kommentaren, oder Kritik <a href="/contact">kontaktéiert</a> d'Partner vun Depuwatch. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
@@ -97,8 +103,8 @@ D'Depuwatch Partner ënnerstëtzen all Initiativ fir en Projet vun den offiziell
 
 <div class="content_static">
 <p> <a name="delete"> </a> <img src="/images/013.gif"> <strong> Ech sinn Deputéiert; kann ech meng Donnéeë läschte loossen?</strong></a></p>
-<p> Mat der Ausnahm vun de Sozialen Netzwierk Profiler sinn all Donnéeë vun Depuwatch ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
-Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentlechen, deen dës Persoun wëll geheim halen, dann schéckt ons eng Mail op <i>abuse@depuwatch</i>.lu a mir läschen de Link op dëse Profil. Mir empfielen awer an e sou engem Fall de concernéierten Account beim Sozialen Netzwierk och ze läschen oder ze melle wëll sech sou Profiler generell net geheim hale loossen. <a href="#up"><img src="/images/012.gif"></a> </p>
+<p> Mat der Ausnahm vun de Sozialen Netzwierk Profiler sinn all Donnéeë  vun Depuwatch ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
+Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentlechen, deen dës Persoun wëll geheim halen, da schéckt ons eng Mail op <i>abuse@depuwatch.lu</i> a mir läschen de Link op dëse Profil. Mir empfielen awer an e sou engem  Fall de concernéierten Account beim Sozialen Netzwierk och ze läschen  oder ze melle wëll sech sou Profiler generell net geheim hale loossen. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
@@ -111,28 +117,27 @@ Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentl
 
 <div class="content_static">
 <p> <a name="wou"> </a> <img src="/images/013.gif"> <strong> Wou kommen d'Donnéeën hier?</strong></a></p>
-<p> All Donnéeën vun Depuwatch (bis op Links op Sozial Medien) si vun den offiziellen Säiten vun der <a href="http://chd.lu">Chambre des Députés</a> a <a href="http://légilux.public.lu">Légilux</a>, suwuel wéi <a href="http://politikercheck.lu">Politikercheck</a> (Fotoen). Depuwatch verbënnt dës Donnéeën a wéist se an iwwersiichtlecher Duerstellung un. </p>
+<p> All Donnéeë vun Depuwatch (bis op Links op Sozial Medien) si vun den offizielle Säite vun der <a href="http://chd.lu">Chambre des Députés</a> a <a href="http://légilux.public.lu">Légilux</a>, souwuel wéi <a href="http://politikercheck.lu">Politikercheck</a> (Fotoen). Depuwatch verbënnt dës Donnéeën a wéist se an iwwersiichtlecher Duerstellung un. </p>
 <p>Donnéeë gi mat Hëllef vun engem <a href="http://scraperwiki.com/scrapers/chd/">Script</a> no bestëmmte Reegele beim automateschen Opruffe vun der Chamber Websäit erofgelueden ("gescraped"). Dës Donnéeë ginn da manuell iwwerpréift ier se publizéiert ginn.</p>
  <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
 <p> <a name="korrekt"> </a> <img src="/images/013.gif"> <strong> Wouhier weess ech, dass d'Donnéeën richteg sinn?</strong></a></p>
-<p> Donnéeën ginn automatesch aus den offiziellen Dokumenter vun der Chamber erausgelies an an enger Datebank verbonnen. De Fonctionnement vun dëser Datebank, sou wéi d'manuell agedroen Donnéeën goufen vun Piratepartei an Politikercheck op hier Korrektheet gepréift. Zur eegener Iwwerpréifung ass bei all Seance an Dossier e Link op déi offiziell Dokumenter.</p>
+<p> D'Donnéeë ginn automatesch aus den offiziellen Dokumenter vun der Chamber erausgelies an an enger Datebank verbonnen. De Fonctionnement vun dëser Datebank, sou wéi d'manuell agedroen Donnéeë goufe vun der Piratepartei a Politikercheck op hier Korrektheet gepréift. Zur eegener Iwwerpréifung ass bei all Seance an Dossier e Link op déi offiziell Dokumenter.</p>
 <p>Trotz aller Virsiicht kënnen sech an dësem Prozess Feeler aschläichen. Sollt Dir e Feeler opfalen, <a href="/report">kontaktéier ons</a>. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="info">Divers</div>
 <div class="content_static">
-<p> <a name="eu"> </a> <img src="/images/013.gif"> <strong> Wou fannen ech Ofstëmmungen vun den EU Deputéiert?</strong></a></p>
-<p> Depuwatch wéist nëmmen d'Ofstëmmungen vun den lëtzebuerger Deputéiert an der Chambre des Députés un. D'Ofstëmmungen vun den lëtzebuergeschen EU Deputéiert sinn op
+<p> <a name="eu"> </a> <img src="/images/013.gif"> <strong> Wou fannen ech d'Ofstëmmungen vun den EU Deputéierten?</strong></a></p>
+<p> Depuwatch wéist nëmmen d'Ofstëmmunge vun de lëtzebuerger Deputéiert an der Chambre des Députés un. D'Ofstëmmunge vun de lëtzebuergeschen EU Deputéiert sinn op
 <a href="http://votewatch.eu/cx_countries.php?euro_tara_id=25">Votewatch.eu</a> ze fannen.
  <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
 <p> <a name="qp"> </a> <img src="/images/013.gif"> <strong> Wou fannen ech d'Questions Parlementaires vun den Deputéierten? </strong></a></p>
-<p> D'Questions Parlementaires vun den Deputéiert sinn op der Chamber Säit ënnert "<a href="http://chd.lu/wps/portal/public/!ut/p/c1/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gXI5ewIE8TIwN380ATAyMvVy_z0GA_Ywt3Y6B8pFm8kYVFcJC7o6-rpWWok4GngbNhsGugk5GBpxEB3X4e-bmp-pH6UeZIqsJ8DQ2MnDyNA70CLI0tXA31I3NS0xOTK_ULciPK8x0VFQGcGq-6/dl2/d1/L0lJSklna21BL0lKakFBRXlBQkVSQ0pBISEvWUZOQTFOSTUwLTVGd0EhIS83X0QyRFZSSTQyMEdWTTEwMkJJM1FKUDkzOEUxL0daeE5FNzA3MzAwMTI!/?PC_7_D2DVRI420GVM102BI3QJP938E1_action=doQuestpaList&id=&filter_action=&PC_7_D2DVRI420GVM102BI3QJP938E1_displayLink=&PC_7_D2DVRI420GVM102BI3QJP938E1_numPage=8&PC_7_D2DVRI420GVM102BI3QJP938E1_positionInHistory=&PC_7_D2DVRI420GVM102BI3QJP938E1_display=7&PC_7_D2DVRI420GVM102BI3QJP938E1_EtatQuestion=Toutes&PC_7_D2DVRI420GVM102BI3QJP938E1_AuteurQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_DestinataireQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_TypesDeTri=DateDepot&PC_7_D2DVRI420GVM102BI3QJP938E1_SortOrder=DESC&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageTop=8&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageBottom=8#7_D2DVRI420GVM102BI3QJP938E1">Questions Parlementaires</a>" ze fannen.  <a href="#up"><img src="/images/012.gif"></a> </p>
+<p> D'Questions Parlementaires vun den Deputéierte sinn op der Chamber Säit ënnert "<a href="http://chd.lu/wps/portal/public/!ut/p/c1/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gXI5ewIE8TIwN380ATAyMvVy_z0GA_Ywt3Y6B8pFm8kYVFcJC7o6-rpWWok4GngbNhsGugk5GBpxEB3X4e-bmp-pH6UeZIqsJ8DQ2MnDyNA70CLI0tXA31I3NS0xOTK_ULciPK8x0VFQGcGq-6/dl2/d1/L0lJSklna21BL0lKakFBRXlBQkVSQ0pBISEvWUZOQTFOSTUwLTVGd0EhIS83X0QyRFZSSTQyMEdWTTEwMkJJM1FKUDkzOEUxL0daeE5FNzA3MzAwMTI!/?PC_7_D2DVRI420GVM102BI3QJP938E1_action=doQuestpaList&id=&filter_action=&PC_7_D2DVRI420GVM102BI3QJP938E1_displayLink=&PC_7_D2DVRI420GVM102BI3QJP938E1_numPage=8&PC_7_D2DVRI420GVM102BI3QJP938E1_positionInHistory=&PC_7_D2DVRI420GVM102BI3QJP938E1_display=7&PC_7_D2DVRI420GVM102BI3QJP938E1_EtatQuestion=Toutes&PC_7_D2DVRI420GVM102BI3QJP938E1_AuteurQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_DestinataireQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_TypesDeTri=DateDepot&PC_7_D2DVRI420GVM102BI3QJP938E1_SortOrder=DESC&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageTop=8&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageBottom=8#7_D2DVRI420GVM102BI3QJP938E1">Questions Parlementaires</a>" ze fannen.  <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
-
 
