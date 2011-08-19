@@ -106,7 +106,7 @@ th.vote {
 
 table.content th, table.content_index th {
 	border-bottom: 1px solid #eee;
-	padding-bottom:0px;
+padding-bottom: 10px;
 	text-align:left;
    padding-left: 20px;
 }
@@ -671,6 +671,7 @@ div.dossiers2 {
 
 div.dataTables_wrapper {
 	float: left;
+	margin-top: 5px;
 	}
 
 /* Code for sorting */
