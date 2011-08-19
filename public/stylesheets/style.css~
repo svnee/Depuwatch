@@ -906,7 +906,7 @@ color:#fff
 }
 
 .nav{
-	padding-top:37px;
+	padding-top:10px;
 color: white;}
 
 div.slider {
