@@ -897,23 +897,12 @@ color: white;
 #button{
 width:100px; 
 height:100px; 
-border-radius:190px; 
--moz-border-radius:190px; 
--webkit-border-radius:190px; 
 border:0px;
 padding:13px 5px;
-background: -moz-linear-gradient(center top , #f1f1f1, #E1e1e1) repeat scroll 0 0 transparent; 
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#E1e1e1'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#E1e1e1)); /* for webkit browsers */
-
 text-align:center; 
 font-size:16px; 
-	font-family: Helvetica,"Trebuchet MS",Arial;
+font-family: Helvetica,"Trebuchet MS",Arial;
 color:#fff
--moz-box-shadow: 2px 2px 3px #c1c1c1;
--webkit-box-shadow: 2px 2px 3px #c1c1c1;
-  box-shadow: 2px 2px 3px #c1c1c1;
-
 }
 
 .nav{
@@ -938,11 +927,11 @@ background: -moz-linear-gradient(center top , #FFFFFF, #e1e1e1) repeat scroll 0 
 
 div.beta_div {
 float: right;
-    left: -616px;
+    left: -515px;
     position: relative;
-    top: 12px;
--moz-transform: rotate(12deg);
--webkit-transform: rotate(12deg);
+    top: 64px;
+-moz-transform: rotate(-35deg);
+-webkit-transform: rotate(-35deg);
 }
 
 .usual {
@@ -1084,4 +1073,8 @@ color: #555555;
 .usual3 div {
     clear: left;
     padding: 1px 0px;
+}
+
+span.noline a {
+	text-decoration: none;
 }

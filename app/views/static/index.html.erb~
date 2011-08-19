@@ -27,6 +27,15 @@
 			"bInfo": false,
 			"bAutoWidth": false
 		} );
+		$('#ordered_table4').dataTable( {
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"sPaginationType": "full_numbers"
+		} );
 	} );
 </script>
 
@@ -36,7 +45,7 @@
 <div class="content_static">
 <p>Häerzlech wëllkomm op Depuwatch.lu, dem Internetportal dat dem interesséierte Bierger d'Ofstëmmungsverhale vun onsen Deputéiert an der Chamber transparent an iwwersiichtlech duerstellt</p></div>
 
-<div class="usual"> 
+<div class="usual3"> 
   <ul class="idTabs" style="display:inline;"> 
     <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> Neisten Dossieren</a></li> 
     <li><a href="#idTab2"> <%= image_tag "fav.gif", :alt => "fav" %> Top Dossieren</a></li> 
@@ -122,7 +131,46 @@
   
   <div id="mydiv4" style="display:block; z-index:0;" class="slider_static">
   
-  -- table aktuell deputéiert --
+  <table class="content" id="ordered_table4">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th style="width:100px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
+			<th style="width:100px;">&nbsp;</th>
+			<th>Partei</th>
+			<th>Bezierk</th>
+			<th>Amtszäit</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% cache('index_tab4') do %>
+	<% @deputies.each do |deputy| %>
+	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+			<td><%= image_tag 'active.gif' %></td>
+	    <td><%= link_to deputy.lastname, deputy %></td>
+			<td><%= link_to deputy.firstname, deputy %></td>
+	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
+			<td><%= deputy.bezierk %></td>
+			<td><%str = ""
+				i = 1
+				deputy.memberships.each do |m|
+					if m.end.nil? then 
+			      str = str + "#{m.start.year} - ..."
+			    else
+						if deputy.memberships.size > 1 && i <= deputy.memberships.size then
+			      	str = "#{m.start.year} - #{m.end.year}; " + str
+						else
+							str = "#{m.start.year} - #{m.end.year}" + str
+						end
+			    end
+					i = i + 1
+				end
+			%> <%= str %></td>
+	  </tr>
+	<% end %>
+	<% end %>
+	</tbody>
+</table>
 
  </div>
   

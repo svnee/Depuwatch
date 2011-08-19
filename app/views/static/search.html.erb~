@@ -1,9 +1,10 @@
 <div class="content_wrapper">
+<div class="info"><%= image_tag "113.gif", :alt => "freier" %> <a href="/search">Search</a></div>
 <div class="usual2">
 
 <ul class="idTabs" style="display:inline;"> 
-    <li><a href="#idTab1" class="selected"><%= image_tag "file.gif", :alt => "new" %> Dossier</a></li> 
-    <li><a href="#idTab2"> <%= image_tag "136.gif", :alt => "freier" %> Deputéiert</a></li> 
+    <li><a href="#idTab1" class="selected"><%= image_tag "file.gif", :alt => "dossier" %> Dossier</a></li> 
+    <li><a href="#idTab2"> <%= image_tag "136.gif", :alt => "deputeiert" %> Deputéiert</a></li> 
   </ul> 
 
 <div class="content">
