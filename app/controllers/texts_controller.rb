@@ -62,6 +62,7 @@ class TextsController < ApplicationController
   def update
     @text = Text.find(params[:id])
 		expire_fragment("texts_index_tab1")
+		expire_fragment("texts_show_#{@text.id}")
     respond_to do |format|
       if @text.update_attributes(params[:text])
         format.html { redirect_to(@text, :notice => 'Text was successfully updated.') }
@@ -79,6 +80,7 @@ class TextsController < ApplicationController
     @text = Text.find(params[:id])
     @text.destroy
 		expire_fragment("texts_index_tab1")
+		expire_fragment("texts_show_#{@text.id}")
     respond_to do |format|
       format.html { redirect_to(texts_url) }
       format.xml  { head :ok }

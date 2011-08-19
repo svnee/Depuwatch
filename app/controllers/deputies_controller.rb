@@ -42,7 +42,7 @@ class DeputiesController < ApplicationController
   # POST /deputies.xml
   def create
     @deputy = Deputy.new(params[:deputy])
-
+    
     respond_to do |format|
       if @deputy.save
         format.html { redirect_to(@deputy, :notice => 'Deputy was successfully created.') }
@@ -58,7 +58,7 @@ class DeputiesController < ApplicationController
   # PUT /deputies/1.xml
   def update
     @deputy = Deputy.find(params[:id])
-
+		expire_fragment("deputies_show_#{@deputy.id}")
     respond_to do |format|
       if @deputy.update_attributes(params[:deputy])
         format.html { redirect_to(@deputy, :notice => 'Deputy was successfully updated.') }
