@@ -30,6 +30,7 @@
     <div id="idTab1">
   
   <div class="slider_static">
+	<% cache('texts_index_tab1') do %>
 	<p><table class="content" id="ordered_table">
 <thead>
 <tr>
@@ -50,17 +51,59 @@
 <% end %>
 </tbody>
 </table></p>
+<% end %>
 </div>
 
 
   </div> 
     <!-- TAB 1 -->
     <!-- TAB 2 -->
-   ...
+    <div id="idTab2">
+  
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		<p><table class="content_index" id="ordered_table2">
+		<tr>
+			<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+			<th>Titel</th>
+			<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
+		</tr>
+		<% @top.each do |t| -%>
+		<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+				<td><%= link_to t.code, t%></td>
+				<td><%= t.title %></td>
+				<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
+		</tr>
+		<% end -%>
+
+		</table></p></div>
+  
+  </div> 
       <!-- TAB 2 -->
   
     <!-- TAB 3 -->
-  .!.
+  <div id="idTab3">
+  
+  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><p>  
+  
+  	<table class="content_index" id="ordered_table3">
+	<tr>
+	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th>Titel</th>
+	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
+	</tr>
+	<% @featured.each do |t| -%>
+	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+		<td><%= link_to t.code, t%></td>
+		<td><%= t.title %></td>
+		<td style="padding-left: 25px; text-align: left;"><%= t.featured %></td>
+	</tr>
+	<% end -%>
+
+	</table>
+  
+  
+  </p> </div>
+  
+  </div> 
       <!-- TAB 3 -->
 </div>
 

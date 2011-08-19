@@ -671,6 +671,7 @@ div.dossiers2 {
 
 div.dataTables_wrapper {
 	float: left;
+	margin-top: 5px;
 	}
 
 /* Code for sorting */
