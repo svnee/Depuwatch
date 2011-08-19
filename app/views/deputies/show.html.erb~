@@ -7,6 +7,7 @@
 			"bSort": true,
 			"bInfo": false,
 			"bAutoWidth": false,
+			"sPaginationType": "full_numbers",		
 			"aaSorting": [[ 1, "desc" ]],
 			"aoColumnDefs": [
         { "bSortable": false, "aTargets": [ 0, 2, 4 ] },
@@ -22,7 +23,7 @@
 
 <a href="/deputies">Deput&eacute;</a>: <strong><%= @deputy.name %></strong> | Partei: <strong><%= @deputy.party.name %></strong>
 </div>
-
+<% cache("deputies_show_#{@deputy.id}") do %>
 <div class="content">
 
 <div class="wrapper_text"> 
@@ -144,12 +145,12 @@ Stell dem <%= @deputy.name %> eng Fro!
 	<tbody>
 	<% @deputy.votes.each do |v| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></th>
-		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></th>
+		<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></td>
+		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
-		<td style="padding-left: 35px; text-align: left;"><%= v.text.topics_to_str.html_safe %></th>
-		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></th>
+		<td style="padding-left: 35px; text-align: left;"><%= v.text.topics_to_str.html_safe %></td>
+		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
 	</tr>
 	<% end -%>
 	</tbody>
@@ -157,4 +158,5 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 
 </div>
+<% end %>
 

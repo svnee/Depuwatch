@@ -717,7 +717,7 @@ background-color: #EEEEEE;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-top: 10px;
-    padding: 3px;
+    padding: 1px;
     text-align: center;
     width: 749px;
 }
@@ -811,7 +811,7 @@ background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
     float: left;
     -moz-border-radius: 4px 4px 4px 4px;
-    padding: 3px;
+    padding: 4px;
     width: 749px;
     text-align: center;
     margin-bottom: 10px;
@@ -822,13 +822,12 @@ div.more2 {
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
     float: left;
-    -moz-border-radius: 4px 4px 4px 4px;
-    padding: 3px;
-    width: 749px;
-    text-align: center;
     margin-bottom: 10px;
-    margin-top: 5px;
     margin-left: 10px;
+    margin-top: 5px;
+    padding: 4px;
+    text-align: center;
+    width: 747px;
 }
 
 div.dep_details2 {
