@@ -62,7 +62,9 @@ class AdminController < ApplicationController
   end
   
   def purge_cache
-    
+    d = Deputy.where("last_purge < ?", DateTime.now - 1.hours).order(:last_purge)[0]
+    expire_fragment("deputies_show_#{d.id}")
+    redirect_to d
   end
 
 end
