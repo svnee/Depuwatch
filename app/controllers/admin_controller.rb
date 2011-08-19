@@ -21,6 +21,7 @@ class AdminController < ApplicationController
   			Vote.create({:text_id => @text.id, :deputy_id => k, :vote => vote, :delegate_id => params[:proxy][k]}).save!
     	end
     end
+    expire_fragment("texts_show_#{@text.id}")
   	redirect_to @text
   end
   
