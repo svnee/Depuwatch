@@ -41,6 +41,7 @@
     <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> Neisten Dossieren</a></li> 
     <li><a href="#idTab2"> <%= image_tag "fav.gif", :alt => "fav" %> Top Dossieren</a></li> 
     <li><a href="#idTab3"><%= image_tag "109.gif", :alt => "featured" %> Featured Dossieren</a></li> 
+    <li><a href="#idTab4"><%= image_tag "136.gif", :alt => "featured" %> Aktuell Deputéiert</a></li> 
   </ul> 
 
   <!-- TAB 1 -->
@@ -75,7 +76,7 @@
     <!-- TAB 2 -->
     <div id="idTab2">
   
-  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table2">
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table2">
 <tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 	<th>Titel</th>
@@ -89,7 +90,7 @@
 </tr>
 <% end -%>
 
-</table></p> </div>
+</table> </div>
   
   </div> 
       <!-- TAB 2 -->
@@ -97,7 +98,7 @@
     <!-- TAB 3 -->
   <div id="idTab3">
   
-  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><p><table class="content_index" id="ordered_table3">
+  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table3">
 <tr>
 <th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
 <th>Titel</th>
@@ -111,10 +112,22 @@
 </tr>
 <% end -%>
 
-</table></p> </div>
+</table> </div>
   
   </div> 
       <!-- TAB 3 -->
+      
+      <!-- TAB 4 -->
+  <div id="idTab4">
+  
+  <div id="mydiv4" style="display:block; z-index:0;" class="slider_static">
+  
+  -- table aktuell deputéiert --
+
+ </div>
+  
+  </div> 
+      <!-- TAB 4 -->
   
 </div>
 
