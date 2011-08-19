@@ -16,7 +16,7 @@
   
   <%= form_tag({:action => "results_texts", :controller => "static"}, :method => "post") do  %>
 
-<table style="margin-left:10px; margin-top: 10px; margin-bottom:10px;>
+<table style="margin-left:10px; margin-top: 10px; margin-bottom:10px;">
 <tr><td width="115px"> Deputéiert:</td> 	<td><%= select (:deputy, :id, Deputy.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Partei: </td> 		<td> <%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Vote: </td> 		<td><input type="checkbox" name="vote" value="Jo"> Jo <input type="checkbox" name="vote" value="Nee"> Nee <input type="checkbox" name="vote" value="Abstentioun">
@@ -38,7 +38,7 @@ Abstentioun </td></tr>
   <div class="slider_static">
   <%= form_tag({:action => "results_deputies", :controller => "static"}, :method => "post") do  %>
 
-<table style="margin-left:10px; margin-top: 10px; margin-bottom:10px;>
+<table style="margin-left:10px; margin-top: 10px; margin-bottom:10px;">
 <tr><td width="115px"> Actif:</td>		 	<td><input type="checkbox" name="active" value="Jo"> Jo <input type="checkbox" name="active" value="Nee"> Nee
 <tr><td> Bezierk: </td>		<td> <select name="bezierk"> <option value="all">All</option> <option value="N">Norden</option> <option value="O">Osten</option> <option value="Z">Zentrum</option> <option value="S">Süden</option> </select> </td></tr>
 <tr><td> Partei: </td>		<td><%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
