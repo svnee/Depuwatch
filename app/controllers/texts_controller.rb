@@ -45,7 +45,7 @@ class TextsController < ApplicationController
   # POST /texts.xml
   def create
     @text = Text.new(params[:text])
-
+		expire_fragment("texts_index_tab1")
     respond_to do |format|
       if @text.save
         format.html { redirect_to(@text, :notice => 'Text was successfully created.') }
@@ -61,7 +61,8 @@ class TextsController < ApplicationController
   # PUT /texts/1.xml
   def update
     @text = Text.find(params[:id])
-
+		expire_fragment("texts_index_tab1")
+		expire_fragment("texts_show_#{@text.id}")
     respond_to do |format|
       if @text.update_attributes(params[:text])
         format.html { redirect_to(@text, :notice => 'Text was successfully updated.') }
@@ -78,7 +79,8 @@ class TextsController < ApplicationController
   def destroy
     @text = Text.find(params[:id])
     @text.destroy
-
+		expire_fragment("texts_index_tab1")
+		expire_fragment("texts_show_#{@text.id}")
     respond_to do |format|
       format.html { redirect_to(texts_url) }
       format.xml  { head :ok }

@@ -10,6 +10,7 @@ ChdTransparent::Application.routes.draw do
   resources :legislations
 
 	get "admin/cache_percentages"
+	get "admin/purge_cache"
 	get "admin/cache_active"
   get "admin/vote"
   get "admin/calculate_favs"

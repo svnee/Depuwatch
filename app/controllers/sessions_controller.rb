@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+	before_filter :authenticate , :except => [:index, :show]
   # GET /sessions
   # GET /sessions.xml
   def index
