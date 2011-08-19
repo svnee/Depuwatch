@@ -1074,3 +1074,7 @@ color: #555555;
     clear: left;
     padding: 1px 0px;
 }
+
+span.noline a {
+	text-decoration: none;
+}
