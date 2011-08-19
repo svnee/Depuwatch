@@ -60,7 +60,7 @@
 	
 		<hr>	
 	
-<div style="margin-top:10px;"><img src="/images/facebook_btn.png"> <img src="/images/twitter_btn.png"> <img src="/images/blogger.png"></div>	
+<div style="margin-top:10px; text-align: center;"><a href="https://www.facebook.com/Depuwatch" ><img src="/images/facebook_btn.png"></a> <a href="http://twitter.com/#!/depuwatch"><img src="/images/twitter_btn.png"></a> <a href="http://www.blog.depuwatch.lu/"><img src="/images/blogger.png"></a></div>	
 	
 	
 </div>
