@@ -3,7 +3,7 @@
 		$('#ordered_table').dataTable( {
 			"bPaginate": true,
 			"bLengthChange": false,
-			"bFilter": false,
+			"bFilter": true,
 			"bSort": true,
 			"bInfo": false,
 			"bAutoWidth": false,
@@ -142,14 +142,13 @@ Stell dem <%= @deputy.name %> eng Fro!
 <!-- TAB 1 -->
     <div id="idTab1">
 
-  <div class="slider_static">
-  
+  <div class="slider_static">  
 <table class="content" id="ordered_table">
 	<thead>
 	<tr>
-		<th width="60px"><img width="25" src="/images/sessions.png" alt="logo"></th>
-		<th width="60px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
-		<th width="45px" style="padding-left:0px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+		<th width="90px"><img width="25" src="/images/sessions.png" alt="logo"></th>
+		<th width="100px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+		<th width="70px"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
 		<th><img width="25" alt="logo" src="/images/topics.png"></th>
 		<th width="105px">Délégéierten</th>
@@ -162,7 +161,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 		<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
-		<td style="padding-left: 20px; text-align: left;"><%= v.text.topics_to_str.html_safe %></td>
+		<td style="padding-left: 35px; text-align: left;"><%= v.text.title %></td>
 		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
 	</tr>
 	<% end -%>
