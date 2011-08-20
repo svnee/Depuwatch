@@ -1078,3 +1078,16 @@ color: #555555;
     clear: left;
     padding: 1px 0px;
 }
+
+div.wrapper_error {
+	clear: both;
+    display: block;
+    	background-image: url('/images/background.png');
+    	background-repeat:repeat-y;
+    padding: 0px;
+width: 980px;
+margin-left: auto;
+    margin-right: auto;
+    min-height: 500px;
+
+}

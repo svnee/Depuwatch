@@ -349,6 +349,16 @@ div.content_static {
     width: 755px;
 }
 
+div.content_static_error {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 500px;
+}
+
 div.content_static2 {
   background-color: white;
     border-bottom: 1px solid #EEEEEE;
