@@ -49,15 +49,19 @@ class Text < ActiveRecord::Base
   end
   
   def code
-  	if (!favorite.nil? && favorite < 99) then
-  	  str = "#{self[:code]} <img src='/images/fav.gif' alt='Favorite'>"
-  		str += "<img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
-  		str.html_safe
-  	else
-  		str = self[:code]
-  		str += " <img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
-  		str.html_safe
-  	end
+    if self[:code].nil?
+      nil
+    else
+  	  if (!favorite.nil? && favorite < 99) then
+    	  str = "#{self[:code]} <img src='/images/fav.gif' alt='Favorite'>"
+    		str += "<img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
+    		str.html_safe
+    	else
+    		str = self[:code]
+    		str += " <img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
+    		str.html_safe
+    	end
+    end
   end
   
   def party_opinion(pid)
