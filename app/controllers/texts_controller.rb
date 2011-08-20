@@ -4,7 +4,7 @@ class TextsController < ApplicationController
   def index
     @texts = Text.all
     @top = Text.where('favorite < 99').order(:favorite)
-    @featured = Text.where('featured <> ""').order(:updated_at).limit(15)
+    @featured = Text.where('featured <> ""').order(:updated_at)
 
     respond_to do |format|
       format.html # index.html.erb

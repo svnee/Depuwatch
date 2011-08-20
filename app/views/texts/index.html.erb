@@ -16,6 +16,18 @@
       ]
 			} );
 	} );
+	$(document).ready(function() {
+		$('#ordered_table3').dataTable( {
+			"bPaginate": true,
+      "iDisplayLength": 15,
+      "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			} );
+	} );
 </script>
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
