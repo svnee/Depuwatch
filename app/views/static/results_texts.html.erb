@@ -19,7 +19,7 @@
 </script>
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
-<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong>Gast Gibéryen</strong> | Partei: <strong>Csv</strong> | Vote: <strong>Jo</strong> | Sessioun: <strong>Datum</strong> | Thema: <strong>Justice</strong></div>
+<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong><%= params[:deputy][:id] == 'all' ? 'All' : Deputy.find(params[:deputy][:id]).name %></strong> | Partei: <strong><%= params[:party][:id] == 'all' ? "All" : Party.find(params[:party][:id]).name %></strong> | Vote: <strong><%= params[:vote] %></strong> | Sessioun: <strong><%= params[:session][:id] == 'all' ? 'All' : session_display(Session.find(params[:session][:id])) %></strong> | Thema: <strong><%= params[:topic][:id] == 'all' ? 'All' : Topic.find(params[:topic][:id]).name %></strong></div>
 
 <div class="content">
 <table class="content" id="ordered_table">
