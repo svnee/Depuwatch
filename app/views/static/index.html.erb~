@@ -87,8 +87,8 @@
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table2">
 <tr>
-	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
-	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
+	<th width="55px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th width="75px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
 	<th>Titel</th>
 	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
 </tr>
@@ -111,8 +111,8 @@
   
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table3">
 <tr>
-<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
-<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
+<th width="55px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+<th width="75px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
 <th>Titel</th>
 <th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
 </tr>
@@ -139,7 +139,7 @@
 	<thead>
 		<tr>
 			<th>&nbsp;</th>
-			<th style="width:100px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
+			<th style="width:70px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
 			<th style="width:100px;">&nbsp;</th>
 			<th>Partei</th>
 			<th>Bezierk</th>
