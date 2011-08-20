@@ -39,6 +39,7 @@ class TextsController < ApplicationController
   # GET /texts/1/edit
   def edit
     @text = Text.find(params[:id])
+    @text.code.gsub!(/<.*?>/, '')
   end
 
   # POST /texts
