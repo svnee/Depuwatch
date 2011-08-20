@@ -260,7 +260,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 			</thead>
 			<tbody>
 			<% @deputy.votes.each do |v| -%>
-			<% if !v.text.featured.empty? then %>
+			<% if !v.text.featured.nil? && !v.text.featured.empty? then %>
 			<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 				<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></td>
 				<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
