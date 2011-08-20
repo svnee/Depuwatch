@@ -144,6 +144,8 @@ Stell dem <%= @deputy.name %> eng Fro!
 
   <div class="slider_static">
   
+  change dossier topics to dossier title (column 5)
+  
 <table class="content" id="ordered_table">
 	<thead>
 	<tr>
@@ -178,7 +180,7 @@ Stell dem <%= @deputy.name %> eng Fro!
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		
   
-  insert table
+  insert table top dossiers as voted by deputy (table layout same as tab 1 - with topics changed to dossier title)
 		
 		</div>
   
@@ -191,7 +193,7 @@ Stell dem <%= @deputy.name %> eng Fro!
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">  
   
   	
-  	insert table
+  	insert table feature dossiers as voted by deputy (table layout as tab 1&2, feature tag instead of dossier title)
   
   
   </div>

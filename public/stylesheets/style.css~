@@ -182,7 +182,6 @@ div.title1 a {
  color: #444444;
     font-family: Helvetica,"Trebuchet MS",Arial;
     font-size: 50px;
-    font-weight: bold;
     text-shadow: 2px 2px 3px #CDCDCD;
 }
 
@@ -908,7 +907,10 @@ color:#fff
 
 .nav{
 	padding-top:10px;
-color: white;}
+color: white;
+    font-weight: bold;
+    text-shadow: 2px 1px 3px #777777;
+}
 
 div.slider {
     display: block;
