@@ -144,7 +144,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 
   <div class="slider_static">
   
-  change dossier topics to dossier title (column 5) + add searchbar (as in texts/index).
+  change dossier topics to dossier title (column 5) + add searchbar (as in texts/index) + show 15 dossiers per page
   
 <table class="content" id="ordered_table">
 	<thead>
