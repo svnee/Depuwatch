@@ -49,7 +49,7 @@ class Text < ActiveRecord::Base
   end
   
   def code
-  	if favorite < 99 then
+  	if (!favorite.nil? && favorite < 99) then
   	  str = "#{self[:code]} <img src='/images/fav.gif' alt='Favorite'>"
   		str += "<img src='/images/109.gif' alt='Featured'>" if (self[:featured] != "" && !featured.nil?)
   		str.html_safe
