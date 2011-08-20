@@ -44,7 +44,7 @@ Abstentioun </td></tr>
 <tr><td> Partei: </td>		<td><%= select (:party, :id, Party.all.collect {|d| [d.name, d.id]}, { :include_blank => "All" })%> </td></tr>
 <tr><td> Präsenz bei Voten: <td> <select name="presence"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
 <tr><td> Vote/Delegatioun: <td> <select name="delegations"> <% (0..10).each do |i| %> <option value="<%=i*10%>"><%= "#{i*10} %" %></option> <% end %> </select> </td></tr>
-<tr><td> </td>					<td><%= submit_tag("Search Deputy")%></td></tr>
+<tr><td> </td>					<td><%= submit_tag("Sich Deputéiert")%></td></tr>
 </table>
 <% end %>
   </div>

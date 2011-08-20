@@ -21,7 +21,7 @@
  
 <ul class="idTabs" style="display:inline;"> 
     <li><a href="#idTab1" class="selected"><%= image_tag "active.gif", :alt => "new" %> Aktuell Deputéiert</a></li> 
-    <li><a href="#idTab2"> <%= image_tag "passive.gif", :alt => "freier" %> Fréier Deputéiert</a></li> 
+    <li><a href="#idTab2"> <%= image_tag "093.gif", :alt => "freier" %> Fréier Deputéiert</a></li> 
   </ul> 
  
 <div class="content">
@@ -41,9 +41,11 @@
 		</tr>
 	</thead>
 	<tbody>
+	<% cache('deputies_index_tab1') do %>
 	<% @deputies.each do |deputy| %>
+	<% if (deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+			<td><%= image_tag 'active.gif' %></td>
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
@@ -64,6 +66,8 @@
 				end
 			%> <%= str %></td>
 	  </tr>
+	<% end %>
+	<% end %>
 	<% end %>
 	</tbody>
 </table>
@@ -88,9 +92,11 @@
 		</tr>
 	</thead>
 	<tbody>
+	<% cache('deputies_index_tab2') do %>
 	<% @deputies.each do |deputy| %>
+	<% if (!deputy.active?) then %>
 	  <tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-			<td><%= image_tag 'active.gif' if deputy.active? %></td>
+			<td>&nbsp;</td>
 	    <td><%= link_to deputy.lastname, deputy %></td>
 			<td><%= link_to deputy.firstname, deputy %></td>
 	    <td><div class="<%= deputy.party.name %>"></div><%= deputy.party.name %></td>
@@ -111,6 +117,8 @@
 				end
 			%> <%= str %></td>
 	  </tr>
+	<% end %>
+	<% end %>
 	<% end %>
 	</tbody>
 </table>

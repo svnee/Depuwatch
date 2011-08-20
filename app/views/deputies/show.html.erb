@@ -71,7 +71,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 <table style="margin-bottom:20px">
 <tr>
 <td><img src="/images/123.gif"></td>
-<td> Präsenz bei Voten:</td>
+<td width="120px"> Präsenz bei Voten:</td>
 <td> <%= number_to_percentage(@deputy.presence,:precision => 2) %></td>
 </tr>
 <tr>
@@ -85,17 +85,17 @@ Stell dem <%= @deputy.name %> eng Fro!
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Pour:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Pour:</td>
 		<td style="width: 50px; text-align:left;"><%= p.count %></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Contre:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Contre:</td>
 		<td style="width: 50px; text-align:left;"><%= c.count %></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 50px; text-align:left; font-weight:normal;">Abstentions:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Abstentions:</td>
 		<td style="width: 50px; text-align:left;"><%= a.count %></td>
 	</tr>
 </table>
@@ -148,7 +148,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 	<tr>
 		<th width="60px"><img width="25" src="/images/sessions.png" alt="logo"></th>
 		<th width="60px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
-		<th width="45px" style="padding-left:0px;"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+		<th width="70px" style="padding-left:0px;"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
 		<th><img width="25" alt="logo" src="/images/topics.png"></th>
 		<th width="105px">Délégéierten</th>

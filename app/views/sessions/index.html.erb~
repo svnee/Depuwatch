@@ -1,15 +1,34 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+                        "aoColumnDefs": [
+                          { "bSortable": false, "aTargets": [ 1, 2 ] }
+                        ]
+			} );
+	} );
+</script>
 <div class="pointer_sessiounen"></div>
 <div class="content_wrapper">
-<div class="info">Sessiounen: Iwwerbléck vun de Sessiounen vun der Chamber ab 2009-2010.</div>
+<div class="info"><a href="/sessions">Sessiounen</a>: Iwwerbléck vun de Sessioune vun der Chamber ab 2009-2010.</div>
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
   <tr>
     <th style="width: 200px;"><img src="/images/sessions.png" width="25" alt="logo"></th>
     <th style="width: 100px;">Ufank</th>
     <th>Schluss</th>
   </tr>
-
+	</thead>
+	<tbody>
 <% @sessions.each do |session| %>
   <tr onmouseover="style.backgroundColor='#eee';"
 onmouseout="style.backgroundColor='#fff'">
@@ -18,5 +37,6 @@ onmouseout="style.backgroundColor='#fff'">
     <td><%= session.end %></td>
   </tr>
 <% end %>
+	</tbody>
 </table>
 </div>
