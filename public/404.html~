@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D&eacute;puwatch - kuck dengen D&eacute;put&eacute;iert of d'Fanger!</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="wrapper">
+<div class="header"></div>
+<div class="logo"> </div>
+<div class="title1">D&eacute;puwatch</div>
+<div class="title1_sub">Ofst&euml;mmungen aus der Chambre des D&eacute;put&eacute;s</div>
+<div class="header_top"><!--<a href="/lu"><img src="http://piratepartei.lu/misc/images/LU-flag.png" alt="LU" width="16"></a> <a href="/fr"><img src="http://piratepartei.lu/misc/images/FR-flag.png" alt="FR" width="16"></a> <a href="/de"><img src="http://piratepartei.lu/misc/images/DE-flag.png" alt="DE" width="16"></a>--></div>
+<div class="navi">
+		<div class="navi_item"><div class="navi_img"><img src="/images/sessions.png" width="25" alt="sessions"></div><div class="navi_link"><a href="/sessions">Sessiounen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><img src="/images/seances_small.png" width="25" alt="s&eacute;ances"></div><div class="navi_link"><a href="/seances">  S&eacute;ancen</a></div></div>
+		<div class="navi_item"><div class="navi_img"><img src="/images/dossiers_small.png" width="25" alt="dossiers"></div><div class="navi_link"><a href="/texts"> Dossie&eacute;en</a></div></div>
+		<div class="navi_item"><div class="navi_img"><img src="/images/deputes_small.png" width="25" alt="d&eacute;put&eacute;s"></div><div class="navi_link"><a href="/deputies">  D&eacute;put&eacute;iert</a></div></div>
+		<div class="navi_item"><div class="navi_img"><img src="/images/themen_small.png" width="25" alt="themen"></div><div class="navi_link"><a href="/topics">  Themen</a></div></div>
+</div>
+
+<div class="navi2">
+<div class="intro">W&eacute;i st&euml;mmen D&eacute;put&eacute;iert of? Fann et raus!</div>
+		<div class="navi2_item"><div class="navi2_img">!</div><div class="navi2_link"><a href="/info">Iwwer de Projet</a></div></div>
+		<div class="navi2_item"><div class="navi2_img">?</div><div class="navi2_link"><a href="/faq">F.A.Q.</a></div></div>
+		<div class="navi2_item"><div class="navi2_img">@</div><div class="navi2_link"><a href="/contact">Kontakt</a></div></div>
+
+<!-- LINKS -->
+	<div class="links">
+		<h2>Chambre des D&eacute;put&eacute;s</h2>
+		<ul>
+			<li><a href="http://chd.lu/">Chamber.lu</a></li>
+		</ul>
+		<hr>
+		<h2>D&eacute;puwatch Partner</h2>
+		<ul>
+			<li><a href="http://www.politikercheck.lu">Politikercheck.lu</a></li>
+			<li><a href="http://www.piratepartei.lu">Piratepartei L&euml;tzebeurg</a></li>
+		</ul>
+		<hr>
+		<h2>Parteien</h2>
+			<div class="ADR"></div> <a href="http://www.adr.lu">ADR</a><br>
+			<div class="CSV"></div> <a href="http://www.csv.lu">CSV</a><br>	
+			<div class="Gr&eacute;ng"></div> <a href="http://www.greng.lu/">D&eacute;i Gr&eacute;ng</a><br>		
+			<div class="L&eacute;nk"></div> <a href="http://www.dei-lenk.lu">D&eacute;i L&eacute;nk</a><br>
+			<div class="DP"></div> <a href="http://www.dp.lu">DP</a><br>
+			<div class="KPL"></div> <a href="http://www.kp-l.org/">KPL</a><br>
+			<div class="LSAP"></div> <a href="http://www.lsap.lu">LSAP</a><br>
+			<div class="Piraten"></div> <a href="http://www.piratepartei.lu">Piratepartei</a>
+	</div>
+</div>
+
+<div class="content_wrapper">
+<div class="info">[404] Page not found</div>
+
+<div class="content">
+
+<h1>[404] Page not found</h1>
+<p style="padding: 10px;">
+	The requested page could not be found, please try one of the links shown on this page to see if it helps you getting somewhere!
+</p>
+
+</div>
+
+<div class="footer">
+<a href="/license">Lizenz</a> | All Data provided <a href="http://chd.lu/wps/portal/public">by chd.lu</a> | <a href="/disclaimer">Disclaimer</a>
+</div>
+</div>
+
+
+<!-- wrapper --></div>
+</body>
+</html>
