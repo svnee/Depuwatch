@@ -63,12 +63,14 @@
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		<table class="content_index" id="ordered_table2">
 		<tr>
 			<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+			<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
 			<th>Titel</th>
 			<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
 		</tr>
 		<% @top.each do |t| -%>
 		<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 				<td><%= link_to t.code, t%></td>
+				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
 				<td><%= t.title %></td>
 				<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
 		</tr>
@@ -87,12 +89,14 @@
   	<table class="content_index" id="ordered_table3">
 	<tr>
 	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
+	<th width="80px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
 	<th>Titel</th>
 	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
 	</tr>
 	<% @featured.each do |t| -%>
 	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
 		<td><%= link_to t.code, t%></td>
+		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
 		<td><%= t.title %></td>
 		<td style="padding-left: 25px; text-align: left;"><%= t.featured %></td>
 	</tr>
