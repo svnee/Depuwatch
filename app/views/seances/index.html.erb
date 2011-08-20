@@ -27,7 +27,7 @@
 
 <div class="content">
 	<div class="session_wrapper">
-	<% Session.all.each do |s| %>
+	<% Session.all.order(:start).each do |s| %>
 	<div class="session_btn"><%= link_to "#{s.start.strftime("%Y")}/#{s.end.strftime("%Y")}", s %></div>
 	<% end %>
 	</div>
