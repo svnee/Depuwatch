@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>D&eacute;puwatch - kuck dengen D&eacute;put&eacute;iert of d'Fanger!</title>
+  <title>Depuwatch - kuck dengen Deput&eacute;iert of d'Fanger!</title>
   <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class="wrapper_error">
 
-<div style="float: left; width: 415px; margin-left: 50px;">
-<h1>[404] Säit net fonnt!</h1>
+<div style="float: left; width: 415px; margin-left: 10px;">
+<h1>[404] S&auml;it net fonnt!</h1>
 <p style="padding: 10px;">
-	 Sollt et dës Säit ginn? <a href="/report">Mëll ons de Feeler!</a>.
+	 Sollt et d&euml;s S&auml;it ginn? <a href="/report">Mell ons de Feeler</a>!
 </p>
 
-<p><strong>Zréck op <a href="/">Depuwatch</a>...</strong></p>
+<p><strong>Zr&eacute;ck op <a href="/">Depuwatch</a> ...</strong> <img src="/images/012.gif" alt="" ></p>
 
-<h1>Oder... ënnerstëtz d'Entwéckler vun Depuwatch!</h1>
+<h1>Oder... &euml;nnerst&euml;tz d'Entw&eacute;ckler vun Depuwatch!</h1>
 
 <p>
-Dir gefält Depuwatch? Du wëlls d'Entwéckler ënnerstëtzen? Mir feeën ons iwwert all Spent!
+Dir gef&auml;lt Depuwatch? Du w&euml;lls d'Entw&eacute;ckler &euml;nnerst&euml;tzen? Mir fee&euml;n ons iwwert all Spent!
 </p>
 
 <div class="content_static_error">
 
-<p><span class="h2">Piratepartei Lëtzebuerg</span></p>
+<p><span class="h2">Piratepartei L&euml;tzebuerg</span></p>
 
-<img align="right" width="250px" src="/images/PpLogo-ww-lb-web.png" style="padding-right: 35px;">
+<img align="right" width="250px" src="/images/PpLogo-ww-lb-web.png" style="padding-right: 10px;">
 
 <p><a href="http://www.piratepartei.lu">www.piratepartei.lu</a><br>
 <img align="absmiddle" src="/images/079.gif"> <a href="mailto:ahoi@piratepartei.lu">ahoi@piratepartei.lu</a></p>
 
-Piratepartei Lëtzebuerg Asbl<br>
+Piratepartei L&euml;tzebuerg Asbl<br>
 Kontonr.: IBAN LU67 0019 3255 6480 6000 <br>
 BIC: BCEELULL<br>
 
@@ -39,11 +39,9 @@ BIC: BCEELULL<br>
 
 <div class="content_static_error">
 
-<p>Bei Froen, Kommentarer, oder Kritik kontaktéiert d'Partner vun Depuwatch.</p>
-
 <p><span class="h2">Politikercheck</span></p>
 
-<img align="right" width="220px" style="padding-right: 65px;" src="/images/logo politikercheck.jpg">
+<img align="right" width="220px" style="padding-right: 20px;" src="/images/logo politikercheck.jpg">
 
 <p><a href="http://www.politikercheck.lu">www.politikercheck.lu</a><br>
 <img align="absmiddle" src="/images/079.gif"> <a href="mailto:info@politikercheck.lu">info@politikercheck.lu</a></p>
@@ -57,7 +55,7 @@ BIC: BCEELULL<br>
 
 </div>
 
-<a href="/" ><img src="/images/logo_big.png"></a>
+<img src="/images/logo_big.png">
 
 
 <!-- wrapper --></div>
