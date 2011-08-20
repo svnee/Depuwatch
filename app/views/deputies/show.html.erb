@@ -3,7 +3,7 @@
 		$('#ordered_table').dataTable( {
 			"bPaginate": true,
 			"bLengthChange": false,
-			"bFilter": false,
+			"bFilter": true,
 			"bSort": true,
 			"bInfo": false,
 			"bAutoWidth": false,
@@ -146,6 +146,7 @@ Stell dem <%= @deputy.name %> eng Fro!
   
   change dossier topics to dossier title (column 5) + add searchbar (as in texts/index) + show 15 dossiers per page
   
+  <div class="slider_static">  
 <table class="content" id="ordered_table">
 	<thead>
 	<tr>
@@ -165,6 +166,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 		<td><%= link_to v.text.code, v.text %></td>
 		<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
 		<td style="padding-left: 20px; text-align: left;"><%= v.text.topics_to_str.html_safe %></td>
+		<td style="padding-left: 35px; text-align: left;"><%= v.text.title %></td>
 		<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
 	</tr>
 	<% end -%>
