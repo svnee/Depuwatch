@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate unless request.host_with_port == "cron.depuwatch.lu"
+  before_filter :authenticate, :unless => (request.host_with_port == "cron.depuwatch.lu")
 
   protect_from_forgery
   helper_method :current_user_session, :current_user
