@@ -15,6 +15,38 @@
       ]
 			} );
 	} );
+	$(document).ready(function() {
+		$('#ordered_table2').dataTable( {
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"sPaginationType": "full_numbers",		
+			"aaSorting": [[ 1, "desc" ]],
+			"aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 0, 2, 4 ] },
+        { "sType": "eu_date", "aTargets": [ 1 ] }
+      ]
+			} );
+	} );
+	$(document).ready(function() {
+		$('#ordered_table3').dataTable( {
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"sPaginationType": "full_numbers",		
+			"aaSorting": [[ 1, "desc" ]],
+			"aoColumnDefs": [
+        { "bSortable": false, "aTargets": [ 0, 2, 4 ] },
+        { "sType": "eu_date", "aTargets": [ 1 ] }
+      ]
+			} );
+	} );
 </script>
 
 <div class="pointer_deputeiert"></div>
@@ -85,17 +117,17 @@ Stell dem <%= @deputy.name %> eng Fro!
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:normal;">Pour:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Pour:</td>
 		<td style="width: 50px; text-align:left;"><%= p.count %></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:normal;">Contre:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Contre:</td>
 		<td style="width: 50px; text-align:left;"><%= c.count %></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:normal;">Abstentions:</td>
+        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Abstentions:</td>
 		<td style="width: 50px; text-align:left;"><%= a.count %></td>
 	</tr>
 </table>
@@ -177,7 +209,32 @@ Stell dem <%= @deputy.name %> eng Fro!
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		
   
-  insert table top dossiers as voted by deputy (table layout same as tab 1 - with topics changed to dossier title)
+		<table class="content" id="ordered_table2">
+			<thead>
+			<tr>
+				<th width="60px"><img width="25" src="/images/sessions.png" alt="logo"></th>
+				<th width="60px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+				<th width="70px" style="padding-left:0px;"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+				<th class="vote">Vote</th>
+				<th><img width="25" alt="logo" src="/images/topics.png"></th>
+				<th width="105px">Délégéierten</th>
+			</tr>
+			</thead>
+			<tbody>
+			<% @deputy.votes.each do |v| -%>
+			<% if !v.text.favorite.nil? && v.text.favorite < 99 then %>
+			<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+				<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></td>
+				<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
+				<td><%= link_to v.text.code, v.text %></td>
+				<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
+				<td style="padding-left: 20px; text-align: left;"><%= v.text.title %></td>
+				<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
+			</tr>
+			<% end %>
+			<% end -%>
+			</tbody>
+		</table>
 		
 		</div>
   
@@ -190,7 +247,32 @@ Stell dem <%= @deputy.name %> eng Fro!
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">  
   
   	
-  	insert table feature dossiers as voted by deputy (table layout as tab 1&2, feature tag instead of dossier title)
+		<table class="content" id="ordered_table3">
+			<thead>
+			<tr>
+				<th width="60px"><img width="25" src="/images/sessions.png" alt="logo"></th>
+				<th width="60px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+				<th width="70px" style="padding-left:0px;"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+				<th class="vote">Vote</th>
+				<th><img width="25" alt="logo" src="/images/topics.png"></th>
+				<th width="105px">Délégéierten</th>
+			</tr>
+			</thead>
+			<tbody>
+			<% @deputy.votes.each do |v| -%>
+			<% if !v.text.featured.nil? && !v.text.featured.empty? then %>
+			<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
+				<td><%= link_to "#{v.text.seance.session.start.strftime("%Y")}/#{v.text.seance.session.end.strftime("%Y")}", v.text.seance.session%></td>
+				<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
+				<td><%= link_to v.text.code, v.text %></td>
+				<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
+				<td style="padding-left: 20px; text-align: left;"><%= v.text.title %></td>
+				<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
+			</tr>
+			<% end %>
+			<% end -%>
+			</tbody>
+		</table>
   
   
   </div>
