@@ -64,6 +64,7 @@ class TextsController < ApplicationController
     @text = Text.find(params[:id])
 		expire_fragment("texts_index_tab1")
 		expire_fragment("texts_show_#{@text.id}")
+		params[:text][:code].gsub!(/<.*?>/, '')
     respond_to do |format|
       if @text.update_attributes(params[:text])
         format.html { redirect_to(@text, :notice => 'Text was successfully updated.') }
