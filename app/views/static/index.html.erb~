@@ -121,7 +121,7 @@
 	<td><%= link_to t.code, t%></td>
 	<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
 	<td><%= t.title %></td>
-	<td style="padding-left: 25px; text-align: left;"><%= t.featured %></td>
+	<td style="padding-left: 25px; text-align: left; font-weight: bold;"><%= t.featured %></td>
 </tr>
 <% end -%>
 
