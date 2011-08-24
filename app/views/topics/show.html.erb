@@ -16,12 +16,23 @@
 			} );
 	} );
 </script>
-<div class="pointer_topics"></div>
+
 <div class="content_wrapper">
 <div class="info"><a href="/topics">Thema</a>: <span class="bold"><%= @topic.name %></div></span> 
-
-
+<div class="usual"> 
+ <ul class="idTabs" style="display:inline;"> 
+    <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> All Dossieren</a></li> 
+    <li><a href="#idTab2"> <%= image_tag "fav.gif", :alt => "fav" %> Top Dossieren</a></li> 
+    <li><a href="#idTab3"><%= image_tag "109.gif", :alt => "featured" %> Featured Dossieren</a></li> 
+  </ul> 
 <div class="content">
+
+
+<!-- TAB 1 -->
+    <div id="idTab1">
+
+  <div class="slider_static">
+
 	<table class="content" id="ordered_table">
 	  <thead>
 		<tr>
@@ -43,4 +54,38 @@
 		<% end -%>
 		</tbody>
 	</table>
+</div>
+
+
+  </div> 
+    <!-- TAB 1 -->
+     <!-- TAB 2 -->
+    <div id="idTab2">
+  
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		
+  
+  insert table for top dossiers per topic
+  
+  </div>
+  
+  </div> 
+      <!-- TAB 2 -->
+  
+    <!-- TAB 3 -->
+  <div id="idTab3">
+  
+  <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">  
+  
+  	insert table for feature dossier per table
+  
+  
+  </div>
+  
+  </div> 
+      <!-- TAB 3 -->
+    
+    
+    </div>
+    
+    
 </div>
