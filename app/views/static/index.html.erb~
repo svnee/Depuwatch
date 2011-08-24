@@ -54,7 +54,7 @@
   </ul> 
 
   <!-- TAB 1 -->
-    <div id="idTab1">
+    <div id="idTab1" style="padding-top: 5px;">
   
   <div class="slider_static">
 	<table class="content_index" id="ordered_table">
@@ -77,14 +77,14 @@
 
 </div>
 
-   <div class="content_static"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>
+   <div class="content_static_more"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>
 
   </div> 
     <!-- TAB 1 -->
   
   
     <!-- TAB 2 -->
-    <div id="idTab2">
+    <div id="idTab2" style="padding-top: 5px;">
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table2">
 <tr>
@@ -104,13 +104,13 @@
 
 </table> </div>
   
-   <div class="content_static"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Top Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>  
+   <div class="content_static_more"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Top Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>  
   
   </div> 
       <!-- TAB 2 -->
   
     <!-- TAB 3 -->
-  <div id="idTab3">
+  <div id="idTab3" style="padding-top: 5px;">
   
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table3">
 <tr>
@@ -129,7 +129,7 @@
 <% end -%>
 
 </table> </div>
-     <div class="content_static"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Feature Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>
+     <div class="content_static_more"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Feature Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>
   </div> 
       <!-- TAB 3 -->
       
@@ -181,7 +181,7 @@
 
  </div>
   
-   <div class="content_static"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>  
+   <div class="content_static_more"><div class="more"><img src="/images/file.gif"> <a href="http://dev.depuwatch.lu/texts">All Dossieren</a> |  <a href="http://dev.depuwatch.lu/deputies">All Deputéiert</a> <img src="/images/136.gif"> </div></div>  
   
   </div> 
       <!-- TAB 4 -->
