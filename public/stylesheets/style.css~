@@ -349,6 +349,17 @@ div.content_static {
     width: 755px;
 }
 
+div.content_static_more {
+  background-color: white;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 775px;
+}
+
+
 div.content_static_error {
   background-color: white;
     border-bottom: 1px solid #EEEEEE;
@@ -814,6 +825,7 @@ background-color: #EEEEEE;
     padding: 3px;
     width: 749px;
     margin-top: 5px;
+    margin-left: 13px;
 }
 
 div.more {
