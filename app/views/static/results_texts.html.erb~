@@ -19,14 +19,14 @@
 </script>
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
-<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong>Gast Gibéryen</strong> | Partei: <strong>Csv</strong> | Vote: <strong>Jo</strong> | Sessioun: <strong>Datum</strong> | Thema: <strong>Justice</strong></div>
+<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong><%= params[:deputy][:id] == '' ? 'All' : Deputy.find(params[:deputy][:id]).name %></strong> | Partei: <strong><%= params[:party][:id] == '' ? "All" : Party.find(params[:party][:id]).name %></strong> | Vote: <strong><%= params[:vote] %></strong> | Sessioun: <strong><%= params[:session][:id] == '' ? 'All' : session_display(Session.find(params[:session][:id])) %></strong> | Thema: <strong><%= params[:topic][:id] == '' ? 'All' : Topic.find(params[:topic][:id]).name %></strong></div>
 
 <div class="content">
 <table class="content" id="ordered_table">
 <thead>
 <tr>
-	<th width="50px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
-	<th width="80px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
+	<th width="70px"><img width="25" src="/images/dossiers_small.png" alt="logo"></th>
+	<th width="65px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
 	<th></th>
 	<th width="185px" style="padding-left: 25px;"><img width="25" alt="logo" src="/images/topics.png"></th>
 </tr>

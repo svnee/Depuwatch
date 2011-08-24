@@ -19,7 +19,7 @@
 </script>
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
-<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong><%= params[:deputy][:id] == '' ? 'All' : Deputy.find(params[:deputy][:id]).name %></strong> | Partei: <strong><%= params[:party][:id] == '' ? "All" : Party.find(params[:party][:id]).name %></strong> | Vote: <strong><%= params[:vote] %></strong> | Sessioun: <strong><%= params[:session][:id] == '' ? 'All' : session_display(Session.find(params[:session][:id])) %></strong> | Thema: <strong><%= params[:topic][:id] == '' ? 'All' : Topic.find(params[:topic][:id]).name %></strong></div>
+<div class="info"><%= image_tag "113.gif", :alt => "Search" %> <a href="/search">Search</a>: <a href="/texts">Dossier</a>: Deputéiert: <strong><%= params[:deputy][:id] == '' ? 'All' : Deputy.find(params[:deputy][:id]).name %></strong> | Partei: <strong><%= params[:party][:id] == '' ? "All" : Party.find(params[:party][:id]).name %></strong> | Vote: <strong><%= params[:vote] %></strong> | Sessioun: <strong><%= params[:session][:id] == '' ? 'All' : session_display(Session.find(params[:session][:id])) %></strong> | Thema: <strong><%= params[:topic][:id] == '' ? 'All' : Topic.find(params[:topic][:id]).name %></strong></div>
 
 <div class="content">
 <table class="content" id="ordered_table">
@@ -43,6 +43,6 @@
 </tbody>
 </table>
 
-<div class="more2"><img src="/images/113.gif"> <a href="/search"> Zréck op Search</a></div>
+<div class="more2"><%= image_tag "113.gif", :alt => "Search" %> <a href="/search"> Zréck op Search</a></div>
 
 </div>

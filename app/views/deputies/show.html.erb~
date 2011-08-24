@@ -266,7 +266,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 				<td><%= link_to v.text.seance.start.strftime("%d/%m/%Y"), v.text.seance %></td>
 				<td><%= link_to v.text.code, v.text %></td>
 				<td style="background-color:<%= vote_to_color(v.vote) %>; color:<%= vote_to_color(v.vote) %>"><%= v.vote %></td>
-				<td style="padding-left: 20px; text-align: left; font-weight: bold;"><%= v.featured %></td>
+				<td style="padding-left: 20px; text-align: left; font-weight: bold;"><%= v.text.featured %></td>
 				<td style="padding-left: 10px"><%= v.delegate.nil? ? "" : link_to(v.delegate.name, v.delegate) %></td>
 			</tr>
 			<% end %>

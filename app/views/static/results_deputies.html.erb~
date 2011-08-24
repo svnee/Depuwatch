@@ -1,6 +1,21 @@
 <div class="pointer_deputeiert"></div>
 <div class="content_wrapper">
-<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/deputies">Deputéiert</a>: Actif: <strong>Jo</strong> | Bezierk: <strong>Norden</strong> | Partei: <strong>CSV</strong> | Präsenz bei Voten: <strong>0%</strong> | Vote/Delegatioun: <strong>0%</strong></div>
+<div class="info"><img src="/images/113.gif"> <a href="/search">Search</a>: <a href="/deputies">Deputéiert</a>: Actif: <strong><%= params[:active] %></strong> | Bezierk: <strong><%= circonscription(params[:bezierk]) %></strong> | Partei: <strong><%= params[:party][:id] == '' ? "All" : Party.find(params[:party][:id]).name %></strong> | Präsenz bei Voten: <strong><%= params[:presence] %> %</strong> | Vote/Delegatioun: <strong><%= params[:delegations] %> %</strong></div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+                        "aoColumnDefs": [
+                          { "bSortable": false, "aTargets": [ 0,2 ] }
+                        ]
+		} );
+</script>
 
 <div class="content">
 <% if @deputies.nil? then %>
@@ -10,7 +25,7 @@
 	<thead>
 		<tr>
 			<th>&nbsp;</th>
-			<th style="width:100px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
+			<th style="width:80px;"><img src="/images/deputes_small.png" width="25" alt="députés"></th>
 			<th style="width:100px;">&nbsp;</th>
 			<th>Partei</th>
 			<th>Präsenz/Votes</th>

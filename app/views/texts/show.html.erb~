@@ -1,28 +1,27 @@
 <div class="pointer_dossiers"></div>
 <div class="content_wrapper">
 <div class="info">
-<a href="<%= url_for :controller => :sessions %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
+<a href="<%= url_for @text.seance.session %>">Sessioun</a>: <span class="bold"><%= "#{@text.seance.session.start.strftime("%Y")}/#{@text.seance.session.end.strftime("%Y")}"%></span> 
 |
 <a href="<%= url_for @text.seance %>">S&eacute;ance</a>: <span class="bold"><%= @text.seance.start.strftime("%d/%m/%Y") %></span> de <%= @text.seance.start.strftime("%H:%M") %> jusqu'&agrave;
 <%= @text.seance.end.strftime("%H:%M") %>
 
 </div>
 
-
+<% cache("texts_show_#{@text.id}") do %>
 <div class="content">
 <div class="wrapper_text">
 <div class="projet1">
-<h2>Titel</h2><p><%= @text.title %></p>
 
-<p><span class="h2">Dossier</span>: <%= @text.code %></p>
+<p><img src="/images/file.gif"> <span class="h2"><%= @text.code %> <%= @text.featured %></span> </p>
 
-<p><span class="h2">Mémorial</span>: <%= @text.link_memorial.nil? ? "?" : link_to("PDF-Versioun", @text.link_memorial)%></p>
+<p><%= @text.title %></p>
 
-<p><span class="h2">Themen</span>: </p>
+<p><img src="/images/topics.gif" style="margin-left:2px"> <%= @text.topics_to_str.html_safe %></p>
 
 </div>
 <div class="result3">
-<p><span class="h2">Vote</span>:</p>
+
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
@@ -43,12 +42,26 @@
 <p>
 <img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{@text.votes_pour.count}|#{@text.votes_contre.count}|#{@text.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div>
+
+<div class="d_wrapper">
+	<div class="details">
+<img src="/images/resume.gif"> <%= link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code}")%>
+|
+<img src="/images/memorial.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
+|
+<img src="/images/compte.gif">  <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> 
+	</div>
+	<div class="d_fav">
+<span id="favorite"><%= link_to(image_tag("fav.gif"), {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST) %> <%= link_to "Top Dossier?", {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST %></span>
+	</div>
+</div>
+
 </div>
 <table class="content">
 	<tr>
-		<th style="width: 150px;">Pour</th>
-		<th style="width: 150px;">Contre</th>
-		<th style="width: 150px;">Abstention</th>
+		<th style="width: 150px; padding-top: 10px;">Pour</th>
+		<th style="width: 150px; padding-top: 10px;">Contre</th>
+		<th style="width: 150px; padding-top: 10px;">Abstention</th>
 	</tr>
 	<tr>
 		<td>
@@ -78,7 +91,7 @@
 				<% @text.abstentions.each do |v| -%>
 
 					<li> <table>
-<tbody><tr><td width="150px" style="border-bottom:0px solid red; padding: 0px;"><%= link_to v.deputy.name, v.deputy %> </td><td style="border-bottom:0px solid red; padding-: 0px;"><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
+<tbody><tr><td width="150px" style="border-bottom:0px solid red; padding: 0px;"><%= link_to v.deputy.name, v.deputy %> </td><td style="border-bottom:0px solid red; padding: 0px;"><div class="h2_partei_wrapper2"> <div class="<%= v.deputy.party.name %>"></div> <div class="h2_partei_name"><%= v.deputy.party.name %></div></div></td></tr>
 </tbody></table></li>
 
 				<% end -%>
@@ -87,3 +100,4 @@
 	</tr>
 </table>
 </div>
+<% end %>
