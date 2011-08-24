@@ -197,7 +197,7 @@ color: #734347;
     margin-left: 85px;
     position: relative;
     text-shadow: 2px 2px 3px #CDCDCD;
-    top: -11px;
+    top: -9px;
     width: 434px;
 }
 
