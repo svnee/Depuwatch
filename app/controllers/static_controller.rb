@@ -47,7 +47,7 @@ class StaticController < ApplicationController
   def missing
   	@texts = Array.new
   	Text.all.each do |t|
-  		@texts << t if ((t.votes.size < 1) || (t.votes.size > 60) || (t.votes_contre.size > t.votes_pour.size))
+  		@texts << t if ((t.link_memorial.empty?) || (t.title.empty?) || (t.seance.compte_rendu.empty?))
   	end
   end
   
