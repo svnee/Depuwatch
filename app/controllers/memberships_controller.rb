@@ -1,4 +1,5 @@
 class MembershipsController < ApplicationController
+
   # GET /memberships
   # GET /memberships.xml
   def index

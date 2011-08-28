@@ -1,4 +1,5 @@
 class VotesController < ApplicationController
+
   # GET /votes
   # GET /votes.xml
   def index

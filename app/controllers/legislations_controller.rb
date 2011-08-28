@@ -1,4 +1,5 @@
 class LegislationsController < ApplicationController
+
   # GET /legislations
   # GET /legislations.xml
   def index

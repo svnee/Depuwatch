@@ -1,4 +1,5 @@
 class TextsController < ApplicationController
+
   # GET /texts
   # GET /texts.xml
   def index

@@ -1,5 +1,5 @@
 class DeputiesController < ApplicationController
-  before_filter :authenticate , :except => [:index, :show]
+
   # GET /deputies
   # GET /deputies.xml
   def index

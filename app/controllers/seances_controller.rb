@@ -1,5 +1,5 @@
 class SeancesController < ApplicationController
-	before_filter :authenticate , :except => [:index, :show]
+
   # GET /seances
   # GET /seances.xml
   def index

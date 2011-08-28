@@ -31,15 +31,10 @@ class ApplicationController < ActionController::Base
       @current_user = current_user_session && current_user_session.user
     end
     
-  protected
+  private
     def authenticate
-      authenticate_or_request_with_http_basic do |username, password|
-        session[:username] = username
-        (username == "developer" && password == "depuwatch") || (username == "beta" && password == "ateb")
-      end
-    end
-    
-    def admin?
-      session[:username] == "developer"
+      authenticate_or_request_with_http_basic { |username, password|
+        (username == "developer" && password == "depuwatch") || (username == "beta" && password == "ateb" && action_name != "update" && action_name != "destroy" && action_name != "edit")
+      }
     end
 end

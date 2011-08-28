@@ -1,4 +1,5 @@
 class TextTopicsController < ApplicationController
+
   # GET /text_topics
   # GET /text_topics.xml
   def index

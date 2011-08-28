@@ -1,4 +1,5 @@
 class RatingsController < ApplicationController
+
   def create
     r = Rating.new
     r.text_id = params[:text_id]
