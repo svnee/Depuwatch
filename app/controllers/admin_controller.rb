@@ -31,17 +31,17 @@ class AdminController < ApplicationController
   	texts = Text.all
   	texts.sort! { |a,b| b.fav_count <=> a.fav_count }
   	texts.each do |t|
-  		if i < 15 then
+  		if i < 45 then
   		  expire_fragment("texts_show_#{t.id}") if (t.favorite.nil? || t.favorite == 99)
   			t.favorite = i + 1
   		else
   		  expire_fragment("texts_show_#{t.id}") if (t.favorite < 99)
   			t.favorite = 99
   		end
-  		expire_fragment("texts_index_tab1")
   		t.save!
   		i += 1
   	end
+  	expire_fragment("texts_index_tab1")
   	render :text => "OK!"
   end
   
