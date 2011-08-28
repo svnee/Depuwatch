@@ -1125,6 +1125,8 @@ padding: 5px;
 	-o-transform: rotate(90deg);
 	box-shadow: 3px 5px 3px #E1E1E1;
 	font-weight: bold;
+	 right: -22px;
+    top: 180px;
 }
 
-div.feedback a { color: white;text-decoration: none; }
+div.feedback a { color: white;text-decoration: none; font-size: 13px;}
