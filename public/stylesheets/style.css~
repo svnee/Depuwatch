@@ -1112,3 +1112,17 @@ margin-left: auto;
     min-height: 548px;
 
 }
+
+div.feedback {
+position: fixed;
+background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0 transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
+color: white;
+padding: 5px;
+-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	box-shadow: 3px 5px 3px #E1E1E1;
+	font-weight: bold;
+}

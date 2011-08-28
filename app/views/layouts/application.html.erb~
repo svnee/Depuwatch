@@ -81,6 +81,12 @@
 </div>
 <!-- wrapper --></div>
 
+<div class="feedback">
+
+<a href="/feedback">Feedback!</a>
+
+</div>
+
 <!-- Javascript -->
 <%= javascript_include_tag "ga" %>
 <script type="text/javascript">
