@@ -15,8 +15,8 @@ class TopicsController < ApplicationController
   # GET /topics/1.xml
   def show
     @topic = Topic.find(params[:id])
-    @top = @topic.texts.collect {|t| t if t.favorite < 99}
-    @featured = @topic.texts.collect {|t| t if t.featured != ""}
+    @top = @topic.texts.collect{ |t| t if t.favorite < 99}
+    @featured = @topic.texts.collect{ |t| t if t.featured != ""}
 
     respond_to do |format|
       format.html # show.html.erb
