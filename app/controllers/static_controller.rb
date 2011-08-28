@@ -30,6 +30,10 @@ class StaticController < ApplicationController
     @page = request.referer
   end
   
+  def feedback
+    @report = Report.new
+  end
+  
   def report_sent
     @report = Report.create(params[:report])
     

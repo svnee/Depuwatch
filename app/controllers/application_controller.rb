@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate #:unless => (request.host_with_port == "cron.depuwatch.lu")
+  before_filter :authenticate
 
   protect_from_forgery
   helper_method :current_user_session, :current_user
@@ -34,7 +34,12 @@ class ApplicationController < ActionController::Base
   protected
     def authenticate
       authenticate_or_request_with_http_basic do |username, password|
+        session[:username] = username
         (username == "developer" && password == "depuwatch") || (username == "beta" && password == "ateb")
       end
+    end
+    
+    def admin?
+      session[:username] == "developer"
     end
 end
