@@ -80,7 +80,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 	</div>
 	
 	<div class="contact_btm">
-<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><%= image_tag "politikercheck_small.jpg" %> </a>
+<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><img src="politikercheck_small.jpg"> </a>
 
 <%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
