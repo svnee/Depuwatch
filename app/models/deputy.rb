@@ -67,7 +67,7 @@ class Deputy < ActiveRecord::Base
   
   def texts_count
     texts = 0
-    Text.all.each { |t| if (memberships.any? { |m| m.start < t.seance.start.to_date && (m.end.nil? || m.end > t.seance.end.to_date) }) then texts = texts + 1 end }
+    Text.all.each { |t| if (memberships.any? { |m| m.start <= t.seance.start.to_date && (m.end.nil? || m.end >= t.seance.end.to_date) }) then texts = texts + 1 end }
     texts
   end
   
