@@ -4,11 +4,11 @@
 <div class="content_static">
 
 	 <h1></h1>
-	<p> E Feeler fonnt? Ob technesche Feeler, falsch Donnéeën oder Problemer mam Design, mat dësem Formulaire kanns De ons de Feeler mellen.</p>
+	<p> Wat häls Du vun Depuwatch? Dëse Projet ass nach an Entwécklung, mat Dengem Feedback kënne mer Depuwatch weider verbesseren!</p>
 
-<p>Am schnellste kënne Feeler behuewe ginn, wann se op <a href="https://github.com/svnee/Depuwatch/issues?sort=created&direction=desc&state=open">Github</a> agestallt ginn. Mir bieden och drëms d'aktuell <a href="https://github.com/svnee/Depuwatch/issues?sort=created&direction=desc&state=open">"To-Do"-Lëscht</a> ze kucken an ze iwwerpréiwen op de Feeler net schon gemellt gouf.</p>
+<p>Feelermeldungen kanns Du op onser <a href="/report">Report</a> Säit man. Dëse Formulaire ass fir generell Kommentaren, positiv oder negativ, geduecht.</p>
 	
-<p><strong>Feelermeldung</strong></p>
+<p><strong>Feedback</strong></p>
 	
 	<%= form_for(@report, :url => url_for(:action => 'report_sent', :controller => 'static')) do |f| %>
 	  <% if @report.errors.any? %>
@@ -26,10 +26,6 @@
 	  <div class="field">
 	    <%= f.label :email %> (nëmme falls Réckmeldung erwënscht)<br />
 	    <%= f.text_field :email %>
-	  </div>
-	  <div class="field">
-	    <%= f.label :page %><br />
-	    <%= f.text_field :page, {:value => @page} %>
 	  </div>
 	  <div class="field">
 	    <%= f.label :description %><br />
