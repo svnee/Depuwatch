@@ -16,7 +16,7 @@ class StaticController < ApplicationController
   
   def index
     @dossiers = Text.order("updated_at DESC").limit(15)
-    @top = Text.where('favorite < 99').order(:favorite)
+    @top = Text.where('favorite < 16').order(:favorite)
     @featured = Text.where('featured <> ""').order(:updated_at).limit(15)
     @deputies = Deputy.where('active_cache <> 0').order(:lastname)
   end
