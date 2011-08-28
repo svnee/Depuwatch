@@ -354,9 +354,8 @@ div.content_static_more {
     border-bottom: 1px solid #EEEEEE;
     display: block;
     float: left;
-    padding-left: 10px;
     padding-right: 10px;
-    width: 775px;
+    width: 765px;
 }
 
 
@@ -834,11 +833,11 @@ background-color: #EEEEEE;
     float: left;
     -moz-border-radius: 4px 4px 4px 4px;
     padding: 4px;
-    width: 747px;
+    width: 740px;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 5px;
-    margin-left: 13px;
+    margin-left: 14px;
 }
 
 div.more2 {
@@ -1099,7 +1098,6 @@ color: #555555;
 
 .usual3 div {
     clear: left;
-    padding: 1px 0px;
 }
 
 div.wrapper_error {

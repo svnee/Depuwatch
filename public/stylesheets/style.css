@@ -1112,3 +1112,8 @@ margin-left: auto;
     min-height: 548px;
 
 }
+
+div.feedback {
+	
+	float: left;
+}
