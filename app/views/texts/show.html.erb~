@@ -13,11 +13,11 @@
 <div class="wrapper_text">
 <div class="projet1">
 
-<p><img src="/images/file.gif"> <span class="h2"><%= @text.code %> <%= @text.featured %></span> </p>
+<p><%= image_tag "file.gif", :alt => "Dossier" %> <span class="h2"><%= @text.code %> <%= @text.featured %></span> </p>
 
 <p><%= @text.title %></p>
 
-<p><img src="/images/topics.gif" style="margin-left:2px"> <%= @text.topics_to_str.html_safe %></p>
+<p><img src="/images/topics.gif" style="margin-left:2px" alt="topics"> <%= @text.topics_to_str.html_safe %></p>
 
 </div>
 <div class="result3">

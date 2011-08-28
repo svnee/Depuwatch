@@ -1,3 +1,21 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#ordered_table').dataTable( {
+			"bPaginate": true,
+                        "iDisplayLength": 15,
+                        "sPaginationType": "full_numbers",
+			"bLengthChange": false,
+			"bFilter": false,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+                        "aoColumnDefs": [
+                          { "bSortable": false, "aTargets": [ 2, 3, -1 ] },
+                          { "sType": "num-html", "aTargets": [ 0 ] }
+                        ]
+			} );
+	} );
+</script>
 <div class="pointer_sessiounen"></div>
 <div class="content_wrapper">
 <div class="info">
@@ -5,7 +23,8 @@
 </div>
 
 <div class="content">
-<table class="content">
+<table class="content" id="ordered_table">
+	<thead>
 	<tr>
 		<th style="width: 60px; text-align: left;">nr.</th>
 		<th style="width: 125px; text-align: left;"><img src="/images/seances_small.png" width="25" alt="logo"></th>
@@ -14,6 +33,8 @@
 		<th style="width: 100px; text-align: left;">Dauer</th>
 		<th style="text-align: left;"><img src="/images/dossiers_small.png" width="25" alt="logo"></th>
 	</tr>
+	</thead>
+	<tbody>
 	<% @session.seances.each do |s| -%>
 	<tr onmouseover="style.backgroundColor='#eee';"
 onmouseout="style.backgroundColor='#fff'">
@@ -32,5 +53,6 @@ onmouseout="style.backgroundColor='#fff'">
 		</td>
 	</tr>
 	<% end -%>
+	</tbody>
 </table>
 </div>

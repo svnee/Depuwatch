@@ -66,7 +66,7 @@
 <div class="result">
 
 <div class="h2">
-	<img src="/images/136.gif"> 
+	<%= image_tag "136.gif", :alt => "Deputeiert" %>  
 		<span class="h2"><%= @deputy.name %> </span> 
 </div>
 <div class="h2_partei_wrapper"> 
@@ -102,12 +102,12 @@ Stell dem <%= @deputy.name %> eng Fro!
 <p>
 <table style="margin-bottom:20px">
 <tr>
-<td><img src="/images/123.gif"></td>
+<td><%= image_tag "123.gif", :alt => "Praesenz" %> </td>
 <td width="120px"> Präsenz bei Voten:</td>
 <td> <%= number_to_percentage(@deputy.presence,:precision => 2) %></td>
 </tr>
 <tr>
-<td><img src="/images/124.gif"></td>
+<td><%= image_tag "124.gif", :alt => "Delegatounen" %></td>
 <td>Délégations / Vote:</td>
 <td> <%= number_to_percentage(@deputy.delegations_rate,:precision => 2) %></td>
 </tr>
@@ -139,7 +139,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 
 	<div class="dep_details">
-<% if @deputy.active? then %><img src="/images/active.gif"> <% end %>			<%str = ""
+<% if @deputy.active? then %> <%= image_tag "active.gif", :alt => "active" %> <% end %>			<%str = ""
 			i = 1
 			@deputy.memberships.each do |m|
 				if m.end.nil? then 
@@ -155,7 +155,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 			end
 		%> <%= str %> <% if !@deputy.predecessor.nil? %>(Prédécesseur: <%= link_to @deputy.predecessor.name, @deputy.predecessor %>) <% end %><% if !@deputy.successor.nil? %> (Successeur: <%= link_to @deputy.successor.name, @deputy.successor %>)<% end %>
 |
-<img src="/images/061.gif">  Bezierk <%= @deputy.bezierk %>
+<%= image_tag "061.gif", :alt => "Bezierk" %> Bezierk <%= @deputy.bezierk %>
 
 	
 </div>
@@ -178,11 +178,11 @@ Stell dem <%= @deputy.name %> eng Fro!
 <table class="content" id="ordered_table">
 	<thead>
 	<tr>
-		<th width="60px"><img width="25" src="/images/sessions.png" alt="logo"></th>
-		<th width="60px"><img width="25" src="/images/seances_small.png" alt="logo"></th>
-		<th width="70px" style="padding-left:0px;"><img width="25" alt="logo" src="/images/dossiers_small.png"></th>
+		<th width="60px"><img width="25" src="/images/sessions.png" alt="Sessions"></th>
+		<th width="60px"><img width="25" src="/images/seances_small.png" alt="Seances"></th>
+		<th width="70px" style="padding-left:0px;"><img width="25" alt="Dossiers" src="/images/dossiers_small.png"></th>
 		<th class="vote">Vote</th>
-		<th><img width="25" alt="logo" src="/images/topics.png"></th>
+		<th><img width="25" alt="Topics" src="/images/topics.png"></th>
 		<th width="105px">Délégéierten</th>
 	</tr>
 	</thead>

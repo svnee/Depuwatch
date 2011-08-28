@@ -1,0 +1,43 @@
+<div class="content_wrapper">
+<div class="info"><%= image_tag "flag.gif", :alt => "Report" %> <a href="/report">Feelermeldung</a> </div>
+
+<div class="content_static">
+
+	 <h1></h1>
+	<p> E Feeler fonnt? Ob technesche Feeler, falsch Donnéeën oder Problemer mam Design, mat dësem Formulaire kanns De ons de Feeler mellen.</p>
+
+<p>Am schnellste kënne Feeler behuewe ginn, wann se op <a href="https://github.com/svnee/Depuwatch/issues?sort=created&direction=desc&state=open">Github</a> agestallt ginn. Mir bieden och drëms d'aktuell <a href="https://github.com/svnee/Depuwatch/issues?sort=created&direction=desc&state=open">"To-Do"-Lëscht</a> ze kucken an ze iwwerpréiwen op de Feeler net schon gemellt gouf.</p>
+	
+<p><strong>Feelermeldung</strong></p>
+	
+	<%= form_for(@report, :url => url_for(:action => 'report_sent', :controller => 'static')) do |f| %>
+	  <% if @report.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this text from being saved:</h2>
+
+	      <ul>
+	      <% @report.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= f.label :email %> (nëmme falls Réckmeldung erwënscht)<br />
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :page %><br />
+	    <%= f.text_field :page, {:value => @page} %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :description %><br />
+	    <%= f.text_area :description %>
+	  </div>
+	  <div class="actions">
+	    <p><%= f.submit %></p>
+	  </div>
+	<% end %>
+
+</div>
