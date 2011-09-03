@@ -16,14 +16,14 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @top = @topic.texts.collect{ |t| 
-      if !t.nil? then
+      if !t.favorite.nil? then
         if t.favorite < 99 then
           t
         end
       end
     }
     @featured = @topic.texts.collect{ |t| 
-      if !t.nil? then
+      if !t.featured.nil? then
         if t.featured != "" then
           t
         end
