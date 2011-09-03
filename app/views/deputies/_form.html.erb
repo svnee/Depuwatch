@@ -40,6 +40,10 @@
     <%= f.select :successor_id, Deputy.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'} %>
   </div>
 	<div class="field">
+    <%= f.label :formulaire, "Link to Formulaire B" %><br />
+    <%= f.text_field :formulaire %>
+  </div>
+	<div class="field">
     <%= f.label :pc_img, "Link to Politikercheck.lu Image" %><br />
     <%= f.text_field :pc_img %>
   </div>
