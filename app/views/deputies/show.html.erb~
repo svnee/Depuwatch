@@ -80,7 +80,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 	</div>
 	
 	<div class="contact_btm">
-<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><img src="politikercheck_small.jpg"> </a>
+<p> <a href="<%= @deputy.pc_profile.nil? ? "http://www.politikercheck.lu/" : @deputy.pc_profile %>"><img src="/images/politikercheck_small.jpg"> </a>
 
 <%= facebook_button(@deputy.facebook).html_safe %>
 <%= twitter_button(@deputy.twitter).html_safe %></p>
@@ -104,7 +104,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 <tr>
 <td><%= image_tag "123.gif", :alt => "Praesenz" %> </td>
 <td width="120px"> Präsenz bei Voten:</td>
-<td> <%= number_to_percentage(@deputy.presence,:precision => 2) %></td>
+<td> <span style="font-weight: bold;"<%= number_to_percentage(@deputy.presence,:precision => 2) %></span></td>
 </tr>
 <tr>
 <td><%= image_tag "124.gif", :alt => "Delegatounen" %></td>
@@ -156,8 +156,9 @@ Stell dem <%= @deputy.name %> eng Fro!
 		%> <%= str %> <% if !@deputy.predecessor.nil? %>(Prédécesseur: <%= link_to @deputy.predecessor.name, @deputy.predecessor %>) <% end %><% if !@deputy.successor.nil? %> (Successeur: <%= link_to @deputy.successor.name, @deputy.successor %>)<% end %>
 |
 <%= image_tag "061.gif", :alt => "Bezierk" %> Bezierk <%= @deputy.bezierk %>
+|
+<%= image_tag "028.gif", :alt => "Niewenakommes" %> Niewenakommes (coming soon)
 
-	
 </div>
 
 
