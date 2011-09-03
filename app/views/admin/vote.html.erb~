@@ -1,11 +1,11 @@
-
+<div class="pointer_deputeiert"></div>
 <div class="content_wrapper">
 <div class="info">
 Entrée vu Voten
 </div>
 
 <div class="content">
-	<div class="wrapper_text"> 
+	
 	<div style="padding: 10px;">
 		
 		<%= form_tag({:action => "save_votes", :controller => "admin"}, :method => "post") do  %>
@@ -43,13 +43,6 @@ Entrée vu Voten
 			<%= submit_tag("Save") %>
 		<% end %>
 	</div>
-	
-	<hr>
-
-<p><i><strong>Oppassen!</strong> Subaal "Save" gedréckt gëtt ginn déi aal Voten iwwerschriwwen.</i></p>
-<p><i><strong>Nei Voten androen/falscher upassen</strong>: Uewen den Dossier Nummer auswielen. Sollten zwee Dossieren mat enger Nummer do sinn handelt et sech eëm zwee verschidde Voten (premier vote, second vote). Fir beim richtegen Dossier d'Voten bäizefügen muss een dofir den éischten Dossier (vun deenen 2) aus der Lëscht uwielen, op "Save" clicken, den Titel kucken (premier/second vote) an de richtegen Compte Rendu auswielen. Dann mat der "Back" Tast vum Browser zréck op "admin/vote" an d'Voten aginn. Beim zweeten Dossier zelwescht: den zweeten Dossier Nummer auswielen, "Save", Compte Rendu, "Back" antippen an "Save". No all Entrée kontrolléieren op d'Stëmmverdeelung korrekt ass. Sollt se falsch sinn (Voten feelen/sinn ze vill), ma der "Back" Tast vum Browser zréck op "admin/vote". Sou bleiwt d'Entrée bestoen. Ass den Dossier korrekt kann d'Fënster zougemeet ginn.</i></p>
-	
-</div></div>
+</div>
 <%= javascript_include_tag "chosen" %>
 <script type="text/javascript"> $(".chzn-select").chosen(); </script>
-
