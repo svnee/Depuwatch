@@ -11,6 +11,8 @@
 
 <%= link_to 'Back', texts_path %>
 
+<hr>
+
 <p><i><strong>Code</strong>: Dossier Nummer</i></p>
 <p><i><strong>Title</strong>: Dossier Numm, sou wéi am Mémorial publizéiert (net d'Ofkierzung)</i></p>
 <p><i><strong>Link memorial</strong>: Link op Memorial Verëffentlechung. Dësen ass op <a href="http://www.legilux.public.lu/leg/projets/index.php">Legilux ënnert "Dossiers parlementaires"</a> ze fannen, nom "Numéro du document parlementaire" sichen, den Dossier parlementaire auswielen, dann op "Types des relations vers ce dossier parlementaire." clicken an ënnert "Ce dossier parlementaire est lié à..." de Gesetzestext auswielen. Op der folgender Säit op de PDF clicken an de Link kopéieren.  </i></p>
