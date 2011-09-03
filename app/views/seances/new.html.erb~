@@ -1,5 +1,21 @@
-<h1>New seance</h1>
+<div class="content_wrapper">
+<div class="info">
+
+<a href="/texts">New Seance</a>
+</div>
+
+<div class="content">
+<div class="wrapper_text"> 
+
 
 <%= render 'form' %>
 
 <%= link_to 'Back', seances_path %>
+
+	<hr>
+
+<p><i><strong> Sessioun </strong>: Hei muss d'ID vun der Sessioun agedro ginn. D'ID fënnt een raus andeems een déi gewënschten Sessioun ënnert <a href="/session">Sessiounen</a> uklickt, an dann de Link kuckt (z.B. depuwatch.lu/sessions/<u>9</u>) </i></p>
+<p><i><strong> Nr </strong>: Nummer vun der Séance. Dës sinn op <a href="http://chd.lu/wps/portal/public/!ut/p/c1/jYuxDoIwFAC_xS94j1pqO5ZSagOoUDHQhTAYQyLgYOT37caoufHuwENgHj7jY3iPyzw8oQXP-pSkt9pSgpyzDK1xNGM0R17EwXesJ5y72shSC9EkaFFFTlcJQUv-uTevRHhMVeQqitGQX_fpuEx36MAftupclvtQSampuCDXFK7wmpp2XeXuC9dlLfI!/dl2/d1/L2dJQSEvUUt3QS9ZQnB3LzZfRDJEVlJJNDIwR05RMDBJRzFGQTBTRzMwUzA!/">chd.lu</a> ze fannen. </i></p>
+<p><i><strong> Sessioun </strong>:  </i></p>
+</div>
+</div>
