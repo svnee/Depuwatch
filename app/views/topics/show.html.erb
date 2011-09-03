@@ -64,7 +64,31 @@
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		
   
-  Dëse Feature ass geplangt a wäert an den nächsten Deeg online goen.
+		<table class="content" id="ordered_table2">
+		  <thead>
+			<tr>
+		    <th style="width: 60px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
+		    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
+			 <th style="width: 375px; padding-right: 10px;"> </th>
+			 <th style="width: 150px; padding-left: 20px;">Vote</th>
+		  </tr>
+			</thead>
+			<tbody>
+			<% if !@top.nil? then %>
+			<% @top.each do |t| -%>
+			<% if !t.nil? then %>
+			<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
+				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
+				<td><%= link_to t.code, t %></td>
+				<td style="padding-right:10px"><%= t.title %></td>
+				<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+			<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
+			</tr>
+			<% end -%>
+			<% end -%>
+			<% end -%>
+			</tbody>
+		</table>
   
   </div>
   
@@ -76,7 +100,31 @@
   
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">  
   
-  	Dëse Feature ass geplangt a wäert an den nächsten Deeg online goen.
+		<table class="content" id="ordered_table3">
+		  <thead>
+			<tr>
+		    <th style="width: 60px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
+		    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
+			 <th style="width: 375px; padding-right: 10px;"> </th>
+			 <th style="width: 150px; padding-left: 20px;">Vote</th>
+		  </tr>
+			</thead>
+			<tbody>
+			<% if !@featured.nil? then %>
+			<% @featured.each do |t| -%>
+			<% if !t.nil? then %>
+			<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
+				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
+				<td><%= link_to t.code, t %></td>
+				<td style="padding-right:10px"><%= t.title %></td>
+				<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+			<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
+			</tr>
+			<% end -%>
+			<% end -%>
+			<% end -%>
+			</tbody>
+		</table>
   
   
   </div>
