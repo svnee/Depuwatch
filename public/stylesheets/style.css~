@@ -1123,6 +1123,7 @@ padding: 7px;
 -webkit-transform:rotate(90deg);
 	-moz-transform:rotate(90deg);
 	-o-transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 	box-shadow: 3px 5px 3px #E1E1E1;
 	font-weight: bold;
 	 right: -31px;
