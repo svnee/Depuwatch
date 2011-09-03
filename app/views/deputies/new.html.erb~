@@ -4,7 +4,6 @@ Create a new deputy
 </div>
 
 <div class="content">
-<div class="wrapper_text"> 
 <h1>New deputy</h1>
 
 <%= render 'form' %>
