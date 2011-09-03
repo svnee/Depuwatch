@@ -516,11 +516,11 @@ div.navi2_img {
 -moz-text-shadow: 1px 2px 3px #e1e1e1;
    -webkit-text-shadow: 1px 2px 3px #e1e1e1;
    text-shadow: 1px 2px 3px #333;
-      	background: -moz-linear-gradient(center top , #8D7D78, #734347) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(center top , #8D7D78, #734347) repeat scroll 0 0 transparent;
 	background: -moz-linear-gradient(center top , #8D7D78, #734347) repeat scroll 0 0 transparent;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8D7D78', endColorstr='#734347'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8D7D78), to(#734347)); /* for webkit browsers */
-
+	background-image: -o-linear-gradient(rgb(141,125,120),rgb(115,67,71));
 	}
 	
 div.navi_link {
