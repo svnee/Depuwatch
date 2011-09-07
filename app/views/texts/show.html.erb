@@ -45,7 +45,7 @@
 
 <div class="d_wrapper">
 	<div class="details">
-<%= image_tag "resume.gif", :alt => "Resume" %> <%= link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code}")%>
+<%= image_tag "resume.gif", :alt => "Resume" %> <%= link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code.gsub!(/<.*?>/, '')}")%>
 |
 <%= image_tag "memorial.gif", :alt => "Memorial" %> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
 |
