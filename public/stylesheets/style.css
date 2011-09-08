@@ -577,6 +577,7 @@ div.LSAP {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 div.DP {
@@ -587,6 +588,7 @@ div.DP {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 
 div.ADR {
@@ -597,6 +599,7 @@ div.ADR {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+    clear:both;
 	}
 	
 div.CSV {
@@ -607,6 +610,7 @@ div.CSV {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 div.Gréng {
@@ -617,6 +621,7 @@ div.Gréng {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 div.Lénk {
@@ -627,6 +632,7 @@ div.Lénk {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 div.Piraten {
@@ -637,6 +643,7 @@ div.Piraten {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 div.KPL {
@@ -647,6 +654,7 @@ div.KPL {
     width: 13px;
 margin-left: 3px;
     margin-right: 3px;
+        clear:both;
 	}
 	
 th {
