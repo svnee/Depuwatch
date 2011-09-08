@@ -1131,6 +1131,7 @@ background: -moz-linear-gradient(center top, #8C93FE, #5961cd) repeat scroll 0 0
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C93FE', endColorstr='#5961cd'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#8C93FE), to(#5961cd)); /* for webkit browsers */
 	 		background-image: -o-linear-gradient(rgb(140,147,254),rgb(89,97,205));
+	 		background-color: #8C93FE;
 color: white;
 padding: 7px;
 -webkit-transform:rotate(90deg);
