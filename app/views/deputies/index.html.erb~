@@ -33,7 +33,7 @@
 	<thead>
 		<tr>
 			<th>&nbsp;</th>
-			<th style="width:100px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
+			<th style="width:85px;"><%= image_tag "deputes_small.png", :alt => "Députés" %></th>
 			<th style="width:100px;">&nbsp;</th>
 			<th>Partei</th>
 			<th>Bezierk</th>

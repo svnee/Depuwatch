@@ -62,23 +62,35 @@
      <!-- TAB 2 -->
     <div id="idTab2">
   
-  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		<table class="content_index" id="ordered_table2">
-		<tr>
-			<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
-			<th width="65px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
-			<th>Titel</th>
-			<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
-		</tr>
-		<% @top.each do |t| -%>
-		<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-				<td><%= link_to t.code, t%></td>
-				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
-				<td><%= t.title %></td>
-				<td style="padding-left: 25px; text-align: left;"><%= t.topics_to_str.html_safe %></td>
-		</tr>
-		<% end -%>
-
-		</table></div>
+  <div id="mydiv2" style="display:block; z-index:0;" class="slider_static">		
+  
+		<table class="content" id="ordered_table2">
+		  <thead>
+			<tr>
+		    <th style="width: 60px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
+		    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
+			 <th style="width: 375px; padding-right: 10px;"> </th>
+			 <th style="width: 150px; padding-left: 20px;">Vote</th>
+		  </tr>
+			</thead>
+			<tbody>
+			<% if !@top.nil? then %>
+			<% @top.each do |t| -%>
+			<% if !t.nil? then %>
+			<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
+				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
+				<td><%= link_to t.code, t %></td>
+				<td style="padding-right:10px"><%= t.title %></td>
+				<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+			<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
+			</tr>
+			<% end -%>
+			<% end -%>
+			<% end -%>
+			</tbody>
+		</table>
+  
+  </div>
   
   </div> 
       <!-- TAB 2 -->
@@ -88,23 +100,31 @@
   
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">  
   
-  	<table class="content_index" id="ordered_table3">
-	<tr>
-	<th width="50px"><%= image_tag "dossiers_small.png", :alt => "Dossiers" %></th>
-	<th width="65px"><%= image_tag "seances_small.png", :alt => "Séances" %></th>
-	<th>Titel</th>
-	<th width="185px" style="padding-left: 25px;"><%= image_tag "topics.png", :alt => "Topics" %></th>
-	</tr>
-	<% @featured.each do |t| -%>
-	<tr onmouseover="style.backgroundColor='#eee';" onmouseout="style.backgroundColor='#fff'">
-		<td><%= link_to t.code, t%></td>
-		<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")} #{t.seance.start.strftime("%H:%M")}-#{t.seance.end.strftime("%H:%M")}", t.seance %></td>
-		<td><%= t.title %></td>
-		<td style="padding-left: 25px; text-align: left; font-weight: bold;"><%= t.featured %></td>
-	</tr>
-	<% end -%>
-
-	</table>
+		<table class="content" id="ordered_table3">
+		  <thead>
+			<tr>
+		    <th style="width: 60px;"><img width="25" alt="séances" src="/images/seances_small.png"></th>
+		    <th style="width: 50px;"><img width="25" alt="dossiers" src="/images/dossiers_small.png"></th>
+			 <th style="width: 375px; padding-right: 10px;"> </th>
+			 <th style="width: 150px; padding-left: 20px;">Vote</th>
+		  </tr>
+			</thead>
+			<tbody>
+			<% if !@featured.nil? then %>
+			<% @featured.each do |t| -%>
+			<% if !t.nil? then %>
+			<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
+				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
+				<td><%= link_to t.code, t %></td>
+				<td style="padding-right:10px"><%= t.title %></td>
+				<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
+			<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
+			</tr>
+			<% end -%>
+			<% end -%>
+			<% end -%>
+			</tbody>
+		</table>
   
   
   </div>
