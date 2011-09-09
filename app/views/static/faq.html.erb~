@@ -68,7 +68,7 @@
 </div>
 
 <div class="content_static">
-<p> <%= image_tag "013.gif", :alt => "Fro"%> <a name="functioun"> </a> <strong> "Abstention" - sinn dat och d'Absencen?
+<p> <%= image_tag "013.gif", :alt => "Fro"%> <a name="abstention"> </a> <strong> "Abstention" - sinn dat och d'Absencen?
 </strong></p>
 <p> Nee. Bei "Abstention" gëtt just ugewise wéi oft en Deputéierten sech bei enger Ofstëmmung enthalen huet. D'Absencë kënne mer net uweise wëll dës Donnéeën net vun der Chamber verëffentlecht ginn. Mir kënnen ënnert "Präsenz bei Voten" just uweise wéi oft en Deputéierte präsent war, wann en Dossier zur Ofstëmmung stoung. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
