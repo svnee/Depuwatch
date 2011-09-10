@@ -18,7 +18,7 @@ class StaticController < ApplicationController
     seances = Seance.order("start DESC").limit(15)
     @dossiers = Array.new
     i = 0
-    idx = seances.size-1
+    idx = 0
     sid = seances[idx].id
     while i < 10 do
       s = Seance.find(sid)
@@ -28,7 +28,7 @@ class StaticController < ApplicationController
           i += 1
         end
       end
-      idx = idx - 1
+      idx = idx + 1
       sid = seances[idx].id
     end
     
