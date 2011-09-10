@@ -15,7 +15,20 @@ class StaticController < ApplicationController
   end
   
   def index
-    @dossiers = Text.order("updated_at DESC").limit(15)
+    @dossiers = Array.new
+    i = 1
+    sid = Seance.last.id
+    while i < 10 do
+      s = Seance.find(sid)
+      s.texts.each do |t|
+        if i < 10 then
+          @dossiers << t
+          i += 1
+        end
+      end
+    end
+    
+    #@dossiers = Text.order("updated_at DESC").limit(15)
     @top = Text.where('favorite < 16').order(:favorite)
     @featured = Text.where('featured <> ""').order(:updated_at).limit(15)
     @deputies = Deputy.where('active_cache <> 0').order(:lastname)
