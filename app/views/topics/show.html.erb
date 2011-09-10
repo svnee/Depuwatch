@@ -116,7 +116,7 @@
 			<tr  onmouseout="style.backgroundColor='#fff'" onmouseover="style.backgroundColor='#eee';" style="background-color: rgb(255, 255, 255);">
 				<td><%= link_to "#{t.seance.start.strftime("%d/%m/%Y")}", t.seance %></td>
 				<td><%= link_to t.code, t %></td>
-				<td style="padding-right:10px"><%= t.title %></td>
+				<td style="padding-right:10px"><%= t.featured %></td>
 				<td style="padding-left: 10px;"><img src="http://chart.apis.google.com/chart?cht=bhs&chs=150x23&chd=t:<%= "#{t.votes_pour.count}|#{t.votes_contre.count}|#{t.abstentions.count}" %>&chds=0,60&chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" /><br />
 			<%= "#{t.votes_pour.count}:#{t.votes_contre.count}:#{t.abstentions.count}" %></td>
 			</tr>
