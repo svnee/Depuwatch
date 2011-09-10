@@ -17,7 +17,7 @@ class StaticController < ApplicationController
   def index
     seances = Seance.order("start DESC").limit(15)
     @dossiers = Array.new
-    i = 1
+    i = 0
     idx = seances.size-1
     sid = seances[idx].id
     while i < 10 do
