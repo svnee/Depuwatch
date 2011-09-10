@@ -117,22 +117,22 @@ Stell dem <%= @deputy.name %> eng Fro!
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 120px; text-align:left; font-weight:bold;">Pour:</td>
+        <td style="width: 121px; text-align:left;">Pour:</td>
 		<td style="width: 75px; text-align:left;"><strong><%= p.count %> (<%= number_to_percentage((p.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</strong></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 120px; text-align:left; font-weight:bold;">Contre:</td>
+        <td style="width: 121px; text-align:left;">Contre:</td>
 		<td style="width: 75px; text-align:left;"><strong><%= c.count %> (<%= number_to_percentage((c.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</strong></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 120px; text-align:left; font-weight:bold;">Abstentions:</td>
+        <td style="width: 121px; text-align:left;">Abstentions:</td>
 		<td style="width: 75px; text-align:left;"><strong><%= a.count %> (<%= number_to_percentage((a.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</strong></td>
 	</tr>
 </table>
 <p>
-<img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=150x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
+<img src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=224x23&amp;chd=t:<%= "#{p.count}|#{c.count}|#{a.count}" %>&amp;chds=0,<%=p.count+c.count+a.count%>&amp;chco=<%= "#{vote_to_color_simple(1)},#{vote_to_color_simple(-1)},#{vote_to_color_simple(0)}" %>" />
 </div>	
 
 </div>
@@ -163,7 +163,7 @@ Stell dem <%= @deputy.name %> eng Fro!
 
 <% if @deputy.active? && !@deputy.chdlink.nil? then -%>
 |
-<a href="<%= @deputy.chdlink %>" target="_blank">Weider Detailer</a>
+<%= image_tag "038.gif", :alt => "Detailer" %> <a href="<%= @deputy.chdlink %>" target="_blank">Weider Detailer</a>
 
 <% end -%>
 
