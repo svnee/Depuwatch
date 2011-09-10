@@ -26,6 +26,7 @@ class StaticController < ApplicationController
           i += 1
         end
       end
+      sid = sid - 1
     end
     
     #@dossiers = Text.order("updated_at DESC").limit(15)
