@@ -15,9 +15,11 @@ class StaticController < ApplicationController
   end
   
   def index
+    seances = Seance.order("start DESC").limit(15)
     @dossiers = Array.new
     i = 1
-    sid = Seance.last.id
+    idx = seances.size-1
+    sid = seances[idx].id
     while i < 10 do
       s = Seance.find(sid)
       s.texts.each do |t|
@@ -26,7 +28,8 @@ class StaticController < ApplicationController
           i += 1
         end
       end
-      sid = sid - 1
+      idx = idx - 1
+      sid = seances[idx].id
     end
     
     #@dossiers = Text.order("updated_at DESC").limit(15)
