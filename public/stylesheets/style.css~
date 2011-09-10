@@ -666,7 +666,7 @@ th {
 
 div.result2 {
 	padding-bottom:0px;
-margin-right: 100px;
+margin-right: 20px;
 }
 
 div.wrapperDEP {
