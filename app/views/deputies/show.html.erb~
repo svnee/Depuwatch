@@ -118,17 +118,17 @@ Stell dem <%= @deputy.name %> eng Fro!
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
         <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Pour:</td>
-		<td style="width: 50px; text-align:left;"><%= p.count %> (<%= number_to_percentage((p.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
+		<td style="width: 75px; text-align:left;"><%= p.count %> (<%= number_to_percentage((p.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
         <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Contre:</td>
-		<td style="width: 50px; text-align:left;"><%= c.count %> (<%= number_to_percentage((c.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
+		<td style="width: 75px; text-align:left;"><%= c.count %> (<%= number_to_percentage((c.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
         <td style="text-shadow: 2px 2px 3px rgb(205, 205, 205); width: 70px; text-align:left; font-weight:bold;">Abstentions:</td>
-		<td style="width: 50px; text-align:left;"><%= a.count %> (<%= number_to_percentage((a.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
+		<td style="width: 75px; text-align:left;"><%= a.count %> (<%= number_to_percentage((a.count / (p.count+c.count+a.count).to_f)*100,:precision => 2) %>)</td>
 	</tr>
 </table>
 <p>
@@ -159,6 +159,12 @@ Stell dem <%= @deputy.name %> eng Fro!
 |
 <% if @deputy.active? then -%>
 <%= image_tag "028.gif", :alt => "Niewenakommes" %> <%= @deputy.formulaire.nil? ? "Niewenakommes (coming soon)" : "<a href='#{@deputy.formulaire}'>Niewenakommes</a>".html_safe %>
+<% end -%>
+
+<% if @deputy.active? && !@deputy.chdlink.nil? then -%>
+|
+<a href="<%= @deputy.chdlink %>" target="_blank">Weider Detailer</a>
+
 <% end -%>
 
 </div>
