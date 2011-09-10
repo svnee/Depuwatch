@@ -64,6 +64,18 @@ class Text < ActiveRecord::Base
     end
   end
   
+  def code_int
+    if self[:code].nil?
+      nil
+    else
+  	  if (!favorite.nil? && favorite < 99) then
+    	  self[:code].gsub!(/<.*?>/, '')
+    	else
+    		self[:code].gsub!(/<.*?>/, '')
+    	end
+    end
+  end
+  
   def party_opinion(pid)
     c, p, a = 0,0,0
     votes.each do |v|
