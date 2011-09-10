@@ -157,7 +157,9 @@ Stell dem <%= @deputy.name %> eng Fro!
 |
 <%= image_tag "061.gif", :alt => "Bezierk" %> Bezierk <%= @deputy.bezierk %>
 |
+<% if @deputy.active? then -%>
 <%= image_tag "028.gif", :alt => "Niewenakommes" %> <%= @deputy.formulaire.nil? ? "Niewenakommes (coming soon)" : "<a href='#{@deputy.formulaire}'>Niewenakommes</a>".html_safe %>
+<% end -%>
 
 </div>
 
