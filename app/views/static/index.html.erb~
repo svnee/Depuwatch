@@ -40,13 +40,12 @@
 </script>
 
 <div class="content_wrapper">
-<div class="info">Depuwatch</div>
 
 <div class="usual"> 
   <ul class="idTabs" style="display:inline; margin-left: 0px; padding-left: 0px;"> 
-    <li><a href="#id1" class="selected"><%= image_tag "001.gif", :alt => "new" %> LU</a></li> 
-    <li><a href="#id2"> <%= image_tag "fav.gif", :alt => "fav" %> FR</a></li> 
-    <li><a href="#id3"><%= image_tag "109.gif", :alt => "featured" %> DE</a></li> 
+    <li><a href="#id1" class="selected"><%= image_tag "LU-flag.png", :alt => "new" %> LU</a></li> 
+    <li><a href="#id2"> <%= image_tag "FR-flag.png", :alt => "fav" %> FR</a></li> 
+    <li><a href="#id3"><%= image_tag "DE-flag.png", :alt => "featured" %> DE</a></li> 
   </ul> 
 
   <!-- TAB 1 -->
