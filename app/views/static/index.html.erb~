@@ -47,13 +47,13 @@
 
 <div class="usual3"> 
   <ul class="idTabs" style="display:inline; margin-left: 0px; padding-left: 0px;"> 
-    <li><a href="#idTab1" class="selected"><%= image_tag "001.gif", :alt => "new" %> LU</a></li> 
-    <li><a href="#idTab2"> <%= image_tag "fav.gif", :alt => "fav" %> FR</a></li> 
-    <li><a href="#idTab3"><%= image_tag "109.gif", :alt => "featured" %> DE</a></li> 
+    <li><a href="#id1" class="selected"><%= image_tag "001.gif", :alt => "new" %> LU</a></li> 
+    <li><a href="#id2"> <%= image_tag "fav.gif", :alt => "fav" %> FR</a></li> 
+    <li><a href="#id3"><%= image_tag "109.gif", :alt => "featured" %> DE</a></li> 
   </ul> 
 
   <!-- TAB 1 -->
-    <div id="idTab1" style="padding-top: 5px;">
+    <div id="id1" style="padding-top: 5px;">
   
   <div class="slider_static">
 LU
@@ -64,7 +64,7 @@ LU
   
   
     <!-- TAB 2 -->
-    <div id="idTab2" style="padding-top: 5px;">
+    <div id="id2" style="padding-top: 5px;">
   
   <div id="mydiv2" style="display:block; z-index:0;" class="slider_static"><table class="content_index" id="ordered_table2">
 
@@ -75,7 +75,7 @@ FR
       <!-- TAB 2 -->
   
     <!-- TAB 3 -->
-  <div id="idTab3" style="padding-top: 5px;">
+  <div id="id3" style="padding-top: 5px;">
   
   <div id="mydiv3" style="display:block; z-index:0;" class="slider_static">
   DE
