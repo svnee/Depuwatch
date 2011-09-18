@@ -1,8 +1,51 @@
 <div class="content_wrapper">
 <a name="up"> </a>
-<div class="info"><a href="/faq">F.A.Q</a>: Heefeg gestallte Froen</div>
 
 <div class="content_static">
+
+<div class="usual"> 
+  <ul class="idTabs" style="display:inline; margin-left: 0px; padding-left: 0px;"> 
+    <li><a href="#id1" class="selected"><%= image_tag "LU-flag.png", :alt => "LU" %>F.A.Q. - Heefeg gestallte Froen</a></li> 
+    <li><a href="#id2"> <%= image_tag "FR-flag.png", :alt => "FR" %> F.A.Q. - Questions fréquemment posées</a></li> 
+    <li><a href="#id3"><%= image_tag "DE-flag.png", :alt => "DE" %> F.A.Q. - Häufig gestellte Fragen</a></li> 
+  </ul> 
+
+  <!-- TAB 1 -->
+    <div id="id1" style="padding-top: 5px;">
+  
+  <div class="slider_static">
+<div class="content_static" style="padding-left:10px;">
+<p>Häerzlech wëllkomm op Depuwatch.lu, dem Internetportal dat dem interesséierte Bierger d'Ofstëmmungsverhale vun onsen Deputéiert an der Chamber transparent an iwwersiichtlech duerstellt.</p></div>
+
+</div>
+
+  </div> 
+    <!-- TAB 1 -->
+  
+  
+    <!-- TAB 2 -->
+    <div id="id2" style="padding-top: 5px;">
+  
+   <div class="slider_static">
+<div class="content_static" style="padding-left:10px;">
+<p>Bienvenu sur Depuwatch.lu, le site Internet qui visualise pour tout citoyen interessé d'une façon transparente et claire les votes des Députés de la Chambre des Députés.</p></div>
+
+</div>
+  
+  </div> 
+      <!-- TAB 2 -->
+  
+    <!-- TAB 3 -->
+  <div id="id3" style="padding-top: 5px;">
+  
+ <div class="slider_static">
+<div class="content_static" style="padding-left:10px;">
+<p>Herzlich willkommen auf Depuwatch.lu, dem Internetportal das dem interessierten Bürger das Abstimmungsverhalten der Abgeordneten im Parlament transparent und übersichtlich darstellt.</p></div>
+
+</div>
+ </div> 
+      <!-- TAB 3 -->
+      </div>
 
 <p><strong>Fonctionnement</strong></p>
 <p>
@@ -122,13 +165,13 @@ D'Depuwatch Partner ënnerstëtzen all Initiativ fir en Projet vun den offiziell
 
 <div class="content_static">
 <p> <a name="delete"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Ech sinn Deputéiert; kann ech meng Donnéeë läschte loossen?</strong></a></p>
-<p> Mat der Ausnahm vun de Sozialen Netzwierk Profiler sinn all Donnéeë  vun Depuwatch ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
+<p> Sll Donnéeë  vun Depuwatch sinn ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
 Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentlechen, deen dës Persoun wëll geheim halen, da schéckt ons eng Mail op <i>abuse@depuwatch.lu</i> a mir läschen de Link op dëse Profil. Mir empfielen awer an e sou engem  Fall de concernéierten Account beim Sozialen Netzwierk och ze läschen  oder ze melle wëll sech sou Profiler generell net geheim hale loossen. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
 <p> <a name="updates"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Wéi bleiwen ech um Lafenden wat d'Entwécklung vun Depuwatch ugeet?</strong></a></p>
-<p> Alles neits zum Projet Depuwatch gëtt et op dem <a href="http://blog.depuwatch.lu"> Depuwatch Blog</a>, Facebook, Twitter, a via E-Mail am Newsletter. <a href="#up"><img src="/images/012.gif"></a> </p>
+<p> Alles neits zum Projet Depuwatch gëtt et op dem <a href="http://blog.depuwatch.lu"> Depuwatch Blog</a>, <a href="https://www.facebook.com/Depuwatch">Facebook</a> an <a href="http://twitter.com/#!/depuwatch">Twitter</a>. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static"></div>
