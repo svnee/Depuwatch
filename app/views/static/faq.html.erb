@@ -3,7 +3,7 @@
 
 <div class="usual"> 
   <ul class="idTabs" style="display:inline; margin-left: 0px; padding-left: 0px;"> 
-    <li><a href="#id1" class="selected"><%= image_tag "LU-flag.png", :alt => "LU" %>F.A.Q. - Heefeg gestallte Froen</a></li> 
+    <li><a href="#id1" class="selected"><%= image_tag "LU-flag.png", :alt => "LU" %> F.A.Q. - Heefeg gestallte Froen</a></li> 
     <li><a href="#id2"> <%= image_tag "FR-flag.png", :alt => "FR" %> F.A.Q. - Questions fréquemment posées</a></li> 
     <li><a href="#id3"><%= image_tag "DE-flag.png", :alt => "DE" %> F.A.Q. - Häufig gestellte Fragen</a></li> 
   </ul> 
@@ -12,8 +12,8 @@
     <div id="id1" style="padding-top: 5px;">
   
   <div class="slider_static">
+  
 <div class="content_static" style="padding-left:10px;">
-
 
 <p><strong>Fonctionnement</strong></p>
 <p>
@@ -46,8 +46,6 @@
 </p>
 
 <div class="more">Eng Fro, déi am F.A.Q. feelt? <a href="/contact">So ons bescheed!</a></div>
-
-</div>
 
 <div class="info">Fonctionnement</div>
 
@@ -288,7 +286,7 @@ D'Depuwatch Partner ënnerstëtzen all Initiativ fir en Projet vun den offiziell
 
 <div class="content_static">
 <p> <a name="delete"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Ech sinn Deputéiert; kann ech meng Donnéeë läschte loossen?</strong></a></p>
-<p> Sll Donnéeë  vun Depuwatch sinn ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
+<p> All Donnéeë  vun Depuwatch sinn ëffentlech verfügbar. D'Späicheren an d'Verëffentlechung, d'Analyse an d'Diskutéiere vun dësen Donnéeën ass en integrale Bestanddeel vun enger Demokratie a wäerten net geläscht ginn.</p><p>
 Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentlechen, deen dës Persoun wëll geheim halen, da schéckt ons eng Mail op <i>abuse@depuwatch.lu</i> a mir läschen de Link op dëse Profil. Mir empfielen awer an e sou engem  Fall de concernéierten Account beim Sozialen Netzwierk och ze läschen  oder ze melle wëll sech sou Profiler generell net geheim hale loossen. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
@@ -336,7 +334,155 @@ Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentl
   
    <div class="slider_static">
 <div class="content_static" style="padding-left:10px;">
-<p>Bienvenu sur Depuwatch.lu, le site Internet qui visualise pour tout citoyen interessé d'une façon transparente et claire les votes des Députés de la Chambre des Députés.</p></div>
+
+<p><strong>Fonctionnement</strong></p>
+<p>
+<%= image_tag "013.gif", :alt => "Fro" %> <a href="#wei_fr">Comment trouver un dossier particulier?</a><br>
+<%= image_tag "013.gif", :alt => "Fro" %> <a href="#fav_fr">Que signifie l'étoile jaune (<%= image_tag "fav.gif", :alt => "fav" %>) derrière le numéro de dossier ("Top" dossiers)?</a><br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#feature_fr">Que signifie la médaille (<%= image_tag "109.gif", :alt => "feature" %>) derrière le numéro de dossier ("Feature" dossiers)?</a><br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#dot_fr">Que signifie le point vert (<%= image_tag "active.gif", :alt => "active" %>) devant le nom du député?</a><br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#abstention_fr">Abstention: est-ce que cela signifie aussi absence? </a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#niewen_fr">Que signifie "Niewenakommes" (autres revenus)?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#functioun_fr">Je voudrais bien une fonction A ou une statistique B! </a> <br>
+</p>
+<p><strong>A propos du projet</strong></p>
+<p>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#wisou_fr">Pourquoi Depuwatch.lu?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#wien_fr">Qui sommes-nous?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#beta_fr">Que signifie Beta?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#chamber_fr">Ne serait-il pas plus opportun que la Chambre des Députés offrît ces donnés plutôt qu'un parti politique?</a><br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#delete_fr">Je suis député : puis-je faire effacer mes données du site?</a><br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#updates_fr">Comment peut-je rester au courant des développements de Depuwatch?</a><br>
+</p>
+<p><strong>Infrastructure technique</strong></p>
+<p>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#wou_fr">Comment arrivent ici les données?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#korrekt_fr">Comment puis-je être sûr que les données sont justes?</a>
+</p>
+<strong>Divers</strong>
+<p>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#eu_fr">Où puis-je trouver les données concernant les députés européens?</a> <br>
+<%= image_tag "013.gif", :alt => "Fro"%> <a href="#qp_fr">Où puis-je trouver les questions parlementaires?</a>
+</p>
+
+<div class="more">Une question manque dans notre F.A.Q.? <a href="/contact">Contactez-nous!</a></div>
+
+<div class="info">Fonctionnement</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%>  <a name="wei_fr"> </a> <strong>Comment trouver un dossier particulier?</strong></p>
+<p> <strong>Avec la "Recherche"</strong></p>
+<p>Il est possible d'utiliser un mot clé. Dans la section <a href="/texts">dossiers</a>, il suffit de mettre le mot-clé dans la recherche. Vont être affichés les dossiers qui comportent le mot clé dans leur titre.</p>
+<p> <strong>Avec le numéro de dossier</strong></p>
+<p>Si vous connaissez le numéro de dossier, allez dans la case "Search" sur <a href="/texts">dossiers</a>  et tapez le numéro. Les dossiers apparaissent même quand vous ne connaissez qu'une partie de leur numéro.</p>
+<p><strong>Avec le thème</strong></p>
+<p>La page <a href="/topics">thème</a> permet de retrouver un dossier par son thème. Sélectionner un thème particulier et de nouvelles précisions sur le thème apparaissent. Les thématiques des dossiers sont déterminées par le ministère qui a signé le dossier (par exemple, les dossiers du ministère des Finances se trouvent sous le thème Finance). <a href="#up"><img src="/images/012.gif"></a> </p>
+<p><strong>"Top" dossier ou "Feature" dossier</strong></p>
+<p>Quand un dossier suscite de nombreux réactions ou lorsqu'il a engendré des évolutions importantes il peut être classé comme "Feature" dossier par Politikercheck ou comme "Top" Dossier par les utilisateurs de Depuwatch. Ainsi il est possible de retrouver rapidement les dossiers les plus importants.</p>
+</div>
+
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%>  <a name="fav"> </a> <strong> Que signifie l'étoile jaune (<%= image_tag "fav.gif", :alt => "fav" %>) derrière le numéro de dossier ("Top" dossiers)?</strong></p>
+<p>Les dossiers marqués d'une étoile jaune sont ceux qui sont considérés comme intéressants par les lecteurs de Depuwatch. </p>
+<p>Il est possible de noter chaque dossier sur la page de détail. Les dossiers de la rubrique "Top" Dossier sont les 45 dossiers qui ont obtenus le plus de votes lors des sept derniers jours.<a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%>  <a name="feature_fr"> </a> <strong>Que signifie la médaille (<%= image_tag "109.gif", :alt => "feature" %>) derrière le numéro de dossier ("Feature" dossiers)?</strong></p>
+<p>Les dossiers qui ont une médaille sont les "Feature" dossiers. Ce sont des dossiers particulièrement intéressants dont on a beaucoup parlé au Luxembourg ou qui ont apporté de changements importants. Leur titre comporte une explication sur la thématique du dossier.  </p>
+<p>Les dossiers "Feature" sont sélectionnés par "Politikercheck" selon les critères énumérés plus haut. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%>  <a name="dot_fr"> </a> <strong>Que signifie le point vert (<%= image_tag "active.gif", :alt => "active" %>) devant le nom du député?</strong></p>
+<p>Le point vert signifie que le député est en activité. Les noms des députés sans point vert son ceux qui ne sont plus membre à la Chambre des Députés. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%> <a name="abstention_fr"> </a> <strong>"Abstention": est-ce que cela signifie aussi absence?</strong></p>
+<p>Non. Abstention signifie que lors du vote, le député s'est abstenu. Nous ne pouvons pas comptabiliser les absences parce que ces données ne sont pas publiées par la Chambre des Députés. Nous ne pouvons reprendre que la présence des Députés lors d'un vote. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%> <a name="niewen_fr"> </a> <strong> Que signifie "Niewenakommes" (autres revenus)?
+</strong></p>
+<p> Sous "Niewenakommes" on fait le lien au formulaire A et formulaire B, qui sont publiés par la Chambre des Députés. Ici les Députés énumèrent leurs activités et rémunération à cotés de celles de Député. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <%= image_tag "013.gif", :alt => "Fro"%> <a name="functioun_fr"> </a> <strong>Je voudrais bien une fonction A ou une statistique B!
+</strong></p>
+<p> Depuwatch voudrait s'améliorer constamment. Si vous désirez voir une nouvelle fonction, écrivez-nous sur <i>info@depuwatch.lu</i>. </p><p>
+Depuwatch est un projet conçu en "open source". Le code source de Depuwatch sont récupérables sur <a href="https://github.com/svnee/Depuwatch">Github</a> et peut être consulté et adapté par toute personne intéressée. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="info">A propos du projet</div>
+
+<div class="content_static">
+<p> <a name="wisou_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Pourquoi Depuwatch.lu?</strong></p>
+<p> Le but de Depuwatch est de rendre la politique plus transparente pour les citoyens. Les votes à la Chambre sont en effet publiques, mais très difficiles à trouver.Ainsi les votes des Députés peuvent être trouvés sur le site de la Chambre (dans un fichier PDF), mais pas sous la forme d'une représentation graphique. Il est aussi possible de suivre les votes par ChamberTV, mais ici il n'y a que le résultat global du vote et pas le vote par Député.</p>
+
+<p>Depuwatch va remédier à ces lacunes et présenter des données publiques d'une façon claire pour rapprocher les citoyens de la politique et des Députés. Ce projet a pour but d'améliorer la transparence dans le travail de la Chambre, ainsi que d'animer les citoyens à un dialogue plus intense avec les Députés. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="wien_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Qui sommes-nous?</strong></p>
+<p>Depuwatch est un projet commun de politikercheck.lu et du Parti Pirate du Luxembourg. La coopération de Politikercheck et du Parti Pirate permet aux citoyens de s'adresser directement à leurs députés concernant des questions précises. Politikercheck.lu joue le rôle d'un observateur indépendant tandis que le Parti Pirate s'occupe de l'infrastructure technique.</p><p>
+Pour des questions, des commentaires ou des critiques, <a href="/contact">contactez</a> les partenaires de Depuwatch. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="beta_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Que signifie Beta?</strong></p>
+<p>Depuwatch est pour le moment dans une version Beta, c'est-à-dire dans une phase de développement. L'avantage de ce mode est de faciliter le feed-back des utilisateurs et de pouvoir ajouter de nouvelles fonctions selon leurs souhaits. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+
+<div class="content_static">
+<p> <a name="chamber_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong> Ne serait-il pas plus opportun que la Chambre des Députés offrît ces donnés plutôt qu'un parti politique?</strong></p>
+<p>Si! Mais à ce jour ces données ne peuvent être trouvées que très difficilement (p.ex. votes) ou pas du tout (p.ex. présences) sur les sites officielles.</p><p>
+Les partenaires de Depuwatch soutiennent toutes les initiatives autour d'un projet semblable de la part des autorités. Les responsables de la Chambre peuvent prendre contact avec nous à l'adresse <i>info@depuwatch.lu</i>. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="delete_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Je suis député : puis-je faire effacer mes données du site?
+</strong></a></p>
+<p>Toutes les données de Depuwatch sont publiques. L'enregistrement, la publication, l'analyse et la discussion autour de ces données est un pilier incontestable de toute démocratie et les données ne seront pas effacées.  </p><p>
+Si depuwatch crée un lien vers un réseau social d'un Député que ce dernier voulait ne pas publier, il pourra nous envoyer un mail à <i>abuse@depuwatch.lu</i> et nous supprimerons le lien en question. Cependant nous recommandons dans pareil cas de faire éliminer ce profil sur le réseau social car de manière générale ces sites ne restent pas secret. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="updates_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Comment peut-je rester au courant des développements de Depuwatch?</strong></a></p>
+<p> Toutes les nouveautés seront publiées sur le <a href="http://blog.depuwatch.lu"> Depuwatch Blog</a>, <a href="https://www.facebook.com/Depuwatch">Facebook</a> et <a href="http://twitter.com/#!/depuwatch">Twitter</a>. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static"></div>
+<div class="info">Infrastructure technique</div>
+
+<div class="content_static">
+<p> <a name="wou_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Comment arrivent ici les données?</strong></a></p>
+<p> Toutes les données de Depuwatch (sauf les liens sur les réseaux sociaux) sont issues des pages officielles de la <a href="http://chd.lu">Chambre des Députés</a> et <a href="http://légilux.public.lu">Légilux</a>, tout comme de <a href="http://politikercheck.lu">Politikercheck</a> (Fotos). Depuwatch relie les données et œuvre à une présentation claire.</p>
+<p>Les données sont compilées avec un <a href="http://scraperwiki.com/scrapers/chd/">Script</a>automatique depuis les pages du site web de la Chambre. Elles sont vérifiées manuellement avant d'être publiées. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="korrekt_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Comment puis-je être sûr que les données sont justes?</strong></a></p>
+<p>Les données sont extraites automatiquement du site de la Chambre et reliées dans une base de données. Le fonctionnement de cette base de donné est contrôlée manuellement par le Parti Pirate et Politercheck. Un lien vers les documents officiels (compte rendu, mémorial et résumé) est établi sur chaque page pour contrôler les données. </p>
+<p>Malgré toutes ces précautions, s'il devait y avoir des erreurs, merci de nous <a href="/report">contacter</a>. <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="info">Divers</div>
+<div class="content_static">
+<p> <a name="eu_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Où puis-je trouver les données concernant les députés européens?</strong></a></p>
+<p>Depuwatch s'occupe exclusivement des données des députés à la Chambre. Pour celles qui concernent les députés européens, il faut se diriger vers 
+<a href="http://votewatch.eu/cx_countries.php?euro_tara_id=25">Votewatch.eu</a>.
+ <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
+
+<div class="content_static">
+<p> <a name="qp_fr"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Où puis-je trouver les questions parlementaires?</strong></a></p>
+<p>Les questions parlementaires se trouvent sur le site de la Chambre à la rubrique "<a href="http://chd.lu/wps/portal/public/!ut/p/c1/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gXI5ewIE8TIwN380ATAyMvVy_z0GA_Ywt3Y6B8pFm8kYVFcJC7o6-rpWWok4GngbNhsGugk5GBpxEB3X4e-bmp-pH6UeZIqsJ8DQ2MnDyNA70CLI0tXA31I3NS0xOTK_ULciPK8x0VFQGcGq-6/dl2/d1/L0lJSklna21BL0lKakFBRXlBQkVSQ0pBISEvWUZOQTFOSTUwLTVGd0EhIS83X0QyRFZSSTQyMEdWTTEwMkJJM1FKUDkzOEUxL0daeE5FNzA3MzAwMTI!/?PC_7_D2DVRI420GVM102BI3QJP938E1_action=doQuestpaList&id=&filter_action=&PC_7_D2DVRI420GVM102BI3QJP938E1_displayLink=&PC_7_D2DVRI420GVM102BI3QJP938E1_numPage=8&PC_7_D2DVRI420GVM102BI3QJP938E1_positionInHistory=&PC_7_D2DVRI420GVM102BI3QJP938E1_display=7&PC_7_D2DVRI420GVM102BI3QJP938E1_EtatQuestion=Toutes&PC_7_D2DVRI420GVM102BI3QJP938E1_AuteurQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_DestinataireQuestion=ALL&PC_7_D2DVRI420GVM102BI3QJP938E1_TypesDeTri=DateDepot&PC_7_D2DVRI420GVM102BI3QJP938E1_SortOrder=DESC&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageTop=8&PC_7_D2DVRI420GVM102BI3QJP938E1_numPageBottom=8#7_D2DVRI420GVM102BI3QJP938E1">Questions Parlementaires</a>" ze fannen.  <a href="#up"><img src="/images/012.gif"></a> </p>
+</div>
 
 </div>
   
