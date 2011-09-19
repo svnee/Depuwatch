@@ -14,7 +14,7 @@
     <div id="id1" style="padding-top: 5px;">
   
   <div class="slider_static">
-  
+  <div class="content_static">
 <p><strong>Fonctionnement</strong></p>
 <p>
 <%= image_tag "013.gif", :alt => "Fro" %> <a href="#wei">Wéi fannen ech e bestëmmten Dossier?</a><br>
@@ -197,6 +197,7 @@ Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentl
 <%= image_tag "013.gif", :alt => "Fro"%> <a href="#eu">Wou fannen ech Ofstëmmungen vun den EU Deputéiert?</a> <br>
 <%= image_tag "013.gif", :alt => "Fro"%> <a href="#qp">Wou fannen ech d'Questions Parlementaires vun den Deputéierten? </a>
 </p>
+</div>
 
 <div class="more">Eng Fro, déi am F.A.Q. feelt? <a href="/contact">So ons bescheed!</a></div>
 
