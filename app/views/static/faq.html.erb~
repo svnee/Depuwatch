@@ -8,13 +8,13 @@
     <li><a href="#id3"><%= image_tag "DE-flag.png", :alt => "DE" %> F.A.Q. - Häufig gestellte Fragen</a></li> 
   </ul> 
 
+<div class="content">
+
   <!-- TAB 1 -->
     <div id="id1" style="padding-top: 5px;">
   
   <div class="slider_static">
   
-<div class="content_static" style="padding-left:10px;">
-
 <p><strong>Fonctionnement</strong></p>
 <p>
 <%= image_tag "013.gif", :alt => "Fro" %> <a href="#wei">Wéi fannen ech e bestëmmten Dossier?</a><br>
@@ -500,3 +500,4 @@ Si depuwatch crée un lien vers un réseau social d'un Député que ce dernier v
  </div> 
       <!-- TAB 3 -->
 
+</div>
