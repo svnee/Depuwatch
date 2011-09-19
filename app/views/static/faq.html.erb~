@@ -11,7 +11,7 @@
 <div class="content">
 
   <!-- TAB 1 -->
-    <div id="id1" style="padding-top: 5px;">
+    <div id="id1">
   
   <div class="slider_static">
   <div class="content_static">
@@ -176,13 +176,13 @@ Sollt Depuwatch en Sozialen Netzwierk Account vun engem Deputéierte verëffentl
 
   </div> 
     <!-- TAB 1 -->
-  
+
   
     <!-- TAB 2 -->
-    <div id="id2" style="padding-top: 5px;">
+    <div id="id2">
   
    <div class="slider_static">
-<div class="content_static" style="padding-left:10px;">
+  <div class="content_static">
 
 <p><strong>Fonctionnement</strong></p>
 <p>
