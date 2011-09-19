@@ -376,7 +376,7 @@ Si depuwatch crée un lien vers un réseau social d'un Député que ce dernier v
 <%= image_tag "013.gif", :alt => "Fro"%> <a href="#qp_de">Wo finde ich die "Parlamentarischen Anfragen" der Angeordneten?</a>
 </p>
 
-	</div>
+	
 
 <div class="more">Es fehlt eine Frage im F.A.Q.? <a href="/contact">Sag uns bescheid!</a></div>
 	
