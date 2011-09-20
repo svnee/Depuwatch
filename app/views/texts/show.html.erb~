@@ -45,11 +45,17 @@
 
 <div class="d_wrapper">
 	<div class="details">
-<img src="/images/resume.gif"> <%= link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code}")%>
+<%= image_tag "resume.gif", :alt => "Resume" %> 
+<%= if (@text.favorite < 99 || !@text.featured.nil?) then
+	link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code.gsub(/<.*?>/, '')}")
+else
+	link_to("Resumé", "http://www.chd.lu/wps/portal/public/RoleEtendu?action=doDocpaDetails&id=#{@text.code}")
+end
+%>
 |
-<img src="/images/memorial.gif"> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
+<%= image_tag "memorial.gif", :alt => "Memorial" %> <%= @text.link_memorial.nil? ? "?" : link_to("Memorial", @text.link_memorial)%>
 |
-<img src="/images/compte.gif">  <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> 
+<%= image_tag "compte.gif", :alt => "Compte Rendu" %>  <%= @text.seance.compte_rendu.nil? ? "?" : link_to("Compte rendu", @text.seance.compte_rendu)%> 
 	</div>
 	<div class="d_fav">
 <span id="favorite"><%= link_to(image_tag("fav.gif"), {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST) %> <%= link_to "Top Dossier?", {:action => :create, :controller => :ratings, :text_id => @text.id}, :remote => true, :method => :POST %></span>

@@ -25,18 +25,18 @@
 <table>
 	<tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Pour:</td>
-		<td style="width: 50px; text-align:left;"><%= @text.votes_pour.count %></td>
+        <td style="width: 50px; text-align:left;">Pour:</td>
+		<td style="width: 50px; text-align:left; font-weight:bold;"><%= @text.votes_pour.count %></td>
 	</tr>
     <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(-1)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Contre:</td>
-		<td style="width: 50px; text-align:left;"><%= @text.votes_contre.count %></td>
+        <td style="width: 50px; text-align:left;">Contre:</td>
+		<td style="width: 50px; text-align:left; font-weight:bold;"><%= @text.votes_contre.count %></td>
 	</tr>
 	 <tr>
 		<td style="width: 15px; text-align:left; background-color:<%=vote_to_color(0)%>"> </td>
-        <td style="text-shadow: 2px 2px 3px #CDCDCD; width: 50px; text-align:left; font-weight:bold;">Abstentions:</td>
-		<td style="width: 50px; text-align:left;"><%= @text.abstentions.count %></td>
+        <td style="width: 50px; text-align:left;">Abstentions:</td>
+		<td style="width: 50px; text-align:left; font-weight:bold;"><%= @text.abstentions.count %></td>
 	</tr>
 </table>
 <p>
