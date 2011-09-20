@@ -13,9 +13,7 @@
 <!-- TAB 1 -->
     <div id="id1" style="padding-top: 5px;">
   		<div class="slider_static">
-			<div class="content_static" style="padding-left:10px;"> <!-- CT START 1 -->
-
-<div class="content_static">
+			<div class="content_static" style="padding-left:10px;"> <!-- CS START 1 -->
 
 <p><strong>Fonctionnement</strong></p>
 <p>
@@ -47,16 +45,15 @@
 <%= image_tag "013.gif", :alt => "Fro"%> <a href="#qp">Wou fannen ech d'Questions Parlementaires vun den Deputéierten? </a>
 </p>
 
-</div>
+			</div> <!-- CS END 1 -->
 
 <div class="more">Eng Fro, déi am F.A.Q. feelt? <a href="/contact">So ons bescheed!</a></div>
 
 <div class="info">Fonctionnement</div>
 
-			</div> <!-- CT END 1 -->
 
-  		</div> 
-	</div> 
+  		</div> <!-- SS END 1 -->
+	</div> <!-- ID END 1 -->
 <!-- TAB 1 -->
   
 <!-- TAB 2 -->
