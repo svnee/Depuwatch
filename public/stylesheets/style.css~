@@ -853,6 +853,20 @@ background-color: #EEEEEE;
     margin-left: 14px;
 }
 
+
+div.more3 {
+background-color: #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 4px;
+    width: 740px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 4px;
+}
+
 div.more2 {
 background-color: #EEEEEE;
     border-radius: 4px 4px 4px 4px;
