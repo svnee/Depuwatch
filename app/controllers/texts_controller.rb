@@ -47,6 +47,7 @@ class TextsController < ApplicationController
   # POST /texts.xml
   def create
     @text = Text.new(params[:text])
+    @text.favorite = 99
 		expire_fragment("texts_index_tab1")
     respond_to do |format|
       if @text.save
