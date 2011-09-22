@@ -466,7 +466,7 @@ Sollte ein Abgeordneter ein Profil auf einem sozialen Netzwerk was auf Depuwatch
 <div class="content_static">
 <p> <a name="wou_de"> </a> <%= image_tag "013.gif", :alt => "Fro"%> <strong>Wo kommen die Daten her?</strong></a></p>
 <p> Alle Daten von Depuwatch (bis auf Links auf soziale Medien) kommen von den offiziellen Seiten des <a href="http://chd.lu">Parlamentes</a> oder <a href="http://légilux.public.lu">Légilux</a>, als auch von Politikercheck.lu (Fotos). Depuwatch verbindet diese Daten und zeigt sie in einer übersichtlichen Darstellung an.</p>
-<p>Die Daten wurden mit Hilfe eines<a href="http://scraperwiki.com/scrapers/chd/">Script</a> nach bestimmten Regeln beim automatischen Aufrufen der Webseite des Parlaments heruntergeladen ("gescraped"). Diese Daten werden dann manuell überprüft bevor sie veröffentlicht werden. <a href="#up"><img src="/images/012.gif"></a> </p>
+<p>Die Daten wurden mit Hilfe eines <a href="http://scraperwiki.com/scrapers/chd/">Scripts</a> nach bestimmten Regeln beim automatischen Aufrufen der Webseite des Parlaments heruntergeladen ("gescraped"). Diese Daten werden dann manuell überprüft bevor sie veröffentlicht werden. <a href="#up"><img src="/images/012.gif"></a> </p>
 </div>
 
 <div class="content_static">
